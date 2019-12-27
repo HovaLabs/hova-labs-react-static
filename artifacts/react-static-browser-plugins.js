@@ -5,27 +5,27 @@ import plugin0 from '/Users/matthewhovanec/Sites/hova-labs-react-static/node_mod
 const plugins = [{
         location: "/Users/matthewhovanec/Sites/hova-labs-react-static/node_modules/react-static-plugin-typescript",
         plugins: [],
-        hooks: {}
+        hooks: {},
       },
 {
         location: "/Users/matthewhovanec/Sites/hova-labs-react-static/node_modules/react-static-plugin-source-filesystem",
         plugins: [],
-        hooks: {}
+        hooks: {},
       },
 {
         location: "/Users/matthewhovanec/Sites/hova-labs-react-static/node_modules/react-static-plugin-reach-router",
         plugins: [],
-        hooks: plugin0({})
+        hooks: plugin0({}),
       },
 {
         location: "/Users/matthewhovanec/Sites/hova-labs-react-static/node_modules/react-static-plugin-sitemap/dist",
         plugins: [],
-        hooks: {}
+        hooks: {},
       },
 {
         location: "/Users/matthewhovanec/Sites/hova-labs-react-static",
         plugins: [],
-        hooks: {}
+        hooks: {},
       }]
 
 // Export em!

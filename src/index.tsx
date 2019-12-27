@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+// eslint-disable-next-line
 import { AppContainer } from 'react-hot-loader'
 
 // Your top level component
@@ -21,7 +22,7 @@ if (typeof document !== 'undefined') {
       <AppContainer>
         <Comp />
       </AppContainer>,
-      target
+      target,
     )
   }
 

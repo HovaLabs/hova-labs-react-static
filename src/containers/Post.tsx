@@ -7,7 +7,11 @@ export default () => {
   const { post }: { post: Post } = useRouteData()
   return (
     <div>
-      <Link to="/blog/">{'<'} Back</Link>
+      <Link to="/blog/">
+        {'<'}
+        {' '}
+Back
+      </Link>
       <br />
       <h3>{post.title}</h3>
       <p>{post.body}</p>
