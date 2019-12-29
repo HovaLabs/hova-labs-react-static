@@ -1,8 +1,10 @@
-import React from 'react'
+import React from "react";
 
 type Props = {
-    children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
-const FancyDiv: React.FC = ({ children }: Props) => <div style={{ border: '1px solid red' }}>{children}</div>
-export default FancyDiv
+const FancyDiv: React.FC = ({ children }: Props) => (
+  <div style={{ border: "1px solid red" }}>{children}</div>
+);
+export default FancyDiv;
