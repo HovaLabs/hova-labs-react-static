@@ -1,14 +1,6 @@
-export type Radii = {
-  none: 0;
-  s: number;
-  m: number;
-  l: number;
-  xl: number;
-  xxl: number;
-  round: number;
-};
+import { Radii } from "@hova-labs/bento-box-web";
 
-export const radiiDefault: Radii = {
+export const radii: Radii = {
   none: 0,
   s: 2,
   m: 4,

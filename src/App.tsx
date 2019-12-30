@@ -4,13 +4,15 @@ import { Link, Router } from "@reach/router";
 import { ThemeContextContainer } from "@hova-labs/bento-box-web";
 import FancyDiv from "./components/FancyDiv";
 import { WebsiteContainer } from "./components";
+import { themes } from "./theme";
+
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(["dynamic"]);
 
 function App() {
   return (
     <Root>
-      <ThemeContextContainer>
+      <ThemeContextContainer themes={themes}>
         <WebsiteContainer>
           <nav>
             <Link to="/">Home</Link>

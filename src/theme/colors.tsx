@@ -1,14 +1,4 @@
-export type Colors = {
-  primary: string;
-  secondary: string;
-  tertiary: string;
-  backgroundPrimary: string;
-  backgroundSecondary: string;
-  backgroundTertiary: string;
-  accentPrimary: string;
-  accentSecondary: string;
-  accentTertiary: string;
-};
+import { Colors } from "@hova-labs/bento-box-web";
 
 export const colorsLightTheme: Colors = {
   primary: "rgb(0, 0, 0)",

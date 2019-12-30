@@ -1,34 +1,27 @@
-import { Breakpoints, breakpointsDefault } from "./breakpoints";
-import { Colors, colorsLightTheme, colorsDarkTheme } from "./colors";
-import { Radii, radiiDefault } from "./radii";
-import { Space, spaceDefault } from "./space";
-import { Typography, typographyDefault } from "./typography";
+import { Theme } from "@hova-labs/bento-box-web";
 
-export type Theme = {
-  name: "lightTheme" | "darkTheme";
-  breakpoints: Breakpoints;
-  colors: Colors;
-  radii: Radii;
-  space: Space;
-  typography: Typography;
-};
+import { breakpoints } from "./breakpoints";
+import { colorsLightTheme, colorsDarkTheme } from "./colors";
+import { radii } from "./radii";
+import { spacings } from "./spacings";
+import { typography } from "./typography";
 
 export const lightTheme: Theme = {
   name: "lightTheme",
-  breakpoints: breakpointsDefault,
+  breakpoints,
   colors: colorsLightTheme,
-  radii: radiiDefault,
-  space: spaceDefault,
-  typography: typographyDefault
+  radii,
+  spacings,
+  typography
 };
 
 export const darkTheme: Theme = {
   name: "darkTheme",
-  breakpoints: breakpointsDefault,
+  breakpoints,
   colors: colorsDarkTheme,
-  radii: radiiDefault,
-  space: spaceDefault,
-  typography: typographyDefault
+  radii,
+  spacings,
+  typography
 };
 
 export const themes = {
