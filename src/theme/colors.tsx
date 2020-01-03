@@ -1,25 +1,25 @@
 import { Colors } from "@hova-labs/bento-box-web";
 
 export const colorsLightTheme: Colors = {
-  primary: "rgb(0, 0, 0)",
-  secondary: "rgb(20, 20, 20)",
-  tertiary: "rgb(40, 40, 40)",
+  primary: "rgb(20, 21, 23)",
+  secondary: "rgb(40, 42, 46)",
+  tertiary: "rgb(60, 63, 69)",
   backgroundPrimary: "rgb(255, 255, 255)",
-  backgroundSecondary: "rgb(235, 235, 235)",
-  backgroundTertiary: "rgb(215, 215, 215)",
-  accentPrimary: "rgb(255, 155, 155)",
-  accentSecondary: "rgb(255, 255, 155)",
-  accentTertiary: "rgb(255, 155, 255)"
+  backgroundSecondary: "rgb(242, 242, 242)",
+  backgroundTertiary: "rgb(229, 229, 229)",
+  accentPrimary: "rgb(120, 129, 174)",
+  accentSecondary: "rgb(174, 120, 129)",
+  accentTertiary: "rgb(129, 174, 120)"
 };
 
 export const colorsDarkTheme: Colors = {
   primary: "rgb(255, 255, 255)",
-  secondary: "rgb(235, 235, 235)",
-  tertiary: "rgb(215, 215, 215)",
-  backgroundPrimary: "rgb(0, 0, 0)",
-  backgroundSecondary: "rgb(20, 20, 20)",
-  backgroundTertiary: "rgb(40, 40, 40)",
-  accentPrimary: "rgb(155, 55, 55)",
-  accentSecondary: "rgb(155, 155, 55)",
-  accentTertiary: "rgb(155, 55, 155)"
+  secondary: "rgb(242, 242, 242)",
+  tertiary: "rgb(229, 229, 229)",
+  backgroundPrimary: "rgb(20, 21, 23)",
+  backgroundSecondary: "rgb(40, 42, 46)",
+  backgroundTertiary: "rgb(60, 63, 69)",
+  accentPrimary: "rgb(120,129,174)",
+  accentSecondary: "rgb(174, 120, 129)",
+  accentTertiary: "rgb(129, 174, 120)"
 };

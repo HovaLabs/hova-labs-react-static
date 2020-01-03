@@ -1,18 +1,11 @@
-import React from "react";
+import { createStyledComponent } from "@hova-labs/bento-box-web";
 
-interface WebsiteContainerInterface {
-  children: JSX.Element[] | JSX.Element;
-}
-
-export const WebsiteContainer = ({
-  children
-}: WebsiteContainerInterface): JSX.Element => (
-  <div
-    style={{
-      background: "white",
-      padding: "32px"
-    }}
-  >
-    {children}
-  </div>
-);
+export const WebsiteContainer = createStyledComponent("div")(c => ({
+  position: "absolute",
+  top: 0,
+  bottom: 0,
+  left: 0,
+  right: 0,
+  background: c.theme.colors.backgroundPrimary,
+  padding: c.theme.spacings.xl
+}));

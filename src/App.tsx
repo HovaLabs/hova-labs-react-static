@@ -1,10 +1,11 @@
 import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
-import { Link, Router } from "@reach/router";
-import { ThemeContextContainer } from "@hova-labs/bento-box-web";
+import { Router } from "@reach/router";
+import { DesignSystemProvider } from "@hova-labs/bento-box-web";
 import FancyDiv from "./components/FancyDiv";
-import { WebsiteContainer } from "./components";
+import { TopNavigation, WebsiteContainer } from "./components";
 import { themes } from "./theme";
+import "./global.css";
 
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(["dynamic"]);
@@ -12,13 +13,14 @@ addPrefetchExcludes(["dynamic"]);
 function App() {
   return (
     <Root>
-      <ThemeContextContainer themes={themes}>
+      <DesignSystemProvider themes={themes}>
         <WebsiteContainer>
-          <nav>
+          <TopNavigation />
+          {/* <nav>
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             <Link to="/blog">Blog</Link>
-          </nav>
+          </nav> */}
           <div className="content">
             <FancyDiv>
               <React.Suspense fallback={<em>Loading...</em>}>
@@ -29,7 +31,7 @@ function App() {
             </FancyDiv>
           </div>
         </WebsiteContainer>
-      </ThemeContextContainer>
+      </DesignSystemProvider>
     </Root>
   );
 }

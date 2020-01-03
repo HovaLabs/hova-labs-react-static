@@ -5,8 +5,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "bold",
     lineHeight: {
-      s: 52,
-      m: 60
+      s: "52px",
+      m: "60px"
     },
     fontSize: {
       s: 46,
@@ -17,8 +17,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "bold",
     lineHeight: {
-      s: 24,
-      m: 50
+      s: "24px",
+      m: "50px"
     },
     fontSize: {
       s: 20,
@@ -29,8 +29,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "normal",
     lineHeight: {
-      s: 24,
-      m: 24
+      s: "24px",
+      m: "24px"
     },
     fontSize: {
       s: 16,
@@ -41,8 +41,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "normal",
     lineHeight: {
-      s: 16,
-      m: 24
+      s: "16px",
+      m: "24px"
     },
     fontSize: {
       s: 12,
@@ -53,8 +53,8 @@ export const typography: Typography = {
     color: "backgroundPrimary",
     fontWeight: "bold",
     lineHeight: {
-      s: 16,
-      m: 24
+      s: "16px",
+      m: "24px"
     },
     fontSize: {
       s: 12,
@@ -66,8 +66,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "bold",
     lineHeight: {
-      s: 16,
-      m: 24
+      s: "16px",
+      m: "24px"
     },
     fontSize: {
       s: 12,
@@ -79,8 +79,8 @@ export const typography: Typography = {
     color: "primary",
     fontWeight: "bold",
     lineHeight: {
-      s: 16,
-      m: 24
+      s: "16px",
+      m: "24px"
     },
     fontSize: {
       s: 12,
