@@ -2,7 +2,6 @@ import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
 import { Router } from "@reach/router";
 import { DesignSystemProvider } from "@hova-labs/bento-box-web";
-import FancyDiv from "./components/FancyDiv";
 import { TopNavigation, WebsiteContainer } from "./components";
 import { themes } from "./theme";
 import "./global.css";
@@ -16,19 +15,12 @@ function App() {
       <DesignSystemProvider themes={themes}>
         <WebsiteContainer>
           <TopNavigation />
-          {/* <nav>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-          </nav> */}
           <div className="content">
-            <FancyDiv>
-              <React.Suspense fallback={<em>Loading...</em>}>
-                <Router>
-                  <Routes path="*" />
-                </Router>
-              </React.Suspense>
-            </FancyDiv>
+            <React.Suspense fallback={<em>Loading...</em>}>
+              <Router>
+                <Routes path="*" />
+              </Router>
+            </React.Suspense>
           </div>
         </WebsiteContainer>
       </DesignSystemProvider>

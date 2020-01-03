@@ -6,11 +6,11 @@ export const typography: Typography = {
     fontWeight: "bold",
     lineHeight: {
       s: "52px",
-      m: "60px"
+      l: "60px"
     },
     fontSize: {
       s: 46,
-      m: 52
+      l: 52
     }
   },
   headingMedium: {
@@ -18,11 +18,11 @@ export const typography: Typography = {
     fontWeight: "bold",
     lineHeight: {
       s: "24px",
-      m: "50px"
+      l: "50px"
     },
     fontSize: {
       s: 20,
-      m: 34
+      l: 34
     }
   },
   headingSmall: {
@@ -30,11 +30,11 @@ export const typography: Typography = {
     fontWeight: "normal",
     lineHeight: {
       s: "24px",
-      m: "24px"
+      l: "24px"
     },
     fontSize: {
       s: 16,
-      m: 20
+      l: 20
     }
   },
   bodyText: {
@@ -42,11 +42,11 @@ export const typography: Typography = {
     fontWeight: "normal",
     lineHeight: {
       s: "16px",
-      m: "24px"
+      l: "24px"
     },
     fontSize: {
       s: 12,
-      m: 16
+      l: 16
     }
   },
   buttonPrimary: {
@@ -54,11 +54,11 @@ export const typography: Typography = {
     fontWeight: "bold",
     lineHeight: {
       s: "16px",
-      m: "24px"
+      l: "24px"
     },
     fontSize: {
       s: 12,
-      m: 16
+      l: 16
     },
     letterSpacing: "xl"
   },
@@ -67,11 +67,11 @@ export const typography: Typography = {
     fontWeight: "bold",
     lineHeight: {
       s: "16px",
-      m: "24px"
+      l: "24px"
     },
     fontSize: {
       s: 12,
-      m: 16
+      l: 16
     },
     letterSpacing: "xl"
   },
@@ -80,11 +80,11 @@ export const typography: Typography = {
     fontWeight: "bold",
     lineHeight: {
       s: "16px",
-      m: "24px"
+      l: "24px"
     },
     fontSize: {
       s: 12,
-      m: 16
+      l: 16
     },
     letterSpacing: "xl"
   }

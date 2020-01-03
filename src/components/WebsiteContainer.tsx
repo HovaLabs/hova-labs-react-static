@@ -7,5 +7,8 @@ export const WebsiteContainer = createStyledComponent("div")(c => ({
   left: 0,
   right: 0,
   background: c.theme.colors.backgroundPrimary,
-  padding: c.theme.spacings.xl
+  padding: {
+    s: c.theme.spacings.l,
+    l: c.theme.spacings.xl
+  }
 }));
