@@ -9,7 +9,7 @@ import "./global.css";
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(["dynamic"]);
 
-function App() {
+function App(): React.ReactElement {
   return (
     <Root>
       <DesignSystemProvider themes={themes}>
