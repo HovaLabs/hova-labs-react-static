@@ -6,7 +6,7 @@ import { radii } from "./radii";
 import { spacings } from "./spacings";
 import { typography } from "./typography";
 
-export const lightTheme: Theme = {
+const lightTheme: Theme = {
   name: "lightTheme",
   breakpoints,
   colors: colorsLightTheme,
@@ -15,7 +15,7 @@ export const lightTheme: Theme = {
   typography
 };
 
-export const darkTheme: Theme = {
+const darkTheme: Theme = {
   name: "darkTheme",
   breakpoints,
   colors: colorsDarkTheme,
