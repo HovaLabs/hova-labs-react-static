@@ -3,13 +3,7 @@ import { createStyledComponent, Text } from "@hova-labs/bento-box-web";
 import hovalin from "../media/hovalin-64.jpg";
 import theHovas from "../media/the-hovas.png";
 
-const Container = createStyledComponent("div")(c => ({
-  position: "relative",
-  top: {
-    s: -38 - c.theme.spacings.l * 2,
-    l: -70 - c.theme.spacings.l * 2
-  }
-}));
+const Container = createStyledComponent("div")(() => ({}));
 
 // HERO START
 const HeroContainer = createStyledComponent("div")({
@@ -39,8 +33,11 @@ const Hero = createStyledComponent("img")({
 // ABOUT START
 
 const AboutContainer = createStyledComponent("div")(c => ({
-  backgroundColor: c.theme.colors.backgroundSecondary,
-  marginTop: c.theme.spacings.l
+  marginTop: {
+    s: c.theme.spacings.l,
+    l: c.theme.spacings.xl
+  },
+  backgroundColor: c.theme.colors.backgroundSecondary
 }));
 
 const AboutImageContainer = createStyledComponent("div")({

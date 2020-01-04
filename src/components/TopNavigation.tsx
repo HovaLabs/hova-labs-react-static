@@ -7,15 +7,19 @@ import {
 import { Link, Logo } from ".";
 
 const TopNavigationContainer = createStyledComponent("div")(c => ({
+  position: "absolute",
+  zIndex: 1000,
+  width: {
+    s: `calc(100% - ${c.theme.spacings.l * 2}px)`,
+    l: `calc(100% - ${c.theme.spacings.xl * 2}px)`
+  },
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
   background: c.theme.colors.backgroundSecondary,
   opacity: 0.5,
-  padding: c.theme.spacings.l,
-  position: "relative",
-  zIndex: 1000
+  padding: c.theme.spacings.l
 }));
 
 const LogoContainer = createStyledComponent("div")({
