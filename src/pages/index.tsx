@@ -20,9 +20,14 @@ const HeroContainer = createStyledComponent("div")({
   justifyContent: "center"
 });
 
-const HeroText = createStyledComponent("div")({
-  position: "absolute"
-});
+const HeroText = createStyledComponent("div")(c => ({
+  position: "absolute",
+  color: c.theme.colors.primary,
+  fontSize: {
+    s: 50,
+    l: 100
+  }
+}));
 const Hero = createStyledComponent("img")({
   width: "100%",
   minWidth: 600,
@@ -82,9 +87,7 @@ const AboutTextContainer = createStyledComponent("div")(c => ({
 export default (): React.ReactElement => (
   <Container>
     <HeroContainer>
-      <HeroText>
-        <Text typography="headingLarge">HOVA LABS</Text>
-      </HeroText>
+      <HeroText>HOVA LABS</HeroText>
       <Hero src={hovalin} />
     </HeroContainer>
     <AboutContainer>
