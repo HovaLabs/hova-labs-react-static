@@ -13,16 +13,16 @@ function App(): React.ReactElement {
   return (
     <Root>
       <DesignSystemProvider themes={themes}>
-        <WebsiteContainer>
-          <div className="content">
-            <React.Suspense fallback={<em>Loading...</em>}>
+        <div className="content">
+          <React.Suspense fallback={<em>Loading...</em>}>
+            <WebsiteContainer>
               <TopNavigation />
               <Router>
                 <Routes path="*" />
               </Router>
-            </React.Suspense>
-          </div>
-        </WebsiteContainer>
+            </WebsiteContainer>
+          </React.Suspense>
+        </div>
       </DesignSystemProvider>
     </Root>
   );
