@@ -25,7 +25,7 @@ const HeroText = styled("div")`
     })}
 `;
 
-const Hero = styled("img")`
+const Hero = styled("img").attrs({ src: hovalin })`
   width: 100%;
   min-width: 600px;
   background-position: center center;
@@ -55,7 +55,7 @@ const AboutImageFiller = styled("div")`
   flex: 1;
 `;
 
-const AboutImage = styled("img")`
+const AboutImage = styled("img").attrs({ src: theHovas })`
   width: 100%;
   flex: 1;
   min-width: 500px;
@@ -79,6 +79,7 @@ const AboutTextContainer = styled("div")`
 // ABOUT END
 
 // SERVICES START
+
 // SERVICES END
 
 // EVENTS START
@@ -94,7 +95,7 @@ export default (): React.ReactElement => (
   <Container>
     <HeroContainer>
       <HeroText>HOVA LABS</HeroText>
-      <Hero src={hovalin} />
+      <Hero />
     </HeroContainer>
     <AboutContainer>
       <AboutTextContainer>
@@ -114,7 +115,7 @@ export default (): React.ReactElement => (
       </AboutTextContainer>
       <AboutImageContainer>
         <AboutImageFiller />
-        <AboutImage src={theHovas} />
+        <AboutImage />
       </AboutImageContainer>
     </AboutContainer>
   </Container>
