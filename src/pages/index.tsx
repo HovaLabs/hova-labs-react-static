@@ -156,6 +156,46 @@ const services: Array<Service> = [
 // SERVICES END
 
 // EVENTS START
+type Event = {
+  date: string;
+  location: string;
+  description: string;
+};
+const events: Array<Event> = [
+  {
+    date: "Feb 4",
+    location: "Anytown, USA",
+    description: "Light Show",
+  },
+  {
+    date: "Apr 20",
+    location: "Berkeley, CA",
+    description: "Woot Woot!",
+  },
+];
+
+const EventContainer = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("margin-top", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
+    })}
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xxl}px`,
+    })}
+  background-color: ${p => p.theme.colors.backgroundSecondary};
+`;
+
+const EventsTextContainer = styled("div")``;
+const EventsTableContainer = styled("div")`
+  padding-top: ${p => p.theme.spacings.xl}px;
+`;
+const EventsGrid = styled("div")`
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+`;
 // EVENTS END
 
 // LATEST BLOG START
@@ -213,5 +253,47 @@ export default (): React.ReactElement => (
         ))}
       </ServiceGridContainer>
     </ServicesContainer>
+    <EventContainer>
+      <EventsTextContainer>
+        <div>
+          <Text typography="headingSmall">EVENTS</Text>
+        </div>
+        <div>
+          <Text typography="headingLarge">Say Hey</Text>
+        </div>
+      </EventsTextContainer>
+      <EventsTableContainer>
+        {events.length ? (
+          <EventsGrid>
+            <div>
+              <Text>DATE</Text>
+            </div>
+            <div>
+              <Text>LOCATION</Text>
+            </div>
+            <div>
+              <Text>THING</Text>
+            </div>
+            {events.map(event => (
+              <>
+                <div>
+                  <Text>{event.date}</Text>
+                </div>
+                <div>
+                  <Text>{event.location}</Text>
+                </div>
+                <div>
+                  <Text>{event.description}</Text>
+                </div>
+              </>
+            ))}
+          </EventsGrid>
+        ) : (
+          <div>
+            <Text>No events at this time...</Text>
+          </div>
+        )}
+      </EventsTableContainer>
+    </EventContainer>
   </Container>
 );
