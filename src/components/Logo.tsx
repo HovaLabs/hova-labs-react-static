@@ -1,9 +1,9 @@
 import React from "react";
-import { createStyledComponent } from "@hova-labs/bento-box-web";
+import styled from "styled-components";
 
-const StyledPath = createStyledComponent("path")(c => ({
-  fill: c.theme.colors.primary
-}));
+const StyledPath = styled("path")`
+  fill: ${p => p.theme.colors.primary};
+`;
 
 export const Logo = () => (
   <svg

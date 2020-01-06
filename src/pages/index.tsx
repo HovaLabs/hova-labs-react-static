@@ -1,72 +1,81 @@
 import React from "react";
-import { createStyledComponent, Text } from "@hova-labs/bento-box-web";
+import styled from "styled-components";
+import { Text } from "@hova-labs/bento-box-web";
 import hovalin from "../media/hovalin-64.jpg";
 import theHovas from "../media/the-hovas.png";
 
-const Container = createStyledComponent("div")(() => ({}));
+const Container = styled("div")``;
 
 // HERO START
-const HeroContainer = createStyledComponent("div")({
-  width: "100%",
-  overflow: "hidden",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
-});
+const HeroContainer = styled("div")`
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-const HeroText = createStyledComponent("div")(c => ({
-  position: "absolute",
-  color: c.theme.colors.primary,
-  fontSize: {
-    s: 50,
-    l: 100
-  }
-}));
-const Hero = createStyledComponent("img")({
-  width: "100%",
-  minWidth: 600,
-  backgroundPosition: "center center",
-  backgroundRepeat: "no-repeat"
-});
+const HeroText = styled("div")`
+  position: absolute;
+  color: ${p => p.theme.colors.primary};
+  ${p =>
+    p.theme.responsiveStyle("font-size", {
+      s: "50px",
+      l: "100px",
+    })}
+`;
+
+const Hero = styled("img")`
+  width: 100%;
+  min-width: 600px;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
 // HERO END
 
 // ABOUT START
+const AboutContainer = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("margin-top", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
+    })}
+  background-color: ${p => p.theme.colors.backgroundSecondary};
+`;
 
-const AboutContainer = createStyledComponent("div")(c => ({
-  marginTop: {
-    s: c.theme.spacings.l,
-    l: c.theme.spacings.xl
-  },
-  backgroundColor: c.theme.colors.backgroundSecondary
-}));
+const AboutImageContainer = styled("div")`
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-const AboutImageContainer = createStyledComponent("div")({
-  width: "100%",
-  overflow: "hidden",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center"
-});
+const AboutImageFiller = styled("div")`
+  flex: 1;
+`;
 
-const AboutImageFiller = createStyledComponent("div")({ flex: 1 });
-const AboutImage = createStyledComponent("img")({
-  width: "100%",
-  flex: 1,
-  minWidth: 500,
-  backgroundPosition: "center center",
-  backgroundRepeat: "no-repeat"
-});
+const AboutImage = styled("img")`
+  width: 100%;
+  flex: 1;
+  min-width: 500px;
+  background-position: center center;
+  background-repeat: no-repeat;
+`;
 
-const AboutTextContainer = createStyledComponent("div")(c => ({
-  position: ["l", "xl"].includes(c.dimensions.breakpoint)
-    ? "absolute"
-    : "relative",
-  padding: {
-    s: c.theme.spacings.l,
-    l: c.theme.spacings.xxl
-  },
-  paddingBottom: 0
-}));
+const AboutTextContainer = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("position", {
+      s: "relative",
+      l: "absolute",
+    })}
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xxl}px`,
+    })}
+  padding-bottom: 0;
+`;
 // ABOUT END
 
 // SERVICES START

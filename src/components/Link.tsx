@@ -1,7 +1,8 @@
 import { Link as LinkLib } from "@reach/router";
-import { createStyledComponent } from "@hova-labs/bento-box-web";
+import styled from "styled-components";
 
-export const Link = createStyledComponent(LinkLib)(c => ({
-  marginLeft: c.theme.spacings.xl,
-  ...c.theme.typography.headingMedium
-}));
+export const Link = styled(LinkLib)`
+  text-decoration: none;
+  margin-left: ${p => p.theme.spacings.xl}px;
+  ${p => p.theme.typography.headingMedium}
+`;

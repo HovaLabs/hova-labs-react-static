@@ -14,9 +14,9 @@ function App(): React.ReactElement {
     <Root>
       <DesignSystemProvider themes={themes}>
         <WebsiteContainer>
-          <TopNavigation />
           <div className="content">
             <React.Suspense fallback={<em>Loading...</em>}>
+              <TopNavigation />
               <Router>
                 <Routes path="*" />
               </Router>

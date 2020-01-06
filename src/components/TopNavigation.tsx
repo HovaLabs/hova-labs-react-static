@@ -1,55 +1,58 @@
 import React from "react";
-import {
-  DimensionsContext,
-  createStyledComponent
-} from "@hova-labs/bento-box-web";
+import styled from "styled-components";
 
 import { Link, Logo } from ".";
 
-const TopNavigationContainer = createStyledComponent("div")(c => ({
-  position: "absolute",
-  zIndex: 1000,
-  width: {
-    s: `calc(100% - ${c.theme.spacings.l * 2}px)`,
-    l: `calc(100% - ${c.theme.spacings.xl * 2}px)`
-  },
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "space-between",
-  background: c.theme.colors.backgroundSecondary,
-  opacity: 0.5,
-  padding: c.theme.spacings.l
-}));
+const TopNavigationContainer = styled("div")`
+  position: absolute;
+  z-index: 1000;
+  ${p =>
+    p.theme.responsiveStyle("width", {
+      s: `calc(100% - ${p.theme.spacings.l * 2}px)`,
+      l: `calc(100% - ${p.theme.spacings.xl * 2}px)`,
+    })}
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: ${p => p.theme.colors.backgroundSecondary};
+  opacity: 0.5;
+  padding: ${p => p.theme.spacings.l}px;
+`;
 
-const LogoContainer = createStyledComponent("div")({
-  width: {
-    s: 38,
-    l: 70
-  },
-  height: {
-    s: 38,
-    l: 70
-  },
-  justifySelf: "flex-start"
-});
+const LogoContainer = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("width", {
+      s: "38px",
+      l: "70px",
+    })}
+  ${p =>
+    p.theme.responsiveStyle("height", {
+      s: "38px",
+      l: "70px",
+    })}
+  justify-self: flex-start;
+`;
+
+const Wide = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("display", {
+      s: "none",
+      l: "initial",
+    })}
+`;
 
 export const TopNavigation = (): React.ReactElement => {
-  const { breakpoint } = React.useContext(DimensionsContext);
   return (
     <TopNavigationContainer>
       <LogoContainer>
         <Logo />
       </LogoContainer>
-      <div>
-        {["l", "xl"].includes(breakpoint) ? (
-          <>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/blog">Blog</Link>
-          </>
-        ) : null}
-      </div>
+      <Wide>
+        <Link to="/">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/blog">Blog</Link>
+      </Wide>
     </TopNavigationContainer>
   );
 };

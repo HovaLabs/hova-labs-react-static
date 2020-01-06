@@ -1,4 +1,5 @@
-import { Theme } from "@hova-labs/bento-box-web";
+import { DefaultTheme } from "styled-components";
+import { responsiveStyle } from "@hova-labs/bento-box-web";
 
 import { breakpoints } from "./breakpoints";
 import { colorsLightTheme, colorsDarkTheme } from "./colors";
@@ -6,25 +7,27 @@ import { radii } from "./radii";
 import { spacings } from "./spacings";
 import { typography } from "./typography";
 
-const lightTheme: Theme = {
+const lightTheme: DefaultTheme = {
   name: "lightTheme",
   breakpoints,
   colors: colorsLightTheme,
   radii,
   spacings,
-  typography
+  typography,
+  responsiveStyle,
 };
 
-const darkTheme: Theme = {
+const darkTheme: DefaultTheme = {
   name: "darkTheme",
   breakpoints,
   colors: colorsDarkTheme,
   radii,
   spacings,
-  typography
+  typography,
+  responsiveStyle,
 };
 
 export const themes = {
   lightTheme,
-  darkTheme
+  darkTheme,
 };
