@@ -1,5 +1,9 @@
 import { css } from "styled-components";
-import { FontWeights, Typography } from "@hova-labs/bento-box-web";
+import { FontWeights, Typography, Colors } from "@hova-labs/bento-box-web";
+
+interface TypographyProps {
+  color: keyof Colors;
+}
 
 export const typography: Typography = {
   headingLarge: css`
@@ -12,9 +16,9 @@ export const typography: Typography = {
       })}
     `}
   `,
-  headingMedium: css`
+  headingMedium: css<TypographyProps>`
     ${p => css`
-      color: ${p.theme.colors.primary};
+      color: ${p.color || p.theme.colors.primary};
       font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
         s: "20px",
@@ -33,7 +37,7 @@ export const typography: Typography = {
     `}
   `,
   bodyText: css`
-    ${p => css`
+    ${p => css<TypographyProps>`
       color: ${p.theme.colors.primary};
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {

@@ -161,16 +161,22 @@ type Event = {
   location: string;
   description: string;
 };
+
 const events: Array<Event> = [
   {
-    date: "Feb 4",
+    date: "2020-02-04T00:00:00.000Z",
     location: "Anytown, USA",
     description: "Light Show",
   },
   {
-    date: "Apr 20",
+    date: "2020-04-20T00:00:00.000Z",
     location: "Berkeley, CA",
     description: "Woot Woot!",
+  },
+  {
+    date: "2020-04-21T00:00:00.000Z",
+    location: "Berkeley, CA",
+    description: "Nope Nope!",
   },
 ];
 
@@ -194,8 +200,38 @@ const EventsTableContainer = styled("div")`
 `;
 const EventsGrid = styled("div")`
   display: grid;
-  grid-template-columns: 1fr 1fr 2fr;
+  grid-template-columns: min-content 1fr;
+  grid-gap: ${p => p.theme.spacings.l}px;
 `;
+
+const EventGridDateBox = styled("div")(p => ({
+  display: "flex",
+  flexDirection: "column",
+  padding: `${p.theme.spacings.l}px`,
+  background: p.theme.colors.backgroundTertiary,
+}));
+
+const EventGridInfoBox = styled("div")(p => ({
+  display: "flex",
+  flexDirection: "column",
+  padding: `${p.theme.spacings.l}px`,
+  background: p.theme.colors.primary,
+}));
+
+const months = [
+  "JAN",
+  "FEB",
+  "MAR",
+  "APR",
+  "MAY",
+  "JUN",
+  "JUL",
+  "AUG",
+  "SEP",
+  "OCT",
+  "NOV",
+  "DEC",
+];
 // EVENTS END
 
 // LATEST BLOG START
@@ -265,26 +301,32 @@ export default (): React.ReactElement => (
       <EventsTableContainer>
         {events.length ? (
           <EventsGrid>
-            <div>
-              <Text>DATE</Text>
-            </div>
-            <div>
-              <Text>LOCATION</Text>
-            </div>
-            <div>
-              <Text>THING</Text>
-            </div>
             {events.map(event => (
               <>
-                <div>
-                  <Text>{event.date}</Text>
-                </div>
-                <div>
-                  <Text>{event.location}</Text>
-                </div>
-                <div>
-                  <Text>{event.description}</Text>
-                </div>
+                <EventGridDateBox>
+                  <div>
+                    <Text typography="headingSmall">
+                      {(new Date(event.date).getDay() + 1)
+                        .toString()
+                        .padStart(2, "0")}
+                    </Text>
+                  </div>
+                  <div>
+                    <Text typography="headingSmall">
+                      {months[new Date(event.date).getMonth()]}
+                    </Text>
+                  </div>
+                </EventGridDateBox>
+                <EventGridInfoBox>
+                  <div>
+                    <Text typography="headingMedium" color="backgroundPrimary">
+                      {event.location}
+                    </Text>
+                  </div>
+                  <div>
+                    <Text>{event.description}</Text>
+                  </div>
+                </EventGridInfoBox>
               </>
             ))}
           </EventsGrid>
