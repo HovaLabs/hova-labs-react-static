@@ -278,7 +278,7 @@ export default (): React.ReactElement => (
       </ServicesTextContainer>
       <ServiceGridContainer>
         {services.map(s => (
-          <ServiceGridItem>
+          <ServiceGridItem key={s.title}>
             <div>
               <Text typography="headingMedium">{s.title}</Text>
             </div>
@@ -302,11 +302,11 @@ export default (): React.ReactElement => (
         {events.length ? (
           <EventsGrid>
             {events.map(event => (
-              <>
+              <React.Fragment key={event.date}>
                 <EventGridDateBox>
                   <div>
                     <Text typography="headingSmall">
-                      {(new Date(event.date).getDay() + 1)
+                      {(new Date(event.date).getDate() + 1)
                         .toString()
                         .padStart(2, "0")}
                     </Text>
@@ -327,7 +327,7 @@ export default (): React.ReactElement => (
                     <Text>{event.description}</Text>
                   </div>
                 </EventGridInfoBox>
-              </>
+              </React.Fragment>
             ))}
           </EventsGrid>
         ) : (
