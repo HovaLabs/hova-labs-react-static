@@ -20,8 +20,10 @@ const TopNavigationContainer = styled("div")<TopNavigationContainerProps>`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: ${p => p.theme.colors.backgroundSecondary};
-    opacity: ${p => (p.scrolled ? 1 : 0.5)};
+    background: ${p =>
+      p.theme.colors.backgroundSecondary
+        .replace("rgb", "rgba")
+        .replace(")", p.scrolled ? ", 1)" : ", 0.7)")};
     padding: ${p => p.theme.spacings.l}px;
     border-bottom: ${p => (p.scrolled ? "3px solid black" : "none")};
     transition: all 250ms;
@@ -53,10 +55,16 @@ const Wide = styled("div")`
 export const TopNavigation = (): React.ReactElement => {
   const { breakpoint } = React.useContext(DimensionsContext);
 
-  const isScrolled = (): boolean =>
-    document.body.getBoundingClientRect().top +
-      (["s", "m"].includes(breakpoint) ? 16 : 32) <
-    0;
+  const isScrolled = (): boolean => {
+    if (typeof document !== "undefined") {
+      return (
+        document.body.getBoundingClientRect().top +
+          (["s", "m"].includes(breakpoint) ? 16 : 32) <
+        0
+      );
+    }
+    return false;
+  };
 
   const [scrolled, setScrolled] = React.useState(isScrolled());
 
