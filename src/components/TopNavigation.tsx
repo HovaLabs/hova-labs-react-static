@@ -2,11 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link as LinkLib } from "@reach/router";
 import { DimensionsContext } from "@hova-labs/bento-box-web";
-
-import { Link, Logo } from ".";
+import { Link, Logo, Modal } from ".";
 
 interface TopNavigationContainerProps {
   readonly scrolled: boolean;
+  readonly menuIsOpen: boolean;
 }
 
 const TopNavigationContainer = styled("div")<TopNavigationContainerProps>`
@@ -52,8 +52,17 @@ const Wide = styled("div")`
     })}
 `;
 
+const MenuButton = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("display", {
+      s: "initial",
+      l: "none",
+    })}
+`;
+
 export const TopNavigation = (): React.ReactElement => {
   const { breakpoint } = React.useContext(DimensionsContext);
+  const [menuIsOpen, setMenuIsOpen] = React.useState(false);
 
   const isScrolled = (): boolean => {
     if (typeof document !== "undefined") {
@@ -79,22 +88,43 @@ export const TopNavigation = (): React.ReactElement => {
     };
   }, [isScrolled, setScrolled]);
 
+  console.log("dafaq", menuIsOpen);
+
   return (
-    <TopNavigationContainer scrolled={scrolled}>
-      <div>
-        <LinkLib to="/">
-          <LogoContainer>
-            <Logo />
-          </LogoContainer>
-        </LinkLib>
-        <Wide>
-          {/* <Link to="/">Home</Link> */}
-          <Link to="/projects">Projects</Link>
-          <Link to="/blog">Blog</Link>
-          <Link to="/store">Store</Link>
-          <Link to="/contact">Contact</Link>
-        </Wide>
-      </div>
-    </TopNavigationContainer>
+    <>
+      <Modal isOpen={menuIsOpen}>
+        <button
+          onClick={() => {
+            setMenuIsOpen(!menuIsOpen);
+          }}
+        >
+          yo!
+        </button>
+      </Modal>
+      <TopNavigationContainer scrolled={scrolled} menuIsOpen={menuIsOpen}>
+        <div>
+          <LinkLib to="/">
+            <LogoContainer>
+              <Logo />
+            </LogoContainer>
+          </LinkLib>
+          <Wide>
+            <Link to="/projects">Projects</Link>
+            <Link to="/blog">Blog</Link>
+            <Link to="/store">Store</Link>
+            <Link to="/contact">Contact</Link>
+          </Wide>
+          <MenuButton>
+            <button
+              onClick={() => {
+                setMenuIsOpen(!menuIsOpen);
+              }}
+            >
+              yo!
+            </button>
+          </MenuButton>
+        </div>
+      </TopNavigationContainer>
+    </>
   );
 };
