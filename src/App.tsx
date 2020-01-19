@@ -16,8 +16,8 @@ function App(): React.ReactElement {
         <div className="content">
           <React.Suspense fallback={<em>Loading...</em>}>
             <GlobalStyle />
+            <TopNavigation />
             <WebsiteContainer>
-              <TopNavigation />
               <Router>
                 <Routes path="*" />
               </Router>

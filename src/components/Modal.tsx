@@ -16,7 +16,7 @@ interface CircleDivProps {
   readonly isOpen: boolean;
   readonly radius: number;
 }
-const CircleDiv = styled("div")<CircleDivProps>`
+const CircleDiv = styled("div") <CircleDivProps>`
   position: absolute;
   width: ${p => (p.isOpen ? p.radius * 2 : 0)}px;
   height: ${p => (p.isOpen ? p.radius * 2 : 0)}px;
@@ -30,10 +30,11 @@ const CircleDiv = styled("div")<CircleDivProps>`
   opacity: ${p => (p.isOpen ? 1 : 0)};
 `;
 
+const getMaxWindowDimension = (): number => {
+  return Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
+};
+
 const Circle = ({ isOpen }: { isOpen: boolean }) => {
-  const getMaxWindowDimension = (): number => {
-    return Math.sqrt(window.innerWidth ** 2 + window.innerHeight ** 2);
-  };
 
   const [maxDimension, setMaxDimension] = React.useState(
     getMaxWindowDimension()
@@ -60,7 +61,7 @@ const Circle = ({ isOpen }: { isOpen: boolean }) => {
 interface ContentContainerProps {
   readonly isOpen: boolean;
 }
-const ContentContainer = styled("div")<ContentContainerProps>`
+const ContentContainer = styled("div") <ContentContainerProps>`
   position: fixed;
   z-index: 9001;
   top: 0;

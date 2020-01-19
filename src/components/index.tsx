@@ -1,5 +1,5 @@
 export { Logo } from "./Logo";
-export { TopNavigation } from "./TopNavigation";
+export * from "./TopNavigation";
 export { WebsiteContainer } from "./WebsiteContainer";
 export { GlobalStyle } from "./GlobalStyle";
 export { Portal } from "./Portal";
