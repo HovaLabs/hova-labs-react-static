@@ -77,7 +77,7 @@ const ModalContent = styled("div")`
 const ClosedButtonContainer = styled("div")`
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   padding: ${p => p.theme.spacings.l}px;
 `;
 
