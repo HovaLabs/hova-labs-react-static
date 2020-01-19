@@ -8,22 +8,21 @@ interface TopNavigationContainerProps {
 export const TopNavigationContainer = styled("div")<
   TopNavigationContainerProps
 >`
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 1000;
   > * {
-    position: absolute;
+    position: fixed;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: ${p =>
-      p.theme.colors.backgroundSecondary
+      p.theme.colors.backgroundPrimary
         .replace("rgb", "rgba")
-        .replace(")", p.scrolled ? ", 1)" : ", 0.7)")};
-    padding: ${p => p.theme.spacings.l}px;
-    border-bottom: ${p => (p.scrolled ? "3px solid black" : "none")};
+        .replace(")", p.scrolled ? ", 1)" : ", 0)")};
+    padding: ${p => p.theme.backgroundGutters.desktop}px;
     transition: all 250ms;
   }
 `;

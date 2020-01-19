@@ -7,10 +7,12 @@ import {
   Spacings,
   Typography,
 } from "@hova-labs/bento-box-web";
+import { BackgroundGutters } from "../types";
 
 declare module "styled-components" {
   export interface DefaultTheme {
     name: "lightTheme" | "darkTheme";
+    backgroundGutters: BackgroundGutters;
     breakpoints: Breakpoints;
     colors: Colors;
     radii: Radii;

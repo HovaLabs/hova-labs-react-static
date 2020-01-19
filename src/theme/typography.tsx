@@ -29,10 +29,9 @@ export const typography: Typography = {
   headingSmall: css`
     ${p => css`
       color: ${p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
-        m: "20px",
+        m: "30px",
       })}
     `}
   `,
