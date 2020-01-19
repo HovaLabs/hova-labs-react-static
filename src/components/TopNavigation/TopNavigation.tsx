@@ -33,7 +33,7 @@ export const TopNavigation = (): React.ReactElement => {
   return (
     <>
       <TopNavigationModal
-        navModalIsOpen
+        navModalIsOpen={navModalIsOpen}
         setNavModalIsOpen={setNavModalIsOpen}
       />
       <S.TopNavigationContainer scrolled={scrolled} menuIsOpen={navModalIsOpen}>

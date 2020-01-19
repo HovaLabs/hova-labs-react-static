@@ -17,14 +17,8 @@ export const mobileNavLinksArray: Array<NavLink> = topNavLinks;
 export const desktopNavLinks = desktopNavLinksArray.map((
   l // Slice to remove "Home" since it's on the logo
 ) => (
-  <Link to="/">
-    >
-    <Text
-      typography="headingMedium"
-      color={window.location.pathname === l.url ? "accentPrimary" : undefined}
-    >
-      {l.name}
-    </Text>
+  <Link to={l.url}>
+    <Text typography="headingMedium">{l.name}</Text>
   </Link>
 ));
 
@@ -32,14 +26,7 @@ export const mobileNavLinks = mobileNavLinksArray.map(l => {
   return (
     <div key={l.url}>
       <Link to={l.url}>
-        <Text
-          typography="headingLarge"
-          color={
-            window.location.pathname === l.url ? "accentPrimary" : undefined
-          }
-        >
-          {l.name}
-        </Text>
+        <Text typography="headingLarge">{l.name}</Text>
       </Link>
     </div>
   );
