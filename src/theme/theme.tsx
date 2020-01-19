@@ -4,11 +4,17 @@ import { responsiveStyle } from "@hova-labs/bento-box-web";
 import { breakpoints } from "./breakpoints";
 import { colorsLightTheme, colorsDarkTheme } from "./colors";
 import { radii } from "./radii";
+import { BackgroundGutters, backgroundGutters } from "./backgroundGutters";
 import { spacings } from "./spacings";
 import { typography } from "./typography";
 
-const lightTheme: DefaultTheme = {
+interface HovaLabsTheme extends DefaultTheme {
+  backgroundGutters: BackgroundGutters;
+}
+
+const lightTheme: HovaLabsTheme = {
   name: "lightTheme",
+  backgroundGutters,
   breakpoints,
   colors: colorsLightTheme,
   radii,
@@ -17,8 +23,9 @@ const lightTheme: DefaultTheme = {
   responsiveStyle,
 };
 
-const darkTheme: DefaultTheme = {
+const darkTheme: HovaLabsTheme = {
   name: "darkTheme",
+  backgroundGutters,
   breakpoints,
   colors: colorsDarkTheme,
   radii,
