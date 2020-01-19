@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Link as LinkLib } from "@reach/router";
+import { Link } from "@reach/router";
 import { DimensionsContext, Text } from "@hova-labs/bento-box-web";
 
-import { Icon, Link, Logo, Modal } from ".";
+import { Icon, Logo, Modal } from ".";
 
 interface TopNavigationContainerProps {
   readonly scrolled: boolean;
@@ -51,6 +51,10 @@ const Wide = styled("div")`
       s: "none",
       l: "initial",
     })}
+  > span > a {
+    text-decoration: none;
+    margin-left: ${p => p.theme.spacings.xl}px;
+  }
 `;
 
 const MenuButton = styled("div")`
@@ -68,9 +72,11 @@ const ModalContent = styled("div")`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  > div > a {
-    text-decoration: none;
-    margin: 0 ${p => p.theme.spacings.l}px;
+  > div {
+    margin: ${p => p.theme.spacings.m}px 0;
+    > a {
+      text-decoration: none;
+    }
   }
 `;
 
@@ -92,6 +98,13 @@ const links = [
 export const TopNavigation = (): React.ReactElement => {
   const { breakpoint } = React.useContext(DimensionsContext);
   const [menuIsOpen, setMenuIsOpen] = React.useState(false);
+  const [routeChange, setRouteChange] = React.useState(0); // hack increment this when we click on a route to update the route highlight styles
+  const LinkLib = (props: any): React.ReactElement => (
+    // eslint-disable-next-line
+    <span onClick={() => setRouteChange(routeChange + 1)}>
+      <Link {...props} />
+    </span>
+  );
 
   const isScrolled = (): boolean => {
     if (typeof document !== "undefined") {
@@ -127,13 +140,24 @@ export const TopNavigation = (): React.ReactElement => {
               onClick={(): void => setMenuIsOpen(!menuIsOpen)}
             />
           </ClosedButtonContainer>
-          {links.map(l => (
-            <div>
-              <LinkLib to={l.url} onClick={(): void => setMenuIsOpen(false)}>
-                <Text typography="headingLarge">{l.name}</Text>
-              </LinkLib>
-            </div>
-          ))}
+          {links.map(l => {
+            return (
+              <div key={l.url}>
+                <LinkLib to={l.url} onClick={(): void => setMenuIsOpen(false)}>
+                  <Text
+                    typography="headingLarge"
+                    color={
+                      window.location.pathname === l.url
+                        ? "accentPrimary"
+                        : undefined
+                    }
+                  >
+                    {l.name}
+                  </Text>
+                </LinkLib>
+              </div>
+            );
+          })}
         </ModalContent>
       </Modal>
       <TopNavigationContainer scrolled={scrolled} menuIsOpen={menuIsOpen}>
@@ -147,7 +171,18 @@ export const TopNavigation = (): React.ReactElement => {
             {links.slice(1).map((
               l // Slice to remove "Home" since it's on the logo
             ) => (
-              <Link to={l.url}>{l.name}</Link>
+              <LinkLib to={l.url} key={l.url}>
+                <Text
+                  typography="headingMedium"
+                  color={
+                    window.location.pathname === l.url
+                      ? "accentPrimary"
+                      : undefined
+                  }
+                >
+                  {l.name}
+                </Text>
+              </LinkLib>
             ))}
           </Wide>
           <MenuButton>
