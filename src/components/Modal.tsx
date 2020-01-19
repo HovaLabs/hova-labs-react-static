@@ -25,7 +25,7 @@ const CircleDiv = styled("div")<CircleDivProps>`
   border-radius: 50%;
   pointer-events: none;
   transition: all 500ms;
-  ${p => (p.isOpen ? "" : "transition-delay: 500ms;")}
+  ${p => (p.isOpen ? "" : "transition-delay: 250ms;")}
   background: ${p => p.theme.colors.backgroundPrimary};
   opacity: ${p => (p.isOpen ? 1 : 0)};
 `;
@@ -69,11 +69,8 @@ const ContentContainer = styled("div")<ContentContainerProps>`
   right: 0;
   ${p => (p.isOpen ? "" : "pointer-events: none;")}
   opacity: ${p => (p.isOpen ? 1 : 0)};
-  transition: opacity 500ms;
+  transition: opacity 250ms;
   ${p => (p.isOpen ? "transition-delay: 500ms;" : "")}
-  display: flex;
-  justify-content: center;
-  align-items: center;
 `;
 
 interface ModalProps {

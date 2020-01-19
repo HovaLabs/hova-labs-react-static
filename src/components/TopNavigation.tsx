@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link as LinkLib } from "@reach/router";
-import { DimensionsContext } from "@hova-labs/bento-box-web";
-import { Link, Logo, Modal } from ".";
+import { DimensionsContext, Text } from "@hova-labs/bento-box-web";
+
+import { Icon, Link, Logo, Modal } from ".";
 
 interface TopNavigationContainerProps {
   readonly scrolled: boolean;
@@ -58,7 +59,35 @@ const MenuButton = styled("div")`
       s: "initial",
       l: "none",
     })}
+  cursor: pointer;
 `;
+
+const ModalContent = styled("div")`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  > div > a {
+    text-decoration: none;
+    margin: 0 ${p => p.theme.spacings.l}px;
+  }
+`;
+
+const ClosedButtonContainer = styled("div")`
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: ${p => p.theme.spacings.l}px;
+`;
+
+const links = [
+  { url: "/", name: "Home" },
+  { url: "/projects", name: "Projects" },
+  { url: "/blog", name: "Blog" },
+  { url: "/store", name: "Store" },
+  { url: "/contact", name: "Contact" },
+];
 
 export const TopNavigation = (): React.ReactElement => {
   const { breakpoint } = React.useContext(DimensionsContext);
@@ -88,18 +117,24 @@ export const TopNavigation = (): React.ReactElement => {
     };
   }, [isScrolled, setScrolled]);
 
-  console.log("dafaq", menuIsOpen);
-
   return (
     <>
       <Modal isOpen={menuIsOpen}>
-        <button
-          onClick={() => {
-            setMenuIsOpen(!menuIsOpen);
-          }}
-        >
-          yo!
-        </button>
+        <ModalContent>
+          <ClosedButtonContainer>
+            <Icon
+              name="MdClose"
+              onClick={(): void => setMenuIsOpen(!menuIsOpen)}
+            />
+          </ClosedButtonContainer>
+          {links.map(l => (
+            <div>
+              <LinkLib to={l.url} onClick={(): void => setMenuIsOpen(false)}>
+                <Text typography="headingLarge">{l.name}</Text>
+              </LinkLib>
+            </div>
+          ))}
+        </ModalContent>
       </Modal>
       <TopNavigationContainer scrolled={scrolled} menuIsOpen={menuIsOpen}>
         <div>
@@ -109,19 +144,19 @@ export const TopNavigation = (): React.ReactElement => {
             </LogoContainer>
           </LinkLib>
           <Wide>
-            <Link to="/projects">Projects</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/store">Store</Link>
-            <Link to="/contact">Contact</Link>
+            {links.slice(1).map((
+              l // Slice to remove "Home" since it's on the logo
+            ) => (
+              <Link to={l.url}>{l.name}</Link>
+            ))}
           </Wide>
           <MenuButton>
-            <button
-              onClick={() => {
+            <Icon
+              name="GiHamburgerMenu"
+              onClick={(): void => {
                 setMenuIsOpen(!menuIsOpen);
               }}
-            >
-              yo!
-            </button>
+            />
           </MenuButton>
         </div>
       </TopNavigationContainer>

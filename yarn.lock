@@ -1114,10 +1114,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hova-labs/bento-box-web@^0.10.1":
-  version "0.10.1"
-  resolved "https://registry.yarnpkg.com/@hova-labs/bento-box-web/-/bento-box-web-0.10.1.tgz#2d1ddffc65b5c3e47b130a0971fc4829cc7f5b92"
-  integrity sha512-ZUuMDNpE1j0bdmiHf2lj6kfKTx4P2uDRI+h0fgcYL+OnsP/TlriMB/sNbMzxiyPJmKHIsisq4OQEiwApsMOSPw==
+"@hova-labs/bento-box-web@^0.10.2":
+  version "0.10.2"
+  resolved "https://registry.yarnpkg.com/@hova-labs/bento-box-web/-/bento-box-web-0.10.2.tgz#16b46008cf3cc7166e8517f283ed5f47fde7eeed"
+  integrity sha512-EmlaL3zbPgBwNqa75/B9G+Yp5htoaxXUGkM8U1xGvir6EbC81umw6C51hcogoz8WkxzV1el2l7we6tcgsjBMRQ==
   dependencies:
     "@types/jest" "^24.0.23"
     "@types/node" "^12.12.14"
@@ -10803,6 +10803,13 @@ react-hot-loader@*, react-hot-loader@^4.12.11, react-hot-loader@^4.3.6:
     react-lifecycles-compat "^3.0.4"
     shallowequal "^1.1.0"
     source-map "^0.7.3"
+
+react-icons@^3.8.0:
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.8.0.tgz#229de5904809696c9f46932bd9b6126b2522866e"
+  integrity sha512-rA/8GRKjPulft8BSBSMsHkE1AGPqJ7LjNsyk0BE7XjG70Iz62zOled2SJk7LDo8x9z86a3xOstDlKlMZ4pAy7A==
+  dependencies:
+    camelcase "^5.0.0"
 
 react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
   version "16.12.0"
