@@ -1,5 +1,5 @@
 # Startup info
 
-``
+```
 yarn start
 ```
