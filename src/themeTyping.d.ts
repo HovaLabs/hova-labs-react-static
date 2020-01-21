@@ -17,5 +17,9 @@ declare module "styled-components" {
     spacings: Spacings;
     typography: Typography;
     responsiveStyle: (styleKey: string, styleObject: any) => any;
+    responsiveValue: (styleObject: any) => any;
+    width: number;
+    height: number;
+    breakpoint: keyof Breakpoints;
   }
 }

@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import {
+  HovaLabsLogo as BentoHovaLabsLogo,
+  Icon,
+} from "@hova-labs/bento-box-web";
 
-interface TopNavigationContainerProps {
+interface TopNavContainerProps {
   readonly scrolled: boolean;
   readonly menuIsOpen: boolean;
 }
 
-export const TopNavigationContainer = styled("div")<
-  TopNavigationContainerProps
->`
+export const TopNavigationContainer = styled("div")<TopNavContainerProps>`
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -29,6 +31,26 @@ export const TopNavigationContainer = styled("div")<
 `;
 
 export const LogoContainer = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("width", {
+      s: "38px",
+      l: "70px",
+    })}
+  ${p =>
+    p.theme.responsiveStyle("height", {
+      s: "38px",
+      l: "70px",
+    })}
+  justify-self: flex-start;
+`;
+
+export const HovaLabsLogo = styled(Icon).attrs(p => ({
+  IconComponent: BentoHovaLabsLogo,
+  size: p.theme.responsiveValue({
+    s: 38,
+    l: 70,
+  })(p),
+}))`
   ${p =>
     p.theme.responsiveStyle("width", {
       s: "38px",

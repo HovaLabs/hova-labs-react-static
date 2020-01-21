@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import * as S from "./TopNavigationStyles";
-import { Icon, Logo } from "..";
+import { Icon } from "..";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { desktopNavLinks } from "./TopNavigationLinks";
 
@@ -39,9 +39,8 @@ export const TopNavigation = (): React.ReactElement => {
       <S.TopNavigationContainer scrolled={scrolled} menuIsOpen={navModalIsOpen}>
         <div>
           <Link to="/">
-            <S.LogoContainer>
-              <Logo />
-            </S.LogoContainer>
+            {/* Add onPress to wrap icon in touchable opacity */}
+            <S.HovaLabsLogo onPress={() => {}} />
           </Link>
           <S.Wide>{desktopNavLinks}</S.Wide>
           <S.MenuButton>
