@@ -43,7 +43,7 @@ export const TopNavigation = (): React.ReactElement => {
               <IconsLogo />
             </S.LogoContainer>
           </Link>
-          <S.Wide>{desktopNavLinks}</S.Wide>
+          <S.Ul>{desktopNavLinks}</S.Ul>
           <S.MenuButton>
             <Icons
               name="GiHamburgerMenu"

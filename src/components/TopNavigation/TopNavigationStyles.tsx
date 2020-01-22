@@ -31,6 +31,14 @@ export const TopNavigationContainer = styled("div")<
   }
 `;
 
+export const Li = styled("li")`
+  display: inline;
+  padding-right: ${p => p.theme.spacings.xl}px;
+  > a {
+    text-decoration: none;
+  }
+`;
+
 export const LogoContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("width", {
@@ -45,16 +53,13 @@ export const LogoContainer = styled("div")`
   justify-self: flex-start;
 `;
 
-export const Wide = styled("div")`
+export const Ul = styled("ul")`
+  list-style: none;
   ${p =>
     p.theme.responsiveStyle("display", {
       s: "none",
       l: "initial",
-    })}
-  > span > a {
-    text-decoration: none;
-    margin-left: ${p => p.theme.spacings.xl}px;
-  }
+    })};
 `;
 
 export const MenuButton = styled("div")`

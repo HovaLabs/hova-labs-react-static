@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import { Text } from "@hova-labs/bento-box-web";
 import { NavLink } from "../types";
+import { Li } from "./TopNavigationStyles";
 
 const topNavLinks: Array<NavLink> = [
   { url: "/", name: "Home" }, // always keep home as first link
@@ -20,9 +21,11 @@ export const desktopNavLinks = desktopNavLinksArray.map(
   ) => {
     const { url, name } = link;
     return (
-      <Link to={url}>
-        <Text typography="headingSmall">{name}</Text>
-      </Link>
+      <Li>
+        <Link to={url}>
+          <Text typography="headingSmall">{name}</Text>
+        </Link>
+      </Li>
     );
   }
 );
@@ -30,10 +33,10 @@ export const desktopNavLinks = desktopNavLinksArray.map(
 export const mobileNavLinks = mobileNavLinksArray.map(link => {
   const { url, name } = link;
   return (
-    <div key={url}>
+    <Li key={name}>
       <Link to={url}>
         <Text typography="headingSmall">{name}</Text>
       </Link>
-    </div>
+    </Li>
   );
 });
