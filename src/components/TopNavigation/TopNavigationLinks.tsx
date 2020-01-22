@@ -14,19 +14,25 @@ const topNavLinks: Array<NavLink> = [
 export const desktopNavLinksArray: Array<NavLink> = topNavLinks.slice(1);
 export const mobileNavLinksArray: Array<NavLink> = topNavLinks;
 
-export const desktopNavLinks = desktopNavLinksArray.map((
-  l // Slice to remove "Home" since it's on the logo
-) => (
-  <Link to={l.url}>
-    <Text typography="headingSmall">{l.name}</Text>
-  </Link>
-));
+export const desktopNavLinks = desktopNavLinksArray.map(
+  (
+    link // Slice to remove "Home" since it's on the logo
+  ) => {
+    const { url, name } = link;
+    return (
+      <Link to={url}>
+        <Text typography="headingSmall">{name}</Text>
+      </Link>
+    );
+  }
+);
 
-export const mobileNavLinks = mobileNavLinksArray.map(l => {
+export const mobileNavLinks = mobileNavLinksArray.map(link => {
+  const { url, name } = link;
   return (
-    <div key={l.url}>
-      <Link to={l.url}>
-        <Text typography="headingSmall">{l.name}</Text>
+    <div key={url}>
+      <Link to={url}>
+        <Text typography="headingSmall">{name}</Text>
       </Link>
     </div>
   );
