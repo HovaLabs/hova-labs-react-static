@@ -22,7 +22,11 @@ export const TopNavigationContainer = styled("div")<
       p.theme.colors.backgroundPrimary
         .replace("rgb", "rgba")
         .replace(")", p.scrolled ? ", 1)" : ", 0)")};
-    padding: ${p => p.theme.backgroundGutters.desktop}px;
+    ${p =>
+      p.theme.responsiveStyle("padding", {
+        s: `${p.theme.backgroundGutters.s}px`,
+        l: `${p.theme.backgroundGutters.l}px`,
+      })}
     transition: all 250ms;
   }
 `;
