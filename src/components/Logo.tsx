@@ -6,7 +6,11 @@ const StyledPath = styled("path")`
 `;
 
 export const SvgContainer = styled("svg")`
-  margin: -6px;
+  ${p =>
+    p.theme.responsiveStyle("margin", {
+      s: `-4px`,
+      l: `-6px`,
+    })}
 `;
 
 export const Logo = () => (
