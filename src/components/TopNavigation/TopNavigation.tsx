@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 import * as S from "./TopNavigationStyles";
-import { Icons, IconsLogo } from "../Icons";
+import { Icons, IconsLogo } from "../index";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { desktopNavLinks } from "./TopNavigationLinks";
 

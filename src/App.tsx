@@ -2,7 +2,7 @@ import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
 import { Router } from "@reach/router";
 import { DesignSystemProvider } from "@hova-labs/bento-box-web";
-import { GlobalStyle, TopNavigation, WebsiteContainer } from "./components";
+import { GlobalStyle, TopNavigation, ContainersWebsite } from "./components";
 import { themes } from "./theme";
 import "./global.css";
 
@@ -17,11 +17,11 @@ function App(): React.ReactElement {
           <React.Suspense fallback={<em>Loading...</em>}>
             <GlobalStyle />
             <TopNavigation />
-            <WebsiteContainer>
+            <ContainersWebsite>
               <Router>
                 <Routes path="*" />
               </Router>
-            </WebsiteContainer>
+            </ContainersWebsite>
           </React.Suspense>
         </div>
       </DesignSystemProvider>

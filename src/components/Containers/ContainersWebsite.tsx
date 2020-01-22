@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WebsiteContainer = styled("div")`
+export const ContainersWebsite = styled("div")`
   position: absolute;
   top: 0;
   /* bottom: 0; no bottom to maintain our infinite height and bottom padding */
