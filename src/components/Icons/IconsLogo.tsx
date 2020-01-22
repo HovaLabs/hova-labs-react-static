@@ -13,7 +13,7 @@ export const SvgContainer = styled("svg")`
     })}
 `;
 
-export const Logo = () => (
+export const IconsLogo = () => (
   <SvgContainer
     x="0px"
     y="0px"

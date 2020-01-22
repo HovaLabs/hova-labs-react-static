@@ -23,7 +23,7 @@ const IconComponent = ({
   return <Component {...rest} />;
 };
 
-export const Icon = styled(IconComponent).attrs(p => ({
+export const Icons = styled(IconComponent).attrs(p => ({
   size: p.theme.spacings.xl,
 }))`
   color: ${p => p.theme.colors.primary};

@@ -1,6 +1,7 @@
 import React from "react";
 import * as S from "./TopNavigationStyles";
-import { Icon, Modal } from "..";
+import { Modal } from "..";
+import { Icons } from "../Icons";
 import { mobileNavLinks } from "./TopNavigationLinks";
 
 export const TopNavigationModal = ({
@@ -14,7 +15,7 @@ export const TopNavigationModal = ({
     <Modal isOpen={navModalIsOpen}>
       <S.ModalContent>
         <S.ClosedButtonContainer>
-          <Icon
+          <Icons
             name="MdClose"
             onClick={(): void => setNavModalIsOpen(!navModalIsOpen)}
           />
