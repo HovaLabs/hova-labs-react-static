@@ -37,6 +37,11 @@ export const Li = styled("li")`
   > a {
     text-decoration: none;
   }
+  ${p =>
+    p.theme.responsiveStyle("padding-bottom", {
+      s: `${p.theme.spacings.xl}px`,
+      l: "0px",
+    })}
 `;
 
 export const LogoContainer = styled("div")`
@@ -69,6 +74,15 @@ export const MenuButton = styled("div")`
       l: "none",
     })}
   cursor: pointer;
+`;
+
+export const ModalContainer = styled("div")`
+  color: red;
+  ${p =>
+    p.theme.responsiveStyle("display", {
+      s: "block",
+      l: "none",
+    })}
 `;
 
 export const ModalContent = styled("div")`

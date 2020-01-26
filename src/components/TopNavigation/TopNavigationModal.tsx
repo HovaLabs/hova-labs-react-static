@@ -12,16 +12,18 @@ export const TopNavigationModal = ({
   setNavModalIsOpen: Function;
 }): React.ReactElement => {
   return (
-    <Modal isOpen={navModalIsOpen}>
-      <S.ModalContent>
-        <S.ClosedButtonContainer>
-          <Icons
-            name="MdClose"
-            onClick={(): void => setNavModalIsOpen(!navModalIsOpen)}
-          />
-        </S.ClosedButtonContainer>
-        {mobileNavLinks}
-      </S.ModalContent>
-    </Modal>
+    <S.ModalContainer>
+      <Modal isOpen={navModalIsOpen}>
+        <S.ModalContent>
+          <S.ClosedButtonContainer>
+            <Icons
+              name="MdClose"
+              onClick={(): void => setNavModalIsOpen(!navModalIsOpen)}
+            />
+          </S.ClosedButtonContainer>
+          {mobileNavLinks}
+        </S.ModalContent>
+      </Modal>
+    </S.ModalContainer>
   );
 };
