@@ -55,6 +55,11 @@ export const LogoContainer = styled("div")`
       s: "38px",
       l: "70px",
     })}
+  ${p =>
+    p.theme.responsiveStyle("margin", {
+      s: `${p.theme.spacings.l}px`,
+      l: 0,
+    })}
   justify-self: flex-start;
 `;
 
@@ -68,6 +73,7 @@ export const Ul = styled("ul")`
 `;
 
 export const MenuButton = styled("div")`
+  padding: ${p => p.theme.spacings.l}px;
   ${p =>
     p.theme.responsiveStyle("display", {
       s: "initial",
@@ -102,6 +108,6 @@ export const ModalContent = styled("div")`
 export const ClosedButtonContainer = styled("div")`
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   padding: ${p => p.theme.spacings.l}px;
 `;
