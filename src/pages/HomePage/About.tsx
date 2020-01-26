@@ -46,6 +46,11 @@ const AboutTextContainer = styled("div")`
       l: `${p.theme.spacings.xxl}px`,
     })}
   padding-bottom: 0;
+  ${p =>
+    p.theme.responsiveStyle("width", {
+      s: `100%`,
+      l: "50%",
+    })}
 `;
 // ABOUT END
 
@@ -58,7 +63,7 @@ export const About = () => (
       <div>
         <Text typography="headingLarge">The Hovas</Text>
       </div>
-      <div style={{ maxWidth: 300 }}>
+      <div>
         <Text>
           We are two Nebraska nerds currently living in the SF Bay Area who use
           diverse backgrounds in art and science to buld scalable projects.

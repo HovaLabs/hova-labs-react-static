@@ -4,5 +4,5 @@ export const breakpoints: Breakpoints = {
   s: 0,
   m: 321,
   l: 769,
-  xl: 1281
+  xl: 1281,
 };

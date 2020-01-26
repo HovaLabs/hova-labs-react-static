@@ -9,20 +9,18 @@ export const typography: Typography = {
   headingLarge: css`
     ${p => css`
       color: ${p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
-        s: "46px",
-        m: "52px",
+        s: "35px",
+        m: "70px",
       })}
     `}
   `,
   headingMedium: css<TypographyProps>`
     ${p => css`
       color: ${p.color || p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
-        s: "20px",
-        m: "34px",
+        s: "25px",
+        m: "50px",
       })}
     `}
   `,
@@ -30,8 +28,8 @@ export const typography: Typography = {
     ${p => css`
       color: ${p.theme.colors.primary};
       ${p.theme.responsiveStyle("font-size", {
-        s: "16px",
-        m: "30px",
+        s: "20px",
+        m: "24px",
       })}
     `}
   `,
@@ -40,9 +38,10 @@ export const typography: Typography = {
       color: ${p.theme.colors.primary};
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {
-        s: "12px",
-        m: "16px",
+        s: "16px",
+        m: "24px",
       })}
+      line-height: 150.5%
     `}
   `,
   buttonPrimary: css`
@@ -50,28 +49,26 @@ export const typography: Typography = {
       color: ${p.theme.colors.primary};
       font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
-        s: "12px",
-        m: "16px",
+        s: "16px",
+        m: "24px",
       })}
     `}
   `,
   buttonSecondary: css`
     ${p => css`
       color: ${p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
-        s: "12px",
-        m: "16px",
+        s: "16px",
+        m: "24px",
       })}
     `}
   `,
   buttonTertiary: css`
     ${p => css`
       color: ${p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
       ${p.theme.responsiveStyle("font-size", {
-        s: "12px",
-        m: "16px",
+        s: "16px",
+        m: "24px",
       })}
     `}
   `,

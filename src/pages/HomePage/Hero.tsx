@@ -18,7 +18,12 @@ const HeroText = styled("div")`
   ${p =>
     p.theme.responsiveStyle("font-size", {
       s: "50px",
-      l: "100px",
+      l: "114px",
+    })}
+  ${p =>
+    p.theme.responsiveStyle("letter-spacing", {
+      s: "10px",
+      l: "10px",
     })}
 `;
 
