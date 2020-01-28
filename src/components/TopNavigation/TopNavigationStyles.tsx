@@ -57,7 +57,7 @@ export const LogoContainer = styled("div")`
     })}
   ${p =>
     p.theme.responsiveStyle("margin", {
-      s: `${p.theme.spacings.l}px`,
+      s: `0`,
       l: 0,
     })}
   justify-self: flex-start;
@@ -73,7 +73,6 @@ export const Ul = styled("ul")`
 `;
 
 export const MenuButton = styled("div")`
-  padding: ${p => p.theme.spacings.l}px;
   ${p =>
     p.theme.responsiveStyle("display", {
       s: "initial",
