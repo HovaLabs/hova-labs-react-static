@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ModalContainer = styled("div")`
+  pointer-events: none;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -40,6 +41,7 @@ interface ContentContainerProps {
 }
 export const ContentContainer = styled("div")<ContentContainerProps>`
   position: fixed;
+  pointer-events: auto;
   z-index: 9001;
   top: 0;
   bottom: 0;
