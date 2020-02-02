@@ -1,9 +1,9 @@
 import React from "react";
 import { useRouteData } from "react-static";
 import { Link } from "@reach/router";
-import { Post } from "../../types";
+import { Post } from "../../../types";
 
-export default () => {
+export const Blog = (): React.ReactElement => {
   const { posts }: { posts: Post[] } = useRouteData();
 
   return (
