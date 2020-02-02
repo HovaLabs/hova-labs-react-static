@@ -39,7 +39,6 @@ export const TopNavigationContainer = styled("div")<
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0px 4px 4px 0px ${primaryOpaqueIfScrolled};
     background: ${primaryOpaqueIfScrolled};
     ${p =>
       p.theme.responsiveStyle("padding", {
