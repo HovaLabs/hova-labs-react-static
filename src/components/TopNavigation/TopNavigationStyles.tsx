@@ -43,8 +43,8 @@ export const TopNavigationContainer = styled("div")<
     background: ${primaryOpaqueIfScrolled};
     ${p =>
       p.theme.responsiveStyle("padding", {
-        s: `${p.theme.backgroundGutters.s}px`,
-        l: `${p.theme.backgroundGutters.l}px`,
+        s: `${p.theme.spacings.xl}px`,
+        l: `${p.theme.spacings.xl}px`,
       })}
     transition: all 250ms;
   }
@@ -127,5 +127,5 @@ export const ClosedButtonContainer = styled("div")`
   position: absolute;
   top: 0;
   right: 0;
-  padding: ${p => p.theme.spacings.l}px;
+  padding: ${p => p.theme.spacings.xl}px;
 `;

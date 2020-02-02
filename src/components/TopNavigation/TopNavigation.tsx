@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { Icon } from "@hova-labs/bento-box-web";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import * as S from "./TopNavigationStyles";
-import { Icons } from "../index";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { desktopNavLinks } from "./TopNavigationLinks";
 
@@ -46,9 +47,10 @@ export const TopNavigation = (): React.ReactElement => {
           </Link>
           <S.Ul>{desktopNavLinks}</S.Ul>
           <S.MenuButton>
-            <Icons
-              name="GiHamburgerMenu"
-              onClick={(): void => {
+            <Icon
+              size={32}
+              IconComponent={GiHamburgerMenu}
+              onPress={(): void => {
                 setNavModalIsOpen(!navModalIsOpen);
               }}
             />

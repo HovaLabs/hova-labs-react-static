@@ -1,7 +1,9 @@
 import React from "react";
+import { MdClose } from "react-icons/md";
+import { Icon } from "@hova-labs/bento-box-web";
+
 import * as S from "./TopNavigationStyles";
 import { Modal } from "..";
-import { Icons } from "../Icons";
 import { mobileNavLinks } from "./TopNavigationLinks";
 
 export const TopNavigationModal = ({
@@ -16,9 +18,10 @@ export const TopNavigationModal = ({
       <Modal isOpen={navModalIsOpen}>
         <S.ModalContent>
           <S.ClosedButtonContainer>
-            <Icons
-              name="MdClose"
-              onClick={(): void => setNavModalIsOpen(!navModalIsOpen)}
+            <Icon
+              size={32}
+              IconComponent={MdClose}
+              onPress={(): void => setNavModalIsOpen(!navModalIsOpen)}
             />
           </S.ClosedButtonContainer>
           {mobileNavLinks}
