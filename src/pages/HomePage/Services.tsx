@@ -30,8 +30,8 @@ const ServiceGridContainer = styled("div")`
     })}
   ${p =>
     p.theme.responsiveStyle("grid-gap", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
+      s: `${p.theme.spacings.xl}px`,
+      l: `${p.theme.spacings.xxl}px`,
     })}
 `;
 
