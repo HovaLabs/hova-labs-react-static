@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "@hova-labs/bento-box-web";
+import { IconBaseProps } from "react-icons";
+import { Icon, Cube, Robot, XML, Magic, Text } from "@hova-labs/bento-box-web";
 
 // SERVICES START
 const ServicesContainer = styled("div")`
@@ -37,7 +38,7 @@ const ServiceGridContainer = styled("div")`
 const ServiceGridItem = styled("div")``;
 
 type Service = {
-  icon: string;
+  icon: (props: IconBaseProps) => JSX.Element;
   title: string;
   description: string;
   linkTitle: string;
@@ -45,7 +46,7 @@ type Service = {
 };
 const services: Array<Service> = [
   {
-    icon: "robot",
+    icon: Robot,
     title: "Firmware & Electronics",
     description:
       "From Arduino to Raspberry Pi, Teensy to AtMega, we've gotten our hands dirty in our fair share of firmware and electronics.",
@@ -53,7 +54,7 @@ const services: Array<Service> = [
     linkHref: "http://www.zombo.com",
   },
   {
-    icon: "html-div",
+    icon: XML,
     title: "Web Development",
     description:
       "We've always had a passion for turning a message into reality.",
@@ -61,7 +62,7 @@ const services: Array<Service> = [
     linkHref: "http://www.zombo.com",
   },
   {
-    icon: "cube",
+    icon: Cube,
     title: "3D Printing",
     description:
       "Since 2012 we've been exploring the world of 3d printing and CAD. We love FDM, Fusion360, and OpenSCAD, to name a few.",
@@ -69,7 +70,7 @@ const services: Array<Service> = [
     linkHref: "http://www.zombo.com",
   },
   {
-    icon: "magic",
+    icon: Magic,
     title: "UX & Design Systems",
     description:
       "The number one rule of software is DRY - Don't Repeat Yourself. We love making beautiful and reusable tools for designing websites",
@@ -79,7 +80,7 @@ const services: Array<Service> = [
 ];
 // SERVICES END
 
-export const Services = () => (
+export const Services = (): React.ReactElement => (
   <ServicesContainer>
     <ServicesTextContainer>
       <div>
@@ -92,6 +93,9 @@ export const Services = () => (
     <ServiceGridContainer>
       {services.map(s => (
         <ServiceGridItem key={s.title}>
+          <div>
+            <Icon IconComponent={s.icon} size={32} />
+          </div>
           <div>
             <Text typography="headingMedium">{s.title}</Text>
           </div>

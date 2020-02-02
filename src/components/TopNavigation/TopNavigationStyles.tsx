@@ -1,17 +1,30 @@
-import styled from "styled-components";
-import { HovaLabsLogo } from "@hova-labs/bento-box-web";
+import styled, { DefaultTheme } from "styled-components";
+import { Icon, HovaLabsLogo } from "@hova-labs/bento-box-web";
 
 interface TopNavigationContainerProps {
   readonly scrolled: boolean;
   readonly menuIsOpen: boolean;
 }
 
-export const Logo = styled(HovaLabsLogo).attrs(p => ({
+export const Logo = styled(Icon).attrs(p => ({
   size: p.theme.responsiveValue({
     s: 38,
     l: 70,
   })(p),
-}))``;
+  IconComponent: HovaLabsLogo,
+  onPress: () => {}, // Adding onPress to give it "touchable opacity"
+}))`
+  color: ${p => p.theme.colors.primary};
+`;
+
+// Helper function that sets the color to primary if scrolled, or opaque if not-scrolled
+// Where "not scrolled" means that the page is scrolled up to the top
+const primaryOpaqueIfScrolled = (
+  p: TopNavigationContainerProps & { theme: DefaultTheme }
+): string =>
+  p.theme.colors.backgroundPrimary
+    .replace("rgb", "rgba")
+    .replace(")", p.scrolled ? ", 1)" : ", 0)");
 
 export const TopNavigationContainer = styled("div")<
   TopNavigationContainerProps
@@ -26,10 +39,8 @@ export const TopNavigationContainer = styled("div")<
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: ${p =>
-      p.theme.colors.backgroundPrimary
-        .replace("rgb", "rgba")
-        .replace(")", p.scrolled ? ", 1)" : ", 0)")};
+    box-shadow: 0px 4px 4px 0px ${primaryOpaqueIfScrolled};
+    background: ${primaryOpaqueIfScrolled};
     ${p =>
       p.theme.responsiveStyle("padding", {
         s: `${p.theme.backgroundGutters.s}px`,
