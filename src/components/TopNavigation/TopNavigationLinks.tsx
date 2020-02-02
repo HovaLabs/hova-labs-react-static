@@ -21,7 +21,7 @@ export const desktopNavLinks = desktopNavLinksArray.map(
   ) => {
     const { url, name } = link;
     return (
-      <Li>
+      <Li key={name}>
         <Link to={url}>
           <Text typography="headingSmall">{name}</Text>
         </Link>
