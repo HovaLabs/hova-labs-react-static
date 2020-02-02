@@ -2,6 +2,7 @@ module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
   plugins: [
+    'react-hooks',
     '@typescript-eslint',
     'jest',
     'prettier'
@@ -17,6 +18,8 @@ module.exports = {
     'plugin:prettier/recommended',  // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     "react/no-unescaped-entities": 0,
     "import/prefer-default-export": 0,
     "react/jsx-props-no-spreading": 0,
