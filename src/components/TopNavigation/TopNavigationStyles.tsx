@@ -6,6 +6,13 @@ interface TopNavigationContainerProps {
   readonly menuIsOpen: boolean;
 }
 
+export const getTopNavHeight = (p: { theme: DefaultTheme }): number => {
+  return p.theme.responsiveValue({
+    s: 38 + p.theme.spacings.xl * 2,
+    l: 70 + p.theme.spacings.xl * 2,
+  })(p);
+};
+
 export const Logo = styled(Icon).attrs(p => ({
   size: p.theme.responsiveValue({
     s: 38,
