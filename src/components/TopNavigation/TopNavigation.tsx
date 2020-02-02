@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "@reach/router";
+
 import * as S from "./TopNavigationStyles";
-import { Icons, IconsLogo } from "../index";
+import { Icons } from "../index";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { desktopNavLinks } from "./TopNavigationLinks";
 
@@ -28,7 +29,7 @@ export const TopNavigation = (): React.ReactElement => {
     return (): void => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolled, setScrolled]);
+  }, []);
 
   return (
     <>
@@ -40,7 +41,7 @@ export const TopNavigation = (): React.ReactElement => {
         <div>
           <Link to="/">
             <S.LogoContainer>
-              <IconsLogo />
+              <S.Logo />
             </S.LogoContainer>
           </Link>
           <S.Ul>{desktopNavLinks}</S.Ul>

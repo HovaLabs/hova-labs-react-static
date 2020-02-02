@@ -1,9 +1,17 @@
 import styled from "styled-components";
+import { HovaLabsLogo } from "@hova-labs/bento-box-web";
 
 interface TopNavigationContainerProps {
   readonly scrolled: boolean;
   readonly menuIsOpen: boolean;
 }
+
+export const Logo = styled(HovaLabsLogo).attrs(p => ({
+  size: p.theme.responsiveValue({
+    s: 38,
+    l: 70,
+  })(p),
+}))``;
 
 export const TopNavigationContainer = styled("div")<
   TopNavigationContainerProps

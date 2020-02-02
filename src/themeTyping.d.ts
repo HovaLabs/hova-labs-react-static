@@ -9,6 +9,10 @@ import {
 } from "@hova-labs/bento-box-web";
 import { BackgroundGutters } from "../types";
 
+interface Props {
+  theme: DefaultTheme;
+}
+
 declare module "styled-components" {
   export interface DefaultTheme {
     name: "lightTheme" | "darkTheme";
@@ -19,5 +23,6 @@ declare module "styled-components" {
     spacings: Spacings;
     typography: Typography;
     responsiveStyle: (styleKey: string, styleObject: any) => any;
+    responsiveValue: (styles: any) => (props: Props) => any;
   }
 }

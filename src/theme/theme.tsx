@@ -1,5 +1,5 @@
 import { DefaultTheme } from "styled-components";
-import { responsiveStyle } from "@hova-labs/bento-box-web";
+import { responsiveStyle, responsiveValue } from "@hova-labs/bento-box-web";
 
 import { breakpoints } from "./breakpoints";
 import { colorsLightTheme, colorsDarkTheme } from "./colors";
@@ -19,6 +19,7 @@ const lightTheme: HovaLabsTheme = {
   spacings,
   typography,
   responsiveStyle,
+  responsiveValue,
 };
 
 const darkTheme: HovaLabsTheme = {
@@ -30,6 +31,7 @@ const darkTheme: HovaLabsTheme = {
   spacings,
   typography,
   responsiveStyle,
+  responsiveValue,
 };
 
 export const themes = {
