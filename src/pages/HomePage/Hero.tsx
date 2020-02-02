@@ -25,6 +25,7 @@ const HeroText = styled("div")`
       s: "10px",
       l: "10px",
     })}
+  text-align: center;
 `;
 
 const HeroImage = styled("img").attrs({ src: hovalin })`
