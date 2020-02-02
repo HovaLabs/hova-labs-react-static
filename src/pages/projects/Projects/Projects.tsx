@@ -3,6 +3,12 @@ import { Link } from "@reach/router";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import * as S from "./ProjectsStyles";
 
+import HovaInstrumentsHero from "./Media/hova-instruments-hero.jpg";
+import TSNHero from "./Media/tsn-hero.jpg";
+import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
+import MCUHero from "./Media/mcu-hero.jpg";
+import WaldoHero from "./Media/waldo-hero.jpg";
+
 type Project = {
   title: string;
   description: string;
@@ -13,7 +19,7 @@ const projectArray: Array<Project> = [
   {
     title: "Hova Instruments",
     description: "Open source, 3D printable acoustic instruments for all!",
-    imgSrc: "/media/projects/hova-instruments-hero.jpg",
+    imgSrc: HovaInstrumentsHero,
     links: [
       {
         title: "Hovalin",
@@ -28,7 +34,7 @@ const projectArray: Array<Project> = [
   {
     title: "Synesthesia Network",
     description: "A Social Network for synesthetes and researchers.",
-    imgSrc: "/media/projects/tsn-hero.jpg",
+    imgSrc: TSNHero,
     links: [
       {
         title: "view",
@@ -40,7 +46,7 @@ const projectArray: Array<Project> = [
     title: "Synesthesia Light Show",
     description:
       "An interactive light show that demonstrates musical note --> color synesthesia.",
-    imgSrc: "/media/projects/hovalin-lights-hero.jpg",
+    imgSrc: HovalinLightsHero,
     links: [
       {
         title: "view",
@@ -51,7 +57,7 @@ const projectArray: Array<Project> = [
   {
     title: "HydraPrint MCU",
     description: "A good looking full stack hardware controller interface.",
-    imgSrc: "/media/projects/mcu-hero.jpg",
+    imgSrc: MCUHero,
     links: [
       {
         title: "view",
@@ -63,7 +69,7 @@ const projectArray: Array<Project> = [
     title: "Waldo",
     description:
       "An awesome, project manager friendly interface for managing your team.",
-    imgSrc: "/media/projects/waldo-hero.jpg",
+    imgSrc: WaldoHero,
     links: [
       {
         title: "Hovalin",
