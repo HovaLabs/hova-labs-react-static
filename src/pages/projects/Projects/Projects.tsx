@@ -72,8 +72,8 @@ const projectArray: Array<Project> = [
     imgSrc: WaldoHero,
     links: [
       {
-        title: "Hovalin",
-        link: "/projects/waldo",
+        title: "view",
+        link: "/waldo",
       },
     ],
   },
