@@ -33,10 +33,11 @@ const HeroImage = styled("img").attrs({ src: hovalin })`
   min-width: 600px;
   background-position: center center;
   background-repeat: no-repeat;
+  opacity: 0.5;
 `;
 // HERO END
 
-export const Hero = () => (
+export const Hero = (): React.ReactElement => (
   <HeroContainer>
     <HeroText>HOVA LABS</HeroText>
     <HeroImage />
