@@ -7,6 +7,7 @@ import { radii } from "./radii";
 import { backgroundGutters } from "./backgroundGutters";
 import { spacings } from "./spacings";
 import { typography } from "./typography";
+import { topNavClearance } from "./topNavClearance";
 
 export type HovaLabsTheme = DefaultTheme;
 
@@ -17,6 +18,7 @@ const lightTheme: HovaLabsTheme = {
   colors: colorsLightTheme,
   radii,
   spacings,
+  topNavClearance,
   typography,
   responsiveStyle,
   responsiveValue,
@@ -29,6 +31,7 @@ const darkTheme: HovaLabsTheme = {
   colors: colorsDarkTheme,
   radii,
   spacings,
+  topNavClearance,
   typography,
   responsiveStyle,
   responsiveValue,
