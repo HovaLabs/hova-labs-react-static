@@ -1,17 +1,15 @@
 import React from "react";
+import { BlogTagType } from "../../types";
 
 type BlogTagProps = {
-  title: string;
-  onClick: () => string;
+  tag: BlogTagType;
+  onClick: () => void;
 };
 
-export const BlogTag = ({
-  title,
-  onClick,
-}: BlogTagProps): React.ReactElement => {
+export const BlogTag = ({ tag, onClick }: BlogTagProps): React.ReactElement => {
   return (
     <button onClick={onClick} type="button">
-      {title}
+      {tag.name}
     </button>
   );
 };
