@@ -4,6 +4,7 @@ import BlogListItem from "../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../components/Blog/BlogTag/BlogTag";
 import { blogTags } from "./BlogUtils";
 import { Post } from "../../../types";
+import * as S from "./BlogStyles";
 
 export const Blog = (): React.ReactElement => {
   const { posts }: { posts: Post[] } = useRouteData();
@@ -17,12 +18,12 @@ export const Blog = (): React.ReactElement => {
     <BlogTag tag={tag} onClick={onClick} />
   ));
   return (
-    <div>
+    <S.OuterContainer>
       {blogTagList}
       <h1>It's blog time.</h1>
       <br />
       All Posts:
       <ul>{blogList}</ul>
-    </div>
+    </S.OuterContainer>
   );
 };
