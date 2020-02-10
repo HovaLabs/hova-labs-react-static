@@ -7,7 +7,7 @@ import {
   Spacings,
   Typography,
 } from "@hova-labs/bento-box-web";
-import { BackgroundGutters, TopNavClearance } from "../types";
+import { BackgroundGutters, Frames, TopNavClearance } from "../types";
 
 interface Props {
   theme: DefaultTheme;
@@ -19,6 +19,7 @@ declare module "styled-components" {
     backgroundGutters: BackgroundGutters;
     breakpoints: Breakpoints;
     colors: Colors;
+    frames: Frames;
     radii: Radii;
     spacings: Spacings;
     topNavClearance: TopNavClearance;

@@ -46,8 +46,7 @@ export const typography: Typography = {
   `,
   buttonPrimary: css`
     ${p => css`
-      color: ${p.theme.colors.primary};
-      font-weight: ${FontWeights.bold};
+      color: ${p.theme.colors.accentPrimary};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
         m: "24px",
