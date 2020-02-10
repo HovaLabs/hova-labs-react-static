@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 import { About } from "./About";
 import { Copyright } from "./Copyright";
-import { Events } from "./Events";
+import { EventsArea } from "../../components/Events/EventsArea/EventsArea";
 import { Hero } from "./Hero";
 import { Services } from "./Services";
 
@@ -17,7 +17,7 @@ export const HomePage = (): React.ReactElement => (
     <Hero />
     <About />
     <Services />
-    <Events />
+    <EventsArea />
     <Copyright />
   </Container>
 );
