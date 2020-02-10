@@ -3,7 +3,7 @@ import { MdClose } from "react-icons/md";
 import { Icon } from "@hova-labs/bento-box-web";
 
 import * as S from "./TopNavigationStyles";
-import { Modal } from "..";
+import { ModalsMobileNav } from "..";
 import { mobileNavLinks } from "./TopNavigationLinks";
 
 export const TopNavigationModal = ({
@@ -15,7 +15,7 @@ export const TopNavigationModal = ({
 }): React.ReactElement => {
   return (
     <S.ModalContainer>
-      <Modal isOpen={navModalIsOpen}>
+      <ModalsMobileNav isOpen={navModalIsOpen}>
         <S.ModalContent>
           <S.ClosedButtonContainer>
             <Icon
@@ -26,7 +26,7 @@ export const TopNavigationModal = ({
           </S.ClosedButtonContainer>
           {mobileNavLinks}
         </S.ModalContent>
-      </Modal>
+      </ModalsMobileNav>
     </S.ModalContainer>
   );
 };
