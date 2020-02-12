@@ -1,26 +1,33 @@
 import React from "react";
-import { useRouteData } from "react-static";
+// import { useRouteData } from "react-static";
 import BlogListItem from "../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../components/Blog/BlogTag/BlogTag";
-import { blogTags } from "./BlogUtils";
-import { Post } from "../../../types";
 import * as S from "./BlogStyles";
+import { blogList } from "./blogList";
 
 export const Blog = (): React.ReactElement => {
-  const { posts }: { posts: Post[] } = useRouteData();
+  const blogTags: Array<any> = [];
+  const BlogList = blogList.map(post => {
+    // HACK - it's a map but were also using it to populate the list of unique tags
+    post.tags.forEach(tag => {
+      if (!blogTags.includes(tag)) {
+        blogTags.push(tag);
+      }
+    });
 
-  const blogList = posts.map(post => <BlogListItem post={post} />);
-
+    return <BlogListItem key={post.datePublished} {...post} />;
+  });
   function onClick(): void {
     console.log("clicked");
   }
+
   const blogTagList = blogTags.map(tag => (
-    <BlogTag tag={tag} onClick={onClick} />
+    <BlogTag key={tag} tag={{ name: tag }} onClick={onClick} />
   ));
   return (
     <S.OuterContainer>
       {blogTagList}
-      {blogList}
+      {BlogList}
     </S.OuterContainer>
   );
 };

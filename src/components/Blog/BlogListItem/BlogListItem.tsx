@@ -1,29 +1,40 @@
 import React from "react";
+import { Link } from "@reach/router";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogListItemStyles";
 
-interface EventProps {
-  post: {
-    title: string;
-    id: number;
-  };
+export interface BlogManifest {
+  title: string;
+  datePublished: string;
+  hero: string;
+  url: string;
+  tags: Array<string>;
 }
 
-const BlogListItem = ({ post }: EventProps): React.ReactElement => (
-  <S.OuterContainer>
-    <S.Image />
-    <S.ContentContainer>
-      <div>
-        <BlogTag tag={{ name: "Food" }} onClick={() => {}} />
-        <Text>15 Minute Read </Text>
-      </div>
-      <div>
-        <Text>{post.title}</Text>
-        <Button title="link" onPress={() => {}} />
-      </div>
-    </S.ContentContainer>
-  </S.OuterContainer>
-);
+const BlogListItem = ({
+  title,
+  tags,
+  url,
+}: BlogManifest): React.ReactElement => {
+  return (
+    <S.OuterContainer>
+      <S.Image />
+      <S.ContentContainer>
+        <div>
+          {tags.map(tag => (
+            <BlogTag tag={{ name: tag }} onClick={() => {}} />
+          ))}
+        </div>
+        <div>
+          <Text>{title}</Text>
+          <Link to={url}>
+            <Button title="link" onPress={() => {}} />
+          </Link>
+        </div>
+      </S.ContentContainer>
+    </S.OuterContainer>
+  );
+};
 
 export default BlogListItem;
