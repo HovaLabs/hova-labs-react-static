@@ -28,10 +28,7 @@ export const Logo = styled(Icon).attrs(p => ({
 // Where "not scrolled" means that the page is scrolled up to the top
 const primaryOpaqueIfScrolled = (
   p: TopNavigationContainerProps & { theme: DefaultTheme }
-): string =>
-  p.theme.colors.background
-    .replace("rgb", "rgba")
-    .replace(")", p.scrolled ? ", 1)" : ", 0)");
+): string => (p.scrolled ? p.theme.colors.background : "transparent");
 
 export const TopNavigationContainer = styled("div")<
   TopNavigationContainerProps
