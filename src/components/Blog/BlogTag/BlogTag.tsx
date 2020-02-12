@@ -11,7 +11,7 @@ type BlogTagProps = {
 export const BlogTag = ({ tag, onClick }: BlogTagProps): React.ReactElement => {
   return (
     <S.Button onClick={onClick} type="button">
-      <Text typography="buttonPrimary">{tag.name}</Text>
+      <Text typography="buttonText">{tag.name}</Text>
     </S.Button>
   );
 };

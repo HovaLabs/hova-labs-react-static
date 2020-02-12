@@ -44,25 +44,7 @@ export const typography: Typography = {
       line-height: 150.5%
     `}
   `,
-  buttonPrimary: css`
-    ${p => css`
-      color: ${p.theme.colors.onSurface};
-      ${p.theme.responsiveStyle("font-size", {
-        s: "16px",
-        m: "24px",
-      })}
-    `}
-  `,
-  buttonSecondary: css`
-    ${p => css`
-      color: ${p.theme.colors.onSurface};
-      ${p.theme.responsiveStyle("font-size", {
-        s: "16px",
-        m: "24px",
-      })}
-    `}
-  `,
-  buttonTertiary: css`
+  buttonText: css`
     ${p => css`
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
