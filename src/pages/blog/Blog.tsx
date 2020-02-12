@@ -20,10 +20,7 @@ export const Blog = (): React.ReactElement => {
   return (
     <S.OuterContainer>
       {blogTagList}
-      <h1>It's blog time.</h1>
-      <br />
-      All Posts:
-      <ul>{blogList}</ul>
+      {blogList}
     </S.OuterContainer>
   );
 };
