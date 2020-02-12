@@ -14,7 +14,7 @@ ${p =>
     s: `${p.theme.spacings.l}px`,
     l: `${p.theme.spacings.xxl}px`,
   })}
-background-color: ${p => p.theme.colors.backgroundTertiary};
+background-color: ${p => p.theme.colors.surface};
 `;
 
 // COPYRIGHT END

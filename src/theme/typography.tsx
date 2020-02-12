@@ -8,7 +8,7 @@ interface TypographyProps {
 export const typography: Typography = {
   headingLarge: css`
     ${p => css`
-      color: ${p.theme.colors.primary};
+      color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "35px",
         m: "70px",
@@ -17,7 +17,7 @@ export const typography: Typography = {
   `,
   headingMedium: css<TypographyProps>`
     ${p => css`
-      color: ${p.color || p.theme.colors.primary};
+      color: ${p.color || p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "25px",
         m: "50px",
@@ -26,7 +26,7 @@ export const typography: Typography = {
   `,
   headingSmall: css`
     ${p => css`
-      color: ${p.theme.colors.primary};
+      color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "20px",
         m: "24px",
@@ -35,7 +35,7 @@ export const typography: Typography = {
   `,
   bodyText: css`
     ${p => css<TypographyProps>`
-      color: ${p.theme.colors.primary};
+      color: ${p.theme.colors.onSurface};
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
@@ -46,7 +46,7 @@ export const typography: Typography = {
   `,
   buttonPrimary: css`
     ${p => css`
-      color: ${p.theme.colors.accentPrimary};
+      color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
         m: "24px",
@@ -55,7 +55,7 @@ export const typography: Typography = {
   `,
   buttonSecondary: css`
     ${p => css`
-      color: ${p.theme.colors.primary};
+      color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
         m: "24px",
@@ -64,7 +64,7 @@ export const typography: Typography = {
   `,
   buttonTertiary: css`
     ${p => css`
-      color: ${p.theme.colors.primary};
+      color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
         m: "24px",

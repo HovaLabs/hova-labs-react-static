@@ -1,25 +1,23 @@
 import { Colors } from "@hova-labs/bento-box-web";
 
 export const colorsLightTheme: Colors = {
-  primary: "rgb(20, 21, 23)",
-  secondary: "rgb(40, 42, 46)",
-  tertiary: "rgb(60, 63, 69)",
-  backgroundPrimary: "rgb(255, 255, 255)",
-  backgroundSecondary: "rgb(242, 242, 242)",
-  backgroundTertiary: "rgb(229, 229, 229)",
-  accentPrimary: "rgb(120, 129, 174)",
-  accentSecondary: "rgb(174, 120, 129)",
-  accentTertiary: "rgb(129, 174, 120)"
+  onBackground: "hsla(220, 7%, 8%, 1)",
+  onSurface: "hsla(220, 7%, 8%, 1)",
+  onPrimary: "hsla(0, 0%, 95%, 1)",
+  onSecondary: "hsla(0, 0%, 95%, 1)",
+  background: "hsla(0, 0%, 100%, 1)",
+  surface: "hsla(0, 0%, 95%, 1)",
+  primary: "hsla(230, 25%, 58%, 1)",
+  secondary: "hsla(230, 28%, 45%, 1)",
 };
 
 export const colorsDarkTheme: Colors = {
-  primary: "rgb(255, 255, 255)",
-  secondary: "rgb(242, 242, 242)",
-  tertiary: "rgb(229, 229, 229)",
-  backgroundPrimary: "rgb(20, 21, 23)",
-  backgroundSecondary: "rgb(40, 42, 46)",
-  backgroundTertiary: "rgb(60, 63, 69)",
-  accentPrimary: "rgb(120,129,174)",
-  accentSecondary: "rgb(174, 120, 129)",
-  accentTertiary: "rgb(129, 174, 120)"
+  onBackground: "hsla(0, 0%, 0%, 1)",
+  onSurface: "hsla(0, 0%, 0%, 1)",
+  onPrimary: "hsla(220, 7%, 8%, 1)",
+  onSecondary: "hsla(230, 7%, 16%, 1)",
+  background: "hsla(0, 0%, 100%, 1)",
+  surface: "hsla(0, 0%, 92%, 1)",
+  primary: "hsla(230, 25%, 68%, 1)",
+  secondary: "hsla(230, 25%, 78%, 1)",
 };

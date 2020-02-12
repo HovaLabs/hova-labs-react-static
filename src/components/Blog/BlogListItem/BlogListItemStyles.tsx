@@ -19,7 +19,7 @@ export const Image = styled("div")`
       s: "0 0 100%",
       l: "0 0 646px",
     })}
-  background-color: ${p => p.theme.colors.backgroundSecondary};
+  background-color: ${p => p.theme.colors.surface};
 `;
 
 export const OuterContainer = styled("div")`

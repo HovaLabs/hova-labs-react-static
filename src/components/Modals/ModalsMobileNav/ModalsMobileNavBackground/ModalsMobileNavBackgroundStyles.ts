@@ -14,7 +14,7 @@ export const CircleDiv = styled("div")<CircleDivProps>`
   pointer-events: none;
   transition: all 500ms;
   ${p => (p.isOpen ? "" : "transition-delay: 250ms;")}
-  background: ${p => p.theme.colors.backgroundPrimary};
+  background: ${p => p.theme.colors.background};
   opacity: ${p => (p.isOpen ? 1 : 0)};
 `;
 

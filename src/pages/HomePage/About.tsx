@@ -11,7 +11,7 @@ const OuterContainer = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
-  background-color: ${p => p.theme.colors.backgroundSecondary};
+  background-color: ${p => p.theme.colors.surface};
 `;
 
 const InnerContainer = styled("div")`

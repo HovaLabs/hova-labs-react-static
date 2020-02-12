@@ -29,7 +29,7 @@ export const Logo = styled(Icon).attrs(p => ({
 const primaryOpaqueIfScrolled = (
   p: TopNavigationContainerProps & { theme: DefaultTheme }
 ): string =>
-  p.theme.colors.backgroundPrimary
+  p.theme.colors.background
     .replace("rgb", "rgba")
     .replace(")", p.scrolled ? ", 1)" : ", 0)");
 

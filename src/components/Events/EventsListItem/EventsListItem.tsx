@@ -23,7 +23,7 @@ const EventsListItem = ({ event }: EventProps): React.ReactElement => (
     </EventGridDateBox>
     <EventGridInfoBox>
       <div>
-        <Text typography="headingSmall" color="backgroundPrimary">
+        <Text typography="headingSmall" color="onSurface">
           {event.location}
         </Text>
       </div>

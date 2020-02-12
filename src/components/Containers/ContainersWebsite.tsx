@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ContainersWebsite = styled("div")`
-  background: ${p => p.theme.colors.backgroundPrimary};
+  background: ${p => p.theme.colors.background};
   ${p =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.backgroundGutters.s}px`,
