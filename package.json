@@ -13,7 +13,7 @@
     "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/blogList.ts --fix"
   },
   "dependencies": {
-    "@hova-labs/bento-box-web": "^0.16.0",
+    "@hova-labs/bento-box-web": "^0.16.2",
     "@reach/router": "^1.2.1",
     "@types/color": "^3.0.1",
     "@types/styled-components": "^4.4.1",
