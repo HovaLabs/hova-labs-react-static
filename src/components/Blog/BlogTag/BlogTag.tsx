@@ -1,12 +1,9 @@
-import React from "react";
+import styled from "styled-components";
 import { Button } from "@hova-labs/bento-box-web";
-import { BlogTagType } from "../../types";
 
-type BlogTagProps = {
-  tag: BlogTagType;
-  onPress: () => void;
-};
-
-export const BlogTag = ({ tag, onPress }: BlogTagProps): React.ReactElement => {
-  return <Button onPress={onPress} title={tag.name} />;
-};
+export const BlogTag = styled(Button).attrs({ variant: "secondary" })`
+  margin: 10px;
+  &:first-of-type: {
+    margin-left: 0;
+  }
+`;

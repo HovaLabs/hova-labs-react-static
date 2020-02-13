@@ -17,15 +17,12 @@ const BlogListItem = ({
   tags,
   url,
 }: BlogManifest): React.ReactElement => {
+  const tagsList = tags.map(tag => <BlogTag title={tag} onPress={() => {}} />);
   return (
     <S.OuterContainer>
       <S.Image />
       <S.ContentContainer>
-        <div>
-          {tags.map(tag => (
-            <BlogTag tag={{ name: tag }} onPress={() => {}} />
-          ))}
-        </div>
+        <div>{tagsList}</div>
         <div>
           <Text>{title}</Text>
           <Link to={url}>

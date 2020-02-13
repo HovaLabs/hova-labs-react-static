@@ -22,8 +22,9 @@ export const Blog = (): React.ReactElement => {
   }
 
   const blogTagList = blogTags.map(tag => (
-    <BlogTag key={tag} tag={{ name: tag }} onPress={onPress} />
+    <BlogTag key={tag} title={tag} onPress={onPress} />
   ));
+
   return (
     <S.OuterContainer>
       {blogTagList}
