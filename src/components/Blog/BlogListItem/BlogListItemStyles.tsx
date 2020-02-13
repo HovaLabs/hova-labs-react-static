@@ -1,7 +1,9 @@
 import styled from "styled-components";
+import { Button as BBButton } from "@hova-labs/bento-box-web";
 
-export const Button = styled("div")`
+export const Button = styled(BBButton)`
   margin-top: ${p => `${p.theme.spacings.l}px`};
+  margin-bottom: ${p => `${p.theme.spacings.l}px`};
 `;
 
 export const Description = styled("div")`

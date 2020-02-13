@@ -83,7 +83,9 @@ export const Projects = (): React.ReactElement => (
   <S.Container>
     {projectArray.map(project => (
       <>
-        <S.HeroImage backgroundImage={project.imgSrc} />
+        <Link to={project.links[0].link} key={project.links[0].link}>
+          <S.HeroImage backgroundImage={project.imgSrc} />
+        </Link>
         <div>
           <S.TitleContainer>
             <Text typography="headingMedium">{project.title}</Text>
