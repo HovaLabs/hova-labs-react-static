@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const Button = styled("div")`
+  margin-top: ${p => `${p.theme.spacings.l}px`};
+`;
+
 export const ContentContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("padding", {

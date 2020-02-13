@@ -24,10 +24,15 @@ const BlogListItem = ({
       <S.ContentContainer>
         <div>{tagsList}</div>
         <div>
-          <Text>{title}</Text>
-          <Link to={url}>
-            <Button title="link" onPress={() => {}} />
-          </Link>
+          <Text typography="headingMedium">{title}</Text>
+          <div>
+            <Text>{title}</Text>
+          </div>
+          <S.Button>
+            <Link to={url}>
+              <Button title="link" onPress={() => {}} />
+            </Link>
+          </S.Button>
         </div>
       </S.ContentContainer>
     </S.OuterContainer>
