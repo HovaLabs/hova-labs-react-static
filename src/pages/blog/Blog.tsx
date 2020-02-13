@@ -17,12 +17,12 @@ export const Blog = (): React.ReactElement => {
 
     return <BlogListItem key={post.datePublished} {...post} />;
   });
-  function onClick(): void {
+  function onPress(): void {
     console.log("clicked");
   }
 
   const blogTagList = blogTags.map(tag => (
-    <BlogTag key={tag} tag={{ name: tag }} onClick={onClick} />
+    <BlogTag key={tag} tag={{ name: tag }} onPress={onPress} />
   ));
   return (
     <S.OuterContainer>

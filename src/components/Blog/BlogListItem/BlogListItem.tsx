@@ -23,7 +23,7 @@ const BlogListItem = ({
       <S.ContentContainer>
         <div>
           {tags.map(tag => (
-            <BlogTag tag={{ name: tag }} onClick={() => {}} />
+            <BlogTag tag={{ name: tag }} onPress={() => {}} />
           ))}
         </div>
         <div>
