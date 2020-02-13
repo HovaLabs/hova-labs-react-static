@@ -4,6 +4,14 @@ export const Button = styled("div")`
   margin-top: ${p => `${p.theme.spacings.l}px`};
 `;
 
+export const Description = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("padding-top", {
+      s: `${p.theme.spacings.l}px`,
+      l: `0`,
+    })}
+`;
+
 export const ContentContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("padding", {

@@ -25,12 +25,12 @@ const BlogListItem = ({
         <div>{tagsList}</div>
         <div>
           <Text typography="headingMedium">{title}</Text>
-          <div>
+          <S.Description>
             <Text>{title}</Text>
-          </div>
+          </S.Description>
           <S.Button>
             <Link to={url}>
-              <Button title="link" onPress={() => {}} />
+              <Button title="Read" onPress={() => {}} />
             </Link>
           </S.Button>
         </div>
