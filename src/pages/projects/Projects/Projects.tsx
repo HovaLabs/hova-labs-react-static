@@ -13,69 +13,46 @@ type Project = {
   title: string;
   description: string;
   imgSrc: string;
-  links: Array<{ title: string; link: string }>;
+  linkTitle: string;
+  linkUrl: string;
 };
 const projectArray: Array<Project> = [
   {
     title: "Hova Instruments",
     description: "Open source, 3D printable acoustic instruments for all!",
     imgSrc: HovaInstrumentsHero,
-    links: [
-      {
-        title: "Hovalin",
-        link: "/projects/hovalin",
-      },
-      {
-        title: "Hovalele",
-        link: "/projects/hovalele",
-      },
-    ],
+    linkTitle: "view",
+    linkUrl: "/projects/hovalin",
   },
   {
     title: "Synesthesia Network",
     description: "A Social Network for synesthetes and researchers.",
     imgSrc: TSNHero,
-    links: [
-      {
-        title: "view",
-        link: "/projects/the-synesthesia-network",
-      },
-    ],
+    linkTitle: "view",
+    linkUrl: "/projects/the-synesthesia-network",
   },
   {
     title: "Synesthesia Light Show",
     description:
       "An interactive light show that demonstrates musical note --> color synesthesia.",
     imgSrc: HovalinLightsHero,
-    links: [
-      {
-        title: "view",
-        link: "/projects/synesthesia-light-show",
-      },
-    ],
+    linkTitle: "view",
+    linkUrl: "/projects/synesthesia-light-show",
   },
   {
     title: "HydraPrint MCU",
     description: "A good looking full stack hardware controller interface.",
     imgSrc: MCUHero,
-    links: [
-      {
-        title: "view",
-        link: "/projects/hydraprint",
-      },
-    ],
+    linkTitle: "view",
+    linkUrl: "/projects/hydraprint",
   },
   {
     title: "Waldo",
     description:
       "An awesome, project manager friendly interface for managing your team.",
     imgSrc: WaldoHero,
-    links: [
-      {
-        title: "view",
-        link: "/waldo",
-      },
-    ],
+    linkTitle: "view",
+    linkUrl: "/waldo",
   },
 ];
 
@@ -83,7 +60,7 @@ export const Projects = (): React.ReactElement => (
   <S.Container>
     {projectArray.map(project => (
       <>
-        <Link to={project.links[0].link} key={project.links[0].link}>
+        <Link to={project.linkUrl} key={project.linkUrl}>
           <S.HeroImage backgroundImage={project.imgSrc} />
         </Link>
         <div>
@@ -94,11 +71,9 @@ export const Projects = (): React.ReactElement => (
             <Text>{project.description}</Text>
           </S.DescriptionContainer>
           <S.ButtonContainer>
-            {project.links.map(link => (
-              <Link to={link.link} key={link.link}>
-                <Button onPress={() => {}} title={link.title} />
-              </Link>
-            ))}
+            <Link to={project.linkUrl} key={project.linkUrl}>
+              <Button onPress={() => {}} title={project.linkTitle} />
+            </Link>
           </S.ButtonContainer>
         </div>
       </>
