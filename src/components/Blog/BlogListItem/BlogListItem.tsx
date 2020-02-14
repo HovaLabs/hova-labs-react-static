@@ -13,8 +13,9 @@ export interface BlogManifest {
 }
 
 const BlogListItem = ({
-  title,
+  hero,
   tags,
+  title,
   url,
 }: BlogManifest): React.ReactElement => {
   const tagsList = tags.map(tag => (
@@ -22,7 +23,7 @@ const BlogListItem = ({
   ));
   return (
     <S.OuterContainer>
-      <S.Image />
+      <S.Image src={hero} />
       <S.ContentContainer>
         <div>
           <div>

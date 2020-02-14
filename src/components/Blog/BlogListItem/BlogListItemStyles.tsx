@@ -22,7 +22,7 @@ export const ContentContainer = styled("div")`
     })}
 `;
 
-export const Image = styled("div")`
+export const Image = styled("img")`
   ${p =>
     p.theme.responsiveStyle("height", {
       s: `150px`,
