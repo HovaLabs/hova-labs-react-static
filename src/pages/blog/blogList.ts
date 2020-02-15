@@ -1,23 +1,27 @@
+import fooTheBar from "./foo-the-bar/hero.jpg";
+import fooTheFoo from "./foo-the-foo/hero.jpg";
+import ourFiveStringSynesthesiaViolin from "./our-five-string-synesthesia-violin/hero.jpg";
+
 export const blogList = [
   {
+    hero: ourFiveStringSynesthesiaViolin,
     datePublished: "2020-02-12T16:26:08.712Z",
-    title: "Our 5 String Synesthesia Violin",
-    hero: "https://www.fillmurray.com/600/300.jpg",
     tags: ["music", "hovalin"],
-    url: "/blog/our-5-string-synesthesia-violin",
+    title: "Our 5 String Synesthesia Violin",
+    url: "/blog/our-five-string-synesthesia-violin",
   },
   {
+    hero: fooTheBar,
     datePublished: "2020-02-10T16:26:08.712Z",
-    title: "Foo the Bar",
-    hero: "https://www.fillmurray.com/600/300.jpg",
     tags: ["food"],
+    title: "Foo the Bar",
     url: "/blog/foo-the-bar",
   },
   {
+    hero: fooTheFoo,
     datePublished: "2020-02-02T16:26:08.712Z",
-    title: "Foo the Foo",
-    hero: "https://www.fillmurray.com/600/300.jpg",
     tags: ["food"],
+    title: "Foo the Foo",
     url: "/blog/foo-the-foo",
   },
 ];
