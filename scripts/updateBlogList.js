@@ -14,7 +14,7 @@ const manifestArray = [];
 fs.readdirSync(blogFolder).forEach((file) => {
   // Look in each blog-post's directory
   if (fs.statSync(path.join(blogFolder, file)).isDirectory()) {
-    blogListFile += `import ${camelCase(file)} from './${file}/hero.jpg'\n`;
+    blogListFile += `import ${camelCase(file)}HeroImage from './${file}/hero.jpg'\n`;
 
     const blogManifest = JSON.parse(fs
       .readFileSync(path.join(blogFolder, file, 'manifest.json')).toString());
@@ -31,7 +31,7 @@ fs.readdirSync(blogFolder).forEach((file) => {
     // and then pass the path to hero as a variable instead of a string
     // We still use the manifest.json values to sort the array
     blogManifest.string = `{
-      hero: ${blogManifest.hero},
+      hero: ${blogManifest.hero}HeroImage,
       datePublished: "${blogManifest.datePublished}",
       tags: ${JSON.stringify(blogManifest.tags)},
       title: "${blogManifest.title}",
