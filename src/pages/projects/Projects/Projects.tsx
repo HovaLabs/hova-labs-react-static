@@ -22,7 +22,7 @@ const projectArray: Array<Project> = [
     description: "Open source, 3D printable acoustic instruments for all!",
     imgSrc: HovaInstrumentsHero,
     linkTitle: "view",
-    linkUrl: "/projects/hovalin",
+    linkUrl: "/hovalin",
   },
   {
     title: "Synesthesia Network",
