@@ -1,7 +1,7 @@
 import React from "react";
 // import { useRouteData } from "react-static";
-import BlogListItem from "../../components/Blog/BlogListItem/BlogListItem";
-import { BlogTag } from "../../components/Blog/BlogTag/BlogTag";
+import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
+import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
 import * as S from "./BlogStyles";
 import { blogList } from "./blogList";
 

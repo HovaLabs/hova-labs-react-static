@@ -14,7 +14,10 @@ const manifestArray = [];
 fs.readdirSync(blogFolder).forEach((file) => {
   // Look in each blog-post's directory
   if (fs.statSync(path.join(blogFolder, file)).isDirectory()) {
-    blogListFile += `import ${camelCase(file)}HeroImage from './${file}/hero.jpg'\n`;
+    if (file === 'Blog') {
+      return;
+    }
+    blogListFile += `import ${camelCase(file)}HeroImage from '../${file}/hero.jpg'\n`;
 
     const blogManifest = JSON.parse(fs
       .readFileSync(path.join(blogFolder, file, 'manifest.json')).toString());
@@ -49,4 +52,4 @@ manifestArray.sort((a, b) => {
 
 // Write the file NOTE: this will overwrite any existing file
 blogListFile += `export const blogList = [${manifestArray.map(m => m.string).join()}]`;
-fs.writeFileSync(path.join(blogFolder, 'blogList.ts'), blogListFile);
+fs.writeFileSync(path.join(blogFolder, 'Blog', 'blogList.ts'), blogListFile);

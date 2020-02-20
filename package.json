@@ -10,7 +10,7 @@
     "serve": "serve dist -p 3000 -s",
     "stage": "react-static build --staging",
     "start": "yarn update-blog-list && react-static start",
-    "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/blogList.ts --fix"
+    "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/Blog/blogList.ts --fix"
   },
   "dependencies": {
     "@hova-labs/bento-box-web": "^0.16.2",

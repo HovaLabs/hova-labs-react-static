@@ -1,6 +1,6 @@
-import fooTheBarHeroImage from "./foo-the-bar/hero.jpg";
-import fooTheFooHeroImage from "./foo-the-foo/hero.jpg";
-import ourFiveStringSynesthesiaViolinHeroImage from "./our-five-string-synesthesia-violin/hero.jpg";
+import fooTheBarHeroImage from "../foo-the-bar/hero.jpg";
+import fooTheFooHeroImage from "../foo-the-foo/hero.jpg";
+import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
 
 export const blogList = [
   {
