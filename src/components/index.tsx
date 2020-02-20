@@ -4,3 +4,4 @@ export { Portal } from "./Portal";
 export { ModalsMobileNav } from "./Modals";
 export * from "./Containers";
 export * from "./Icons";
+export * from "./Button";
