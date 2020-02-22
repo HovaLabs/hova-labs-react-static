@@ -1,9 +1,9 @@
 import React from "react";
 import hovalinHero from "./hovalin-hero.jpg";
-import { Button } from "../../components";
+import { Button } from "../../../components";
 import * as S from "./HovalinStyles";
 
-export default (): React.ReactElement => (
+export const Hovalin = (): React.ReactElement => (
   <div>
     <img alt="hovalin" src={hovalinHero} />
     <div>Hovalin</div>
