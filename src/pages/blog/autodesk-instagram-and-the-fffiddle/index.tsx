@@ -2,9 +2,11 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
 import fffiddle from "./Media/fffiddle.jpg";
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         Creating an acoustic 3d printable violin has been a labor of love,
@@ -47,5 +49,5 @@ export default (): React.ReactElement => (
         openfabpdx.com
       </Text>
     </div>
-  </div>
+  </BlogContainer>
 );

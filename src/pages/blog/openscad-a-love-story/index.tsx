@@ -3,8 +3,11 @@ import { Text } from "@hova-labs/bento-box-web";
 
 import hovalinStick from "./Media/hovalin-stick.png";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         There is one line of code to create a cube that is 10mm by 20mm by 30mm.
@@ -220,5 +223,5 @@ export default (): React.ReactElement => (
       </a>
       <Text>.</Text>
     </div>
-  </div>
+  </BlogContainer>
 );

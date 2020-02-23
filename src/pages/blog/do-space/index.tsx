@@ -7,9 +7,11 @@ import kaitlynPlaying from "./Media/kaitlyn-playing.jpg";
 import shoveling from "./Media/shoveling.jpg";
 import snow from "./Media/snow.jpg";
 import soldOut from "./Media/sold-out.jpg";
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         We had the amazing opportunity to present at a sold-out house at the
@@ -52,5 +54,5 @@ export default (): React.ReactElement => (
     <img src={kaitlynPlaying} alt="Kaitlyn playing the Hovalin" />
     <img src={snow} alt="snow" />
     <img src={shoveling} alt="Matt shoveling" />
-  </div>
+  </BlogContainer>
 );

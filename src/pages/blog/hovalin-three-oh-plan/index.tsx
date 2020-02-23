@@ -1,8 +1,11 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         This post is half update and half an apology for the United States not
@@ -81,5 +84,5 @@ export default (): React.ReactElement => (
     <div>
       <Text>-Matt</Text>
     </div>
-  </div>
+  </BlogContainer>
 );

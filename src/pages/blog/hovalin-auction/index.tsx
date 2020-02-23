@@ -1,8 +1,11 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         Hey Everyone! We donated a Hovalin to the Steve Elsasser Fundraiser at
@@ -83,5 +86,5 @@ export default (): React.ReactElement => (
         donate a Hovalin to!
       </Text>
     </div>
-  </div>
+  </BlogContainer>
 );

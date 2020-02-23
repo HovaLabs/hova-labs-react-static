@@ -14,8 +14,11 @@ import steamExhibit from "./Media/steam-exhibit.jpg";
 import steamExhibit2 from "./Media/steam-exhibit-2.jpg";
 import steamExhibit3 from "./Media/steam-exhibit-3.jpg";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         Yes! I got to perform on our latest version of Hovalin for 11 shows over
@@ -69,5 +72,5 @@ export default (): React.ReactElement => (
     <img src={steamExhibit2} alt="steam exhibit" />
     <img src={steamExhibit3} alt="steam exhibit" />
     <img src={steamDisclaimer} alt="disclaimer" />
-  </div>
+  </BlogContainer>
 );

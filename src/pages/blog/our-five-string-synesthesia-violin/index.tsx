@@ -11,8 +11,11 @@ import violinPhoto7 from "./violin-photo-7.jpg";
 import violinPhoto8 from "./violin-photo-8.jpg";
 import violinPhoto9 from "./violin-photo-9.jpg";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         Since the beginning of our pursuit of 3D printing violins, we've had a
@@ -144,5 +147,5 @@ export default (): React.ReactElement => (
       </Text>
     </div>
     <img src={violinPhoto9} alt="hovalin-top-view" />
-  </div>
+  </BlogContainer>
 );

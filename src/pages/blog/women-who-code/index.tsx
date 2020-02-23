@@ -3,8 +3,11 @@ import { Text } from "@hova-labs/bento-box-web";
 
 import wwcHovalin from "./Media/wwc-hovalin.jpg";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>Today I got to hang with my favorite ladies at</Text>
       <a href="https://www.womenwhocode.com/">
@@ -37,5 +40,5 @@ export default (): React.ReactElement => (
       </Text>
     </div>
     <img src={wwcHovalin} alt="Hovalin on wood" />
-  </div>
+  </BlogContainer>
 );

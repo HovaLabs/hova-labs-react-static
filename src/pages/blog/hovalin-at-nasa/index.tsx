@@ -9,8 +9,11 @@ import makerLab from "./Media/maker-lab.jpg";
 import notMatt from "./Media/not-matt.jpg";
 import pcbMill from "./Media/pcb-mill.jpg";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>We had the opportunity to bring our project to</Text>
       <a href="https://www.nasa.gov/centers/ames/home/">
@@ -52,5 +55,5 @@ export default (): React.ReactElement => (
       alt="A nice NASA worker whose name I dont remember but looks vaguely like Matt"
     />
     <img src={gears} alt="A drawer full of gears" />
-  </div>
+  </BlogContainer>
 );

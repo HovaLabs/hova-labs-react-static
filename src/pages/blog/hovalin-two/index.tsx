@@ -2,8 +2,11 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import { routes } from "../../../routes";
 
+import blogManifest from "./manifest.json";
+import { BlogContainer } from "../../../components/BlogContainer";
+
 export default (): React.ReactElement => (
-  <div>
+  <BlogContainer author={blogManifest.author}>
     <div>
       <Text>
         tl;dr You have access to the CAD. It's easier to print and assemble.
@@ -90,5 +93,5 @@ export default (): React.ReactElement => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     />
-  </div>
+  </BlogContainer>
 );

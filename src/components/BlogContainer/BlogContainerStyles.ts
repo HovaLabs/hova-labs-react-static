@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  ${p =>
-    p.theme.responsiveStyle("margin-top", {
-      s: `${p.theme.topNavClearance.s}px`,
-      l: `${p.theme.topNavClearance.l}px`,
-    })}
+export const TopNavBump = styled.div`
+  height: ${p =>
+    p.theme.responsiveValue({
+      s: 38 + p.theme.spacings.xl * 2,
+      l: 70 + p.theme.spacings.xl * 2,
+    })(p)}px;
 `;
+
+export const BlogStyles = styled.div``;
