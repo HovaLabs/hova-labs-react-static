@@ -56,11 +56,11 @@ const Author = ({
 }: {
   author: "Matt" | "Kaitlyn" | "Cat";
 }): React.ReactElement => (
-  <div>
-    <img src={authorPhotos[author]} alt="Author" />
-    <div>
+  <S.AuthorContainer>
+    <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+    <S.AuthorAboutContainer>
       <div>
-        <Text>About the author</Text>
+        <Text typography="headingMedium">About the author</Text>
       </div>
       <div>
         <Text>{authorBios[author]}</Text>
@@ -70,6 +70,6 @@ const Author = ({
           <Text>{authorLinks[author].text}</Text>
         </a>
       </div>
-    </div>
-  </div>
+    </S.AuthorAboutContainer>
+  </S.AuthorContainer>
 );

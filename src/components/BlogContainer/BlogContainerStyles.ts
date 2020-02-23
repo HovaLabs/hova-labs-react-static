@@ -9,3 +9,13 @@ export const TopNavBump = styled.div`
 `;
 
 export const BlogStyles = styled.div``;
+
+export const AuthorImage = styled.img`
+  height: 240px;
+`;
+
+export const AuthorContainer = styled.div`
+  display: flex;
+`;
+
+export const AuthorAboutContainer = styled.div``;
