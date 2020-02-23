@@ -77,7 +77,7 @@ export const blogList = [
   {
     hero: openscadALoveStoryHeroImage,
     datePublished: "2015-09-25T00:00:00.000Z",
-    tags: ["Hovalin", "CAD"],
+    tags: ["hovalin", "CAD"],
     title: "OpenSCAD... a love story",
     url: "/blog/openscad-a-love-story",
   },
