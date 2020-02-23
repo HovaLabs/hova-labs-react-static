@@ -8,7 +8,24 @@ export const TopNavBump = styled.div`
     })(p)}px;
 `;
 
-export const BlogStyles = styled.div``;
+export const BlogStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  iframe,
+  img {
+    align-self: center;
+    margin: ${p => p.theme.spacings.l}px;
+  }
+  img {
+    max-width: 100%;
+    max-height: 75vh;
+  }
+  code {
+    background: ${p => p.theme.colors.surface};
+    margin: ${p => p.theme.spacings.l}px;
+  }
+`;
 
 export const AuthorImage = styled.img`
   height: 240px;
