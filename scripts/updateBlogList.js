@@ -14,7 +14,8 @@ const manifestArray = [];
 fs.readdirSync(blogFolder).forEach((file) => {
   // Look in each blog-post's directory
   if (fs.statSync(path.join(blogFolder, file)).isDirectory()) {
-    if (file === 'Blog') {
+    // Ignore directories that start with uppercase letters
+    if (file[0].toUpperCase() === file[0]) {
       return;
     }
     blogListFile += `import ${camelCase(file)}HeroImage from '../${file}/hero.jpg'\n`;
