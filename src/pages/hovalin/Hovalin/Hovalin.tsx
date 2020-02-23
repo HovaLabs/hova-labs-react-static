@@ -2,6 +2,7 @@ import React from "react";
 import hovalinHero from "./media/hovalin-hero.jpg";
 import hovalinAbout from "./media/hovalinv4.png";
 import makeHero from "./media/make-hero.jpg";
+import { routes } from "../../../routes";
 
 import { Button } from "../../../components";
 import * as S from "./HovalinStyles";
@@ -13,10 +14,14 @@ export const Hovalin = (): React.ReactElement => (
       <div>Hovalin</div>
       <div>Open Source, 3D printable acoustic violin v4.0.0</div>
       <S.ButtonContainer>
-        <Button href="/hovalin/docs" onPress={() => {}} title="Make One" />
-        <Button href="/store" onPress={() => {}} title="Buy One" />
         <Button
-          href="https://www.reddit.com/r/hovalin_community/"
+          href={routes.HOVALIN_DOCS}
+          onPress={() => {}}
+          title="Make One"
+        />
+        <Button href={routes.STORE} onPress={() => {}} title="Buy One" />
+        <Button
+          href={routes.HOVALIN_REDDIT}
           onPress={() => {}}
           title="Discuss on Reddit"
         />
@@ -34,13 +39,21 @@ export const Hovalin = (): React.ReactElement => (
         Stradivarius violin model. The hovalin project is inspired in part by
         David Perry's FFFiddle. Check it out here. Read our FAQ
       </div>
-      <Button href="/hovalin/faq" title="Read our FAQ" onPress={() => {}} />
+      <Button
+        href={routes.HOVALIN_FAQ}
+        title="Read our FAQ"
+        onPress={() => {}}
+      />
     </div>
     <div>
       <img src={makeHero} alt="making a violin" />
       <h1>Let's make one</h1>
       <div>Visit the Hovalin Docs for step by step instructions</div>
-      <Button href="/hovalin/docs" title="Make a Hovalin" onPress={() => {}} />
+      <Button
+        href={routes.HOVALIN_DOCS}
+        title="Make a Hovalin"
+        onPress={() => {}}
+      />
     </div>
     <div>
       <h2>Listen Up</h2>

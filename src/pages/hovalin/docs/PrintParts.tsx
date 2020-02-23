@@ -3,6 +3,7 @@ import threeDPrinter from "./Photos/threeDPrinter.svg";
 import hovalinNeck from "./Photos/hovalin-neck.svg";
 import hovalinBody from "./Photos/hovalin-body.svg";
 import { Button } from "../../../components";
+import { routes } from "../../../routes";
 
 export const PrintParts = (): React.ReactElement => (
   <div>
@@ -57,7 +58,11 @@ export const PrintParts = (): React.ReactElement => (
         <div>Layer Height: 0.2mm</div>
         <div>Infill: 30%</div>
         <div>Perimeters: 3</div>
-        <Button href="/hovalin/docs" title="DOWNLOAD" onPress={() => {}} />
+        <Button
+          href={routes.HOVALIN_DOCS}
+          title="DOWNLOAD"
+          onPress={() => {}}
+        />
       </div>
       <div>
         <img src={hovalinBody} alt="hovalin body" />
@@ -67,7 +72,11 @@ export const PrintParts = (): React.ReactElement => (
         <div>Layer Height: 0.3mm</div>
         <div>Infill: 30%</div>
         <div>Perimeters: 2</div>
-        <Button href="/hovalin/docs" title="DOWNLOAD" onPress={() => {}} />
+        <Button
+          href={routes.HOVALIN_DOCS}
+          title="DOWNLOAD"
+          onPress={() => {}}
+        />
       </div>
     </div>
   </div>

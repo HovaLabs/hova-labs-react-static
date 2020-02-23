@@ -3,13 +3,14 @@ import { Link } from "@reach/router";
 import { Text } from "@hova-labs/bento-box-web";
 import { NavLink } from "../types";
 import { Li } from "./TopNavigationStyles";
+import { routes } from "../../routes";
 
 const topNavLinks: Array<NavLink> = [
-  { url: "/", name: "Home" }, // always keep home as first link
-  { url: "/projects", name: "Projects" },
-  { url: "/blog", name: "Blog" },
-  { url: "/store", name: "Store" },
-  { url: "/contact", name: "Contact" },
+  { url: routes.HOMEPAGE, name: "Home" }, // always keep home as first link
+  { url: routes.PROJECTS, name: "Projects" },
+  { url: routes.BLOG, name: "Blog" },
+  { url: routes.STORE, name: "Store" },
+  { url: routes.CONTACT, name: "Contact" },
 ];
 
 export const desktopNavLinksArray: Array<NavLink> = topNavLinks.slice(1);

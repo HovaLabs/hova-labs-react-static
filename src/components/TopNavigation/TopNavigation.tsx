@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 import { Icon } from "@hova-labs/bento-box-web";
 import { GiHamburgerMenu } from "react-icons/gi";
 
+import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { desktopNavLinks } from "./TopNavigationLinks";
@@ -40,7 +41,7 @@ export const TopNavigation = (): React.ReactElement => {
       />
       <S.TopNavigationContainer scrolled={scrolled} menuIsOpen={navModalIsOpen}>
         <div>
-          <Link to="/">
+          <Link to={routes.HOMEPAGE}>
             <S.LogoContainer>
               <S.Logo />
             </S.LogoContainer>

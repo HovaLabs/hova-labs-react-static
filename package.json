@@ -12,7 +12,7 @@
     "start": "yarn update-scripts && react-static start",
     "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/Blog/blogList.ts --fix",
     "update-route-list": "node ./scripts/updateRoutesList.js && eslint ./src/routes.ts --fix",
-    "update-scripts": "yarn update-blog-list && yarn update-route-list"
+    "update-scripts": "yarn update-route-list && yarn update-blog-list"
   },
   "dependencies": {
     "@hova-labs/bento-box-web": "^0.16.2",
