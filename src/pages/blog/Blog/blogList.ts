@@ -5,6 +5,7 @@ import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
 import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
+import steamCarnivalSfHeroImage from "../steam-carnival-sf/hero.jpg";
 import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogList = [
@@ -56,6 +57,13 @@ export const blogList = [
     tags: ["hovalin", "software"],
     title: "WOMEN WHO CODE",
     url: "/blog/women-who-code",
+  },
+  {
+    hero: steamCarnivalSfHeroImage,
+    datePublished: "2015-11-16T00:00:00.000Z",
+    tags: ["hovalin", "events"],
+    title: "STEAM CARNIVAL SF",
+    url: "/blog/steam-carnival-sf",
   },
   {
     hero: openscadALoveStoryHeroImage,

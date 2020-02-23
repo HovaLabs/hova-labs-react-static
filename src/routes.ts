@@ -55,6 +55,7 @@ export const routes = {
   BLOG_OPENSCAD_A_LOVE_STORY: "/blog/openscad-a-love-story",
   BLOG_OUR_FIVE_STRING_SYNESTHESIA_VIOLIN:
     "/blog/our-five-string-synesthesia-violin",
+  BLOG_STEAM_CARNIVAL_SF: "/blog/steam-carnival-sf",
   BLOG_WOMEN_WHO_CODE: "/blog/women-who-code",
   CONTACT: "/contact",
   HOVALIN: "/hovalin",
