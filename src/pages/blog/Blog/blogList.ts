@@ -1,7 +1,9 @@
 import doSpaceHeroImage from "../do-space/hero.jpg";
+import hovalinAtNasaHeroImage from "../hovalin-at-nasa/hero.jpg";
 import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
 import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
+import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
 
 export const blogList = [
@@ -39,5 +41,19 @@ export const blogList = [
     tags: ["hovalin"],
     title: "DO SPACE",
     url: "/blog/do-space",
+  },
+  {
+    hero: hovalinAtNasaHeroImage,
+    datePublished: "2015-12-05T00:00:00.000Z",
+    tags: ["hovalin"],
+    title: "HOVALIN AT NASA",
+    url: "/blog/hovalin-at-nasa",
+  },
+  {
+    hero: openscadALoveStoryHeroImage,
+    datePublished: "2015-09-25T00:00:00.000Z",
+    tags: ["Hovalin", "CAD"],
+    title: "OpenSCAD... a love story",
+    url: "/blog/openscad-a-love-story",
   },
 ];
