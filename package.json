@@ -2,15 +2,17 @@
   "name": "react-static-example-typescript",
   "private": true,
   "scripts": {
-    "build": "yarn update-blog-list && react-static build",
+    "build": "yarn update-scripts && react-static build",
     "bundle": "react-static bundle",
     "export": "react-static export",
     "launch": "yarn build && surge ./dist hova-labs.surge.sh",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "serve": "serve dist -p 3000 -s",
     "stage": "react-static build --staging",
-    "start": "yarn update-blog-list && react-static start",
-    "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/Blog/blogList.ts --fix"
+    "start": "yarn update-scripts && react-static start",
+    "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/Blog/blogList.ts --fix",
+    "update-route-list": "node ./scripts/updateRoutesList.js && eslint ./src/routes.ts --fix",
+    "update-scripts": "yarn update-blog-list && yarn update-route-list"
   },
   "dependencies": {
     "@hova-labs/bento-box-web": "^0.16.2",
