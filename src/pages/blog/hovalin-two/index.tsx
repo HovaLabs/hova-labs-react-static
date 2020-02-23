@@ -1,4 +1,5 @@
 import React from "react";
+import { routes } from "../../../routes";
 
 export default (): React.ReactElement => (
   <div>
@@ -38,8 +39,12 @@ export default (): React.ReactElement => (
     <div>...But that's for another blog post</div>
     <div>
       Check out the new files. As always, we love feedback. Feel free to send us
-      messages via the contact form. If you want to see a feature added to the
-      Hovalin, please post an issue on The Hovalin's GitHub page.
+      messages via the
+      <a href={routes.CONTACT}> contact form.</a>
+      If you want to see a feature added to the Hovalin, please post an issue on
+      <a href="https://github.com/matthova/hovalin-files/commits/master">
+        The Hovalin's GitHub page.
+      </a>
     </div>
     <div>Cheers, and Happy 2016!</div>
     <iframe
