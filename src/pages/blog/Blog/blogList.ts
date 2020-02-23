@@ -5,6 +5,7 @@ import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
 import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
+import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogList = [
   {
@@ -48,6 +49,13 @@ export const blogList = [
     tags: ["hovalin"],
     title: "HOVALIN AT NASA",
     url: "/blog/hovalin-at-nasa",
+  },
+  {
+    hero: womenWhoCodeHeroImage,
+    datePublished: "2015-11-18T00:00:00.000Z",
+    tags: ["hovalin", "software"],
+    title: "WOMEN WHO CODE",
+    url: "/blog/women-who-code",
   },
   {
     hero: openscadALoveStoryHeroImage,
