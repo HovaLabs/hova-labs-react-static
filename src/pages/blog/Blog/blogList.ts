@@ -1,3 +1,4 @@
+import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
 import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
@@ -23,5 +24,12 @@ export const blogList = [
     tags: ["hovalin"],
     title: "HOVALIN V2.0 IS LIVE",
     url: "/blog/hovalin-two",
+  },
+  {
+    hero: hovalinAuctionHeroImage,
+    datePublished: "2016-01-02T06:10:44.160Z",
+    tags: ["hovalin"],
+    title: "HOVALIN AUCTION",
+    url: "/blog/hovalin-auction",
   },
 ];

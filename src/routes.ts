@@ -47,6 +47,7 @@ export const routes = {
   LIST_PRINT_SCRAPER:
     "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
   BLOG: "/blog",
+  BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",
   BLOG_HOVALIN_THREE_OH_PLAN: "/blog/hovalin-three-oh-plan",
   BLOG_HOVALIN_TWO: "/blog/hovalin-two",
   BLOG_OUR_FIVE_STRING_SYNESTHESIA_VIOLIN:
