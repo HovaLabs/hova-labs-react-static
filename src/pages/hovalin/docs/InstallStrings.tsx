@@ -1,6 +1,6 @@
 import React from "react";
-import hovalinStrings from "./media/hovalin-strings.jpg";
-import hovalinStringsTuners from "./media/hovalin-strings-tuners.jpg";
+import hovalinStrings from "./Photos/hovalin-strings.jpg";
+import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 
 export const InstallStrings = (): React.ReactElement => (
   <div>

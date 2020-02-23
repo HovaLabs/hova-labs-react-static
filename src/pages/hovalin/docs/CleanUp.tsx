@@ -1,5 +1,5 @@
 import React from "react";
-import sanding from "./media/sanding.gif";
+import sanding from "./Photos/sanding.gif";
 
 export const CleanUp = (): React.ReactElement => (
   <div>

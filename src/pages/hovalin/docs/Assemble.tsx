@@ -1,5 +1,5 @@
 import React from "react";
-import assembly from "./media/assembly.gif";
+import assembly from "./Photos/assembly.gif";
 
 export const Assemble = (): React.ReactElement => (
   <div>

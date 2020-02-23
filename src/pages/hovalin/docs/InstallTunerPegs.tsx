@@ -1,7 +1,7 @@
 import React from "react";
-import pegEndBreakoff from "./media/peg-end-breakoff.gif";
-import pegInsert from "./media/peg-insert.gif";
-import pegTighten from "./media/peg-tighten.gif";
+import pegEndBreakoff from "./Photos/peg-end-breakoff.gif";
+import pegInsert from "./Photos/peg-insert.gif";
+import pegTighten from "./Photos/peg-tighten.gif";
 
 export const InstallTunerPegs = (): React.ReactElement => (
   <div>

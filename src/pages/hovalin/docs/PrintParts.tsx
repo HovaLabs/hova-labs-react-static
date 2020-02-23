@@ -1,7 +1,7 @@
 import React from "react";
-import threeDPrinter from "./media/threeDPrinter.svg";
-import hovalinNeck from "./media/hovalin-neck.svg";
-import hovalinBody from "./media/hovalin-body.svg";
+import threeDPrinter from "./Photos/threeDPrinter.svg";
+import hovalinNeck from "./Photos/hovalin-neck.svg";
+import hovalinBody from "./Photos/hovalin-body.svg";
 import { Button } from "../../../components";
 
 export const PrintParts = (): React.ReactElement => (
