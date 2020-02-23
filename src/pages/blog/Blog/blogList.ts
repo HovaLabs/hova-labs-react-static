@@ -1,3 +1,4 @@
+import doSpaceHeroImage from "../do-space/hero.jpg";
 import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
 import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
@@ -31,5 +32,12 @@ export const blogList = [
     tags: ["hovalin"],
     title: "HOVALIN AUCTION",
     url: "/blog/hovalin-auction",
+  },
+  {
+    hero: doSpaceHeroImage,
+    datePublished: "2015-12-24T06:10:44.160Z",
+    tags: ["hovalin"],
+    title: "DO SPACE",
+    url: "/blog/do-space",
   },
 ];
