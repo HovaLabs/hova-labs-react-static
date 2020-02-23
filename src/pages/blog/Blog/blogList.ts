@@ -1,3 +1,4 @@
+import autodeskInstagramAndTheFffiddleHeroImage from "../autodesk-instagram-and-the-fffiddle/hero.jpg";
 import doSpaceHeroImage from "../do-space/hero.jpg";
 import hovalinAtNasaHeroImage from "../hovalin-at-nasa/hero.jpg";
 import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
@@ -6,6 +7,7 @@ import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
 import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
 import steamCarnivalSfHeroImage from "../steam-carnival-sf/hero.jpg";
+import theSiteIsNowLiveHeroImage from "../the-site-is-now-live/hero.jpg";
 import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogList = [
@@ -52,6 +54,13 @@ export const blogList = [
     url: "/blog/hovalin-at-nasa",
   },
   {
+    hero: theSiteIsNowLiveHeroImage,
+    datePublished: "2015-11-28T00:00:00.000Z",
+    tags: [],
+    title: "THE SITE IS NOW LIVE!",
+    url: "/blog/the-site-is-now-live",
+  },
+  {
     hero: womenWhoCodeHeroImage,
     datePublished: "2015-11-18T00:00:00.000Z",
     tags: ["hovalin", "software"],
@@ -71,5 +80,12 @@ export const blogList = [
     tags: ["Hovalin", "CAD"],
     title: "OpenSCAD... a love story",
     url: "/blog/openscad-a-love-story",
+  },
+  {
+    hero: autodeskInstagramAndTheFffiddleHeroImage,
+    datePublished: "2015-09-02T00:00:00.000Z",
+    tags: ["hovalin"],
+    title: "AUTODESK, INSTAGRAM, AND THE FFFIDDLE",
+    url: "/blog/autodesk-instagram-and-the-fffiddle",
   },
 ];

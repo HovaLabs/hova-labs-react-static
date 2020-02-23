@@ -47,6 +47,8 @@ export const routes = {
   LIST_PRINT_SCRAPER:
     "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
   BLOG: "/blog",
+  BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
+    "/blog/autodesk-instagram-and-the-fffiddle",
   BLOG_DO_SPACE: "/blog/do-space",
   BLOG_HOVALIN_AT_NASA: "/blog/hovalin-at-nasa",
   BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",
@@ -56,6 +58,7 @@ export const routes = {
   BLOG_OUR_FIVE_STRING_SYNESTHESIA_VIOLIN:
     "/blog/our-five-string-synesthesia-violin",
   BLOG_STEAM_CARNIVAL_SF: "/blog/steam-carnival-sf",
+  BLOG_THE_SITE_IS_NOW_LIVE: "/blog/the-site-is-now-live",
   BLOG_WOMEN_WHO_CODE: "/blog/women-who-code",
   CONTACT: "/contact",
   HOVALIN: "/hovalin",
