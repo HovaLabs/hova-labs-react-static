@@ -12,12 +12,12 @@ export const colorsLightTheme: Colors = {
 };
 
 export const colorsDarkTheme: Colors = {
-  onBackground: "hsla(0, 0%, 0%, 1)",
-  onSurface: "hsla(0, 0%, 0%, 1)",
-  onPrimary: "hsla(220, 7%, 8%, 1)",
-  onSecondary: "hsla(230, 7%, 16%, 1)",
-  background: "hsla(0, 0%, 100%, 1)",
-  surface: "hsla(0, 0%, 92%, 1)",
+  onBackground: "hsla(0, 0%, 100%, 1)",
+  onSurface: "hsla(0, 0%, 100%, 1)",
+  onPrimary: "hsla(0, 0%, 0%, 1)",
+  onSecondary: "hsla(0, 0%, 0%, 1)",
+  background: "hsla(0, 0%, 0%, 1)",
+  surface: "hsla(0, 0%, 20%, 1)",
   primary: "hsla(230, 25%, 68%, 1)",
   secondary: "hsla(230, 25%, 78%, 1)",
 };

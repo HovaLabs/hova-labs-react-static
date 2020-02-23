@@ -1,4 +1,6 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
+
 import violinPhoto1 from "./violin-photo-1.jpg";
 import violinPhoto2 from "./violin-photo-2.jpg";
 import violinPhoto3 from "./violin-photo-3.jpg";
@@ -12,23 +14,39 @@ import violinPhoto9 from "./violin-photo-9.jpg";
 export default (): React.ReactElement => (
   <div>
     <div>
-      Since the beginning of our pursuit of 3D printing violins, we've had a
-      very specific list of checkboxes in mind for our "no holds barred",
-      perfect violin.
+      <Text>
+        Since the beginning of our pursuit of 3D printing violins, we've had a
+        very specific list of checkboxes in mind for our "no holds barred",
+        perfect violin.
+      </Text>
     </div>
     <ul>
-      <li>3D printable on a "Desktop" printer</li>
-      <li>5 String</li>
-      <li>Barbera pickup</li>
-      <li>Translucent with LEDs in it</li>
-      <li>Responsive to sound and pitch</li>
+      <li>
+        <Text>3D printable on a "Desktop" printer</Text>
+      </li>
+      <li>
+        <Text>5 String</Text>
+      </li>
+      <li>
+        <Text>Barbera pickup</Text>
+      </li>
+      <li>
+        <Text>Translucent with LEDs in it</Text>
+      </li>
+      <li>
+        <Text>Responsive to sound and pitch</Text>
+      </li>
     </ul>
     <div>
-      Just checking off the first box was quite an endeavor. We're nowhere near
-      done tweaking our design, but we wereso happy to have our first working
-      prototype of what I call, the"Synesthesia Projector" Hovalin.
+      <Text>
+        Just checking off the first box was quite an endeavor. We're nowhere
+        near done tweaking our design, but we wereso happy to have our first
+        working prototype of what I call, the"Synesthesia Projector" Hovalin.
+      </Text>
     </div>
-    <div>Here's a clip of the violin in action:</div>
+    <div>
+      <Text>Here's a clip of the violin in action:</Text>
+    </div>
     <iframe
       title="hovalin-in-action"
       width="560"
@@ -38,66 +56,92 @@ export default (): React.ReactElement => (
       allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     />
-    <div>Here's a quick walkthrough of the build:</div>
     <div>
-      We added a slot for a 5-string Barbera pickup, as well as an on/off switch
-      for the electronics.
+      <Text>Here's a quick walkthrough of the build:</Text>
+    </div>
+    <div>
+      <Text>
+        We added a slot for a 5-string Barbera pickup, as well as an on/off
+        switch for the electronics.
+      </Text>
     </div>
     <img src={violinPhoto1} alt="hovalin-pickup" />
     <div>
-      Below that pickup, (You can sort of see it through the F hole) we have a
-      cheapo piezopickup that will be used to drive the pitch and level
-      detection.
+      <Text>
+        Below that pickup, (You can sort of see it through the F hole) we have a
+        cheapo piezopickup that will be used to drive the pitch and level
+        detection.
+      </Text>
     </div>
     <img src={violinPhoto2} alt="hovalin-pickup-alternate-angle" />
     <div>
-      In order tocharge the LED system, we added a usb-micro extension cable. To
-      mount it inplace, we covered a chopstick in hot glue and proceeded to
-      apply it liberally to the general area.
+      <Text>
+        In order tocharge the LED system, we added a usb-micro extension cable.
+        To mount it inplace, we covered a chopstick in hot glue and proceeded to
+        apply it liberally to the general area.
+      </Text>
     </div>
     <img src={violinPhoto3} alt="hovalin-hot-glue" />
     <img src={violinPhoto4} alt="hovalin-charging-port" />
     <div>
-      All signal processing is done by the Teensy3.6 and the Teensy Audio board.
-      The goal of the Teensy is to convert theinput microphone's pitch into a
-      specific color, and have the volume drivethe brightness.
+      <Text>
+        All signal processing is done by the Teensy3.6 and the Teensy Audio
+        board. The goal of the Teensy is to convert theinput microphone's pitch
+        into a specific color, and have the volume drivethe brightness.
+      </Text>
     </div>
-    <div>Some interesting bugs I ran into:</div>
+    <div>
+      <Text>Some interesting bugs I ran into:</Text>
+    </div>
     <ul>
       <li>
-        If I started to drive morethan ~40 neopixels, I would start to
-        experience ring modulation in my audioprocessing sketch.
+        <Text>
+          If I started to drive morethan ~40 neopixels, I would start to
+          experience ring modulation in my audioprocessing sketch.
+        </Text>
       </li>
       <li>
-        The noise generated from driving neopixels could bepicked up by the
-        audio circuit. If it picked up enough noise from drivingthe LEDs, it
-        would eventually reach a never-ending noise/light/feedback loopwhere the
-        noise generated from the LEDs would create audio which would makethe
-        LEDs brighter, and so on.
+        <Text>
+          The noise generated from driving neopixels could bepicked up by the
+          audio circuit. If it picked up enough noise from drivingthe LEDs, it
+          would eventually reach a never-ending noise/light/feedback loopwhere
+          the noise generated from the LEDs would create audio which would
+          makethe LEDs brighter, and so on.
+        </Text>
       </li>
       <li>
-        The Teensy 3.2 (or perhaps my poor soldering)was more susceptible to
-        noise.
+        <Text>
+          The Teensy 3.2 (or perhaps my poor soldering)was more susceptible to
+          noise.
+        </Text>
       </li>
     </ul>
     <div>
-      I'd love to improve the sketch, but for now,it's working just fine. My
-      guess is that having a dedicated brain for the neopixels will make things
-      run a lot smoother.
+      <Text>
+        I'd love to improve the sketch, but for now,it's working just fine. My
+        guess is that having a dedicated brain for the neopixels will make
+        things run a lot smoother.
+      </Text>
     </div>
     <img src={violinPhoto5} alt="hovalin-electronics" />
     <img src={violinPhoto6} alt="hovalin-power-input" />
     <div>
-      The violin has a gamut of connections rolling out of it. I didn't get a
-      proper photo, but the Teensy on/off switch works by breaking a USB cable's
-      5V (red wire).
+      <Text>
+        The violin has a gamut of connections rolling out of it. I didn't get a
+        proper photo, but the Teensy on/off switch works by breaking a USB
+        cable's 5V (red wire).
+      </Text>
     </div>
     <img src={violinPhoto7} alt="hovalin-power-enclosure" />
-    <div>Last, but not least, we painted in the H logo on the Hovalin.</div>
+    <div>
+      <Text>Last, but not least, we painted in the H logo on the Hovalin.</Text>
+    </div>
     <img src={violinPhoto8} alt="hovalin-logo" />
     <div>
-      Well, there you have it, our 5 string Synesthesia Projector Hovalin is
-      built and working. Can't wait to post more videos of it in action soon.
+      <Text>
+        Well, there you have it, our 5 string Synesthesia Projector Hovalin is
+        built and working. Can't wait to post more videos of it in action soon.
+      </Text>
     </div>
     <img src={violinPhoto9} alt="hovalin-top-view" />
   </div>
