@@ -4,7 +4,7 @@ import { Icon } from "@hova-labs/bento-box-web";
 
 import * as S from "./TopNavigationStyles";
 import { ModalsMobileNav } from "..";
-import { mobileNavLinks } from "./TopNavigationLinks";
+import { MobileNavLinks } from "./TopNavigationLinks";
 
 export const TopNavigationModal = ({
   navModalIsOpen,
@@ -21,10 +21,10 @@ export const TopNavigationModal = ({
             <Icon
               size={32}
               IconComponent={MdClose}
-              onPress={(): void => setNavModalIsOpen(!navModalIsOpen)}
+              onPress={(): void => setNavModalIsOpen(false)}
             />
           </S.ClosedButtonContainer>
-          {mobileNavLinks}
+          <MobileNavLinks onPress={(): void => setNavModalIsOpen(false)} />
         </S.ModalContent>
       </ModalsMobileNav>
     </S.ModalContainer>

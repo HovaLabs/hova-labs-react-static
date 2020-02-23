@@ -31,13 +31,21 @@ export const desktopNavLinks = desktopNavLinksArray.map(
   }
 );
 
-export const mobileNavLinks = mobileNavLinksArray.map(link => {
-  const { url, name } = link;
-  return (
-    <Li key={name}>
-      <Link to={url}>
-        <Text typography="headingSmall">{name}</Text>
-      </Link>
-    </Li>
-  );
-});
+export const MobileNavLinks = ({
+  onPress,
+}: {
+  onPress: () => void;
+}): React.ReactElement => (
+  <>
+    {mobileNavLinksArray.map(link => {
+      const { url, name } = link;
+      return (
+        <Li key={name}>
+          <Link to={url} onClick={onPress}>
+            <Text typography="headingSmall">{name}</Text>
+          </Link>
+        </Li>
+      );
+    })}
+  </>
+);

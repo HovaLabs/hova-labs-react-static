@@ -52,7 +52,7 @@ export const TopNavigation = (): React.ReactElement => {
               size={32}
               IconComponent={GiHamburgerMenu}
               onPress={(): void => {
-                setNavModalIsOpen(!navModalIsOpen);
+                setNavModalIsOpen(true);
               }}
             />
           </S.MenuButton>
