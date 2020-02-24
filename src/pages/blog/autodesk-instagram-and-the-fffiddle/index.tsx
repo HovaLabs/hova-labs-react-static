@@ -6,7 +6,7 @@ import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <BlogContainer author={blogManifest.author}>
+  <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
         Creating an acoustic 3d printable violin has been a labor of love,

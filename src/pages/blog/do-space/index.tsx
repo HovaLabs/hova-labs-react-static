@@ -11,7 +11,7 @@ import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <BlogContainer author={blogManifest.author}>
+  <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
         We had the amazing opportunity to present at a sold-out house at the

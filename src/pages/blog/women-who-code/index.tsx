@@ -7,7 +7,7 @@ import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <BlogContainer author={blogManifest.author}>
+  <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>Today I got to hang with my favorite ladies at</Text>
       <a href="https://www.womenwhocode.com/">

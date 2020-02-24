@@ -6,7 +6,7 @@ import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <BlogContainer author={blogManifest.author}>
+  <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
         tl;dr You have access to the CAD. It's easier to print and assemble.

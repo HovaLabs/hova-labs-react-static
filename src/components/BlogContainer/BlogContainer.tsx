@@ -8,16 +8,21 @@ import Cat from "./cat.png";
 import * as S from "./BlogContainerStyles";
 
 export const BlogContainer = ({
-  author,
+  blogManifest,
   children,
 }: {
-  author: "Matt" | "Kaitlyn" | "Cat";
+  blogManifest: {
+    author: "Matt" | "Kaitlyn" | "Cat";
+    datePublished: string;
+    title: string;
+    tags: Array<string>;
+  };
   children: React.ReactNode;
 }): React.ReactElement => (
   <div>
     <S.TopNavBump />
     <S.BlogStyles>{children}</S.BlogStyles>
-    <Author author={author} />
+    <Author author={blogManifest.author} />
   </div>
 );
 

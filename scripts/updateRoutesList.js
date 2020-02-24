@@ -53,7 +53,7 @@ const routeObject = {
 routesArray.forEach(r => {
   const routeString = r.slice(1).toUpperCase().replace(/(\/|-)/g, '_');
   if (routeObject[routeString]) {
-    throw new Error('duplicate routes, oh noes!');
+    throw new Error(`duplicate route "${routeString}", oh noes!`);
   }
   routeObject[routeString] = r;
 });

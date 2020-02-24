@@ -13,7 +13,7 @@ import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
 export default (): React.ReactElement => (
-  <BlogContainer author={blogManifest.author}>
+  <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>We had the opportunity to bring our project to</Text>
       <a href="https://www.nasa.gov/centers/ames/home/">
