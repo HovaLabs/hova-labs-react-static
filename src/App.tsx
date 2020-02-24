@@ -6,10 +6,29 @@ import { GlobalStyle, TopNavigation, ContainersWebsite } from "./components";
 import { themes } from "./theme";
 import "./global.css";
 
+// helper function to make window scroll to the top when the route changes
+export const ScrollToTop = ({
+  children,
+  location,
+}: {
+  children: React.ReactNode;
+  location: typeof window.location;
+  path?: string;
+}): any => {
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, [location.pathname]);
+  return children;
+};
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(["dynamic"]);
 
 function App(): React.ReactElement {
+  if (typeof window === "undefined") {
+    return null;
+  }
   return (
     <Root>
       <DesignSystemProvider themes={themes}>
@@ -19,7 +38,9 @@ function App(): React.ReactElement {
             <TopNavigation />
             <ContainersWebsite>
               <Router>
-                <Routes path="*" />
+                <ScrollToTop location={window.location} path="/">
+                  <Routes path="*" />
+                </ScrollToTop>
               </Router>
             </ContainersWebsite>
           </React.Suspense>
