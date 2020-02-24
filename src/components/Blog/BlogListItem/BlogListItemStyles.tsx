@@ -22,7 +22,7 @@ export const ContentContainer = styled("div")`
     })}
 `;
 
-export const Image = styled("img")`
+export const Image = styled("div")<{ backgroundImage: string }>`
   ${p =>
     p.theme.responsiveStyle("height", {
       s: `150px`,
@@ -34,6 +34,9 @@ export const Image = styled("img")`
       l: "0 0 646px",
     })}
   background-color: ${p => p.theme.colors.surface};
+  background-image: url(${p => p.backgroundImage});
+  background-position: center;
+  background-size: cover;
 `;
 
 export const OuterContainer = styled("div")`

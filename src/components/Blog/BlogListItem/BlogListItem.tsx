@@ -23,7 +23,7 @@ const BlogListItem = ({
   ));
   return (
     <S.OuterContainer>
-      <S.Image src={hero} />
+      <S.Image backgroundImage={hero} />
       <S.ContentContainer>
         <div>
           <div>
