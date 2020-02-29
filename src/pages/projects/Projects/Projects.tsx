@@ -29,7 +29,7 @@ const projectArray: Array<Project> = [
     description: "A Social Network for synesthetes and researchers.",
     imgSrc: TSNHero,
     linkTitle: "view",
-    linkUrl: "/projects/the-synesthesia-network",
+    linkUrl: "/the-synesthesia-network",
   },
   {
     title: "Synesthesia Light Show",
