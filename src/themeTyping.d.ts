@@ -1,5 +1,4 @@
 import { DefaultTheme } from "styled-components";
-
 import {
   Breakpoints,
   Colors,
@@ -25,6 +24,9 @@ declare module "styled-components" {
     topNavClearance: TopNavClearance;
     typography: Typography;
     responsiveStyle: (styleKey: string, styleObject: any) => any;
-    responsiveValue: (styles: any) => (props: Props) => any;
+    responsiveValue: (styleObject: any) => (props: any) => any;
+    width: number;
+    height: number;
+    breakpoint: keyof Breakpoints;
   }
 }

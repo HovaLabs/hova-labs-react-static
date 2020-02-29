@@ -24,6 +24,9 @@ const lightTheme: HovaLabsTheme = {
   typography,
   responsiveStyle,
   responsiveValue,
+  width: 0,
+  height: 0,
+  breakpoint: "l",
 };
 
 const darkTheme: HovaLabsTheme = {
@@ -38,6 +41,9 @@ const darkTheme: HovaLabsTheme = {
   typography,
   responsiveStyle,
   responsiveValue,
+  width: 0,
+  height: 0,
+  breakpoint: "l",
 };
 
 export const themes = {

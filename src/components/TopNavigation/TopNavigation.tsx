@@ -1,37 +1,16 @@
 import React from "react";
+import { ThemeContext } from "styled-components";
 import { Link } from "@reach/router";
-import { Icon } from "@hova-labs/bento-box-web";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Icon, HovaLabsLogo, Text } from "@hova-labs/bento-box-web";
+import { TopNavigationModal } from "./TopNavigationModal";
 
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
-import { TopNavigationModal } from "./TopNavigationModal";
-import { desktopNavLinks } from "./TopNavigationLinks";
-
-const isScrolled = (): boolean => {
-  // Allows us to build with React Static
-  // variable "document" doesn't exist in a Node env
-  if (typeof document !== "undefined") {
-    return document.body.getBoundingClientRect().top < 0;
-  }
-  return false;
-};
 
 export const TopNavigation = (): React.ReactElement => {
-  // STATE VARIABLES
-  const [navModalIsOpen, setNavModalIsOpen] = React.useState(false);
-  const [scrolled, setScrolled] = React.useState(isScrolled());
-
-  // HANDLE SCROLL BEHAVIOR
-  React.useEffect(() => {
-    const handleScroll = (): void => {
-      setScrolled(isScrolled());
-    };
-    window.addEventListener("scroll", handleScroll);
-    return (): void => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  const [navModalIsOpen, setNavModalIsOpen] = React.useState<boolean>(false);
+  const theme = React.useContext(ThemeContext);
 
   return (
     <>
@@ -39,25 +18,38 @@ export const TopNavigation = (): React.ReactElement => {
         navModalIsOpen={navModalIsOpen}
         setNavModalIsOpen={setNavModalIsOpen}
       />
-      <S.TopNavigationContainer scrolled={scrolled} menuIsOpen={navModalIsOpen}>
-        <div>
-          <Link to={routes.HOMEPAGE}>
-            <S.LogoContainer>
-              <S.Logo />
-            </S.LogoContainer>
-          </Link>
-          <S.Ul>{desktopNavLinks}</S.Ul>
-          <S.MenuButton>
+      <S.Container>
+        <Link to={routes.HOMEPAGE}>
+          <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
+        </Link>
+        <S.Links>
+          {["s", "m"].includes(theme.breakpoint) ? (
             <Icon
-              size={32}
               IconComponent={GiHamburgerMenu}
-              onPress={(): void => {
+              size={64}
+              onPress={() => {
                 setNavModalIsOpen(true);
               }}
             />
-          </S.MenuButton>
-        </div>
-      </S.TopNavigationContainer>
+          ) : (
+            <>
+              <Link to={routes.PROJECTS}>
+                <Text typography="headingSmall">Projects</Text>
+              </Link>
+              <Link to={routes.BLOG}>
+                <Text typography="headingSmall">Blog</Text>
+              </Link>
+              <Link to={routes.STORE}>
+                <Text typography="headingSmall">Store</Text>
+              </Link>
+              <Link to={routes.CONTACT}>
+                <Text typography="headingSmall">Contact</Text>
+              </Link>
+            </>
+          )}
+        </S.Links>
+        {/* <S.MenuButton /> */}
+      </S.Container>
     </>
   );
 };

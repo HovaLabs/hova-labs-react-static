@@ -4,7 +4,7 @@ export type BlogTagType = {
 };
 
 // THEME
-export type BackgroundGutters = { desktop: number; mobile: number };
+export type BackgroundGutters = { l: number; s: number };
 export type Frames = { outline: { border: number } };
 export type TopNavClearance = { s: number; l: number };
 

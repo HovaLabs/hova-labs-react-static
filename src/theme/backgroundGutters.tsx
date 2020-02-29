@@ -1,6 +1,6 @@
 import { spacings } from "./spacings";
 
 export const backgroundGutters = {
-  l: spacings.xl,
+  l: spacings.xxl,
   s: spacings.l,
 };
