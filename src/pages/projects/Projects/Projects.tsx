@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import * as S from "./ProjectsStyles";
+import { routes } from "../../../routes";
 
 import HovaInstrumentsHero from "./Media/hova-instruments-hero.jpg";
 import TSNHero from "./Media/tsn-hero.jpg";
@@ -22,14 +23,14 @@ const projectArray: Array<Project> = [
     description: "Open source, 3D printable acoustic instruments for all!",
     imgSrc: HovaInstrumentsHero,
     linkTitle: "view",
-    linkUrl: "/hovalin",
+    linkUrl: routes.HOVALIN,
   },
   {
     title: "Synesthesia Network",
     description: "A Social Network for synesthetes and researchers.",
     imgSrc: TSNHero,
     linkTitle: "view",
-    linkUrl: "/the-synesthesia-network",
+    linkUrl: routes.THE_SYNESTHESIA_NETWORK,
   },
   {
     title: "Synesthesia Light Show",
@@ -37,14 +38,14 @@ const projectArray: Array<Project> = [
       "An interactive light show that demonstrates musical note --> color synesthesia.",
     imgSrc: HovalinLightsHero,
     linkTitle: "view",
-    linkUrl: "/projects/synesthesia-light-show",
+    linkUrl: routes.SYNESTHESIA_LIGHT_SHOW,
   },
   {
     title: "HydraPrint MCU",
     description: "A good looking full stack hardware controller interface.",
     imgSrc: MCUHero,
     linkTitle: "view",
-    linkUrl: "/projects/hydraprint",
+    linkUrl: routes.HYDRAPRINT,
   },
   {
     title: "Waldo",
@@ -52,7 +53,7 @@ const projectArray: Array<Project> = [
       "An awesome, project manager friendly interface for managing your team.",
     imgSrc: WaldoHero,
     linkTitle: "view",
-    linkUrl: "/waldo",
+    linkUrl: routes.WALDO,
   },
 ];
 

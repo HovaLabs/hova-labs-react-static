@@ -64,7 +64,10 @@ export const routes = {
   HOVALIN: "/hovalin",
   HOVALIN_DOCS: "/hovalin/docs",
   HOVALIN_FAQ: "/hovalin/faq",
+  HYDRAPRINT: "/hydraprint",
   PROJECTS: "/projects",
   STORE: "/store",
+  SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
+  THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
   WALDO: "/waldo",
 };
