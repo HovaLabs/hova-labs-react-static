@@ -5,6 +5,10 @@ export const GlobalStyle = createGlobalStyle`
     background: ${p => p.theme.colors.background};
   }
 
+  body{
+    ${p => p.theme.typography.bodyText}
+  }
+
   a {
     text-decoration: none;
   }
