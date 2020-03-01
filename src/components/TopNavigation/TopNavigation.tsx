@@ -34,16 +34,16 @@ export const TopNavigation = (): React.ReactElement => {
           ) : (
             <>
               <Link to={routes.PROJECTS}>
-                <Text typography="headingSmall">Projects</Text>
+                <Text typography="headingMedium">Projects</Text>
               </Link>
               <Link to={routes.BLOG}>
-                <Text typography="headingSmall">Blog</Text>
+                <Text typography="headingMedium">Blog</Text>
               </Link>
               <Link to={routes.STORE}>
-                <Text typography="headingSmall">Store</Text>
+                <Text typography="headingMedium">Store</Text>
               </Link>
               <Link to={routes.CONTACT}>
-                <Text typography="headingSmall">Contact</Text>
+                <Text typography="headingMedium">Contact</Text>
               </Link>
             </>
           )}
