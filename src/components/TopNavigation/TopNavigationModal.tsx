@@ -28,27 +28,27 @@ export const TopNavigationModal = ({
           <S.ModalLinkContainer onClick={() => setNavModalIsOpen(false)}>
             <Link to={routes.HOMEPAGE}>
               <div>
-                <Text typography="headingSmall">Home</Text>
+                <Text typography="headingMedium">Home</Text>
               </div>
             </Link>
             <Link to={routes.PROJECTS}>
               <div>
-                <Text typography="headingSmall">Projects</Text>
+                <Text typography="headingMedium">Projects</Text>
               </div>
             </Link>
             <Link to={routes.BLOG}>
               <div>
-                <Text typography="headingSmall">Blog</Text>
+                <Text typography="headingMedium">Blog</Text>
               </div>
             </Link>
             <Link to={routes.STORE}>
               <div>
-                <Text typography="headingSmall">Store</Text>
+                <Text typography="headingMedium">Store</Text>
               </div>
             </Link>
             <Link to={routes.CONTACT}>
               <div>
-                <Text typography="headingSmall">Contact</Text>
+                <Text typography="headingMedium">Contact</Text>
               </div>
             </Link>
           </S.ModalLinkContainer>
