@@ -16,7 +16,9 @@ export const ScrollToTop = ({
   path?: string;
 }): any => {
   React.useEffect(() => {
-    document.getElementById("hova-labs-scrollable-content").scrollTo(0, 0);
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
   }, [location.pathname]);
   return children;
 };
