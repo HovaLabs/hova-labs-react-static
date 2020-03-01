@@ -2,20 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import { IconBaseProps } from "react-icons";
 import { Icon, Cube, Robot, XML, Magic, Text } from "@hova-labs/bento-box-web";
+import { ContainerWithBorder } from "../../components/Containers/ContainerWithBorder";
 
 // SERVICES START
+
 const ServicesContainer = styled("div")`
-  ${p =>
-    p.theme.responsiveStyle("margin-top", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
   ${p =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xxl}px`,
     })}
-  background-color: ${p => p.theme.colors.surface};
 `;
 
 const ServicesTextContainer = styled("div")``;
@@ -81,29 +77,31 @@ const services: Array<Service> = [
 // SERVICES END
 
 export const Services = (): React.ReactElement => (
-  <ServicesContainer>
-    <ServicesTextContainer>
-      <div>
-        <Text typography="headingSmall">SERVICES</Text>
-      </div>
-      <div>
-        <Text typography="headingLarge">What We Do</Text>
-      </div>
-    </ServicesTextContainer>
-    <ServiceGridContainer>
-      {services.map(s => (
-        <ServiceGridItem key={s.title}>
-          <div>
-            <Icon IconComponent={s.icon} size={32} />
-          </div>
-          <div>
-            <Text typography="headingMedium">{s.title}</Text>
-          </div>
-          <div>
-            <Text>{s.description}</Text>
-          </div>
-        </ServiceGridItem>
-      ))}
-    </ServiceGridContainer>
-  </ServicesContainer>
+  <ContainerWithBorder>
+    <ServicesContainer>
+      <ServicesTextContainer>
+        <div>
+          <Text typography="headingSmall">SERVICES</Text>
+        </div>
+        <div>
+          <Text typography="headingLarge">What We Do</Text>
+        </div>
+      </ServicesTextContainer>
+      <ServiceGridContainer>
+        {services.map(s => (
+          <ServiceGridItem key={s.title}>
+            <div>
+              <Icon IconComponent={s.icon} size={32} />
+            </div>
+            <div>
+              <Text typography="headingMedium">{s.title}</Text>
+            </div>
+            <div>
+              <Text>{s.description}</Text>
+            </div>
+          </ServiceGridItem>
+        ))}
+      </ServiceGridContainer>
+    </ServicesContainer>
+  </ContainerWithBorder>
 );
