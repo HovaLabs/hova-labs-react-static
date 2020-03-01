@@ -16,9 +16,7 @@ export const ScrollToTop = ({
   path?: string;
 }): any => {
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.scrollTo(0, 0);
-    }
+    document.getElementById("hova-labs-scrollable-content").scrollTo(0, 0);
   }, [location.pathname]);
   return children;
 };
@@ -37,11 +35,13 @@ function App(): React.ReactElement {
             <GlobalStyle />
             <TopNavigation />
             <ContainersWebsite>
-              <Router>
-                <ScrollToTop location={window.location} path="/">
-                  <Routes path="*" />
-                </ScrollToTop>
-              </Router>
+              <div id="hova-labs-scrollable-content">
+                <Router>
+                  <ScrollToTop location={window.location} path="/">
+                    <Routes path="*" />
+                  </ScrollToTop>
+                </Router>
+              </div>
             </ContainersWebsite>
           </React.Suspense>
         </div>
