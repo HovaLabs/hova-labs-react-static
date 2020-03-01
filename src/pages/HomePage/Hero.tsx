@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ContainerWithBorder } from "../../components/Containers/ContainerWithBorder";
+import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import hovalin from "../../media/hovalin-64.jpg";
 
 // HERO START

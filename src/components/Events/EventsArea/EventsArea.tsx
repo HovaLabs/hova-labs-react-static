@@ -6,7 +6,7 @@ import {
   EventListOuterContainer,
   OuterContainer,
 } from "./EventsAreaStyles";
-import { ContainerWithBorder } from "../../Containers/ContainerWithBorder";
+import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import EventsListItem from "../EventsListItem/EventsListItem";
 
 export const EventsArea = (): React.ReactElement => {

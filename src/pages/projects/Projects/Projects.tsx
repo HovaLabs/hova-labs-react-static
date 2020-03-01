@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import * as S from "./ProjectsStyles";
 import { routes } from "../../../routes";
-import { ContainerWithBorder } from "../../../components/Containers/ContainerWithBorder";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 import HovaInstrumentsHero from "./Media/hova-instruments-hero.jpg";
 import TSNHero from "./Media/tsn-hero.jpg";
 import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";

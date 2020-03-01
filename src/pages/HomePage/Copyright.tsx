@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
-import { ContainerWithBorder } from "../../components/Containers/ContainerWithBorder";
+import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 
 // COPYRIGHT START
 const CopyrightContainer = styled("div")`

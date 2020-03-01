@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
-import { ContainerWithBorder } from "../../components/Containers/ContainerWithBorder";
+import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import theHovas from "../../media/the-hovas.png";
 
 // ABOUT START
