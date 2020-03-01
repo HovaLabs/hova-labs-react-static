@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import hovalin from "../../media/hovalin-64.jpg";
 
 // HERO START
@@ -44,8 +44,10 @@ const HeroImage = styled("img").attrs({ src: hovalin })`
 // HERO END
 
 export const Hero = (): React.ReactElement => (
-  <HeroContainer>
-    <HeroImage />
-    <HeroText>HOVA LABS</HeroText>
-  </HeroContainer>
+  <ContainerWithBorder>
+    <HeroContainer>
+      <HeroImage />
+      <HeroText>HOVA LABS</HeroText>
+    </HeroContainer>
+  </ContainerWithBorder>
 );

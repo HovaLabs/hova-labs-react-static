@@ -3,7 +3,7 @@ import { Link } from "@reach/router";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import * as S from "./ProjectsStyles";
 import { routes } from "../../../routes";
-
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 import HovaInstrumentsHero from "./Media/hova-instruments-hero.jpg";
 import TSNHero from "./Media/tsn-hero.jpg";
 import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
@@ -58,9 +58,9 @@ const projectArray: Array<Project> = [
 ];
 
 export const Projects = (): React.ReactElement => (
-  <S.Container>
+  <>
     {projectArray.map(project => (
-      <>
+      <ContainerWithBorder>
         <Link to={project.linkUrl} key={project.linkUrl}>
           <S.HeroImage backgroundImage={project.imgSrc} />
         </Link>
@@ -77,7 +77,7 @@ export const Projects = (): React.ReactElement => (
             </Link>
           </S.ButtonContainer>
         </div>
-      </>
+      </ContainerWithBorder>
     ))}
-  </S.Container>
+  </>
 );

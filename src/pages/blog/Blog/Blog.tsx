@@ -4,6 +4,7 @@ import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
 import * as S from "./BlogStyles";
 import { blogList } from "./blogList";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const Blog = (): React.ReactElement => {
   const blogTags: Array<any> = [];
@@ -26,9 +27,11 @@ export const Blog = (): React.ReactElement => {
   ));
 
   return (
-    <S.OuterContainer>
-      {blogTagList}
-      {BlogList}
-    </S.OuterContainer>
+    <ContainerWithBorder>
+      <S.OuterContainer>
+        {blogTagList}
+        {BlogList}
+      </S.OuterContainer>
+    </ContainerWithBorder>
   );
 };

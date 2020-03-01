@@ -1,18 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
-
+import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import theHovas from "../../media/the-hovas.png";
 
 // ABOUT START
-const OuterContainer = styled("div")`
-  ${p =>
-    p.theme.responsiveStyle("margin-top", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
-  background-color: ${p => p.theme.colors.surface};
-`;
 
 const InnerContainer = styled("div")`
   background-image: url(${theHovas});
@@ -47,7 +39,7 @@ const AboutTextContainer = styled("div")`
 // ABOUT END
 
 export const About = () => (
-  <OuterContainer>
+  <ContainerWithBorder>
     <InnerContainer>
       <AboutTextContainer>
         <div>
@@ -65,5 +57,5 @@ export const About = () => (
         </div>
       </AboutTextContainer>
     </InnerContainer>
-  </OuterContainer>
+  </ContainerWithBorder>
 );

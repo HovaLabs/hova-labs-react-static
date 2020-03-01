@@ -6,6 +6,7 @@ import {
   EventListOuterContainer,
   OuterContainer,
 } from "./EventsAreaStyles";
+import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import EventsListItem from "../EventsListItem/EventsListItem";
 
 export const EventsArea = (): React.ReactElement => {
@@ -19,14 +20,16 @@ export const EventsArea = (): React.ReactElement => {
     </div>
   );
   return (
-    <OuterContainer>
-      <div>
-        <Text typography="headingSmall">EVENTS</Text>
-      </div>
-      <div>
-        <Text typography="headingLarge">Say Hey</Text>
-      </div>
-      <EventListOuterContainer>{content}</EventListOuterContainer>
-    </OuterContainer>
+    <ContainerWithBorder>
+      <OuterContainer>
+        <div>
+          <Text typography="headingSmall">EVENTS</Text>
+        </div>
+        <div>
+          <Text typography="headingLarge">Say Hey</Text>
+        </div>
+        <EventListOuterContainer>{content}</EventListOuterContainer>
+      </OuterContainer>
+    </ContainerWithBorder>
   );
 };
