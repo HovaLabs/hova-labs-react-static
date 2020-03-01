@@ -46,5 +46,4 @@ export const ButtonContainer = styled.div`
   > * {
     margin-right: ${p => p.theme.spacings.m}px;
   }
-  margin-bottom: ${p => p.theme.spacings.xl}px;
 `;
