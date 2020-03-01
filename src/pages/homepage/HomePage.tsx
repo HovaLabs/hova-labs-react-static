@@ -6,6 +6,7 @@ import { Copyright } from "./Copyright";
 import { EventsArea } from "../../components/Events/EventsArea/EventsArea";
 import { Hero } from "./Hero";
 import { Services } from "./Services";
+import { NewOnTheBlog } from "./NewOnTheBlog";
 
 const Container = styled("div")``;
 
@@ -18,6 +19,7 @@ export const HomePage = (): React.ReactElement => (
     <About />
     <Services />
     <EventsArea />
+    <NewOnTheBlog />
     <Copyright />
   </Container>
 );
