@@ -13,6 +13,7 @@ export const typography: Typography = {
         s: "35px",
         m: "70px",
       })}
+      line-height: 120%;
     `}
   `,
   headingMedium: css<TypographyProps>`
@@ -22,6 +23,7 @@ export const typography: Typography = {
         s: "25px",
         m: "50px",
       })}
+      line-height: 120%;
     `}
   `,
   headingSmall: css`
