@@ -2,7 +2,7 @@ import React from "react";
 import { Root, Routes, addPrefetchExcludes } from "react-static";
 import { Router } from "@reach/router";
 import { DesignSystemProvider } from "@hova-labs/bento-box-web";
-import { GlobalStyle, TopNavigation, ContainersWebsite } from "./components";
+import { GlobalStyle, TopNavigation } from "./components";
 import { themes } from "./theme";
 import "./global.css";
 
@@ -36,15 +36,13 @@ function App(): React.ReactElement {
           <React.Suspense fallback={<em>Loading...</em>}>
             <GlobalStyle />
             <TopNavigation />
-            <ContainersWebsite>
-              <div id="hova-labs-scrollable-content">
-                <Router>
-                  <ScrollToTop location={window.location} path="/">
-                    <Routes path="*" />
-                  </ScrollToTop>
-                </Router>
-              </div>
-            </ContainersWebsite>
+            <div id="hova-labs-scrollable-content">
+              <Router>
+                <ScrollToTop location={window.location} path="/">
+                  <Routes path="*" />
+                </ScrollToTop>
+              </Router>
+            </div>
           </React.Suspense>
         </div>
       </DesignSystemProvider>
