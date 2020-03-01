@@ -20,7 +20,6 @@ export const BlogContainer = ({
   children: React.ReactNode;
 }): React.ReactElement => (
   <div>
-    <S.TopNavBump />
     <S.BlogStyles>{children}</S.BlogStyles>
     <Author author={blogManifest.author} />
   </div>

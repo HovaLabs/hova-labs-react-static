@@ -12,7 +12,7 @@ import hydraprintJobsList from "./hydraprint-jobs-list.jpg";
 import hydraprintTerminal from "./hydraprint-terminal.jpg";
 
 export const Hydraprint = (): React.ReactElement => (
-  <div style={{ marginTop: 120 }}>
+  <div>
     <div>
       <img src={hydraprintHero} alt="hydraprint" style={{ height: 200 }} />
     </div>

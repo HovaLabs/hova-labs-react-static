@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
 export const SynesthesiaLightShow = (): React.ReactElement => (
-  <div style={{ marginTop: 120 }}>
+  <div>
     <div>
       <Text typography="headingLarge">Pitch -> Color.</Text>
     </div>

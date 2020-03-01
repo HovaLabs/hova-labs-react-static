@@ -24,9 +24,14 @@ const HeroText = styled("div")`
   ${p =>
     p.theme.responsiveStyle("letter-spacing", {
       s: "10px",
-      l: "10px",
+      l: "20px",
     })}
   text-align: center;
+  ${p =>
+    p.theme.responsiveStyle("line-height", {
+      s: "50px",
+      l: "114px",
+    })}
 `;
 
 const HeroImage = styled("img").attrs({ src: hovalin })`

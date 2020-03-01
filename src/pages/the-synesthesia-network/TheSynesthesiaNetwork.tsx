@@ -6,7 +6,7 @@ import tsn from "./tsn.jpg";
 import tsn2 from "./tsn-2.jpg";
 
 export const TheSynesthesiaNetwork = (): React.ReactElement => (
-  <div style={{ marginTop: 120 }}>
+  <div>
     <div>
       <img src={tsnHero} alt="The Synesthesia Network" />
     </div>
