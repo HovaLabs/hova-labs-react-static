@@ -11,7 +11,8 @@ export const typography: Typography = {
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "35px",
-        m: "70px",
+        m: "52px",
+        l: "70px",
       })}
       line-height: 120%;
     `}
@@ -21,7 +22,8 @@ export const typography: Typography = {
       color: ${p.color || p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "25px",
-        m: "50px",
+        m: "37px",
+        l: "50px",
       })}
       line-height: 120%;
     `}
@@ -31,7 +33,8 @@ export const typography: Typography = {
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "20px",
-        m: "24px",
+        m: "22px",
+        l: "24px",
       })}
     `}
   `,
@@ -41,7 +44,8 @@ export const typography: Typography = {
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
-        m: "24px",
+        m: "20px",
+        l: "24px",
       })}
       line-height: 150.5%
     `}
@@ -51,7 +55,8 @@ export const typography: Typography = {
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
-        m: "24px",
+        m: "20px",
+        l: "24px",
       })}
     `}
   `,

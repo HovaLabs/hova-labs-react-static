@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
 import { blogList } from "../blog/Blog/blogList";
 import { Button } from "../../components";
@@ -7,9 +7,9 @@ import { Button } from "../../components";
 // COPYRIGHT START
 const NewOnTheBlogContainer = styled("div")`
 ${p =>
-  p.theme.responsiveStyle("margin-top", {
-    s: `${p.theme.spacings.l}px`,
-    l: `${p.theme.spacings.xl}px`,
+  p.theme.responsiveStyle("margin", {
+    s: `${p.theme.spacings.m}px ${p.theme.spacings.l}px`,
+    l: `${p.theme.spacings.l}px ${p.theme.spacings.xl}px`,
   })}
 ${p =>
   p.theme.responsiveStyle("padding", {
@@ -37,9 +37,29 @@ const Image = styled("div")<{ backgroundImage: string }>`
 `;
 
 const BlogContainer = styled("div")`
+  padding-top: ${p => p.theme.spacings.xl}px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  padding: ${p => p.theme.spacings.l}px;
+  ${p =>
+    p.theme.responsiveStyle("grid-template-columns", {
+      s: "1fr",
+      l: "1fr 2fr",
+    })}
+  ${p =>
+    p.theme.responsiveStyle("grid-gap", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xxl}px`,
+    })}
+  ${p =>
+    p.theme.responsiveValue({
+      s: css`
+        > div {
+          :nth-child(2n -1) {
+            margin-top: 48px;
+          }
+        }
+      `,
+      l: "",
+    })}
 `;
 
 const LeftColumn = styled("div")`
