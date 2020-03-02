@@ -4,7 +4,6 @@ import { Router } from "@reach/router";
 import { DesignSystemProvider } from "@hova-labs/bento-box-web";
 import { GlobalStyle, TopNavigation } from "./components";
 import { themes } from "./theme";
-import "./global.css";
 
 // helper function to make window scroll to the top when the route changes
 export const ScrollToTop = ({
@@ -36,13 +35,11 @@ function App(): React.ReactElement {
           <React.Suspense fallback={<em>Loading...</em>}>
             <GlobalStyle />
             <TopNavigation />
-            <div id="hova-labs-scrollable-content">
-              <Router>
-                <ScrollToTop location={window.location} path="/">
-                  <Routes path="*" />
-                </ScrollToTop>
-              </Router>
-            </div>
+            <Router>
+              <ScrollToTop location={window.location} path="/">
+                <Routes path="*" />
+              </ScrollToTop>
+            </Router>
           </React.Suspense>
         </div>
       </DesignSystemProvider>
