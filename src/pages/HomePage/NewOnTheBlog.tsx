@@ -103,7 +103,7 @@ const dateToString = (isoString: string): string => {
 export const NewOnTheBlog = (): React.ReactElement => (
   <NewOnTheBlogContainer>
     <div>
-      <Text typography="headingSmall">New on the blog</Text>
+      <Text typography="headingSmall">NEW ON THE BLOG</Text>
     </div>
     <BlogContainer>
       {blogList.slice(0, 2).map(blog => (
