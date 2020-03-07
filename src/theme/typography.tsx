@@ -8,8 +8,9 @@ interface TypographyProps {
 const fontFamily = "Josefin Sans, sans-serif";
 
 export const typography: Typography = {
-  headingLarge: css`
-    ${p => css`
+  headingLarge: css<TypographyProps>`
+    ${p => css<TypographyProps>`
+      font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
         s: "35px",
@@ -20,7 +21,7 @@ export const typography: Typography = {
     `}
   `,
   headingMedium: css<TypographyProps>`
-    ${p => css`
+    ${p => css<TypographyProps>`
       font-family: ${fontFamily};
       color: ${p.color || p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
@@ -31,8 +32,8 @@ export const typography: Typography = {
       line-height: 120%;
     `};
   `,
-  headingSmall: css`
-    ${p => css`
+  headingSmall: css<TypographyProps>`
+    ${p => css<TypographyProps>`
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
@@ -42,7 +43,7 @@ export const typography: Typography = {
       })}
     `}
   `,
-  bodyText: css`
+  bodyText: css<TypographyProps>`
     ${p => css<TypographyProps>`
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface};
@@ -55,8 +56,8 @@ export const typography: Typography = {
       line-height: 150.5%
     `}
   `,
-  buttonText: css`
-    ${p => css`
+  buttonText: css<TypographyProps>`
+    ${p => css<TypographyProps>`
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface};
       ${p.theme.responsiveStyle("font-size", {
