@@ -9,7 +9,7 @@ import { InstallTunerPegs } from "./InstallTunerPegs";
 import { Assemble } from "./Assemble";
 import { InstallStrings } from "./InstallStrings";
 
-export default (): React.ReactElement => (
+const Hovalin: React.FC<{}> = () => (
   <div>
     <Hero />
     <LinkList />
@@ -22,3 +22,5 @@ export default (): React.ReactElement => (
     <InstallStrings />
   </div>
 );
+
+export default Hovalin;

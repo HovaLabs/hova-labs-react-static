@@ -5,7 +5,7 @@ import fffiddle from "./Media/fffiddle.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const AutodeskInstagramAndTheFFFiddle: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -51,3 +51,5 @@ export default (): React.ReactElement => (
     </div>
   </BlogContainer>
 );
+
+export default AutodeskInstagramAndTheFFFiddle;

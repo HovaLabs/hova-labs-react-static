@@ -1,7 +1,7 @@
 import React from "react";
 import hovalin from "./hovalinv4.png";
 
-export const Store = (): React.ReactElement => (
+export const Store: React.FC<{}> = () => (
   <div style={{ display: "flex" }}>
     <div>
       <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />

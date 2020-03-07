@@ -3,7 +3,7 @@ import pegEndBreakoff from "./Photos/peg-end-breakoff.gif";
 import pegInsert from "./Photos/peg-insert.gif";
 import pegTighten from "./Photos/peg-tighten.gif";
 
-export const InstallTunerPegs = (): React.ReactElement => (
+export const InstallTunerPegs: React.FC<{}> = () => (
   <div>
     <div>
       <div>4</div>

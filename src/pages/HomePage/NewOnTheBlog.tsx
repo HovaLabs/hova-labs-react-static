@@ -100,7 +100,7 @@ const dateToString = (isoString: string): string => {
   return `${month} ${date.getDate()}, ${date.getFullYear()}`;
 };
 
-export const NewOnTheBlog = (): React.ReactElement => (
+export const NewOnTheBlog: React.FC<{}> = () => (
   <NewOnTheBlogContainer>
     <div>
       <Text typography="headingSmall">NEW ON THE BLOG</Text>

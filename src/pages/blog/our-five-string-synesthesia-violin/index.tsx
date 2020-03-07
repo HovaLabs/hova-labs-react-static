@@ -14,7 +14,7 @@ import violinPhoto9 from "./violin-photo-9.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -149,3 +149,5 @@ export default (): React.ReactElement => (
     <img src={violinPhoto9} alt="hovalin-top-view" />
   </BlogContainer>
 );
+
+export default OurFiveStringSynesthesiaViolin;

@@ -2,7 +2,7 @@ import React from "react";
 import hovalinStrings from "./Photos/hovalin-strings.jpg";
 import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 
-export const InstallStrings = (): React.ReactElement => (
+export const InstallStrings: React.FC<{}> = () => (
   <div>
     <div>
       <div>6</div>

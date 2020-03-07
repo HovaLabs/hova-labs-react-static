@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
-export const SynesthesiaLightShow = (): React.ReactElement => (
+export const SynesthesiaLightShow: React.FC<{}> = () => (
   <div>
     <div>
       <Text typography="headingLarge">Pitch -> Color.</Text>

@@ -7,10 +7,7 @@ import Cat from "./cat.png";
 
 import * as S from "./BlogContainerStyles";
 
-export const BlogContainer = ({
-  blogManifest,
-  children,
-}: {
+export const BlogContainer: React.FC<{
   blogManifest: {
     author: "Matt" | "Kaitlyn" | "Cat";
     datePublished: string;
@@ -18,7 +15,7 @@ export const BlogContainer = ({
     tags: Array<string>;
   };
   children: React.ReactNode;
-}): React.ReactElement => (
+}> = ({ blogManifest, children }) => (
   <div>
     <S.BlogStyles>{children}</S.BlogStyles>
     <Author author={blogManifest.author} />
@@ -55,11 +52,9 @@ const authorLinks = {
   },
 };
 
-const Author = ({
+const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
   author,
-}: {
-  author: "Matt" | "Kaitlyn" | "Cat";
-}): React.ReactElement => (
+}) => (
   <S.AuthorContainer>
     <S.AuthorImage src={authorPhotos[author]} alt="Author" />
     <S.AuthorAboutContainer>

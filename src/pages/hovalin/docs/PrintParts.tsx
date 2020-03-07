@@ -5,7 +5,7 @@ import hovalinBody from "./Photos/hovalin-body.svg";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
 
-export const PrintParts = (): React.ReactElement => (
+export const PrintParts: React.FC<{}> = () => (
   <div>
     <div>
       <div>

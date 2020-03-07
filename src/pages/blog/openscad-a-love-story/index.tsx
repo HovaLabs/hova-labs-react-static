@@ -6,7 +6,7 @@ import hovalinStick from "./Media/hovalin-stick.png";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const OpenscadALoveStory: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -225,3 +225,5 @@ export default (): React.ReactElement => (
     </div>
   </BlogContainer>
 );
+
+export default OpenscadALoveStory;

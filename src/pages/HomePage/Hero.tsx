@@ -35,7 +35,7 @@ const HeroText = styled("div")`
     })}
 `;
 
-export const Hero = (): React.ReactElement => (
+export const Hero: React.FC<{}> = () => (
   <ContainerWithBorder backgroundImage={hovalin}>
     <HeroContainer>
       <HeroText>HOVA LABS</HeroText>

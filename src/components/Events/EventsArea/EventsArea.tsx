@@ -9,7 +9,7 @@ import {
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import EventsListItem from "../EventsListItem/EventsListItem";
 
-export const EventsArea = (): React.ReactElement => {
+export const EventsArea: React.FC<{}> = () => {
   // CONSTANTS
   const eventsList = events.map(event => <EventsListItem event={event} />);
   const content = events.length ? (

@@ -7,10 +7,10 @@ interface ModalsMobileNavProps {
   children: React.ReactNode;
   isOpen: boolean;
 }
-export const ModalsMobileNav = ({
+export const ModalsMobileNav: React.FC<ModalsMobileNavProps> = ({
   children,
   isOpen,
-}: ModalsMobileNavProps): React.ReactElement => {
+}) => {
   return (
     <Portal>
       <S.ModalContainer>

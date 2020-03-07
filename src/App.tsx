@@ -6,25 +6,23 @@ import { GlobalStyle, TopNavigation } from "./components";
 import { themes } from "./theme";
 
 // helper function to make window scroll to the top when the route changes
-export const ScrollToTop = ({
-  children,
-  location,
-}: {
+export const ScrollToTop: React.FC<{
   children: React.ReactNode;
   location: typeof window.location;
   path?: string;
-}): any => {
+}> = ({ children, location }) => {
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       window.scrollTo(0, 0);
     }
   }, [location.pathname]);
-  return children;
+
+  return <>{children}</>;
 };
 // Any routes that start with 'dynamic' will be treated as non-static routes
 addPrefetchExcludes(["dynamic"]);
 
-function App(): React.ReactElement {
+const App: React.FC<{}> = () => {
   if (typeof window === "undefined") {
     return null;
   }
@@ -45,6 +43,6 @@ function App(): React.ReactElement {
       </DesignSystemProvider>
     </Root>
   );
-}
+};
 
 export default App;

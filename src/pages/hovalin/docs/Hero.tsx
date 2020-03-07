@@ -2,7 +2,7 @@ import React from "react";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
 
-export const Hero = (): React.ReactElement => (
+export const Hero: React.FC<{}> = () => (
   <div>
     <div>Hovalin</div>
     <div>

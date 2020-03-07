@@ -5,13 +5,10 @@ import { Link } from "@reach/router";
 const isExternalHref = (href: string): boolean => /^https?:\/\//i.test(href);
 
 // If we pass an href, we want to try to route there using react-static's router
-const ButtonLinkWrapper = ({
-  children,
-  href,
-}: {
+const ButtonLinkWrapper: React.FC<{
   children: React.ReactNode;
   href?: string;
-}): React.ReactElement => {
+}> = ({ children, href }) => {
   if (href) {
     if (isExternalHref(href)) {
       return (
@@ -26,7 +23,7 @@ const ButtonLinkWrapper = ({
   return <>{children}</>;
 };
 
-export const Button = ({ href, ...rest }: ButtonProps): React.ReactElement => (
+export const Button: React.FC<ButtonProps> = ({ href, ...rest }) => (
   <ButtonLinkWrapper href={href}>
     <ButtonBB {...rest} />
   </ButtonLinkWrapper>

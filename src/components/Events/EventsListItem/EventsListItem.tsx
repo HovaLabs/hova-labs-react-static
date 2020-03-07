@@ -11,7 +11,7 @@ interface EventProps {
   };
 }
 
-const EventsListItem = ({ event }: EventProps): React.ReactElement => (
+const EventsListItem: React.FC<EventProps> = ({ event }) => (
   <React.Fragment key={event.date.toString()}>
     <EventGridDateBox>
       <div>

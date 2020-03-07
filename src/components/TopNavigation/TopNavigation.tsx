@@ -8,7 +8,7 @@ import { TopNavigationModal } from "./TopNavigationModal";
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
 
-export const TopNavigation = (): React.ReactElement => {
+export const TopNavigation: React.FC<{}> = () => {
   const [navModalIsOpen, setNavModalIsOpen] = React.useState<boolean>(false);
   const theme = React.useContext(ThemeContext);
 

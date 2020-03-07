@@ -5,7 +5,7 @@ import tsnHero from "./tsn-hero.jpg";
 import tsn from "./tsn.jpg";
 import tsn2 from "./tsn-2.jpg";
 
-export const TheSynesthesiaNetwork = (): React.ReactElement => (
+export const TheSynesthesiaNetwork: React.FC<{}> = () => (
   <div>
     <div>
       <img src={tsnHero} alt="The Synesthesia Network" />

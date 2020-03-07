@@ -1,6 +1,6 @@
 import React from "react";
 
-export const FAQ = (): React.ReactElement => {
+export const FAQ: React.FC<{}> = () => {
   return (
     <div>
       <h1>Hova Instruments FAQ</h1>

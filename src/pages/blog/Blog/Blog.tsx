@@ -7,7 +7,7 @@ import * as S from "./BlogStyles";
 import { blogList } from "./blogList";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
-export const Blog = (): React.ReactElement => {
+export const Blog: React.FC<{}> = () => {
   const blogTags: Array<any> = [];
   const BlogList = blogList.map(post => {
     // HACK - it's a map but were also using it to populate the list of unique tags

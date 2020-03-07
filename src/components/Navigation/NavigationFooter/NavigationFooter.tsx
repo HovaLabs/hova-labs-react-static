@@ -2,9 +2,8 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import * as S from "./NavigationFooterStyles";
-// COPYRIGHT END
 
-export const NavigationFooter = (): React.ReactElement => (
+export const NavigationFooter: React.FC<{}> = () => (
   <ContainerWithBorder>
     <S.OuterContainer>
       <Text typography="headingSmall">

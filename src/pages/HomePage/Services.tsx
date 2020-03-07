@@ -76,7 +76,7 @@ const services: Array<Service> = [
 ];
 // SERVICES END
 
-export const Services = (): React.ReactElement => (
+export const Services: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ServicesContainer>
       <ServicesTextContainer>

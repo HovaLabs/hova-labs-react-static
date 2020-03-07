@@ -15,10 +15,7 @@ const icons = {
 interface IconComponentProps extends IconBaseProps {
   name: "GiHamburgerMenu" | "MdClose"; // | "Foo"
 }
-const IconComponent = ({
-  name,
-  ...rest
-}: IconComponentProps): React.ReactElement => {
+const IconComponent: React.FC<IconComponentProps> = ({ name, ...rest }) => {
   const Component = icons[name];
   return <Component {...rest} />;
 };

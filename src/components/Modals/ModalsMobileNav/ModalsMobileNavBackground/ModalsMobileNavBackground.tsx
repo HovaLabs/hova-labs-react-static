@@ -2,12 +2,9 @@ import React from "react";
 import { getMaxWindowDimension } from "./ModalsMobileNavBackgroundUtils";
 import * as S from "./ModalsMobileNavBackgroundStyles";
 
-const ModalsMobileNavBackground = ({
+const ModalsMobileNavBackground: React.FC<{ isOpen: boolean }> = ({
   isOpen,
-}: {
-  isOpen: boolean;
-}): React.ReactElement => {
-  //
+}) => {
   const [maxDimension, setMaxDimension] = React.useState(
     getMaxWindowDimension()
   );

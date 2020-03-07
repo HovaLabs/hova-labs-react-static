@@ -6,7 +6,7 @@ import wwcHovalin from "./Media/wwc-hovalin.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const WomenWhoCode: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>Today I got to hang with my favorite ladies at</Text>
@@ -42,3 +42,5 @@ export default (): React.ReactElement => (
     <img src={wwcHovalin} alt="Hovalin on wood" />
   </BlogContainer>
 );
+
+export default WomenWhoCode;

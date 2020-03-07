@@ -146,7 +146,7 @@ const shoppingList = [
   },
 ];
 
-export const ShoppingList = (): React.ReactElement => (
+export const ShoppingList: React.FC<{}> = () => (
   <div>
     <div>
       <div>1</div>

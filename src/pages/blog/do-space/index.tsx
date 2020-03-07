@@ -10,7 +10,7 @@ import soldOut from "./Media/sold-out.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const DoSpace: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -56,3 +56,5 @@ export default (): React.ReactElement => (
     <img src={shoveling} alt="Matt shoveling" />
   </BlogContainer>
 );
+
+export default DoSpace;

@@ -17,7 +17,7 @@ import steamExhibit3 from "./Media/steam-exhibit-3.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const SteamCarnivalSF: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -74,3 +74,5 @@ export default (): React.ReactElement => (
     <img src={steamDisclaimer} alt="disclaimer" />
   </BlogContainer>
 );
+
+export default SteamCarnivalSF;

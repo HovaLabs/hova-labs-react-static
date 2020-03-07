@@ -12,12 +12,7 @@ export interface BlogManifest {
   tags: Array<string>;
 }
 
-const BlogListItem = ({
-  hero,
-  tags,
-  title,
-  url,
-}: BlogManifest): React.ReactElement => {
+const BlogListItem: React.FC<BlogManifest> = ({ hero, tags, title, url }) => {
   const tagsList = tags.map(tag => (
     <BlogTag title={tag} disabled onPress={() => {}} />
   ));

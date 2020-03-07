@@ -12,7 +12,7 @@ import pcbMill from "./Media/pcb-mill.jpg";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const HovalinAtNasa: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>We had the opportunity to bring our project to</Text>
@@ -57,3 +57,4 @@ export default (): React.ReactElement => (
     <img src={gears} alt="A drawer full of gears" />
   </BlogContainer>
 );
+export default HovalinAtNasa;

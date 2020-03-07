@@ -14,7 +14,7 @@ import waldoTeam from "./waldo-team.jpg";
 import waldoTeam2 from "./waldo-team-2.jpg";
 import waldoTeams from "./waldo-teams.jpg";
 
-export const Waldo = (): React.ReactElement => (
+export const Waldo: React.FC<{}> = () => (
   <S.Container>
     <div>
       <img src={waldoHero} alt="Waldo Hero" />

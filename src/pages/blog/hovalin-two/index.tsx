@@ -5,7 +5,7 @@ import { routes } from "../../../routes";
 import blogManifest from "./manifest.json";
 import { BlogContainer } from "../../../components/BlogContainer";
 
-export default (): React.ReactElement => (
+const HovalinTwo: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
     <div>
       <Text>
@@ -95,3 +95,5 @@ export default (): React.ReactElement => (
     />
   </BlogContainer>
 );
+
+export default HovalinTwo;

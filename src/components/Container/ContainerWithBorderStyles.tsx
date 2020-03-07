@@ -36,7 +36,7 @@ export const InnerContainer = styled("div")<InnerContainerProps>`
     p.hasBackgroundImage
       ? null
       : css`
-          background-color: ${p => p.theme.colors.surface};
+          background-color: ${p.theme.colors.surface};
         `}
   ${p =>
     p.theme.responsiveStyle("padding", {

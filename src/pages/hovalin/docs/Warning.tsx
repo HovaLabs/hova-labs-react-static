@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Warning = (): React.ReactElement => (
+export const Warning: React.FC<{}> = () => (
   <div>
     <div>warning icon</div>
     <div>

@@ -11,7 +11,7 @@ import hydraprintJobs from "./hydraprint-jobs.jpg";
 import hydraprintJobsList from "./hydraprint-jobs-list.jpg";
 import hydraprintTerminal from "./hydraprint-terminal.jpg";
 
-export const Hydraprint = (): React.ReactElement => (
+export const Hydraprint: React.FC<{}> = () => (
   <div>
     <div>
       <img src={hydraprintHero} alt="hydraprint" style={{ height: 200 }} />

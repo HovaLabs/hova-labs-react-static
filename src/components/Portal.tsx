@@ -19,10 +19,8 @@ if (typeof document !== "undefined") {
     document.body.appendChild(createDivWithId(PORTAL_TARGET_ID));
 }
 
-export const Portal = ({
+export const Portal: React.FC<{ children: React.ReactNode }> = ({
   children,
-}: {
-  children: React.ReactNode;
 }): React.ReactPortal | any => {
   if (typeof document === "undefined") {
     const mockPortal = (): React.ReactElement => null as any;
@@ -34,7 +32,7 @@ export const Portal = ({
     return (): void => {
       portalTarget.removeChild(el);
     };
-  }, []);
+  }, [el]);
 
   const foo = ReactDOM.createPortal(children, el);
   return foo;

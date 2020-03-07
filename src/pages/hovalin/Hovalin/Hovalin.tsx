@@ -7,7 +7,7 @@ import { routes } from "../../../routes";
 import { Button } from "../../../components";
 import * as S from "./HovalinStyles";
 
-export const Hovalin = (): React.ReactElement => (
+export const Hovalin: React.FC<{}> = () => (
   <div>
     <div>
       <img alt="hovalin" src={hovalinHero} />

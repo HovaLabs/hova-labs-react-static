@@ -13,7 +13,7 @@ export const SvgContainer = styled("svg")`
     })}
 `;
 
-export const IconsLogo = () => (
+export const IconsLogo: React.FC<{}> = () => (
   <SvgContainer
     x="0px"
     y="0px"

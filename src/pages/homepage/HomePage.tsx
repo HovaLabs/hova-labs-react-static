@@ -13,7 +13,7 @@ const Container = styled("div")``;
 // LATEST BLOG START
 // LATEST BLOG END
 
-export const HomePage = (): React.ReactElement => (
+export const HomePage: React.FC<{}> = () => (
   <Container>
     <Hero />
     <About />

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LinkList = (): React.ReactElement => (
+export const LinkList: React.FC<{}> = () => (
   <div>
     <a href="#shopping-list">
       <div>

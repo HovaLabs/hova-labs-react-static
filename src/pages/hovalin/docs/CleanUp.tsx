@@ -1,7 +1,7 @@
 import React from "react";
 import sanding from "./Photos/sanding.gif";
 
-export const CleanUp = (): React.ReactElement => (
+export const CleanUp: React.FC<{}> = () => (
   <div>
     <div>
       <div>3</div>

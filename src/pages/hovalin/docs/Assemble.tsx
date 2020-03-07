@@ -1,7 +1,7 @@
 import React from "react";
 import assembly from "./Photos/assembly.gif";
 
-export const Assemble = (): React.ReactElement => (
+export const Assemble: React.FC<{}> = () => (
   <div>
     <div>
       <div>5</div>

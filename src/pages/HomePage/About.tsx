@@ -38,7 +38,7 @@ const AboutTextContainer = styled("div")`
 `;
 // ABOUT END
 
-export const About = () => (
+export const About: React.FC<{}> = () => (
   <ContainerWithBorder
     backgroundImage={theHovas}
     backgroundImageStyles={{

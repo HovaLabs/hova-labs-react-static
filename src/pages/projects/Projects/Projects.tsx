@@ -57,7 +57,7 @@ const projectArray: Array<Project> = [
   },
 ];
 
-export const Projects = (): React.ReactElement => (
+export const Projects: React.FC<{}> = () => (
   <>
     {projectArray.map(project => (
       <ContainerWithBorder>
