@@ -60,7 +60,7 @@ const projectArray: Array<Project> = [
 export const Projects = (): React.ReactElement => (
   <>
     {projectArray.map(project => (
-      <ContainerWithBorder>
+      <ContainerWithBorder isFooter={false}>
         <Link to={project.linkUrl} key={project.linkUrl}>
           <S.HeroImage backgroundImage={project.imgSrc} />
         </Link>

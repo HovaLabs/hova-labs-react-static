@@ -77,7 +77,7 @@ const services: Array<Service> = [
 // SERVICES END
 
 export const Services = (): React.ReactElement => (
-  <ContainerWithBorder>
+  <ContainerWithBorder isFooter={false}>
     <ServicesContainer>
       <ServicesTextContainer>
         <div>

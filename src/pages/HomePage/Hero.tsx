@@ -44,7 +44,7 @@ const HeroImage = styled("img").attrs({ src: hovalin })`
 // HERO END
 
 export const Hero = (): React.ReactElement => (
-  <ContainerWithBorder>
+  <ContainerWithBorder isFooter={false}>
     <HeroContainer>
       <HeroImage />
       <HeroText>HOVA LABS</HeroText>

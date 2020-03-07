@@ -39,7 +39,7 @@ const AboutTextContainer = styled("div")`
 // ABOUT END
 
 export const About = () => (
-  <ContainerWithBorder>
+  <ContainerWithBorder isFooter={false}>
     <InnerContainer>
       <AboutTextContainer>
         <div>
