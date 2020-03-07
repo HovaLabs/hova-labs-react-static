@@ -5,7 +5,7 @@ import * as S from "./NavigationFooterStyles";
 // COPYRIGHT END
 
 export const NavigationFooter = (): React.ReactElement => (
-  <ContainerWithBorder isFooter>
+  <ContainerWithBorder>
     <S.OuterContainer>
       <Text typography="headingSmall">
         {`Copyright Hova Labs 2019 - ${new Date().getFullYear().toString()}`}

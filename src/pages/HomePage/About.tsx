@@ -7,7 +7,7 @@ import theHovas from "../../media/the-hovas.png";
 // ABOUT START
 
 const InnerContainer = styled("div")`
-  background-image: url(${theHovas});
+  height: 400px;
   ${p =>
     p.theme.responsiveStyle("display", {
       s: `block`,
@@ -39,7 +39,16 @@ const AboutTextContainer = styled("div")`
 // ABOUT END
 
 export const About = () => (
-  <ContainerWithBorder isFooter={false}>
+  <ContainerWithBorder
+    backgroundImage={theHovas}
+    backgroundImageStyles={{
+      maxHeight: 300,
+      marginTop: "auto",
+      maxWidth: 400,
+      marginLeft: "auto",
+      opacity: 0.5,
+    }}
+  >
     <InnerContainer>
       <AboutTextContainer>
         <div>

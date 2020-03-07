@@ -29,7 +29,7 @@ export const Blog = (): React.ReactElement => {
 
   return (
     <>
-      <ContainerWithBorder isFooter={false}>
+      <ContainerWithBorder>
         <S.OuterContainer>
           {blogTagList}
           {BlogList}

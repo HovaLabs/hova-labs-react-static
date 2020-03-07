@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
+// TopNavPadding and Container are used together to create a fixed TopNav and to push down everything below it
+
+export const TopNavPadding = styled("div")`
+  height: ${p => p.theme.spacings.xxl}px;
+`;
+
 export const Container = styled("div")`
   position: fixed;
+  top: 0;
   display: flex;
   width: 100%;
   height: ${p => p.theme.spacings.xxl}px;

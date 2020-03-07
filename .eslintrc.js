@@ -23,6 +23,7 @@ module.exports = {
     "react/no-unescaped-entities": 0,
     "import/prefer-default-export": 0,
     "react/jsx-props-no-spreading": 0,
+    "react/prop-types": 0,
     "import/no-cycle": 1,
     '@typescript-eslint/explicit-function-return-type': [
       'error',

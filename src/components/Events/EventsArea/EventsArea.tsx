@@ -20,7 +20,7 @@ export const EventsArea = (): React.ReactElement => {
     </div>
   );
   return (
-    <ContainerWithBorder isFooter={false}>
+    <ContainerWithBorder>
       <OuterContainer>
         <div>
           <Text typography="headingSmall">EVENTS</Text>

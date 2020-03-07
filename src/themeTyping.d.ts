@@ -6,7 +6,7 @@ import {
   Spacings,
   Typography,
 } from "@hova-labs/bento-box-web";
-import { BackgroundGutters, Frames, TopNavClearance } from "../types";
+import { BackgroundGutters, Frames } from "../types";
 
 interface Props {
   theme: DefaultTheme;
@@ -21,7 +21,6 @@ declare module "styled-components" {
     frames: Frames;
     radii: Radii;
     spacings: Spacings;
-    topNavClearance: TopNavClearance;
     typography: Typography;
     responsiveStyle: (styleKey: string, styleObject: any) => any;
     responsiveValue: (styleObject: any) => (props: any) => any;

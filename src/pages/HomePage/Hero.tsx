@@ -7,6 +7,7 @@ import hovalin from "../../media/hovalin-64.jpg";
 const HeroContainer = styled("div")`
   position: relative;
   width: 100%;
+  height: 400px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -34,19 +35,9 @@ const HeroText = styled("div")`
     })}
 `;
 
-const HeroImage = styled("img").attrs({ src: hovalin })`
-  width: 100%;
-  min-width: 600px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.5;
-`;
-// HERO END
-
 export const Hero = (): React.ReactElement => (
-  <ContainerWithBorder isFooter={false}>
+  <ContainerWithBorder backgroundImage={hovalin}>
     <HeroContainer>
-      <HeroImage />
       <HeroText>HOVA LABS</HeroText>
     </HeroContainer>
   </ContainerWithBorder>

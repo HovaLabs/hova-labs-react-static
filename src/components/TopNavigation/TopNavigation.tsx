@@ -18,6 +18,7 @@ export const TopNavigation = (): React.ReactElement => {
         navModalIsOpen={navModalIsOpen}
         setNavModalIsOpen={setNavModalIsOpen}
       />
+      <S.TopNavPadding />
       <S.Container>
         <Link to={routes.HOMEPAGE}>
           <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
