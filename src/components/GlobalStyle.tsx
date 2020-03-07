@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
   html {
     background: ${p => p.theme.colors.background};
@@ -14,7 +14,6 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body{
-    font-family: 'Roboto', sans-serif;
     ${p => p.theme.typography.bodyText}
   }
 
