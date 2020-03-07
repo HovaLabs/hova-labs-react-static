@@ -2,6 +2,7 @@ import React from "react";
 // import { useRouteData } from "react-static";
 import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
+import { NavigationFooter } from "../../../components/Navigation/NavigationFooter";
 import * as S from "./BlogStyles";
 import { blogList } from "./blogList";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
@@ -27,11 +28,14 @@ export const Blog = (): React.ReactElement => {
   ));
 
   return (
-    <ContainerWithBorder>
-      <S.OuterContainer>
-        {blogTagList}
-        {BlogList}
-      </S.OuterContainer>
-    </ContainerWithBorder>
+    <>
+      <ContainerWithBorder>
+        <S.OuterContainer>
+          {blogTagList}
+          {BlogList}
+        </S.OuterContainer>
+      </ContainerWithBorder>
+      <NavigationFooter />
+    </>
   );
 };

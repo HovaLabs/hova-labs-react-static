@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { About } from "./About";
-import { Copyright } from "./Copyright";
+import { NavigationFooter } from "../../components/Navigation/NavigationFooter";
 import { EventsArea } from "../../components/Events/EventsArea/EventsArea";
 import { Hero } from "./Hero";
 import { Services } from "./Services";
@@ -20,6 +20,6 @@ export const HomePage = (): React.ReactElement => (
     <Services />
     <EventsArea />
     <NewOnTheBlog />
-    <Copyright />
+    <NavigationFooter />
   </Container>
 );
