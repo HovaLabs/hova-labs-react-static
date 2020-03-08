@@ -13,9 +13,7 @@ export interface BlogManifest {
 }
 
 const BlogListItem: React.FC<BlogManifest> = ({ hero, tags, title, url }) => {
-  const tagsList = tags.map(tag => (
-    <BlogTag title={tag} disabled onPress={() => {}} />
-  ));
+  const tagsList = tags.map(tag => <BlogTag title={tag} onPress={() => {}} />);
   return (
     <S.OuterContainer>
       <S.Image backgroundImage={hero} />
@@ -23,12 +21,12 @@ const BlogListItem: React.FC<BlogManifest> = ({ hero, tags, title, url }) => {
         <div>
           <div>
             <Text typography="headingMedium">{title}</Text>
+            <div>{tagsList}</div>
           </div>
           <Link to={url}>
             <S.Button title="Read" onPress={() => {}} />
           </Link>
         </div>
-        <div>{tagsList}</div>
       </S.ContentContainer>
     </S.OuterContainer>
   );

@@ -18,8 +18,7 @@ export const OuterContainer = styled("div")`
   h3 {
     ${p => p.theme.typography.headingSmall}
   }
-  p,
-  div {
+  p {
     ${p => p.theme.typography.bodyText}
   }
 `;

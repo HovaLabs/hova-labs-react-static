@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 // import { useRouteData } from "react-static";
+import { Text } from "@hova-labs/bento-box-web";
 import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
 import { NavigationFooter } from "../../../components/Navigation/NavigationFooter";
@@ -20,18 +21,16 @@ export const Blog: React.FC<{}> = () => {
 
     return <BlogListItem key={post.datePublished} {...post} />;
   });
-  function onPress(): void {
-    console.log("clicked");
-  }
 
   const blogTagList = blogTags.map(tag => (
-    <BlogTag key={tag} title={tag} onPress={onPress} />
+    <BlogTag key={tag} title={tag} onPress={() => {}} />
   ));
 
   return (
     <>
       <ContainerWithBorder>
         <S.OuterContainer>
+          <Text typography="headingLarge">Blog</Text>
           <div>{blogTagList}</div>
           {BlogList}
         </S.OuterContainer>

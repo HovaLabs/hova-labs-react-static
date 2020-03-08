@@ -39,14 +39,14 @@ export const typography: Typography = {
       ${p.theme.responsiveStyle("font-size", {
         s: "20px",
         m: "22px",
-        l: "24px",
+        l: "30px",
       })}
     `}
   `,
   bodyText: css<TypographyProps>`
     ${p => css<TypographyProps>`
       font-family: ${fontFamily};
-      color: ${p.theme.colors.onSurface1};
+      color: ${p.color ? p.color : p.theme.colors.onSurface1};
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",

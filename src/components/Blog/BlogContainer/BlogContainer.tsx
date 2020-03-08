@@ -6,6 +6,7 @@ import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
+import { BlogTag } from "../BlogTag/BlogTag";
 
 import * as S from "./BlogContainerStyles";
 
@@ -14,21 +15,32 @@ export const BlogContainer: React.FC<{
     author: "Matt" | "Kaitlyn" | "Cat";
     datePublished: string;
     title: string;
+    subtitle: string;
     tags: Array<string>;
   };
   children: React.ReactNode;
-}> = ({ blogManifest, children }) => (
-  <>
-    <ContainerWithBorder>
-      <h1>{blogManifest.title}</h1>
-    </ContainerWithBorder>
-    <ContainerWithBorder>
-      <S.BlogStyles>{children}</S.BlogStyles>
-    </ContainerWithBorder>
-    <Author author={blogManifest.author} />
-    <NavigationFooter />
-  </>
-);
+}> = ({ blogManifest, children }) => {
+  const tagsList = blogManifest.tags.map(tag => (
+    <BlogTag title={tag} onPress={() => {}} />
+  ));
+
+  return (
+    <>
+      <ContainerWithBorder>
+        <Text typography="headingLarge">{blogManifest.title}</Text>
+        <br />
+        <Text typography="headingSmall">{blogManifest.subtitle}</Text>
+        <br />
+        {tagsList}
+      </ContainerWithBorder>
+      <ContainerWithBorder>
+        <S.BlogStyles>{children}</S.BlogStyles>
+      </ContainerWithBorder>
+      <Author author={blogManifest.author} />
+      <NavigationFooter />
+    </>
+  );
+};
 
 const authorPhotos = {
   Matt,

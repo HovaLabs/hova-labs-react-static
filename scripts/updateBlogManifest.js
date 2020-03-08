@@ -40,6 +40,7 @@ fs.readdirSync(blogFolder).forEach((file) => {
       datePublished: "${blogManifest.datePublished}",
       tags: ${JSON.stringify(blogManifest.tags)},
       title: "${blogManifest.title}",
+      subtitle: "${blogManifest.subtitle}",
       url: "${blogManifest.url}",
     }`
     // add the json from each maifest to the array
