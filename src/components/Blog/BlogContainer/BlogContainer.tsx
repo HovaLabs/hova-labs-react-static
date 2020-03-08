@@ -7,8 +7,9 @@ import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import { BlogTag } from "../BlogTag/BlogTag";
-
 import * as S from "./BlogContainerStyles";
+
+import { dateToString } from "../../../utils/utilsDates";
 
 export const BlogContainer: React.FC<{
   blogManifest: {
@@ -23,13 +24,13 @@ export const BlogContainer: React.FC<{
   const tagsList = blogManifest.tags.map(tag => (
     <BlogTag title={tag} onPress={() => {}} />
   ));
-
+  const formattedDate = dateToString(blogManifest.datePublished);
   return (
     <>
       <ContainerWithBorder>
         <Text typography="headingLarge">{blogManifest.title}</Text>
         <S.Subtitle>
-          <Text typography="headingSmall">{blogManifest.subtitle}</Text>
+          <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
         </S.Subtitle>
         {tagsList}
       </ContainerWithBorder>

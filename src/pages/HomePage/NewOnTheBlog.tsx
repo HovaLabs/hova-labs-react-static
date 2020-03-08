@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
 import { blogManifest } from "../blog/Blog/blogManifest";
 import { Button } from "../../components";
+import { dateToString } from "../../utils/utilsDates";
 
 // COPYRIGHT START
 const NewOnTheBlogContainer = styled("div")`
@@ -76,29 +77,6 @@ const BlogTitle = styled("div")`
 const RightColumn = styled("div")`
   flex: 2;
 `;
-
-const months: { [key: string]: string } = {
-  "0": "January",
-  "1": "February",
-  "2": "March",
-  "3": "April",
-  "4": "May",
-  "5": "June",
-  "6": "July",
-  "7": "August",
-  "8": "September",
-  "9": "October",
-  "10": "November",
-  "11": "December",
-};
-
-const dateToString = (isoString: string): string => {
-  const date = new Date(isoString);
-  const monthInt = date.getMonth().toString();
-  const month = months[monthInt];
-
-  return `${month} ${date.getDate()}, ${date.getFullYear()}`;
-};
 
 export const NewOnTheBlog: React.FC<{}> = () => (
   <NewOnTheBlogContainer>

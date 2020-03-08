@@ -3,6 +3,7 @@ import { Link } from "@reach/router";
 import { Text } from "@hova-labs/bento-box-web";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogListItemStyles";
+import { dateToString } from "../../../utils/utilsDates";
 
 export interface BlogManifest {
   title: string;
@@ -12,8 +13,15 @@ export interface BlogManifest {
   tags: Array<string>;
 }
 
-const BlogListItem: React.FC<BlogManifest> = ({ hero, tags, title, url }) => {
+const BlogListItem: React.FC<BlogManifest> = ({
+  datePublished,
+  hero,
+  tags,
+  title,
+  url,
+}) => {
   const tagsList = tags.map(tag => <BlogTag title={tag} onPress={() => {}} />);
+  const formattedDate = dateToString(datePublished);
   return (
     <S.OuterContainer>
       <S.Image backgroundImage={hero} />
@@ -21,6 +29,9 @@ const BlogListItem: React.FC<BlogManifest> = ({ hero, tags, title, url }) => {
         <div>
           <div>
             <Text typography="headingMedium">{title}</Text>
+            <S.Date>
+              <Text typography="headingSmall">{formattedDate}</Text>
+            </S.Date>
             <div>{tagsList}</div>
           </div>
           <Link to={url}>
