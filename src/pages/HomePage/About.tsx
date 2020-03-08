@@ -7,7 +7,7 @@ import theHovas from "../../media/the-hovas.png";
 const InnerContainer = styled("div")`
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: space-between;
   ${p =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,
@@ -16,7 +16,15 @@ const InnerContainer = styled("div")`
 `;
 
 const AboutTextContainer = styled("div")`
+  flex: 1;
+  min-width: 360px;
   max-width: 600px;
+`;
+
+const HovaCentered = styled("div")`
+  flex: 1;
+  display: flex;
+  justify-content: center;
 `;
 
 const TheHovas = styled("img").attrs({ src: theHovas })`
@@ -26,8 +34,8 @@ const TheHovas = styled("img").attrs({ src: theHovas })`
       s: `-${p.theme.spacings.xl}px`,
       l: `-${p.theme.spacings.xxl}px`,
     })}
-  height: 240px;
-  max-width: 240px;
+  height: 336px;
+  min-width: 336px;
   align-self: flex-end;
 `;
 
@@ -49,7 +57,9 @@ export const About: React.FC<{}> = () => (
           </Text>
         </div>
       </AboutTextContainer>
-      <TheHovas />
+      <HovaCentered>
+        <TheHovas />
+      </HovaCentered>
     </InnerContainer>
   </ContainerWithBorder>
 );
