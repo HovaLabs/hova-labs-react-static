@@ -39,7 +39,7 @@ export const typography: Typography = {
       ${p.theme.responsiveStyle("font-size", {
         s: "20px",
         m: "22px",
-        l: "24px",
+        l: "30px",
       })}
     `}
   `,

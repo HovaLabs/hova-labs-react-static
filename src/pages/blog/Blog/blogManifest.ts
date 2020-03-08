@@ -17,6 +17,7 @@ export const blogManifest = [
     datePublished: "2020-02-12T16:26:08.712Z",
     tags: ["electronics", "hovalin"],
     title: "Our 5 String Synesthesia Violin",
+    subtitle: "See the colors of sound in real time",
     url: "/blog/our-five-string-synesthesia-violin",
   },
   {
@@ -24,6 +25,7 @@ export const blogManifest = [
     datePublished: "2016-04-18T06:10:44.160Z",
     tags: ["hovalin"],
     title: "HOVALIN 3.0 PLAN",
+    subtitle: "We're never finished",
     url: "/blog/hovalin-three-oh-plan",
   },
   {
@@ -31,6 +33,7 @@ export const blogManifest = [
     datePublished: "2016-01-06T06:10:44.160Z",
     tags: ["hovalin"],
     title: "HOVALIN V2.0 IS LIVE",
+    subtitle: "We did it",
     url: "/blog/hovalin-two",
   },
   {
@@ -38,6 +41,7 @@ export const blogManifest = [
     datePublished: "2016-01-02T06:10:44.160Z",
     tags: ["hovalin"],
     title: "HOVALIN AUCTION",
+    subtitle: "Doing some good",
     url: "/blog/hovalin-auction",
   },
   {
@@ -45,6 +49,7 @@ export const blogManifest = [
     datePublished: "2015-12-24T06:10:44.160Z",
     tags: ["hovalin"],
     title: "DO SPACE",
+    subtitle: "A really cool organization that's excited about the Hovalin",
     url: "/blog/do-space",
   },
   {
@@ -52,6 +57,7 @@ export const blogManifest = [
     datePublished: "2015-12-05T00:00:00.000Z",
     tags: ["hovalin"],
     title: "HOVALIN AT NASA",
+    subtitle: "Not sure how we got here but we're delighted",
     url: "/blog/hovalin-at-nasa",
   },
   {
@@ -59,6 +65,7 @@ export const blogManifest = [
     datePublished: "2015-11-28T00:00:00.000Z",
     tags: [],
     title: "THE SITE IS NOW LIVE!",
+    subtitle: "Yes, finally",
     url: "/blog/the-site-is-now-live",
   },
   {
@@ -66,6 +73,7 @@ export const blogManifest = [
     datePublished: "2015-11-18T00:00:00.000Z",
     tags: ["hovalin", "software"],
     title: "WOMEN WHO CODE",
+    subtitle: "A great nonprofit that empowers women in tech",
     url: "/blog/women-who-code",
   },
   {
@@ -73,6 +81,7 @@ export const blogManifest = [
     datePublished: "2015-11-16T00:00:00.000Z",
     tags: ["hovalin", "events"],
     title: "STEAM CARNIVAL SF",
+    subtitle: "So much fun and so much STEAM",
     url: "/blog/steam-carnival-sf",
   },
   {
@@ -80,6 +89,7 @@ export const blogManifest = [
     datePublished: "2015-09-25T00:00:00.000Z",
     tags: ["hovalin", "CAD"],
     title: "OpenSCAD... a love story",
+    subtitle: "For alpha nerds",
     url: "/blog/openscad-a-love-story",
   },
   {
@@ -87,6 +97,7 @@ export const blogManifest = [
     datePublished: "2015-09-02T00:00:00.000Z",
     tags: ["hovalin"],
     title: "AUTODESK, INSTAGRAM, AND THE FFFIDDLE",
+    subtitle: "Origins of the Hovalin",
     url: "/blog/autodesk-instagram-and-the-fffiddle",
   },
 ];
