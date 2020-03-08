@@ -1,9 +1,15 @@
-import styled from "styled-components";
-import { Button } from "@hova-labs/bento-box-web";
+import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 
-export const BlogTag = styled(Button).attrs({ variant: "secondary" })`
-  margin: ${p => `${p.theme.spacings.m}px`};
-  :first-of-type {
-    margin-left: 0;
-  }
-`;
+export interface BlogTag {
+  onPress: () => void;
+  title: string;
+}
+
+export const BlogTag: React.FC<BlogTag> = ({ onPress, title }) => {
+  return (
+    <Text color="primary" typography="bodyText" onPress={onPress}>
+      {`#${title} `}
+    </Text>
+  );
+};
