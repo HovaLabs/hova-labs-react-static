@@ -34,7 +34,7 @@ export const Links = styled("div")`
   margin-right: ${p =>
     p.theme.responsiveValue({
       s: 24,
-      l: p.theme.spacings.xxl,
+      l: p.theme.backgroundGutters.l,
     })}px;
   > a {
     margin: ${p => p.theme.spacings.l}px;
@@ -42,6 +42,14 @@ export const Links = styled("div")`
       margin-right: 0;
     }
   }
+`;
+
+export const Toggle = styled("div")`
+  margin-right: ${p =>
+    p.theme.responsiveValue({
+      s: p.theme.spacings.l,
+      l: 0,
+    })}px;
 `;
 
 export const ModalLinkContainer = styled("div")``;

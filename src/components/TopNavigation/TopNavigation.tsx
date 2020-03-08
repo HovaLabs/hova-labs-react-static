@@ -16,6 +16,18 @@ import * as S from "./TopNavigationStyles";
 export const TopNavigation: React.FC<{}> = () => {
   const [navModalIsOpen, setNavModalIsOpen] = React.useState<boolean>(false);
   const { theme, setThemeByThemeKey } = React.useContext(ThemeContext);
+  const themeToggle = (
+    <S.Toggle>
+      <ThemeToggle
+        onPress={() => {
+          setThemeByThemeKey(
+            theme.name === "lightTheme" ? "darkTheme" : "lightTheme"
+          );
+        }}
+        currentTheme={theme.name}
+      />
+    </S.Toggle>
+  );
 
   return (
     <>
@@ -29,25 +41,18 @@ export const TopNavigation: React.FC<{}> = () => {
           <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
         </Link>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <div style={{ paddingRight: 16 }}>
-            <ThemeToggle
-              onPress={() => {
-                setThemeByThemeKey(
-                  theme.name === "lightTheme" ? "darkTheme" : "lightTheme"
-                );
-              }}
-              currentTheme={theme.name}
-            />
-          </div>
           <S.Links>
             {["s", "m"].includes(theme.breakpoint) ? (
-              <Icon
-                IconComponent={GiHamburgerMenu}
-                size={64}
-                onPress={() => {
-                  setNavModalIsOpen(true);
-                }}
-              />
+              <>
+                {themeToggle}
+                <Icon
+                  IconComponent={GiHamburgerMenu}
+                  size={64}
+                  onPress={() => {
+                    setNavModalIsOpen(true);
+                  }}
+                />
+              </>
             ) : (
               <>
                 <Link to={routes.PROJECTS}>
@@ -62,6 +67,7 @@ export const TopNavigation: React.FC<{}> = () => {
                 <Link to={routes.CONTACT}>
                   <Text typography="headingSmall">Contact</Text>
                 </Link>
+                {themeToggle}
               </>
             )}
           </S.Links>
