@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
 import { NavigationFooter } from "components/Navigation/NavigationFooter";
+import { Link } from "@reach/router";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
@@ -9,6 +10,7 @@ import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogContainerStyles";
 
+import { routes } from "../../../routes";
 import { dateToString } from "../../../utils/utilsDates";
 
 export const BlogContainer: React.FC<{
@@ -28,6 +30,13 @@ export const BlogContainer: React.FC<{
   return (
     <>
       <ContainerWithBorder>
+        <div>
+          <Link to={routes.BLOG}>
+            <Text color="primary" typography="bodyText">
+              ← back to blog
+            </Text>
+          </Link>
+        </div>
         <Text typography="headingLarge">{blogManifest.title}</Text>
         <S.Subtitle>
           <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
