@@ -1,7 +1,6 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 // import { useRouteData } from "react-static";
-import { Text } from "@hova-labs/bento-box-web";
 import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
 import { NavigationFooter } from "../../../components/Navigation/NavigationFooter";

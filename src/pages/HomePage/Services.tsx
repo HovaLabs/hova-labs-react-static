@@ -10,7 +10,7 @@ const ServicesContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xxl}px`,
+      l: `${p.theme.spacings.xl}px`,
     })}
 `;
 
@@ -36,7 +36,7 @@ const ServiceGridItem = styled("div")`
   ${p =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
     })}
 `;
 
