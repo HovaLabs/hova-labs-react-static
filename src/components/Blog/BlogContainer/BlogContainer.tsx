@@ -1,8 +1,8 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
-
-import { NavigationFooter } from "components/Navigation/NavigationFooter";
 import { Link } from "@reach/router";
+
+import { NavigationFooter } from "../../Navigation/NavigationFooter";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
@@ -15,6 +15,7 @@ import { dateToString } from "../../../utils/utilsDates";
 
 export const BlogContainer: React.FC<{
   blogManifest: {
+    hero: string;
     author: "Matt" | "Kaitlyn" | "Cat";
     datePublished: string;
     title: string;
@@ -29,7 +30,10 @@ export const BlogContainer: React.FC<{
   const formattedDate = dateToString(blogManifest.datePublished);
   return (
     <>
-      <ContainerWithBorder>
+      <ContainerWithBorder
+        backgroundImage={blogManifest.hero}
+        backgroundImageStyles={{ opacity: 0.2 }}
+      >
         <div>
           <Link to={routes.BLOG}>
             <Text color="primary" typography="bodyText">

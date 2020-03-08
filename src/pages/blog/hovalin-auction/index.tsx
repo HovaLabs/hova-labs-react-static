@@ -2,10 +2,11 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const HovalinAuction: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         Hey Everyone! We donated a Hovalin to the Steve Elsasser Fundraiser at

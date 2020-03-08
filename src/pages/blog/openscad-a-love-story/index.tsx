@@ -4,10 +4,11 @@ import { Text } from "@hova-labs/bento-box-web";
 import hovalinStick from "./Media/hovalin-stick.png";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const OpenscadALoveStory: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         There is one line of code to create a cube that is 10mm by 20mm by 30mm.

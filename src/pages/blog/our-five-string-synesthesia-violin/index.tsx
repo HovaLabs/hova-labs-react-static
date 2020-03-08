@@ -12,10 +12,11 @@ import violinPhoto8 from "./violin-photo-8.jpg";
 import violinPhoto9 from "./violin-photo-9.jpg";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         Since the beginning of our pursuit of 3D printing violins, we've had a

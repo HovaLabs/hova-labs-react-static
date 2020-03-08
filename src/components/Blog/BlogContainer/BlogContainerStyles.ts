@@ -18,6 +18,19 @@ export const BlogStyles = styled.div`
   }
 `;
 
+export const HeroImage = styled("div")<{ backgroundImage: string }>`
+  ${p =>
+    p.theme.responsiveStyle("height", {
+      s: `150px`,
+      l: `120px`,
+    })}
+  background-color: ${p => p.theme.colors.surface1};
+  background-image: url(${p => p.backgroundImage});
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+`;
+
 export const AuthorImage = styled.img`
   height: 240px;
   ${p =>

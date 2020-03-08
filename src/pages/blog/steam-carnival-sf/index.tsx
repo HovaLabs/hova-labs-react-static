@@ -15,10 +15,11 @@ import steamExhibit2 from "./Media/steam-exhibit-2.jpg";
 import steamExhibit3 from "./Media/steam-exhibit-3.jpg";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const SteamCarnivalSF: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         Yes! I got to perform on our latest version of Hovalin for 11 shows over
