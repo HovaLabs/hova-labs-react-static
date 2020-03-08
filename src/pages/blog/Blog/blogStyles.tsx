@@ -23,3 +23,11 @@ export const OuterContainer = styled("div")`
     ${p => p.theme.typography.bodyText}
   }
 `;
+
+export const NewOnTheBlogExtraPadding = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
+    })}
+`;

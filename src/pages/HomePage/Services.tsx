@@ -22,7 +22,7 @@ const ServiceGridContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("grid-template-columns", {
       s: "1fr",
-      l: "1fr 1fr",
+      xl: "1fr 1fr",
     })}
   ${p =>
     p.theme.responsiveStyle("grid-gap", {
@@ -31,7 +31,14 @@ const ServiceGridContainer = styled("div")`
     })}
 `;
 
-const ServiceGridItem = styled("div")``;
+const ServiceGridItem = styled("div")`
+  background: ${p => p.theme.colors.surface2};
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.l}px`,
+    })}
+`;
 
 type Service = {
   icon: (props: IconBaseProps) => JSX.Element;

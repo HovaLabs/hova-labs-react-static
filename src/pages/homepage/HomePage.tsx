@@ -6,7 +6,7 @@ import { NavigationFooter } from "../../components/Navigation/NavigationFooter";
 import { EventsArea } from "../../components/Events/EventsArea/EventsArea";
 import { Hero } from "./Hero";
 import { Services } from "./Services";
-import { NewOnTheBlog } from "./NewOnTheBlog";
+import { NewOnTheBlog } from "../blog/Blog";
 
 const Container = styled("div")``;
 

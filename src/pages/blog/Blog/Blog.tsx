@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 // import { useRouteData } from "react-static";
 import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
@@ -37,5 +38,24 @@ export const Blog: React.FC<{}> = () => {
       </ContainerWithBorder>
       <NavigationFooter />
     </>
+  );
+};
+
+export const NewOnTheBlog: React.FC<{}> = () => {
+  // Grabbing only the two latest
+  const BlogList = blogManifest.slice(0, 2).map(post => {
+    return <BlogListItem key={post.datePublished} {...post} />;
+  });
+
+  return (
+    <ContainerWithBorder>
+      <S.NewOnTheBlogExtraPadding>
+        <div>
+          <Text typography="headingSmall">NEW ON THE BLOG</Text>
+        </div>
+        <br />
+        <S.OuterContainer>{BlogList}</S.OuterContainer>
+      </S.NewOnTheBlogExtraPadding>
+    </ContainerWithBorder>
   );
 };

@@ -33,6 +33,11 @@ export const Image = styled("div")<{ backgroundImage: string }>`
       s: "0 0 100%",
       l: "0 0 646px",
     })}
+  ${p =>
+    p.theme.responsiveStyle("margin-bottom", {
+      s: `${p.theme.spacings.l}px`,
+      xl: `0`,
+    })}
   background-color: ${p => p.theme.colors.surface1};
   background-image: url(${p => p.backgroundImage});
   background-position: center;
@@ -44,7 +49,7 @@ export const OuterContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("display", {
       s: `block`,
-      l: `flex`,
+      xl: `flex`,
     })}
   ${p =>
     p.theme.responsiveStyle("padding", {
