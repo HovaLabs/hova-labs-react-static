@@ -11,6 +11,8 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
+    transition: color 300ms;
+    transition: background-color 500ms;
   }
 
   body{
