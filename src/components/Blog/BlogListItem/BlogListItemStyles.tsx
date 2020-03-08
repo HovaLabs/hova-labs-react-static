@@ -33,13 +33,14 @@ export const Image = styled("div")<{ backgroundImage: string }>`
       s: "0 0 100%",
       l: "0 0 646px",
     })}
-  background-color: ${p => p.theme.colors.surface};
+  background-color: ${p => p.theme.colors.surface1};
   background-image: url(${p => p.backgroundImage});
   background-position: center;
   background-size: cover;
 `;
 
 export const OuterContainer = styled("div")`
+  background: ${p => p.theme.colors.surface2};
   ${p =>
     p.theme.responsiveStyle("display", {
       s: `block`,
@@ -47,7 +48,7 @@ export const OuterContainer = styled("div")`
     })}
   ${p =>
     p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.m}px 0`,
-      l: `${p.theme.spacings.l}px 0`,
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
     })}
 `;

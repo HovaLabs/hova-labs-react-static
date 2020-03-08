@@ -23,7 +23,7 @@ const EventsListItem: React.FC<EventProps> = ({ event }) => (
     </EventGridDateBox>
     <EventGridInfoBox>
       <div>
-        <Text typography="headingSmall" color="onSurface">
+        <Text typography="headingSmall" color="onSurface1">
           {event.location}
         </Text>
       </div>

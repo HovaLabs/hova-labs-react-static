@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const OuterContainer = styled("div")`
   position: relative;
-  background-color: ${p => p.theme.colors.surface};
+  background-color: ${p => p.theme.colors.surface1};
   ${p =>
     p.theme.responsiveStyle("margin", {
       s: `0 ${p.theme.backgroundGutters.s}px`,
@@ -36,7 +36,7 @@ export const InnerContainer = styled("div")<InnerContainerProps>`
     p.hasBackgroundImage
       ? null
       : css`
-          background-color: ${p.theme.colors.surface};
+          background-color: ${p.theme.colors.surface1};
         `}
   ${p =>
     p.theme.responsiveStyle("padding", {

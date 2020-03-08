@@ -22,5 +22,5 @@ export const OuterContainer = styled("div")`
       s: `${p.theme.backgroundGutters.s}px`,
       l: `${p.theme.backgroundGutters.l}px`,
     })}
-  background-color: ${p => p.theme.colors.surface};
+  background-color: ${p => p.theme.colors.surface1};
 `;

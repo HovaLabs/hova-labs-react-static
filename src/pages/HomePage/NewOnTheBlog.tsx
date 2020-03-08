@@ -16,7 +16,7 @@ ${p =>
     s: `${p.theme.spacings.l}px`,
     l: `${p.theme.spacings.xxl}px`,
   })}
-background-color: ${p => p.theme.colors.surface};
+background-color: ${p => p.theme.colors.surface1};
 `;
 
 const Image = styled("div")<{ backgroundImage: string }>`
@@ -30,7 +30,7 @@ const Image = styled("div")<{ backgroundImage: string }>`
       s: "0 0 100%",
       l: "0 0 646px",
     })}
-  background-color: ${p => p.theme.colors.surface};
+  background-color: ${p => p.theme.colors.surface1};
   background-image: url(${p => p.backgroundImage});
   background-position: center;
   background-size: cover;

@@ -31,7 +31,7 @@ export const Blog: React.FC<{}> = () => {
     <>
       <ContainerWithBorder>
         <S.OuterContainer>
-          {blogTagList}
+          <div>{blogTagList}</div>
           {BlogList}
         </S.OuterContainer>
       </ContainerWithBorder>

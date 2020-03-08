@@ -14,7 +14,7 @@ export const BlogStyles = styled.div`
     max-height: 75vh;
   }
   code {
-    background: ${p => p.theme.colors.surface};
+    background: ${p => p.theme.colors.surface1};
     margin: ${p => p.theme.spacings.l}px;
   }
 `;
