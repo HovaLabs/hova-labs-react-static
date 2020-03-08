@@ -28,9 +28,9 @@ export const BlogContainer: React.FC<{
     <>
       <ContainerWithBorder>
         <Text typography="headingLarge">{blogManifest.title}</Text>
-        <br />
-        <Text typography="headingSmall">{blogManifest.subtitle}</Text>
-        <br />
+        <S.Subtitle>
+          <Text typography="headingSmall">{blogManifest.subtitle}</Text>
+        </S.Subtitle>
         {tagsList}
       </ContainerWithBorder>
       <ContainerWithBorder>

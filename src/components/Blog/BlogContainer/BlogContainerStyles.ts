@@ -28,3 +28,11 @@ export const AuthorContainer = styled.div`
 `;
 
 export const AuthorAboutContainer = styled.div``;
+
+export const Subtitle = styled.div`
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.m}px 0`,
+      l: `${p.theme.spacings.l}px 0`,
+    })}
+`;
