@@ -8,10 +8,12 @@ import shoveling from "./Media/shoveling.jpg";
 import snow from "./Media/snow.jpg";
 import soldOut from "./Media/sold-out.jpg";
 import blogManifest from "./manifest.json";
+
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const DoSpace: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         We had the amazing opportunity to present at a sold-out house at the

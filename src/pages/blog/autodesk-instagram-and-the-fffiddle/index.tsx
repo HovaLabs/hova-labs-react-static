@@ -3,10 +3,11 @@ import { Text } from "@hova-labs/bento-box-web";
 
 import fffiddle from "./Media/fffiddle.jpg";
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const AutodeskInstagramAndTheFFFiddle: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         Creating an acoustic 3d printable violin has been a labor of love,

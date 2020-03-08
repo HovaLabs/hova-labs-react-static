@@ -3,10 +3,11 @@ import { Text } from "@hova-labs/bento-box-web";
 import { routes } from "../../../routes";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const HovalinTwo: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>
         tl;dr You have access to the CAD. It's easier to print and assemble.

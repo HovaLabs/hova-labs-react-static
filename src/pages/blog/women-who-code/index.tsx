@@ -4,10 +4,11 @@ import { Text } from "@hova-labs/bento-box-web";
 import wwcHovalin from "./Media/wwc-hovalin.jpg";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const WomenWhoCode: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>Today I got to hang with my favorite ladies at</Text>
       <a href="https://www.womenwhocode.com/">

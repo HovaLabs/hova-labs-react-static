@@ -1,17 +1,21 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
+import { Link } from "@reach/router";
 
-import { NavigationFooter } from "components/Navigation/NavigationFooter";
+import { NavigationFooter } from "../../Navigation/NavigationFooter";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import { BlogTag } from "../BlogTag/BlogTag";
-
 import * as S from "./BlogContainerStyles";
+
+import { routes } from "../../../routes";
+import { dateToString } from "../../../utils/utilsDates";
 
 export const BlogContainer: React.FC<{
   blogManifest: {
+    hero: string;
     author: "Matt" | "Kaitlyn" | "Cat";
     datePublished: string;
     title: string;
@@ -23,13 +27,23 @@ export const BlogContainer: React.FC<{
   const tagsList = blogManifest.tags.map(tag => (
     <BlogTag title={tag} onPress={() => {}} />
   ));
-
+  const formattedDate = dateToString(blogManifest.datePublished);
   return (
     <>
-      <ContainerWithBorder>
+      <ContainerWithBorder
+        backgroundImage={blogManifest.hero}
+        backgroundImageStyles={{ opacity: 0.2 }}
+      >
+        <div>
+          <Link to={routes.BLOG}>
+            <Text color="primary" typography="bodyText">
+              ← back to blog
+            </Text>
+          </Link>
+        </div>
         <Text typography="headingLarge">{blogManifest.title}</Text>
         <S.Subtitle>
-          <Text typography="headingSmall">{blogManifest.subtitle}</Text>
+          <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
         </S.Subtitle>
         {tagsList}
       </ContainerWithBorder>
@@ -77,17 +91,21 @@ const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
 }) => (
   <ContainerWithBorder>
     <S.AuthorContainer>
-      <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+      <S.AuthorImageContainer>
+        <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+      </S.AuthorImageContainer>
       <S.AuthorAboutContainer>
         <div>
-          <Text typography="headingMedium">About the author</Text>
+          <Text typography="headingMedium">About the Author</Text>
         </div>
         <div>
           <Text>{authorBios[author]}</Text>
         </div>
         <div>
           <a href={authorLinks[author].link}>
-            <Text>{authorLinks[author].text}</Text>
+            <Text color="primary" typography="bodyText">
+              {authorLinks[author].text}
+            </Text>
           </a>
         </div>
       </S.AuthorAboutContainer>

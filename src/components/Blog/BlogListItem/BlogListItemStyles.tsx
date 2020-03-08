@@ -27,6 +27,14 @@ export const ContentContainer = styled("div")`
     })}
 `;
 
+export const Date = styled("div")`
+  ${p =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.s}px 0`,
+      l: `${p.theme.spacings.m}px 0`,
+    })}
+`;
+
 export const Image = styled("div")<{ backgroundImage: string }>`
   ${p =>
     p.theme.responsiveStyle("height", {

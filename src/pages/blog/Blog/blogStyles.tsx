@@ -7,8 +7,6 @@ export const OuterContainer = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
-  br {
-  }
   h1 {
     ${p => p.theme.typography.headingLarge}
   }

@@ -14,7 +14,7 @@ export const typography: Typography = {
       color: ${p.theme.colors.onSurface1};
       ${p.theme.responsiveStyle("font-size", {
         s: "35px",
-        m: "52px",
+        m: "46px",
         l: "70px",
       })}
       line-height: 120%;
@@ -26,7 +26,7 @@ export const typography: Typography = {
       color: ${p.color || p.theme.colors.onSurface1};
       ${p.theme.responsiveStyle("font-size", {
         s: "25px",
-        m: "37px",
+        m: "32px",
         l: "50px",
       })}
       line-height: 120%;
@@ -50,7 +50,7 @@ export const typography: Typography = {
       font-weight: ${FontWeights.normal};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
-        m: "20px",
+        m: "18px",
         l: "24px",
       })}
       line-height: 150.5%
@@ -62,7 +62,7 @@ export const typography: Typography = {
       color: ${p.theme.colors.onSurface1};
       ${p.theme.responsiveStyle("font-size", {
         s: "16px",
-        m: "20px",
+        m: "18px",
         l: "24px",
       })}
     `}

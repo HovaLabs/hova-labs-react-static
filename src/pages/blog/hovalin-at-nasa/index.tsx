@@ -10,10 +10,11 @@ import notMatt from "./Media/not-matt.jpg";
 import pcbMill from "./Media/pcb-mill.jpg";
 
 import blogManifest from "./manifest.json";
+import hero from "./hero.jpg";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const HovalinAtNasa: React.FC<{}> = () => (
-  <BlogContainer blogManifest={blogManifest}>
+  <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
       <Text>We had the opportunity to bring our project to</Text>
       <a href="https://www.nasa.gov/centers/ames/home/">
