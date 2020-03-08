@@ -10,7 +10,7 @@
     "serve": "serve dist -p 3000 -s",
     "stage": "react-static build --staging",
     "start": "yarn update-scripts && react-static start",
-    "update-blog-manifest": "node ./scripts/updateBlogManifest.js && eslint ./src/pages/blog/BlogList/blogManifest.ts --fix",
+    "update-blog-manifest": "node ./scripts/updateBlogManifest.js && eslint ./src/pages/blog/Blog/blogManifest.ts --fix",
     "update-route-list": "node ./scripts/updateRoutesList.js && eslint ./src/routes.ts --fix",
     "update-scripts": "yarn update-route-list && yarn update-blog-manifest"
   },

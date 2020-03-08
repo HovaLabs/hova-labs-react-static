@@ -54,4 +54,4 @@ manifestArray.sort((a, b) => {
 
 // Write the file NOTE: this will overwrite any existing file
 blogManifestFile += `export const blogManifest = [${manifestArray.map(m => m.string).join()}]`;
-fs.writeFileSync(path.join(blogFolder, 'BlogList', 'blogManifest.ts'), blogManifestFile);
+fs.writeFileSync(path.join(blogFolder, 'Blog', 'blogManifest.ts'), blogManifestFile);

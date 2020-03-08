@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
-import { blogManifest } from "../blog/BlogList/blogManifest";
+import { blogManifest } from "../blog/Blog/blogManifest";
 import { Button } from "../../components";
 
 // COPYRIGHT START
