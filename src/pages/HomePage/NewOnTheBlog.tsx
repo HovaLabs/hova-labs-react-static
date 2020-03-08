@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
-import { blogList } from "../blog/Blog/blogList";
+import { blogManifest } from "../blog/BlogList/blogManifest";
 import { Button } from "../../components";
 
 // COPYRIGHT START
@@ -106,7 +106,7 @@ export const NewOnTheBlog: React.FC<{}> = () => (
       <Text typography="headingSmall">NEW ON THE BLOG</Text>
     </div>
     <BlogContainer>
-      {blogList.slice(0, 2).map(blog => (
+      {blogManifest.slice(0, 2).map(blog => (
         <>
           <LeftColumn>
             <BlogTitle>{blog.title}</BlogTitle>

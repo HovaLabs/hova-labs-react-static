@@ -10,9 +10,9 @@
     "serve": "serve dist -p 3000 -s",
     "stage": "react-static build --staging",
     "start": "yarn update-scripts && react-static start",
-    "update-blog-list": "node ./scripts/updateBlogList.js && eslint ./src/pages/blog/Blog/blogList.ts --fix",
+    "update-blog-manifest": "node ./scripts/updateBlogManifest.js && eslint ./src/pages/blog/BlogList/blogManifest.ts --fix",
     "update-route-list": "node ./scripts/updateRoutesList.js && eslint ./src/routes.ts --fix",
-    "update-scripts": "yarn update-route-list && yarn update-blog-list"
+    "update-scripts": "yarn update-route-list && yarn update-blog-manifest"
   },
   "dependencies": {
     "@hova-labs/bento-box-web": "^0.19.4",

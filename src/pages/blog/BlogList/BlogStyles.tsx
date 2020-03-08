@@ -7,4 +7,19 @@ export const OuterContainer = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
+  br {
+  }
+  h1 {
+    ${p => p.theme.typography.headingLarge}
+  }
+  h2 {
+    ${p => p.theme.typography.headingMedium}
+  }
+  h3 {
+    ${p => p.theme.typography.headingSmall}
+  }
+  p,
+  div {
+    ${p => p.theme.typography.bodyText}
+  }
 `;
