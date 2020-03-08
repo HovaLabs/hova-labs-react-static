@@ -5,7 +5,7 @@ export const OuterContainer = styled("div")`
 ${p =>
   p.theme.responsiveStyle("padding", {
     s: `${p.theme.spacings.l}px`,
-    l: `${p.theme.spacings.xxl}px`,
+    l: `${p.theme.spacings.l}px`,
   })}
 background-color: ${p => p.theme.colors.surface1};
 `;

@@ -20,13 +20,37 @@ export const BlogStyles = styled.div`
 
 export const AuthorImage = styled.img`
   height: 240px;
+  ${p =>
+    p.theme.responsiveStyle("margin-bottom", {
+      s: `${p.theme.spacings.m}px`,
+      l: `-${p.theme.spacings.xl}px`,
+    })}
+`;
+export const AuthorImageContainer = styled.span`
+  ${p =>
+    p.theme.responsiveStyle("flex-basis", {
+      s: "100%",
+      m: "40%",
+      l: "30%",
+    })}
 `;
 
 export const AuthorContainer = styled.div`
-  display: flex;
+  ${p =>
+    p.theme.responsiveStyle("display", {
+      s: "block",
+      l: "flex",
+    })}
 `;
 
-export const AuthorAboutContainer = styled.div``;
+export const AuthorAboutContainer = styled.div`
+  ${p =>
+    p.theme.responsiveStyle("flex-basis", {
+      s: "100%",
+      m: "60%",
+      l: "70%",
+    })}
+`;
 
 export const Subtitle = styled.div`
   ${p =>

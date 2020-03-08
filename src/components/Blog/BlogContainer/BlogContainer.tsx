@@ -77,17 +77,21 @@ const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
 }) => (
   <ContainerWithBorder>
     <S.AuthorContainer>
-      <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+      <S.AuthorImageContainer>
+        <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+      </S.AuthorImageContainer>
       <S.AuthorAboutContainer>
         <div>
-          <Text typography="headingMedium">About the author</Text>
+          <Text typography="headingMedium">About the Author</Text>
         </div>
         <div>
           <Text>{authorBios[author]}</Text>
         </div>
         <div>
           <a href={authorLinks[author].link}>
-            <Text>{authorLinks[author].text}</Text>
+            <Text color="primary" typography="bodyText">
+              {authorLinks[author].text}
+            </Text>
           </a>
         </div>
       </S.AuthorAboutContainer>

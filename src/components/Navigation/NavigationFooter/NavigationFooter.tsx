@@ -6,7 +6,7 @@ import * as S from "./NavigationFooterStyles";
 export const NavigationFooter: React.FC<{}> = () => (
   <ContainerWithBorder>
     <S.OuterContainer>
-      <Text typography="headingSmall">
+      <Text typography="bodyText">
         {`Copyright Hova Labs 2019 - ${new Date().getFullYear().toString()}`}
       </Text>
     </S.OuterContainer>
