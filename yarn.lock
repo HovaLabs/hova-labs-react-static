@@ -1890,10 +1890,10 @@
   dependencies:
     "@hapi/hoek" "^8.3.0"
 
-"@hova-labs/bento-box-web@^0.19.2":
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/@hova-labs/bento-box-web/-/bento-box-web-0.19.2.tgz#769ced3c01768161e86e6e87b0e6f6a0d5a8afd8"
-  integrity sha512-DeSVLV+9ik8h7W3rS9baYlttMt3X79oiG1tTDofJTXH2IMvpS8FABf1uDJvyublrXyjogRAunOiRSVJvLCQQnQ==
+"@hova-labs/bento-box-web@^0.19.4":
+  version "0.19.4"
+  resolved "https://registry.yarnpkg.com/@hova-labs/bento-box-web/-/bento-box-web-0.19.4.tgz#5c99e57a874a5838a6c9df0bc145fb055e68d38b"
+  integrity sha512-6Qk8Xvy7ysyszSdhsIu9XLPS9kcr32dJW+Bwqy7O7m91HtX9JOgXhHpHOgK0X2vtznTnv0EXlYIilOCYjK8qPg==
   dependencies:
     "@types/jest" "^24.0.23"
     "@types/node" "^12.12.14"
