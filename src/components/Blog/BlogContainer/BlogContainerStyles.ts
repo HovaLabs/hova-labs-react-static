@@ -10,8 +10,7 @@ export const BlogStyles = styled.div`
     margin: ${p => p.theme.spacings.l}px;
   }
   img {
-    max-width: 100%;
-    max-height: 75vh;
+    width: 100%;
   }
   code {
     background: ${p => p.theme.colors.surface1};

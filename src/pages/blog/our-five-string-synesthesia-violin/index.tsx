@@ -52,7 +52,7 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
     </div>
     <iframe
       title="hovalin-in-action"
-      width="560"
+      width="100%"
       height="315"
       src="https://www.youtube.com/embed/kvYgzX4rx8U"
       frameBorder="0"
@@ -140,13 +140,13 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
       <Text>Last, but not least, we painted in the H logo on the Hovalin.</Text>
     </div>
     <img src={violinPhoto8} alt="hovalin-logo" />
+    <img src={violinPhoto9} alt="hovalin-top-view" />
     <div>
       <Text>
         Well, there you have it, our 5 string Synesthesia Projector Hovalin is
         built and working. Can't wait to post more videos of it in action soon.
       </Text>
     </div>
-    <img src={violinPhoto9} alt="hovalin-top-view" />
   </BlogContainer>
 );
 
