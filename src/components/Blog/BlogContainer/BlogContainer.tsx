@@ -1,9 +1,11 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
+import { NavigationFooter } from "components/Navigation/NavigationFooter";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
+import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 
 import * as S from "./BlogContainerStyles";
 
@@ -16,10 +18,16 @@ export const BlogContainer: React.FC<{
   };
   children: React.ReactNode;
 }> = ({ blogManifest, children }) => (
-  <div>
-    <S.BlogStyles>{children}</S.BlogStyles>
+  <>
+    <ContainerWithBorder>
+      <h1>{blogManifest.title}</h1>
+    </ContainerWithBorder>
+    <ContainerWithBorder>
+      <S.BlogStyles>{children}</S.BlogStyles>
+    </ContainerWithBorder>
     <Author author={blogManifest.author} />
-  </div>
+    <NavigationFooter />
+  </>
 );
 
 const authorPhotos = {
@@ -55,20 +63,22 @@ const authorLinks = {
 const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
   author,
 }) => (
-  <S.AuthorContainer>
-    <S.AuthorImage src={authorPhotos[author]} alt="Author" />
-    <S.AuthorAboutContainer>
-      <div>
-        <Text typography="headingMedium">About the author</Text>
-      </div>
-      <div>
-        <Text>{authorBios[author]}</Text>
-      </div>
-      <div>
-        <a href={authorLinks[author].link}>
-          <Text>{authorLinks[author].text}</Text>
-        </a>
-      </div>
-    </S.AuthorAboutContainer>
-  </S.AuthorContainer>
+  <ContainerWithBorder>
+    <S.AuthorContainer>
+      <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+      <S.AuthorAboutContainer>
+        <div>
+          <Text typography="headingMedium">About the author</Text>
+        </div>
+        <div>
+          <Text>{authorBios[author]}</Text>
+        </div>
+        <div>
+          <a href={authorLinks[author].link}>
+            <Text>{authorLinks[author].text}</Text>
+          </a>
+        </div>
+      </S.AuthorAboutContainer>
+    </S.AuthorContainer>
+  </ContainerWithBorder>
 );

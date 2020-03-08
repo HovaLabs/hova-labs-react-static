@@ -2,7 +2,7 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const BoilerplateBlogPost: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

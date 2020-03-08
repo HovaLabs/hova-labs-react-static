@@ -3,7 +3,7 @@ import { Text } from "@hova-labs/bento-box-web";
 
 import fffiddle from "./Media/fffiddle.jpg";
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const AutodeskInstagramAndTheFFFiddle: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

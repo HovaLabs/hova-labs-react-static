@@ -15,7 +15,7 @@ import steamExhibit2 from "./Media/steam-exhibit-2.jpg";
 import steamExhibit3 from "./Media/steam-exhibit-3.jpg";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const SteamCarnivalSF: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

@@ -4,7 +4,7 @@ import { Text } from "@hova-labs/bento-box-web";
 import wwcHovalin from "./Media/wwc-hovalin.jpg";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const WomenWhoCode: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

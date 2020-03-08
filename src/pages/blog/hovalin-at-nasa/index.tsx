@@ -10,7 +10,7 @@ import notMatt from "./Media/not-matt.jpg";
 import pcbMill from "./Media/pcb-mill.jpg";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const HovalinAtNasa: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

@@ -4,7 +4,7 @@ import { Text } from "@hova-labs/bento-box-web";
 import hovalinStick from "./Media/hovalin-stick.png";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const OpenscadALoveStory: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

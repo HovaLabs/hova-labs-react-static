@@ -8,7 +8,7 @@ import shoveling from "./Media/shoveling.jpg";
 import snow from "./Media/snow.jpg";
 import soldOut from "./Media/sold-out.jpg";
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const DoSpace: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>

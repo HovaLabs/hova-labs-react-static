@@ -3,7 +3,7 @@ import { Text } from "@hova-labs/bento-box-web";
 import { routes } from "../../../routes";
 
 import blogManifest from "./manifest.json";
-import { BlogContainer } from "../../../components/BlogContainer";
+import { BlogContainer } from "../../../components/Blog/BlogContainer";
 
 const HovalinTwo: React.FC<{}> = () => (
   <BlogContainer blogManifest={blogManifest}>
