@@ -28,7 +28,7 @@ const Image = styled("div")<{ backgroundImage: string }>`
   ${p =>
     p.theme.responsiveStyle("flex", {
       s: "0 0 100%",
-      l: "0 0 646px",
+      l: "0 1 60%",
     })}
   background-color: ${p => p.theme.colors.surface1};
   background-image: url(${p => p.backgroundImage});

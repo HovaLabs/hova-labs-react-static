@@ -20,6 +20,11 @@ export const ContentContainer = styled("div")`
       s: `${p.theme.spacings.l}px 0 ${p.theme.spacings.xl}px 0`,
       l: `0 ${p.theme.spacings.xl}px`,
     })}
+  ${p =>
+    p.theme.responsiveStyle("flex", {
+      s: "0 0 100%",
+      l: "0 1 40%",
+    })}
 `;
 
 export const Image = styled("div")<{ backgroundImage: string }>`
@@ -31,7 +36,7 @@ export const Image = styled("div")<{ backgroundImage: string }>`
   ${p =>
     p.theme.responsiveStyle("flex", {
       s: "0 0 100%",
-      l: "0 0 646px",
+      l: "0 1 60%",
     })}
   background-color: ${p => p.theme.colors.surface1};
   background-image: url(${p => p.backgroundImage});
