@@ -24,7 +24,9 @@ const BlogListItem: React.FC<BlogManifest> = ({
   const formattedDate = dateToString(datePublished);
   return (
     <S.OuterContainer>
-      <S.Image backgroundImage={hero} />
+      <Link to={url} style={{ width: "100%" }}>
+        <S.Image backgroundImage={hero} />
+      </Link>
       <S.ContentContainer>
         <div>
           <div>
