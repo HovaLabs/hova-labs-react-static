@@ -56,16 +56,16 @@ export const TopNavigation: React.FC<{}> = () => {
             ) : (
               <>
                 <Link to={routes.PROJECTS}>
-                  <Text typography="headingSmall">Projects</Text>
+                  <Text typography="bodyText">Projects</Text>
                 </Link>
                 <Link to={routes.BLOG}>
-                  <Text typography="headingSmall">Blog</Text>
+                  <Text typography="bodyText">Blog</Text>
                 </Link>
                 <Link to={routes.STORE}>
-                  <Text typography="headingSmall">Store</Text>
+                  <Text typography="bodyText">Store</Text>
                 </Link>
                 <Link to={routes.CONTACT}>
-                  <Text typography="headingSmall">Contact</Text>
+                  <Text typography="bodyText">Contact</Text>
                 </Link>
                 {themeToggle}
               </>
