@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const ColorOptionButton = styled("button")`
   align-items: center;
-  background-color: ${p => `${p.theme.colors.background}`};
+  background-color: ${p => `${p.theme.colors.surface1}`};
   border: ${p => `3px solid ${p.theme.colors.onSurface1}`};
   color: ${p => `${p.theme.colors.onSurface1}px`};
   display: flex;
