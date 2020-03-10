@@ -9,17 +9,30 @@ import { blogManifest } from "./blogManifest";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const Blog: React.FC<{}> = () => {
-  const blogTags: Array<any> = [];
-  const BlogList = blogManifest.map(post => {
-    // HACK - it's a map but were also using it to populate the list of unique tags
-    post.tags.forEach(tag => {
-      if (!blogTags.includes(tag)) {
-        blogTags.push(tag);
+  const blogTags = blogManifest.reduce((acc, b) => {
+    b.tags.forEach(tag => {
+      if (!acc.includes(tag)) {
+        acc.push(tag);
       }
     });
+    return acc;
+  }, []);
 
-    return <BlogListItem key={post.datePublished} {...post} />;
-  });
+  const BlogList = React.useMemo(
+    () =>
+      blogManifest
+        .filter(
+          post =>
+            window.location.hash === "" ||
+            post.tags.includes(window.location.hash.replace("#", ""))
+        )
+        .map(post => {
+          return <BlogListItem key={post.datePublished} {...post} />;
+        }),
+    // This is frustrating. linter isn't catching use of window.location.hash
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [window.location.hash]
+  );
 
   const blogTagList = blogTags.map(tag => (
     <BlogTag key={tag} title={tag} onPress={() => {}} />

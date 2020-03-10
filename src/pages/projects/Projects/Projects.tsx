@@ -64,7 +64,7 @@ export const Projects: React.FC<{}> = () => (
         <Link to={project.linkUrl} key={project.linkUrl}>
           <S.HeroImage backgroundImage={project.imgSrc} />
         </Link>
-        <div>
+        <S.InfoContainer>
           <S.TitleContainer>
             <Text typography="headingMedium">{project.title}</Text>
           </S.TitleContainer>
@@ -76,7 +76,7 @@ export const Projects: React.FC<{}> = () => (
               <Button onPress={() => {}} title={project.linkTitle} />
             </Link>
           </S.ButtonContainer>
-        </div>
+        </S.InfoContainer>
       </ContainerWithBorder>
     ))}
   </>
