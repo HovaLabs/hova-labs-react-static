@@ -7,51 +7,46 @@ import { InputsSelectColor } from "../../components/Inputs/InputsSelectColor/Inp
 export const Store: React.FC<{}> = () => (
   <ContainerWithBorder>
     <div style={{ display: "flex" }}>
-      <div>
-        <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
-      </div>
+      <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
       <div>
         <Text typography="headingLarge">The Hovalin</Text>
 
         <Text typography="headingSmall">$600</Text>
-        <div>
-          <Text typography="bodyText">Includes:</Text>
-          <ul>
-            <li>
-              <Text typography="bodyText">3D printed parts</Text>
-            </li>
-            <li>
-              <Text typography="bodyText">Carbon Fiber Rod</Text>
-            </li>
-            <li>
-              <Text typography="bodyText">Tuners</Text>
-            </li>
-            <li>
-              <Text typography="bodyText">Strings</Text>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <InputsSelectColor onChange={() => {}} />
-        </div>
-        <div>
-          <Button onPress={() => {}} title="Purchase" variant="primary" />
-        </div>
-        <div>
-          <Text typography="bodyText">NOTE:</Text>
-        </div>
-        <div>
+        <Text typography="bodyText">Includes:</Text>
+        <ul>
+          <li>
+            <Text typography="bodyText">3D printed parts</Text>
+          </li>
+          <li>
+            <Text typography="bodyText">Carbon Fiber Rod</Text>
+          </li>
+          <li>
+            <Text typography="bodyText">Tuners</Text>
+          </li>
+          <li>
+            <Text typography="bodyText">Strings</Text>
+          </li>
+        </ul>
+
+        <InputsSelectColor onChange={() => {}} />
+
+        <Button onPress={() => {}} title="Purchase" variant="primary" />
+        <br />
+        <Text typography="bodyText">Note:</Text>
+        <Text typography="bodyText">
           All violin parts are printed with Hatchbox PLA filament. Gold, Silver,
           Bronze, and Copper are reference colors, and are not inferring that
           the violin will actually be made with any precious metal. Checkout
           Hatchbox PLA color here. Official Hovalins come with a hovalin logo
           embeded on the tailpiece.
-        </div>
-        <div>All parts are made to order. Shipping estimate is 2 weeks.</div>
-        <div>
+        </Text>
+        <Text typography="bodyText">
+          All parts are made to order. Shipping estimate is 2 weeks.
+        </Text>
+        <Text typography="bodyText">
           Shipping outsite of continental United States will be subject to an
           extra charge.
-        </div>
+        </Text>
       </div>
     </div>
   </ContainerWithBorder>
