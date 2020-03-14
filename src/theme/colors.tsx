@@ -19,9 +19,9 @@ export const colorsDarkTheme: Colors = {
   onSurface2: "hsla(0, 0%, 100%, 1)",
   onPrimary: "hsla(0, 0%, 0%, 1)",
   onSecondary: "hsla(0, 0%, 0%, 1)",
-  background: "hsla(0, 0%, 0%, 1)",
-  surface1: "hsla(0, 0%, 15%, 1)",
-  surface2: "hsla(0, 0%, 25%, 1)",
+  background: "	hsl(0, 0%, 7%)",
+  surface1: "hsl(0, 0%, 12%)",
+  surface2: "hsl(0, 0%, 18%)",
   primary: "hsla(230, 25%, 68%, 1)",
   secondary: "hsla(230, 25%, 78%, 1)",
 };
