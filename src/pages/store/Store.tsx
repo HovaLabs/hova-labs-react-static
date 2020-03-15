@@ -6,7 +6,7 @@ import { InputsSelectColor } from "../../components/Inputs/InputsSelectColor/Inp
 
 export const Store: React.FC<{}> = () => (
   <ContainerWithBorder>
-    <div style={{ display: "flex" }}>
+    <div style={{ display: "flex", justifyContent: "center" }}>
       <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
       <div>
         <Text typography="headingLarge">The Hovalin</Text>
@@ -31,23 +31,24 @@ export const Store: React.FC<{}> = () => (
         <InputsSelectColor onChange={() => {}} />
 
         <Button onPress={() => {}} title="Purchase" variant="primary" />
-        <br />
-        <Text typography="bodyText">Note:</Text>
-        <Text typography="bodyText">
-          All violin parts are printed with Hatchbox PLA filament. Gold, Silver,
-          Bronze, and Copper are reference colors, and are not inferring that
-          the violin will actually be made with any precious metal. Checkout
-          Hatchbox PLA color here. Official Hovalins come with a hovalin logo
-          embeded on the tailpiece.
-        </Text>
-        <Text typography="bodyText">
-          All parts are made to order. Shipping estimate is 2 weeks.
-        </Text>
-        <Text typography="bodyText">
-          Shipping outsite of continental United States will be subject to an
-          extra charge.
-        </Text>
       </div>
+    </div>
+    <div>
+      <Text typography="bodyText">Note:</Text>
+      <Text typography="bodyText">
+        All violin parts are printed with Hatchbox PLA filament. Gold, Silver,
+        Bronze, and Copper are reference colors, and are not inferring that the
+        violin will actually be made with any precious metal. Checkout Hatchbox
+        PLA color here. Official Hovalins come with a hovalin logo embeded on
+        the tailpiece.
+      </Text>
+      <Text typography="bodyText">
+        All parts are made to order. Shipping estimate is 2 weeks.
+      </Text>
+      <Text typography="bodyText">
+        Shipping outside of continental United States will be subject to an
+        extra charge.
+      </Text>
     </div>
   </ContainerWithBorder>
 );
