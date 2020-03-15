@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Text } from "@hova-labs/bento-box-web";
 import hovalin from "./hovalinv4.png";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
-import { InputsSelectColor } from "../../components/Inputs/InputsSelectColor/InputsSelectColor";
+import { InputsSelect } from "../../components/Inputs/InputsSelect/InputsSelect";
 
 export const Store: React.FC<{}> = () => (
   <ContainerWithBorder>
@@ -28,7 +28,7 @@ export const Store: React.FC<{}> = () => (
           </li>
         </ul>
 
-        <InputsSelectColor onChange={() => {}} />
+        <InputsSelect onChange={() => {}} />
 
         <Button onPress={() => {}} title="Purchase" variant="primary" />
       </div>
