@@ -17,8 +17,9 @@ export const Description = styled("div")`
 export const ContentContainer = styled("div")`
   ${p =>
     p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px 0 ${p.theme.spacings.xl}px 0`,
-      l: `0 ${p.theme.spacings.xl}px`,
+      s: `${p.theme.spacings.m}px 0 0 0`,
+      l: `${p.theme.spacings.l}px 0 0 0`,
+      xl: `0 ${p.theme.spacings.xl}px`,
     })}
   ${p =>
     p.theme.responsiveStyle("flex", {
