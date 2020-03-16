@@ -9,7 +9,7 @@ export const Store: React.FC<{}> = () => {
   const [color, setColor] = useState("black");
   return (
     <ContainerWithBorder>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <S.StoreArea>
         <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
         <div>
           <Text typography="headingLarge">The Hovalin</Text>
@@ -34,7 +34,8 @@ export const Store: React.FC<{}> = () => {
               <Text typography="bodyText">Strings</Text>
             </li>
           </ul>
-
+          <S.Divider />
+          <Text typography="bodyText">SelectColor</Text>
           <InputsSelect onChange={setColor} />
 
           <Button
@@ -45,7 +46,7 @@ export const Store: React.FC<{}> = () => {
             variant="primary"
           />
         </div>
-      </div>
+      </S.StoreArea>
       <S.NoteArea>
         <Text typography="bodyText">Note:</Text>
         <Text typography="bodyText">
