@@ -3,6 +3,7 @@ import { Button, Text } from "@hova-labs/bento-box-web";
 import hovalin from "./hovalinv4.png";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import { InputsSelect } from "../../components/Inputs/InputsSelect/InputsSelect";
+import * as S from "./StoreStyles";
 
 export const Store: React.FC<{}> = () => {
   const [color, setColor] = useState("black");
@@ -13,8 +14,12 @@ export const Store: React.FC<{}> = () => {
         <div>
           <Text typography="headingLarge">The Hovalin</Text>
 
-          <Text typography="headingSmall">$600</Text>
-          <Text typography="bodyText">Includes:</Text>
+          <S.TextCost>
+            <Text typography="headingSmall">$600</Text>
+          </S.TextCost>
+          <S.TextIncludes>
+            <Text typography="bodyText">Includes:</Text>
+          </S.TextIncludes>
           <ul>
             <li>
               <Text typography="bodyText">3D printed parts</Text>
@@ -41,7 +46,7 @@ export const Store: React.FC<{}> = () => {
           />
         </div>
       </div>
-      <div>
+      <S.NoteArea>
         <Text typography="bodyText">Note:</Text>
         <Text typography="bodyText">
           All violin parts are printed with Hatchbox PLA filament. Gold, Silver,
@@ -57,7 +62,7 @@ export const Store: React.FC<{}> = () => {
           Shipping outside of continental United States will be subject to an
           extra charge.
         </Text>
-      </div>
+      </S.NoteArea>
     </ContainerWithBorder>
   );
 };
