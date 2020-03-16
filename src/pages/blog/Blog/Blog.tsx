@@ -43,7 +43,7 @@ export const Blog: React.FC<{}> = () => {
       <ContainerWithBorder>
         <S.OuterContainer>
           <Text typography="headingLarge">Blog</Text>
-          <div>{blogTagList}</div>
+          <S.TagsContainer>{blogTagList}</S.TagsContainer>
           {BlogList}
         </S.OuterContainer>
       </ContainerWithBorder>

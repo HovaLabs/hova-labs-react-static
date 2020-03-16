@@ -70,3 +70,7 @@ export const OuterContainer = styled("div")`
       l: `${p.theme.spacings.xl}px`,
     })}
 `;
+
+export const TagsContainer = styled.div`
+  display: flex;
+`;

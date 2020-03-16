@@ -73,3 +73,7 @@ export const Subtitle = styled.div`
       l: `${p.theme.spacings.l}px 0`,
     })}
 `;
+
+export const TagsContainer = styled.div`
+  display: flex;
+`;

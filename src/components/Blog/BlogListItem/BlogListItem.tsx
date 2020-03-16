@@ -34,7 +34,7 @@ const BlogListItem: React.FC<BlogManifest> = ({
             <S.Date>
               <Text typography="headingSmall">{formattedDate}</Text>
             </S.Date>
-            <div>{tagsList}</div>
+            <S.TagsContainer>{tagsList}</S.TagsContainer>
           </div>
           <Link to={url}>
             <S.Button title="Read" onPress={() => {}} />

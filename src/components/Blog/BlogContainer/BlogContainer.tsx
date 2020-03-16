@@ -45,7 +45,7 @@ export const BlogContainer: React.FC<{
         <S.Subtitle>
           <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
         </S.Subtitle>
-        {tagsList}
+        <S.TagsContainer>{tagsList}</S.TagsContainer>
       </ContainerWithBorder>
       <ContainerWithBorder>
         <S.BlogStyles>{children}</S.BlogStyles>
