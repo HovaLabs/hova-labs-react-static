@@ -5,6 +5,7 @@ import { Icon, Text } from "@hova-labs/bento-box-web";
 
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
+import * as S2 from "./TopNavigationModalStyles";
 import { ModalsMobileNav } from "..";
 
 export const TopNavigationModal: React.FC<{
@@ -23,29 +24,29 @@ export const TopNavigationModal: React.FC<{
         </S.ClosedButtonContainer>
         <S.ModalLinkContainer onClick={() => setNavModalIsOpen(false)}>
           <Link to={routes.HOMEPAGE}>
-            <div>
+            <S2.Link>
               <Text typography="headingMedium">Home</Text>
-            </div>
+            </S2.Link>
           </Link>
           <Link to={routes.PROJECTS}>
-            <div>
+            <S2.Link>
               <Text typography="headingMedium">Projects</Text>
-            </div>
+            </S2.Link>
           </Link>
           <Link to={routes.BLOG}>
-            <div>
+            <S2.Link>
               <Text typography="headingMedium">Blog</Text>
-            </div>
+            </S2.Link>
           </Link>
           <Link to={routes.STORE}>
-            <div>
+            <S2.Link>
               <Text typography="headingMedium">Store</Text>
-            </div>
+            </S2.Link>
           </Link>
           <Link to={routes.CONTACT}>
-            <div>
+            <S2.Link>
               <Text typography="headingMedium">Contact</Text>
-            </div>
+            </S2.Link>
           </Link>
         </S.ModalLinkContainer>
       </S.ModalContent>
