@@ -49,10 +49,10 @@ type Service = {
 };
 const services: Array<Service> = [
   {
-    icon: Robot,
-    title: "Firmware & Electronics",
+    icon: Magic,
+    title: "UX & Design Systems",
     description:
-      "From Arduino to Raspberry Pi, Teensy to AtMega, we've gotten our hands dirty in our fair share of firmware and electronics.",
+      "The number one rule of software is DRY - Don't Repeat Yourself. We love making beautiful and reusable tools for designing websites",
     linkTitle: "Find out more",
     linkHref: "http://www.zombo.com",
   },
@@ -65,18 +65,18 @@ const services: Array<Service> = [
     linkHref: "http://www.zombo.com",
   },
   {
-    icon: Cube,
-    title: "3D Printing",
+    icon: Robot,
+    title: "Firmware & Electronics",
     description:
-      "Since 2012 we've been exploring the world of 3d printing and CAD. We love FDM, Fusion360, and OpenSCAD, to name a few.",
+      "From Arduino to Raspberry Pi, Teensy to AtMega, we've gotten our hands dirty in our fair share of firmware and electronics.",
     linkTitle: "Find out more",
     linkHref: "http://www.zombo.com",
   },
   {
-    icon: Magic,
-    title: "UX & Design Systems",
+    icon: Cube,
+    title: "3D Printing",
     description:
-      "The number one rule of software is DRY - Don't Repeat Yourself. We love making beautiful and reusable tools for designing websites",
+      "Since 2012 we've been exploring the world of 3d printing and CAD. We love FDM, Fusion360, and OpenSCAD, to name a few.",
     linkTitle: "Find out more",
     linkHref: "http://www.zombo.com",
   },
