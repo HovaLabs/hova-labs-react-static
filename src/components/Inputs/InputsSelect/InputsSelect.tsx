@@ -5,7 +5,7 @@ import darkThemeArrow from "../../../media/Icons/darkThemeArrow.svg";
 import lightThemeArrow from "../../../media/Icons/lightThemeArrow.svg";
 
 export const InputsSelect: React.FC<{
-  onChange: () => void;
+  onChange: (color: string) => void;
 }> = ({ onChange }) => {
   const { theme } = React.useContext(ThemeContext);
   const colors = [
@@ -27,8 +27,9 @@ export const InputsSelect: React.FC<{
       <S.Select
         backgroundImage={arrow}
         id="colorSelect"
-        onChange={onChange}
-        onKeyPress={onChange}
+        onChange={event => {
+          onChange(event.target.value);
+        }}
       >
         {options}
       </S.Select>
