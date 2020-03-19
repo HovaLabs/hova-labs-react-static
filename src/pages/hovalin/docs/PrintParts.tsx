@@ -52,7 +52,7 @@ export const PrintParts: React.FC<{}> = () => (
     </div>
     <div>
       <div>
-        <img src={hovalinNeck} alt="hovalin neck" />
+        <img width="100%" src={hovalinNeck} alt="hovalin neck" />
         <div>The Neck</div>
         <div>10 PRINT HOURS | 90g PLASTIC</div>
         <div>PARAMETERS</div>
@@ -66,7 +66,7 @@ export const PrintParts: React.FC<{}> = () => (
         />
       </div>
       <div>
-        <img src={hovalinBody} alt="hovalin body" />
+        <img width="100%" src={hovalinBody} alt="hovalin body" />
         <div>The Body</div>
         <div>33 PRINT HOURS | 390g PLASTIC</div>
         <div>PARAMETERS</div>

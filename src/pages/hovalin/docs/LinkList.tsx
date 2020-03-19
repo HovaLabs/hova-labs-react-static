@@ -1,43 +1,30 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
+import * as S from "./LinkListStyles";
 
-export const LinkList: React.FC<{}> = () => (
-  <ContainerWithBorder>
-    <a href="#shopping-list">
-      <div>
-        <div>1</div>
-        <div>Shopping List</div>
-      </div>
-    </a>
-    <a href="#print-parts">
-      <div>
-        <div>2</div>
-        <div>Print Parts</div>
-      </div>
-    </a>
-    <a href="#clean-up">
-      <div>
-        <div>3</div>
-        <div>Clean up Prints</div>
-      </div>
-    </a>
-    <a href="#pegs">
-      <div>
-        <div>4</div>
-        <div>Install Pegs</div>
-      </div>
-    </a>
-    <a href="#assemble">
-      <div>
-        <div>5</div>
-        <div>Assemble Body</div>
-      </div>
-    </a>
-    <a href="#strings">
-      <div>
-        <div>6</div>
-        <div>Install Strings</div>
-      </div>
-    </a>
-  </ContainerWithBorder>
-);
+export const LinkList: React.FC<{}> = () => {
+  const steps = [
+    { anchorLink: "shopping-list", title: "Shopping List" },
+    { anchorLink: "print-parts", title: "Clean up Prints" },
+    { anchorLink: "pegs", title: "Install Pegs" },
+    { anchorLink: "assemble", title: "Assemble Body" },
+    { anchorLink: "strings", title: "Install Strings" },
+  ];
+
+  const links = steps.map((step, index) => (
+    <S.Link>
+      <S.LinkText key={step.anchorLink} href={`#${step.anchorLink}`}>
+        <div>
+          <Text typography="headingMedium">{(index + 1).toString()}</Text>
+          <Text typography="bodyText">{step.title}</Text>
+        </div>
+      </S.LinkText>
+    </S.Link>
+  ));
+  return (
+    <ContainerWithBorder>
+      <S.LinksContainer>{links}</S.LinksContainer>
+    </ContainerWithBorder>
+  );
+};
