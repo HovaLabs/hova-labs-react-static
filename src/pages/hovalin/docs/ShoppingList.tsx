@@ -1,6 +1,8 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import { routes } from "../../../routes";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
+import * as S from "./ShoppingListStyles";
 
 const shoppingList = [
   {
@@ -150,26 +152,28 @@ const shoppingList = [
 export const ShoppingList: React.FC<{}> = () => (
   <ContainerWithBorder>
     <div>
-      <div>1</div>
-      <div>Shopping List</div>
+      <Text typography="headingLarge">1</Text>
+      <Text typography="headingSmall">Shopping List</Text>
     </div>
-    <div>
+    <S.List>
       {shoppingList.map(item => (
-        <div>
+        <S.ListItem>
           <div>{item.icon}</div>
           <div>
-            <div>{item.title}</div>
-            <div>{item.description}</div>
-            <div>
+            <Text typography="headingSmall">{item.title}</Text>
+            <Text typography="bodyText">{item.description}</Text>
+            <ul>
               {item.list.map(li => (
-                <a href={li.link}>
-                  <div>{li.name}</div>
-                </a>
+                <li>
+                  <a href={li.link}>
+                    <div>{li.name}</div>
+                  </a>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </div>
+        </S.ListItem>
       ))}
-    </div>
+    </S.List>
   </ContainerWithBorder>
 );
