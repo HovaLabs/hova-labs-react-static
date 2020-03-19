@@ -155,6 +155,7 @@ export const ShoppingList: React.FC<{}> = () => (
       <Text typography="headingLarge">1</Text>
       <Text typography="headingSmall">Shopping List</Text>
     </div>
+    <br />
     <S.List>
       {shoppingList.map(item => (
         <S.ListItem>
