@@ -13,3 +13,7 @@ export const List = styled("div")`
   display: flex;
   flex-wrap: wrap;
 `;
+
+export const Link = styled("a")`
+  color: ${p => p.theme.colors.primary};
+`;

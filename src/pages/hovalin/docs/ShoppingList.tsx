@@ -165,9 +165,9 @@ export const ShoppingList: React.FC<{}> = () => (
             <ul>
               {item.list.map(li => (
                 <li>
-                  <a href={li.link}>
+                  <S.Link href={li.link}>
                     <div>{li.name}</div>
-                  </a>
+                  </S.Link>
                 </li>
               ))}
             </ul>

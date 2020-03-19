@@ -27,4 +27,8 @@ export const GlobalStyle = createGlobalStyle`
     text-decoration: none;
   }
 
+  ul {
+    padding-inline-start: 20px;
+  }
+
 `;
