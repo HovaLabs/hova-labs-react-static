@@ -1,8 +1,9 @@
 import React from "react";
 import sanding from "./Photos/sanding.gif";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const CleanUp: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <div>
       <div>3</div>
       <div>Clean Up</div>
@@ -16,5 +17,5 @@ export const CleanUp: React.FC<{}> = () => (
         For extra credit, sand the rest of the surfaces as well.
       </div>
     </div>
-  </div>
+  </ContainerWithBorder>
 );

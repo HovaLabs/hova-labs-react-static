@@ -1,7 +1,8 @@
 import React from "react";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const LinkList: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <a href="#shopping-list">
       <div>
         <div>1</div>
@@ -38,5 +39,5 @@ export const LinkList: React.FC<{}> = () => (
         <div>Install Strings</div>
       </div>
     </a>
-  </div>
+  </ContainerWithBorder>
 );

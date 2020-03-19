@@ -4,9 +4,10 @@ import hovalinNeck from "./Photos/hovalin-neck.svg";
 import hovalinBody from "./Photos/hovalin-body.svg";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const PrintParts: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <div>
       <div>
         <div>2</div>
@@ -79,5 +80,5 @@ export const PrintParts: React.FC<{}> = () => (
         />
       </div>
     </div>
-  </div>
+  </ContainerWithBorder>
 );

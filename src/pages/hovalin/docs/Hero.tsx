@@ -1,10 +1,12 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const Hero: React.FC<{}> = () => (
-  <div>
-    <div>Hovalin</div>
+  <ContainerWithBorder>
+    <Text typography="headingLarge">Hovalin</Text>
     <div>
       <Button
         href={routes.HOVALIN_4_4_FILES}
@@ -22,10 +24,5 @@ export const Hero: React.FC<{}> = () => (
         title="Discuss on Reddit"
       />
     </div>
-    <div>
-      <a target="_blank" rel="noopener noreferrer" href={routes.HOVALIN_V3}>
-        Looking for v3?
-      </a>
-    </div>
-  </div>
+  </ContainerWithBorder>
 );

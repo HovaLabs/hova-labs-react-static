@@ -1,5 +1,6 @@
 import React from "react";
 import { routes } from "../../../routes";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 const shoppingList = [
   {
@@ -147,7 +148,7 @@ const shoppingList = [
 ];
 
 export const ShoppingList: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <div>
       <div>1</div>
       <div>Shopping List</div>
@@ -170,5 +171,5 @@ export const ShoppingList: React.FC<{}> = () => (
         </div>
       ))}
     </div>
-  </div>
+  </ContainerWithBorder>
 );

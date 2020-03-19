@@ -2,9 +2,10 @@ import React from "react";
 import pegEndBreakoff from "./Photos/peg-end-breakoff.gif";
 import pegInsert from "./Photos/peg-insert.gif";
 import pegTighten from "./Photos/peg-tighten.gif";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const InstallTunerPegs: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <div>
       <div>4</div>
       <div>Install Tuner Pegs</div>
@@ -26,5 +27,5 @@ export const InstallTunerPegs: React.FC<{}> = () => (
         hand, then using a 10mm hex wrench.
       </div>
     </div>
-  </div>
+  </ContainerWithBorder>
 );

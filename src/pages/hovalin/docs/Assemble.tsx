@@ -1,8 +1,9 @@
 import React from "react";
 import assembly from "./Photos/assembly.gif";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 
 export const Assemble: React.FC<{}> = () => (
-  <div>
+  <ContainerWithBorder>
     <div>
       <div>5</div>
       <div>Assemble</div>
@@ -15,5 +16,5 @@ export const Assemble: React.FC<{}> = () => (
         through the chamber so that it is flush with the top of the neck.
       </div>
     </div>
-  </div>
+  </ContainerWithBorder>
 );
