@@ -20,7 +20,6 @@ export const LinksContainer = styled("div")`
 `;
 
 export const LinkSurface = styled("div")`
-  background-color: ${p => p.theme.colors.surface2};
-  color: ${p => p.theme.colors.onSurface2};
+  color: ${p => p.theme.colors.onSurface1};
   padding: ${p => `${p.theme.spacings.l}px`};
 `;

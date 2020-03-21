@@ -1,4 +1,5 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import hovalinStrings from "./Photos/hovalin-strings.jpg";
 import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
@@ -6,9 +7,10 @@ import { ContainerWithBorder } from "../../../components/Container/ContainerWith
 export const InstallStrings: React.FC<{}> = () => (
   <ContainerWithBorder>
     <div>
-      <div>6</div>
-      <div>INSTALL STRINGS</div>
+      <Text typography="headingLarge">5</Text>
+      <Text typography="headingSmall">Install Strings</Text>
     </div>
+    <br />
     <div>
       <img width="100%" src={hovalinStrings} alt="strings on bridge" />
       <img
