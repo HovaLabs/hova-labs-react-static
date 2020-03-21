@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Link = styled("div")`
-  padding: ${p => `${p.theme.spacings.l}px`};
   ${p =>
     p.theme.responsiveStyle("flex", {
       s: `1 1 50%`,
