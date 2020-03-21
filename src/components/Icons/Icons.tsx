@@ -3,12 +3,16 @@
 import React from "react";
 import { IconBaseProps } from "react-icons";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { GoCheck } from "react-icons/go";
+import { IoMdWarning } from "react-icons/io";
 import { MdClose } from "react-icons/md";
 
 import styled from "styled-components";
 
 const icons = {
   GiHamburgerMenu,
+  GoCheck,
+  IoMdWarning,
   MdClose,
 };
 

@@ -6,7 +6,7 @@ import * as S from "./LinkListStyles";
 export const LinkList: React.FC<{}> = () => {
   const steps = [
     { anchorLink: "shopping-list", title: "Shopping List" },
-    { anchorLink: "print-parts", title: "Clean up Prints" },
+    { anchorLink: "print-parts", title: "Clean up" },
     { anchorLink: "pegs", title: "Install Pegs" },
     { anchorLink: "assemble", title: "Assemble Body" },
     { anchorLink: "strings", title: "Install Strings" },
@@ -14,12 +14,12 @@ export const LinkList: React.FC<{}> = () => {
 
   const links = steps.map((step, index) => (
     <S.Link>
-      <S.LinkText key={step.anchorLink} href={`#${step.anchorLink}`}>
-        <div>
+      <a key={step.anchorLink} href={`#${step.anchorLink}`}>
+        <S.LinkSurface>
           <Text typography="headingMedium">{(index + 1).toString()}</Text>
           <Text typography="bodyText">{step.title}</Text>
-        </div>
-      </S.LinkText>
+        </S.LinkSurface>
+      </a>
     </S.Link>
   ));
   return (

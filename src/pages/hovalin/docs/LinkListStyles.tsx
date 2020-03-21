@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
 export const Link = styled("div")`
-  background-color: ${p => p.theme.colors.surface2};
   padding: ${p => `${p.theme.spacings.l}px`};
   ${p =>
-    p.theme.responsiveStyle("flex-basis", {
-      s: `50%`,
-      m: `50%`,
-      l: `20%`,
+    p.theme.responsiveStyle("flex", {
+      s: `1 1 50%`,
+      m: `1 1 50%`,
+      l: `1 1 20%`,
     })}
 `;
 
@@ -21,6 +20,8 @@ export const LinksContainer = styled("div")`
     })}
 `;
 
-export const LinkText = styled("a")`
+export const LinkSurface = styled("div")`
+  background-color: ${p => p.theme.colors.surface2};
   color: ${p => p.theme.colors.onSurface2};
+  padding: ${p => `${p.theme.spacings.l}px`};
 `;
