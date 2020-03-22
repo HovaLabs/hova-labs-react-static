@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const Button = styled("input")`
+  ${p => p.theme.typography.buttonText}
+  background-color: ${p => p.theme.colors.primary};
+  border: 0;
+  padding: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  align-items: center;
+  border-radius: 0px;
+  cursor: pointer;
+  transition: all 350ms;
+`;
+
 export const Divider = styled("hr")`
   border: ${p => `3px solid ${p.theme.colors.onSurface1}`};
   ${p =>

@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import { Button, Text } from "@hova-labs/bento-box-web";
+import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import hovalin from "./hovalinv4.png";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 import { InputsSelect } from "../../components/Inputs/InputsSelect/InputsSelect";
 import * as S from "./StoreStyles";
 
 export const Store: React.FC<{}> = () => {
-  const [color, setColor] = useState("black");
   return (
     <ContainerWithBorder>
       <S.StoreArea>
@@ -35,16 +34,27 @@ export const Store: React.FC<{}> = () => {
             </li>
           </ul>
           <S.Divider />
-          <Text typography="bodyText">SelectColor</Text>
-          <InputsSelect onChange={setColor} />
-
-          <Button
-            onPress={() => {
-              console.log(color);
-            }}
-            title="Purchase"
-            variant="primary"
-          />
+          <Text typography="bodyText">Select Color</Text>
+          <form
+            action="https://www.paypal.com/cgi-bin/webscr"
+            method="post"
+            target="_top"
+          >
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input
+              type="hidden"
+              name="hosted_button_id"
+              value="XMM2C9UPENTNU"
+            />
+            <input type="hidden" name="on0" value="Color" />
+            <InputsSelect />
+            <S.Button
+              type="submit"
+              name="submit"
+              value="Purchase"
+              title="Purchase"
+            />
+          </form>
         </div>
       </S.StoreArea>
       <S.NoteArea>

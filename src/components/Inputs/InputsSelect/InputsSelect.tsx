@@ -4,9 +4,7 @@ import * as S from "./InputsSelectStyles";
 import darkThemeArrow from "../../../media/Icons/darkThemeArrow.svg";
 import lightThemeArrow from "../../../media/Icons/lightThemeArrow.svg";
 
-export const InputsSelect: React.FC<{
-  onChange: (color: string) => void;
-}> = ({ onChange }) => {
+export const InputsSelect: React.FC<{}> = () => {
   const { theme } = React.useContext(ThemeContext);
   const colors = [
     "Black",
@@ -23,16 +21,8 @@ export const InputsSelect: React.FC<{
   const options = colors.map(option => <option>{option}</option>);
   const arrow = theme.name === "darkTheme" ? darkThemeArrow : lightThemeArrow;
   return (
-    <>
-      <S.Select
-        backgroundImage={arrow}
-        id="colorSelect"
-        onChange={event => {
-          onChange(event.target.value);
-        }}
-      >
-        {options}
-      </S.Select>
-    </>
+    <S.Select backgroundImage={arrow} id="color-select" name="os0">
+      {options}
+    </S.Select>
   );
 };
