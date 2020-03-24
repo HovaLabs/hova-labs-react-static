@@ -1,7 +1,7 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import {
-  ContainerFullWidth,
+  ContainerContent,
   ContainerWithBorder,
 } from "../../../components/Container";
 import * as S from "./LinkListStyles";
@@ -27,9 +27,9 @@ export const LinkList: React.FC<{}> = () => {
   ));
   return (
     <ContainerWithBorder>
-      <ContainerFullWidth>
+      <ContainerContent flexL="100">
         <S.LinksContainer>{links}</S.LinksContainer>
-      </ContainerFullWidth>
+      </ContainerContent>
     </ContainerWithBorder>
   );
 };

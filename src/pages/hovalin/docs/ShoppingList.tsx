@@ -3,7 +3,7 @@ import { Icon, Text } from "@hova-labs/bento-box-web";
 import { shoppingList } from "./ShoppingListData";
 import {
   ContainerFlex,
-  ContainerHalfWidth,
+  ContainerContent,
   ContainerWithBorder,
 } from "../../../components/Container";
 import * as S from "./ShoppingListStyles";
@@ -11,15 +11,15 @@ import * as S from "./ShoppingListStyles";
 export const ShoppingList: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerHalfWidth>
+      <ContainerContent flexL="50">
         <Text typography="headingLarge">1</Text>
         <Text typography="headingSmall">Shopping List</Text>
         <br />
-      </ContainerHalfWidth>
+      </ContainerContent>
     </ContainerFlex>
     <ContainerFlex>
       {shoppingList.map(item => (
-        <ContainerHalfWidth>
+        <ContainerContent flexL="50">
           <Icon size={32} IconComponent={item.icon} />
           <Text typography="headingSmall">{item.title}</Text>
           <Text typography="bodyText">{item.description}</Text>
@@ -32,7 +32,7 @@ export const ShoppingList: React.FC<{}> = () => (
               </li>
             ))}
           </ul>
-        </ContainerHalfWidth>
+        </ContainerContent>
       ))}
     </ContainerFlex>
   </ContainerWithBorder>

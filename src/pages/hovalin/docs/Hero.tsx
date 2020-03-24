@@ -3,7 +3,7 @@ import { Text } from "@hova-labs/bento-box-web";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
 import {
-  ContainerFullWidth,
+  ContainerContent,
   ContainerWithBorder,
 } from "../../../components/Container";
 import hero from "../../../media/hovalin-docs/hero.jpg";
@@ -14,7 +14,7 @@ export const Hero: React.FC<{}> = () => (
     backgroundImage={hero}
     backgroundImageStyles={{ opacity: ".3" }}
   >
-    <ContainerFullWidth>
+    <ContainerContent flexL="100">
       <Text typography="headingLarge">Hovalin Docs</Text>
       <S.ButtonContainer>
         <Button
@@ -37,6 +37,6 @@ export const Hero: React.FC<{}> = () => (
           title="Discuss on Reddit"
         />
       </S.ButtonContainer>
-    </ContainerFullWidth>
+    </ContainerContent>
   </ContainerWithBorder>
 );

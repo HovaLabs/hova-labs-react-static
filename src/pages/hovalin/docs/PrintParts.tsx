@@ -7,8 +7,7 @@ import { Button } from "../../../components";
 import { routes } from "../../../routes";
 import {
   ContainerFlex,
-  ContainerFullWidth,
-  ContainerHalfWidth,
+  ContainerContent,
   ContainerWithBorder,
 } from "../../../components/Container";
 
@@ -16,17 +15,17 @@ export const PrintParts: React.FC<{}> = () => (
   <>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerHalfWidth>
+        <ContainerContent flexL="50">
           <Text typography="headingLarge">2</Text>
           <Text typography="headingSmall">Print Parts</Text>
           <br />
-        </ContainerHalfWidth>
+        </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
-        <ContainerHalfWidth>
+        <ContainerContent flexL="50">
           <img src={threeDPrinter} alt="3d printer" />
-        </ContainerHalfWidth>
-        <ContainerHalfWidth>
+        </ContainerContent>
+        <ContainerContent flexL="50">
           <Text typography="headingSmall">New to 3D printing?</Text>
           <div>
             In order to make the violin we’re going to need a 3D printer. It
@@ -47,9 +46,10 @@ export const PrintParts: React.FC<{}> = () => (
               signs of peeling.
             </li>
           </ul>
-        </ContainerHalfWidth>
+        </ContainerContent>
       </ContainerFlex>
-      <ContainerFullWidth>
+      <ContainerContent flexL="100">
+        {" "}
         <div>* extra credit *</div>
         <div>
           Sand the blue tape with 100 grit sandpaper to help prevent warping
@@ -64,11 +64,11 @@ export const PrintParts: React.FC<{}> = () => (
           Assuming there aren't too many failed prints, you should be able to
           make the entire hovalin with a single 1kg roll of plastic.
         </div>
-      </ContainerFullWidth>
+      </ContainerContent>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerHalfWidth>
+        <ContainerContent flexL="50">
           <Text typography="headingMedium">The Neck</Text>
           <Text typography="bodyText">10 PRINT HOURS | 90g PLASTIC </Text>
           <Text typography="bodyText">Layer Height: 0.2mm </Text>
@@ -80,15 +80,15 @@ export const PrintParts: React.FC<{}> = () => (
             title="DOWNLOAD"
             onPress={() => {}}
           />
-        </ContainerHalfWidth>
-        <ContainerHalfWidth>
+        </ContainerContent>
+        <ContainerContent flexL="50">
           <img width="100%" src={hovalinNeck} alt="hovalin neck" />
-        </ContainerHalfWidth>
+        </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerHalfWidth>
+        <ContainerContent flexL="50">
           <Text typography="headingMedium">The Body</Text>
           <Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text>
           <Text typography="bodyText">Layer Height: 0.3mm</Text>
@@ -100,10 +100,10 @@ export const PrintParts: React.FC<{}> = () => (
             title="DOWNLOAD"
             onPress={() => {}}
           />
-        </ContainerHalfWidth>
-        <ContainerHalfWidth>
+        </ContainerContent>
+        <ContainerContent flexL="50">
           <img width="100%" src={hovalinBody} alt="hovalin body" />
-        </ContainerHalfWidth>
+        </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
   </>

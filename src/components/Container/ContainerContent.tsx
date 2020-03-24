@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
-export const ContainerHalfWidth = styled("div")`
+interface ContainerContentProps {
+  readonly flexL: string;
+}
+
+export const ContainerContent = styled("div")<ContainerContentProps>`
   ${p =>
     p.theme.responsiveStyle("flex-basis", {
       s: "100%",
-      l: "50%",
+      l: `${p.flexL}%`,
     })};
   ${p =>
     p.theme.responsiveStyle("padding", {
