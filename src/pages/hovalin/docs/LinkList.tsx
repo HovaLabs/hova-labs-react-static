@@ -1,6 +1,9 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
-import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
+import {
+  ContainerFullWidth,
+  ContainerWithBorder,
+} from "../../../components/Container";
 import * as S from "./LinkListStyles";
 
 export const LinkList: React.FC<{}> = () => {
@@ -24,7 +27,9 @@ export const LinkList: React.FC<{}> = () => {
   ));
   return (
     <ContainerWithBorder>
-      <S.LinksContainer>{links}</S.LinksContainer>
+      <ContainerFullWidth>
+        <S.LinksContainer>{links}</S.LinksContainer>
+      </ContainerFullWidth>
     </ContainerWithBorder>
   );
 };
