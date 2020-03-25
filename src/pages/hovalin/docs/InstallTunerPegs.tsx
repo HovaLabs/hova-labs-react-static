@@ -26,6 +26,7 @@ export const InstallTunerPegs: React.FC<{}> = () => (
         Snap off the screw holes on the tuner pegs using a wrench.
       </ContainerContent>
     </ContainerFlex>
+    <br />
     <ContainerFlex>
       <ContainerContent flexL="50">
         <img src={pegInsert} alt="peg insert" width="100%" />
@@ -34,6 +35,7 @@ export const InstallTunerPegs: React.FC<{}> = () => (
         Insert the tuning pegs into the violin neck as shown in the picture.
       </ContainerContent>
     </ContainerFlex>
+    <br />
     <ContainerFlex>
       <ContainerContent flexL="50">
         <img src={pegTighten} alt="peg tighten" width="100%" />
