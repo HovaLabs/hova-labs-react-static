@@ -8,6 +8,7 @@ import { CleanUp } from "./CleanUp";
 import { InstallTunerPegs } from "./InstallTunerPegs";
 import { Assemble } from "./Assemble";
 import { InstallStrings } from "./InstallStrings";
+import { NavigationFooter } from "../../../components/Navigation/NavigationFooter";
 
 const Hovalin: React.FC<{}> = () => (
   <div>
@@ -20,6 +21,7 @@ const Hovalin: React.FC<{}> = () => (
     <InstallTunerPegs />
     <Assemble />
     <InstallStrings />
+    <NavigationFooter />
   </div>
 );
 
