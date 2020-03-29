@@ -6,7 +6,7 @@ const ModalsMobileNavBackground: React.FC<{ isOpen: boolean }> = ({
   isOpen,
 }) => {
   const [maxDimension, setMaxDimension] = React.useState(
-    getMaxWindowDimension()
+    getMaxWindowDimension(),
   );
 
   React.useEffect(() => {

@@ -1,1 +1,3 @@
-export { SynesthesiaLightShow as default } from "./SynesthesiaLightShow";
+import page from "../../sitePages/synesthesia-light-show";
+
+export default page;

@@ -1,1 +1,3 @@
-export { Hydraprint as default } from "./Hydraprint";
+import page from "../../sitePages/hydraprint";
+
+export default page;

@@ -1,20 +1,20 @@
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from 'styled-components';
 import {
   Breakpoints,
   Colors,
   Radii,
   Spacings,
   Typography,
-} from "@hova-labs/bento-box-web";
-import { BackgroundGutters, Frames } from "../types";
+} from '@hova-labs/bento-box-web';
+import { BackgroundGutters, Frames } from './types';
 
 interface Props {
   theme: DefaultTheme;
 }
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
-    name: "lightTheme" | "darkTheme";
+    name: 'lightTheme' | 'darkTheme';
     backgroundGutters: BackgroundGutters;
     breakpoints: Breakpoints;
     colors: Colors;

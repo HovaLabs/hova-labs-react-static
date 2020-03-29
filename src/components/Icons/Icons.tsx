@@ -24,10 +24,10 @@ const IconComponent: React.FC<IconComponentProps> = ({ name, ...rest }) => {
   return <Component {...rest} />;
 };
 
-export const Icons = styled(IconComponent).attrs(p => ({
+export const Icons = styled(IconComponent).attrs((p) => ({
   size: p.theme.spacings.xl,
 }))`
-  color: ${p => p.theme.colors.primary};
-  stroke: ${p => p.theme.colors.primary};
-  fill: ${p => p.theme.colors.primary};
+  color: ${(p) => p.theme.colors.primary};
+  stroke: ${(p) => p.theme.colors.primary};
+  fill: ${(p) => p.theme.colors.primary};
 `;

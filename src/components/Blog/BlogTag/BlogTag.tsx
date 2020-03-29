@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 import { Text } from "@hova-labs/bento-box-web";
 import { routes } from "../../../routes";
 
@@ -9,17 +9,15 @@ export interface BlogTag {
 }
 
 export const BlogTag: React.FC<BlogTag> = ({ onPress, title }) => {
+  const color =
+    typeof window === "undefined" ||
+    window.location.hash.replace("#", "") === title
+      ? "onBackground"
+      : "primary";
+
   return (
     <Link to={`${routes.BLOG}#${title}`}>
-      <Text
-        color={
-          window.location.hash.replace("#", "") === title
-            ? "onBackground"
-            : "primary"
-        }
-        typography="bodyText"
-        onPress={onPress}
-      >
+      <Text color={color} typography="bodyText" onPress={onPress}>
         {` #${title} `}
       </Text>
     </Link>

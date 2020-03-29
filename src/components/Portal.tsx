@@ -16,7 +16,9 @@ let portalTarget: any;
 if (typeof document !== "undefined") {
   portalTarget =
     document.getElementById(PORTAL_TARGET_ID) ||
-    document.body.appendChild(createDivWithId(PORTAL_TARGET_ID));
+    document.body.appendChild(
+      createDivWithId(PORTAL_TARGET_ID) as HTMLDivElement,
+    );
 }
 
 export const Portal: React.FC<{ children: React.ReactNode }> = ({

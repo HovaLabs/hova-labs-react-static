@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 
 import { NavigationFooter } from "../../Navigation/NavigationFooter";
 import Matt from "./matt.png";
@@ -9,7 +9,7 @@ import Cat from "./cat.png";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogContainerStyles";
-
+import Layout from "../../layout";
 import { routes } from "../../../routes";
 import { dateToString } from "../../../utils/utilsDates";
 
@@ -24,12 +24,12 @@ export const BlogContainer: React.FC<{
   };
   children: React.ReactNode;
 }> = ({ blogManifest, children }) => {
-  const tagsList = blogManifest.tags.map(tag => (
+  const tagsList = blogManifest.tags.map((tag) => (
     <BlogTag title={tag} onPress={() => {}} />
   ));
   const formattedDate = dateToString(blogManifest.datePublished);
   return (
-    <>
+    <Layout>
       <ContainerWithBorder
         backgroundImage={blogManifest.hero}
         backgroundImageStyles={{ opacity: 0.2 }}
@@ -52,7 +52,7 @@ export const BlogContainer: React.FC<{
       </ContainerWithBorder>
       <Author author={blogManifest.author} />
       <NavigationFooter />
-    </>
+    </Layout>
   );
 };
 

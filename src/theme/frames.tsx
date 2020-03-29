@@ -1,4 +1,4 @@
-import { Frames } from "../components/types";
+type Frames = { outline: { border: number } };
 
 export const frames: Frames = {
   outline: {

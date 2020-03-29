@@ -18,13 +18,15 @@ module.exports = {
     'plugin:prettier/recommended',  // Enables eslint-plugin-prettier and displays prettier errors as ESLint errors. Make sure this is always the last configuration in the extends array.
   ],
   rules: {
+    quotes: ["error", "double"],
+    'comma-dangle': [2, 'always-multiline'],
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    "react/no-unescaped-entities": 0,
-    "import/prefer-default-export": 0,
-    "react/jsx-props-no-spreading": 0,
-    "react/prop-types": 0,
-    "import/no-cycle": 1,
+    'react/no-unescaped-entities': 0,
+    'import/prefer-default-export': 0,
+    'react/jsx-props-no-spreading': 0,
+    'react/prop-types': 0,
+    'import/no-cycle': 1,
     '@typescript-eslint/explicit-function-return-type': [
       'error',
       {

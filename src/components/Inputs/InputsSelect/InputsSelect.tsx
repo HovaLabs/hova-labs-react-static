@@ -1,8 +1,8 @@
 import React from "react";
 import { ThemeContext } from "@hova-labs/bento-box-web";
 import * as S from "./InputsSelectStyles";
-import darkThemeArrow from "../../../media/Icons/darkThemeArrow.svg";
-import lightThemeArrow from "../../../media/Icons/lightThemeArrow.svg";
+import darkThemeArrow from "./darkThemeArrow.svg";
+import lightThemeArrow from "./lightThemeArrow.svg";
 
 export const InputsSelect: React.FC<{}> = () => {
   const { theme } = React.useContext(ThemeContext);
@@ -18,7 +18,7 @@ export const InputsSelect: React.FC<{}> = () => {
     "Blue",
     "Purple",
   ];
-  const options = colors.map(option => <option>{option}</option>);
+  const options = colors.map((option) => <option>{option}</option>);
   const arrow = theme.name === "darkTheme" ? darkThemeArrow : lightThemeArrow;
   return (
     <S.Select backgroundImage={arrow} id="color-select" name="os0">

@@ -1,1 +1,3 @@
-export { Contact as default } from "./Contact";
+import page from "../../sitePages/contact";
+
+export default page;

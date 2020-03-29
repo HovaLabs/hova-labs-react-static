@@ -1,1 +1,3 @@
-export { Store as default } from "./Store";
+import page from "../../sitePages/store";
+
+export default page;

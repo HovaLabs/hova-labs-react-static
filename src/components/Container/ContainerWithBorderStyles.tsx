@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 
 export const OuterContainer = styled("div")`
   position: relative;
-  background-color: ${p => p.theme.colors.surface1};
-  ${p =>
+  background-color: ${(p) => p.theme.colors.surface1};
+  ${(p) =>
     p.theme.responsiveStyle("margin", {
       s: `0 ${p.theme.backgroundGutters.s}px`,
       l: `0 ${p.theme.backgroundGutters.l}px`,
@@ -20,10 +20,10 @@ export const BackgroundImage = styled("div")<BackgroundImageProps>`
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url(${p => p.backgroundImage});
+  background-image: url(${(p) => p.backgroundImage});
   background-position: center;
   background-size: cover;
-  ${p => p.backgroundImageStyles}
+  ${(p) => p.backgroundImageStyles}
 `;
 
 interface InnerContainerProps {
@@ -32,18 +32,18 @@ interface InnerContainerProps {
 export const InnerContainer = styled("div")<InnerContainerProps>`
   position: relative;
   z-index: 1;
-  ${p =>
+  ${(p) =>
     p.hasBackgroundImage
       ? null
       : css`
           background-color: ${p.theme.colors.surface1};
         `}
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.backgroundGutters.s}px`,
       l: `${p.theme.backgroundGutters.l}px`,
     })};
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("margin", {
       s: `0 0 ${p.theme.backgroundGutters.s}px 0`,
       l: `0 0 ${p.theme.backgroundGutters.l}px 0`,

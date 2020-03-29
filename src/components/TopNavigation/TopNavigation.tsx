@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Icon,
@@ -21,7 +21,7 @@ export const TopNavigation: React.FC<{}> = () => {
       <ThemeToggle
         onPress={() => {
           setThemeByThemeKey(
-            theme.name === "lightTheme" ? "darkTheme" : "lightTheme"
+            theme.name === "lightTheme" ? "darkTheme" : "lightTheme",
           );
         }}
         currentTheme={theme.name}

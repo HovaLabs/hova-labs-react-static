@@ -1,10 +1,12 @@
 /* eslint-disable */
+const rimraf = require("rimraf");
 const fs = require('fs');
 const path = require('path');
 const camelCase = require('camel-case').camelCase;
 
 const outputFilePath = path.join(__dirname, '../src/routes.ts');
-const pagesFolder = path.join(__dirname, '../src/pages');
+const pagesFolder = path.join(__dirname, '../src/sitePages');
+const pagesOutputFolder = path.join(__dirname, '../src/pages');
 
 const routesArray = [];
 
@@ -22,6 +24,17 @@ function findAllRoutes(route) {
 }
 
 findAllRoutes(pagesFolder);
+
+// delete the "pages" directory
+// reconstruct it based on non-capitalized routes from sitePages directory
+rimraf.sync(pagesOutputFolder);
+fs.mkdirSync(pagesOutputFolder);
+fs.writeFileSync(path.join(pagesOutputFolder, 'index.ts'), `import page from "../sitePages";\n\nexport default page;\n`);
+routesArray.forEach(r => {
+  fs.mkdirSync(path.join(pagesOutputFolder, r));
+  fs.writeFileSync(path.join(pagesOutputFolder, r, 'index.ts'), `import page from "${r.split('/').map(a => '../').join('')}sitePages${r}";\n\nexport default page;\n`);
+});
+
 const routeObject = {
   HOMEPAGE: '/',
   HOVALIN_REDDIT: 'https://reddit.com/r/hovalin_community',

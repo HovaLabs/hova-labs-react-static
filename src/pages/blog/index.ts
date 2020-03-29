@@ -1,1 +1,3 @@
-export { Blog as default } from "./Blog";
+import page from "../../sitePages/blog";
+
+export default page;

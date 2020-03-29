@@ -1,1 +1,3 @@
-export { FAQ as default } from "./FAQ";
+import page from "../../../sitePages/hovalin/faq";
+
+export default page;

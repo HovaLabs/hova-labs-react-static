@@ -7,5 +7,5 @@ export const radii: Radii = {
   l: 8,
   xl: 16,
   xxl: 32,
-  round: 9999
+  round: 9999,
 };

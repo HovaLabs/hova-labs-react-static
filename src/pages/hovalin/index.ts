@@ -1,1 +1,3 @@
-export { Hovalin as default } from "./Hovalin";
+import page from "../../sitePages/hovalin";
+
+export default page;

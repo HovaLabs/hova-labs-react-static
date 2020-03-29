@@ -11,7 +11,7 @@ import EventsListItem from "../EventsListItem/EventsListItem";
 
 export const EventsArea: React.FC<{}> = () => {
   // CONSTANTS
-  const eventsList = events.map(event => <EventsListItem event={event} />);
+  const eventsList = events.map((event) => <EventsListItem event={event} />);
   const content = events.length ? (
     <EventListInnerContainer>{eventsList}</EventListInnerContainer>
   ) : (

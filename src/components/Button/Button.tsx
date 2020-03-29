@@ -1,6 +1,6 @@
 import React from "react";
 import { Button as ButtonBB, ButtonProps } from "@hova-labs/bento-box-web";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 
 const isExternalHref = (href: string): boolean => /^https?:\/\//i.test(href);
 

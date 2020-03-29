@@ -9,7 +9,7 @@ const fontFamily = "Josefin Sans, sans-serif";
 
 export const typography: Typography = {
   headingLarge: css<TypographyProps>`
-    ${p => css<TypographyProps>`
+    ${(p) => css<TypographyProps>`
       display: block;
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface1};
@@ -22,7 +22,7 @@ export const typography: Typography = {
     `}
   `,
   headingMedium: css<TypographyProps>`
-    ${p => css<TypographyProps>`
+    ${(p) => css<TypographyProps>`
       display: block;
       font-family: ${fontFamily};
       color: ${p.color || p.theme.colors.onSurface1};
@@ -35,7 +35,7 @@ export const typography: Typography = {
     `};
   `,
   headingSmall: css<TypographyProps>`
-    ${p => css<TypographyProps>`
+    ${(p) => css<TypographyProps>`
       display: block;
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface1};
@@ -47,7 +47,7 @@ export const typography: Typography = {
     `}
   `,
   bodyText: css<TypographyProps>`
-    ${p => css<TypographyProps>`
+    ${(p) => css<TypographyProps>`
       display: block;
       font-family: ${fontFamily};
       color: ${p.color ? p.color : p.theme.colors.onSurface1};
@@ -61,7 +61,7 @@ export const typography: Typography = {
     `}
   `,
   buttonText: css<TypographyProps>`
-    ${p => css<TypographyProps>`
+    ${(p) => css<TypographyProps>`
       font-family: ${fontFamily};
       color: ${p.theme.colors.onSurface1};
       ${p.theme.responsiveStyle("font-size", {

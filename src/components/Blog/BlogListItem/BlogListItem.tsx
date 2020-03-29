@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "@reach/router";
+import { Link } from "gatsby";
 import { Text } from "@hova-labs/bento-box-web";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogListItemStyles";
@@ -20,7 +20,9 @@ const BlogListItem: React.FC<BlogManifest> = ({
   title,
   url,
 }) => {
-  const tagsList = tags.map(tag => <BlogTag title={tag} onPress={() => {}} />);
+  const tagsList = tags.map((tag) => (
+    <BlogTag title={tag} onPress={() => {}} />
+  ));
   const formattedDate = dateToString(datePublished);
   return (
     <S.OuterContainer>

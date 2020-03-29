@@ -2,14 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPath = styled("path")`
-  fill: ${p => p.theme.colors.primary};
+  fill: ${(p) => p.theme.colors.primary};
 `;
 
 export const SvgContainer = styled("svg")`
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("margin", {
-      s: `-4px`,
-      l: `-6px`,
+      s: "-4px",
+      l: "-6px",
     })}
 `;
 

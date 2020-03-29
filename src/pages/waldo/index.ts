@@ -1,1 +1,3 @@
-export { Waldo as default } from "./Waldo";
+import page from "../../sitePages/waldo";
+
+export default page;
