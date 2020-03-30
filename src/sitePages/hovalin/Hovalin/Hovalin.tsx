@@ -68,22 +68,16 @@ export const Hovalin: React.FC<{}> = () => (
         </ContainerFlex>
       </ContainerWithBorder>
       <ContainerWithBorder>
-        <ContainerFlex>
-          <ContainerContent flexL="50">
-            <Text typography="headingMedium">But what does it sound like?</Text>
-          </ContainerContent>
-          <ContainerContent flexL="50">
-            <iframe
-              title="Hovalin Preview Video"
-              width="100%"
-              height="315"
-              src="https://www.youtube.com/embed/YbcQXEyzreA"
-              frameBorder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </ContainerContent>
-        </ContainerFlex>
+        <Text typography="headingMedium">But what does it sound like?</Text>
+        <iframe
+          title="Hovalin Preview Video"
+          width="100%"
+          height="315"
+          src="https://www.youtube.com/embed/YbcQXEyzreA"
+          frameBorder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        />
       </ContainerWithBorder>
       <ContainerWithBorder
         backgroundImage={makeHero}
