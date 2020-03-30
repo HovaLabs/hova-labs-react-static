@@ -18,7 +18,7 @@ export const Assemble: React.FC<{}> = () => (
     </ContainerFlex>
     <ContainerFlex>
       <ContainerContent flexL="50">
-        <img src={assembly} alt="hovalin assembly" />
+        <img src={assembly} alt="hovalin assembly" width="100%" />
       </ContainerContent>
       <ContainerContent flexL="50">
         Fit together the neck and chamber pieces. Once the pieces are locked
