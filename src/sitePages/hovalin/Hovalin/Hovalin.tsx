@@ -1,33 +1,44 @@
 import React from "react";
+import { Text } from "@hova-labs/bento-box-web";
 import hovalinHero from "./media/hovalin-hero.jpg";
 import hovalinAbout from "./media/hovalinv4.png";
 import makeHero from "./media/make-hero.jpg";
 import { routes } from "../../../routes";
 import Layout from "../../../components/layout";
+
 import { Button } from "../../../components";
+import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
 import * as S from "./HovalinStyles";
 
 export const Hovalin: React.FC<{}> = () => (
   <Layout>
     <div>
-      <div>
-        <img alt="hovalin" src={hovalinHero} />
-        <div>Hovalin</div>
-        <div>Open Source, 3D printable acoustic violin v4.0.0</div>
-        <S.ButtonContainer>
+      <ContainerWithBorder
+        backgroundImage={hovalinHero}
+        backgroundImageStyles={{ opacity: 0.2 }}
+      >
+        <Text typography="headingLarge">Hovalin</Text>
+        <Text typography="headingSmall">
+          Open Source, 3D printable acoustic violin v4.0.0
+        </Text>
+        <S.ButtonPadding>
           <Button
             href={routes.HOVALIN_DOCS}
             onPress={() => {}}
             title="Make One"
           />
+        </S.ButtonPadding>
+        <S.ButtonPadding>
           <Button href={routes.STORE} onPress={() => {}} title="Buy One" />
+        </S.ButtonPadding>
+        <S.ButtonPadding>
           <Button
             href={routes.HOVALIN_REDDIT}
             onPress={() => {}}
             title="Discuss on Reddit"
           />
-        </S.ButtonContainer>
-      </div>
+        </S.ButtonPadding>
+      </ContainerWithBorder>
       <div>
         <img src={hovalinAbout} alt="hovalin" />
         <h1>About</h1>
