@@ -4,7 +4,9 @@ export const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 
   html {
-    background: ${(p) => p.theme.colors.background};
+    background: ${(p) => {
+      return p.theme.colors.background;
+    }};
   }
 
   * {

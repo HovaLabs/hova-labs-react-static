@@ -5,6 +5,7 @@ import hovalinAbout from "./media/hovalinv4.png";
 import makeHero from "./media/make-hero.jpg";
 import { routes } from "../../../routes";
 import Layout from "../../../components/layout";
+import { TitlePrimary } from "../../../components/Title/TitlePrimary/TitlePrimary";
 
 import { Button } from "../../../components";
 import {
@@ -49,7 +50,7 @@ export const Hovalin: React.FC<{}> = () => (
             <img src={hovalinAbout} alt="hovalin" width="50%" />
           </ContainerContent>
           <ContainerContent flexL="50">
-            <Text typography="headingMedium">A Violin for Makers</Text>
+            <TitlePrimary subtitle="About" title="A violin for Makers" />
             <Text typography="bodyText">
               The hovalin is a functional acoustic violin that can be produced
               using most standard consumer 3d printers. The total cost of raw
@@ -68,7 +69,10 @@ export const Hovalin: React.FC<{}> = () => (
         </ContainerFlex>
       </ContainerWithBorder>
       <ContainerWithBorder>
-        <Text typography="headingMedium">But what does it sound like?</Text>
+        <TitlePrimary
+          subtitle="Listen up"
+          title="But what does it sound like?"
+        />
         <iframe
           title="Hovalin Preview Video"
           width="100%"
