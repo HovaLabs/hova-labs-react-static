@@ -47,23 +47,24 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "prettier": "^1.19.1",
     "rimraf": "^3.0.2",
+    "surge": "^0.21.3",
     "typescript": "^3.8.3"
   },
   "keywords": [
     "gatsby"
   ],
   "scripts": {
-    "build": "yarn run update-scripts && gatsby build",    
+    "build": "yarn run update-scripts && gatsby build",
     "clean": "gatsby clean",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "launch": "yarn build && surge ./dist hova-labs.surge.sh",
+    "launch": "yarn build && surge ./public hova-labs.surge.sh",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
     "serve": "gatsby serve",
     "start": "yarn update-scripts && yarn run develop",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noEmit",
-    "update-blog-manifest": "node ./scripts/updateBlogManifest.js && eslint ./src/pages/blog/Blog/blogManifest.ts --fix",
+    "update-blog-manifest": "node ./scripts/updateBlogManifest.js && eslint ./src/sitePages/blog/Blog/blogManifest.ts --fix",
     "update-route-list": "node ./scripts/updateRoutesList.js && eslint ./src/routes.ts --fix",
     "update-scripts": "yarn update-route-list && yarn update-blog-manifest"
   },
