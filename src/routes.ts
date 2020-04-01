@@ -71,5 +71,6 @@ export const routes = {
   WALDO: "/waldo",
   PROJECT_HYDRAPRINT:
     "https://github.com/Autodesk/machine-collaboration-utility",
+  PROJECT_TSN: "http://www.thesynesthesianetwork.com/",
   PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
 };
