@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  margin-top: ${(p) => p.theme.spacings.xl}px;
+export const ButtonPadding = styled.span`
+  display: inline-block;
+  padding-right: ${(p) => p.theme.spacings.l}px;
+  padding-top: ${(p) => p.theme.spacings.l}px;
 `;
