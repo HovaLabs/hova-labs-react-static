@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import heroImage from "./hero_homepage.jpg";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
-
 // HERO START
 const HeroContainer = styled("div")`
   position: relative;
@@ -35,7 +35,7 @@ const HeroText = styled("div")`
 `;
 
 export const Hero: React.FC<{}> = () => (
-  <ContainerWithBorder backgroundImage="https://www.fillmurray.com/200/300">
+  <ContainerWithBorder backgroundImage={heroImage}>
     <HeroContainer>
       <HeroText>HOVA LABS</HeroText>
     </HeroContainer>

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
+import theHovas from "./the-hovas.png";
 
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 
@@ -29,7 +30,7 @@ const HovaCentered = styled("div")`
 `;
 
 const TheHovas = styled("img").attrs({
-  src: "https://www.fillmurray.com/200/300",
+  src: theHovas,
 })`
   position: relative;
   ${(p) =>
