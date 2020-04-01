@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { IconBaseProps } from "react-icons";
 import { Icon, Cube, Robot, XML, Magic, Text } from "@hova-labs/bento-box-web";
+import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
+
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 
 // SERVICES START
@@ -87,12 +89,7 @@ export const Services: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ServicesContainer>
       <ServicesTextContainer>
-        <div>
-          <Text typography="headingSmall">SERVICES</Text>
-        </div>
-        <div>
-          <Text typography="headingLarge">What We Do</Text>
-        </div>
+        <TitlePrimary subtitle="Services" title="What We Do" />
       </ServicesTextContainer>
       <ServiceGridContainer>
         {services.map((s) => (
@@ -101,7 +98,7 @@ export const Services: React.FC<{}> = () => (
               <Icon IconComponent={s.icon} size={32} />
             </div>
             <div>
-              <Text typography="headingMedium">{s.title}</Text>
+              <Text typography="headingSmall">{s.title}</Text>
             </div>
             <div>
               <Text>{s.description}</Text>

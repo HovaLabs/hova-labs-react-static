@@ -1,6 +1,8 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import { events } from "./EventsAreaUtils";
+import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
+
 import {
   EventListInnerContainer,
   EventListOuterContainer,
@@ -22,12 +24,7 @@ export const EventsArea: React.FC<{}> = () => {
   return (
     <ContainerWithBorder>
       <OuterContainer>
-        <div>
-          <Text typography="headingSmall">EVENTS</Text>
-        </div>
-        <div>
-          <Text typography="headingLarge">Say Hey</Text>
-        </div>
+        <TitlePrimary subtitle="Events" title="Say Hey" />
         <EventListOuterContainer>{content}</EventListOuterContainer>
       </OuterContainer>
     </ContainerWithBorder>

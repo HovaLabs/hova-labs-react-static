@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { Text } from "@hova-labs/bento-box-web";
 import { blogManifest } from "../blog/Blog/blogManifest";
 import { Button } from "../../components";
+import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 import { dateToString } from "../../utils/utilsDates";
 
 // COPYRIGHT START
@@ -71,7 +71,7 @@ const LeftColumn = styled("div")`
 `;
 
 const BlogTitle = styled("div")`
-  ${(p) => p.theme.typography.headingMedium}
+  ${(p) => p.theme.typography.headingSmall}
 `;
 
 const RightColumn = styled("div")`
@@ -80,9 +80,7 @@ const RightColumn = styled("div")`
 
 export const NewOnTheBlog: React.FC<{}> = () => (
   <NewOnTheBlogContainer>
-    <div>
-      <Text typography="headingSmall">NEW ON THE BLOG</Text>
-    </div>
+    <TitlePrimary subtitle="New on the Blog" title="Our Writings" />
     <BlogContainer>
       {blogManifest.slice(0, 2).map((blog) => (
         <>

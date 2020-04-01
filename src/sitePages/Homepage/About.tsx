@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Text } from "@hova-labs/bento-box-web";
+import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
 
@@ -45,12 +46,7 @@ export const About: React.FC<{}> = () => (
   <ContainerWithBorder>
     <InnerContainer>
       <AboutTextContainer>
-        <div>
-          <Text typography="headingSmall">ABOUT</Text>
-        </div>
-        <div>
-          <Text typography="headingLarge">The Hovas</Text>
-        </div>
+        <TitlePrimary subtitle="About" title="The Hovas" />
         <div>
           <Text>
             We are two Nebraska nerds currently living in the SF Bay Area who
