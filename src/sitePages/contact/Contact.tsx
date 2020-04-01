@@ -1,7 +1,6 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
-import { NavigationFooter } from "../../components/Navigation/NavigationFooter";
 import * as S from "./ContactStyles";
 import Layout from "../../components/layout";
 
@@ -21,6 +20,5 @@ export const Contact: React.FC<{}> = () => (
         </S.EmailContainer>
       </S.OuterContainer>
     </ContainerWithBorder>
-    <NavigationFooter />
   </Layout>
 );

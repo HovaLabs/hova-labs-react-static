@@ -3,7 +3,6 @@ import { Text } from "@hova-labs/bento-box-web";
 // import { useRouteData } from "react-static";
 import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
-import { NavigationFooter } from "../../../components/Navigation/NavigationFooter";
 import * as S from "./blogStyles";
 import { blogManifest } from "./blogManifest";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
@@ -53,7 +52,6 @@ export const Blog: React.FC<{}> = () => {
           {BlogList}
         </S.OuterContainer>
       </ContainerWithBorder>
-      <NavigationFooter />
     </Layout>
   );
 };

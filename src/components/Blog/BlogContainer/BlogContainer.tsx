@@ -2,7 +2,6 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import { Link } from "gatsby";
 
-import { NavigationFooter } from "../../Navigation/NavigationFooter";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
@@ -51,7 +50,6 @@ export const BlogContainer: React.FC<{
         <S.BlogStyles>{children}</S.BlogStyles>
       </ContainerWithBorder>
       <Author author={blogManifest.author} />
-      <NavigationFooter />
     </Layout>
   );
 };
