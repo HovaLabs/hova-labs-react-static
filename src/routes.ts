@@ -69,5 +69,7 @@ export const routes = {
   SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
   THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
   WALDO: "/waldo",
+  PROJECT_HYDRAPRINT:
+    "https://github.com/Autodesk/machine-collaboration-utility",
   PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
 };
