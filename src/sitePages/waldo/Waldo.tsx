@@ -30,7 +30,7 @@ export const Waldo: React.FC<{}> = () => (
         <Button
           href={routes.PROJECT_WALDO}
           onPress={() => {}}
-          title="Check it out"
+          title="Check it out live"
         />
       </S.ButtonPadding>
     </ContainerWithBorder>
