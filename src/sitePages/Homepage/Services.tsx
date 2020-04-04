@@ -33,8 +33,7 @@ const ServiceGridContainer = styled("div")`
     })}
 `;
 
-const ServiceGridItem = styled("div")`s
-`;
+const ServiceGridItem = styled("div")``;
 
 type Service = {
   icon: (props: IconBaseProps) => JSX.Element;

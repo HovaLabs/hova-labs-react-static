@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { Button } from "../../Button/Button";
 import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
 import * as S from "./NavigationFooterStyles";
 
@@ -26,7 +27,7 @@ export const NavigationFooter: React.FC<{}> = () => {
       sending: "Sending...",
       success: "Success! Thanks",
     };
-    const buttonText = ["sending", "success"].includes(status)
+    const buttonText: string = ["sending", "success"].includes(status)
       ? statusText[status]
       : "Submit";
     return (
@@ -47,7 +48,7 @@ export const NavigationFooter: React.FC<{}> = () => {
             type="email"
             placeholder="Your email"
           />
-          <S.Button onClick={submit}>{buttonText}</S.Button>
+          <Button onPress={submit} title={buttonText} />
         </S.InputsArea>
         <S.StatusArea>
           {status === "error" && (

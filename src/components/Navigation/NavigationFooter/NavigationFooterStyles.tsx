@@ -48,8 +48,8 @@ export const Input = styled("input")`
     p.theme.responsiveStyle("flex-basis", {
       s: "100%",
       m: "100%",
-      l: "22%",
-      xl: "22%",
+      l: "25%",
+      xl: "25%",
     })}
   ${(p) =>
     p.theme.responsiveStyle("margin-right", {
@@ -61,21 +61,6 @@ export const Input = styled("input")`
   padding: ${(p) => `${p.theme.spacings.m}px`};
   ${(p) => p.theme.typography.bodyText};
   width: 100%;
-`;
-
-export const Button = styled("button")`
-  background: ${(p) => p.theme.colors.primary};
-  border: 0;
-  ${(p) =>
-    p.theme.responsiveStyle("flex-basis", {
-      s: "100%",
-      m: "100%",
-      l: "22%",
-      xl: "22%",
-    })}
-  ${(p) => p.theme.typography.bodyText};
-  color: ${(p) => p.theme.colors.onPrimary};
-  display: inline;
 `;
 
 export const InputsArea = styled("div")`
