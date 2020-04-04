@@ -33,13 +33,7 @@ const ServiceGridContainer = styled("div")`
     })}
 `;
 
-const ServiceGridItem = styled("div")`
-  background: ${(p) => p.theme.colors.surface2};
-  ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
+const ServiceGridItem = styled("div")`s
 `;
 
 type Service = {
