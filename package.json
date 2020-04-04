@@ -5,6 +5,7 @@
   "dependencies": {
     "@hova-labs/bento-box-web": "^0.20.0",
     "@types/react-helmet": "^5.0.15",
+    "@types/react-mailchimp-subscribe": "^2.0.2",
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.19.45",
