@@ -5,8 +5,8 @@ export const OuterContainer = styled("div")`
   background-color: ${(p) => p.theme.colors.surface1};
   ${(p) =>
     p.theme.responsiveStyle("margin", {
-      s: `0 ${p.theme.backgroundGutters.s}px`,
-      l: `0 ${p.theme.backgroundGutters.l}px`,
+      s: `${p.theme.backgroundGutters.s}px`,
+      l: `${p.theme.backgroundGutters.l}px`,
     })};
 `;
 
@@ -42,10 +42,5 @@ export const InnerContainer = styled("div")<InnerContainerProps>`
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.backgroundGutters.s}px`,
       l: `${p.theme.backgroundGutters.l}px`,
-    })};
-  ${(p) =>
-    p.theme.responsiveStyle("margin", {
-      s: `0 0 ${p.theme.backgroundGutters.s}px 0`,
-      l: `0 0 ${p.theme.backgroundGutters.l}px 0`,
     })};
 `;
