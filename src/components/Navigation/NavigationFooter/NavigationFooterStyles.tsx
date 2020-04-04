@@ -12,6 +12,8 @@ background-color: ${(p) => p.theme.colors.surface1};
 
 // MAILING LIST
 export const ContainerMailingList = styled("div")`
+  align-items: center;
+  display: flex;
   ${(p) =>
     p.theme.responsiveStyle("display", {
       s: "block",
@@ -26,31 +28,76 @@ export const ContainerMailingList = styled("div")`
   justify-content: space-between;
 `;
 
-export const Form = styled("form")`
+export const TitleArea = styled("div")`
+  flex-basis: 40%;
+`;
+
+export const Input = styled("input")`
+  background: ${(p) => p.theme.colors.surface1};
+  border: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
+  color: ${(p) => p.theme.colors.onSurface1};
+  display: inline;
+  ${(p) =>
+    p.theme.responsiveStyle("margin-bottom", {
+      s: `${p.theme.spacings.l}px`,
+      m: `${p.theme.spacings.l}px`,
+      l: 0,
+      xl: 0,
+    })}
+  ${(p) =>
+    p.theme.responsiveStyle("flex-basis", {
+      s: "100%",
+      m: "100%",
+      l: "22%",
+      xl: "22%",
+    })}
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: 0,
+      m: 0,
+      l: `${p.theme.spacings.l}px`,
+      xl: `${p.theme.spacings.l}px`,
+    })}
+  padding: ${(p) => `${p.theme.spacings.m}px`};
+  ${(p) => p.theme.typography.bodyText};
+  width: 100%;
+`;
+
+export const Button = styled("button")`
+  background: ${(p) => p.theme.colors.primary};
+  border: 0;
+  ${(p) =>
+    p.theme.responsiveStyle("flex-basis", {
+      s: "100%",
+      m: "100%",
+      l: "22%",
+      xl: "22%",
+    })}
+  ${(p) => p.theme.typography.bodyText};
+  color: ${(p) => p.theme.colors.onPrimary};
+  display: inline;
+`;
+
+export const InputsArea = styled("div")`
   ${(p) =>
     p.theme.responsiveStyle("display", {
       s: "block",
       l: "flex",
-      xl: "flex",
     })}
-  justify-content: space-between;
-  ${(p) =>
-    p.theme.responsiveStyle("margin-top", {
-      s: `${p.theme.spacings.l}px`,
-      m: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.l}px`,
-      xl: 0,
-    })}
-  margin-top: ${(p) => `${p.theme.spacings.l}px`};
-  max-width: 700px;
-  width: 100%;
-`;
-
-export const InputArea = styled("div")`
+  margin-top: ${(p) => `${p.theme.spacings.m}px`};
   ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.m}px 0`,
       l: "0",
     })}
   justify-content: space-between;
+`;
+
+export const StatusArea = styled("div")`
+  display: flex;
+  flex-basis: 100%;
+  margin-top: ${(p) => `${p.theme.spacings.l}px`};
+  & > div > a {
+    color: ${(p) => p.theme.colors.primary};
+  }
 `;
