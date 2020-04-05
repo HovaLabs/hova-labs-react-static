@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 export const TopNavPadding = styled("div")`
   height: ${(p) => p.theme.spacings.xxl}px;
-  margin-bottom: ${(p) => `-${p.theme.spacings.xxl}px`};
 `;
 
 export const Container = styled("div")`
