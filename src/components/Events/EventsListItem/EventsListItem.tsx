@@ -8,6 +8,7 @@ interface EventProps {
     date: Date;
     description: string;
     location: string;
+    link: string;
   };
 }
 
@@ -22,14 +23,16 @@ const EventsListItem: React.FC<EventProps> = ({ event }) => (
       </div>
     </EventGridDateBox>
     <EventGridInfoBox>
-      <div>
-        <Text typography="headingSmall" color="onSurface1">
-          {event.location}
-        </Text>
-      </div>
-      <div>
-        <Text>{event.description}</Text>
-      </div>
+      <a href={event.link}>
+        <div>
+          <Text typography="headingSmall" color="onSurface1">
+            {event.location}
+          </Text>
+        </div>
+        <div>
+          <Text>{event.description}</Text>
+        </div>
+      </a>
     </EventGridInfoBox>
   </React.Fragment>
 );
