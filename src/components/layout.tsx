@@ -15,7 +15,7 @@ const Layout: React.FC = ({ children }) => {
     <>
       <Helmet>
         <link
-          href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
           rel="stylesheet"
           type="text/css"
         />
