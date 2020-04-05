@@ -20,7 +20,7 @@ interface LineProps {
 }
 export const Line = styled("div")<LineProps>`
   background-color: ${(p) => p.theme.colors.primary};
-  opacity: 0.3;
+  opacity: 0.2;
   ${(p) =>
     p.theme.responsiveStyle("height", {
       s: "36px",
