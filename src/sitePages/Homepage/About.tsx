@@ -48,13 +48,10 @@ export const About: React.FC<{}> = () => (
     <InnerContainer>
       <AboutTextContainer>
         <TitlePrimary subtitle="About" title="The Hovas" />
-        <div>
-          <Text>
-            We are two Nebraska nerds currently living in the SF Bay Area who
-            use diverse backgrounds in art and science to buld scalable
-            projects.
-          </Text>
-        </div>
+        <Text>
+          We are two Nebraska nerds currently living in the SF Bay Area who use
+          diverse backgrounds in art and science to build scalable projects.
+        </Text>
       </AboutTextContainer>
       <HovaCentered>
         <TheHovas />
