@@ -79,7 +79,7 @@ const services: Array<Service> = [
 // SERVICES END
 
 export const Services: React.FC<{}> = () => (
-  <ContainerWithBorder>
+  <ContainerWithBorder lineVariant="forward">
     <ServicesContainer>
       <ServicesTextContainer>
         <TitlePrimary subtitle="Services" title="What We Do" />

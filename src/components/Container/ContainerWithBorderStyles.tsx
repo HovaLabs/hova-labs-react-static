@@ -10,6 +10,32 @@ export const OuterContainer = styled("div")`
     })};
 `;
 
+export const ContentContainer = styled("div")`
+  position: relative;
+  z-index: 1;
+`;
+
+interface LineProps {
+  readonly width: any;
+}
+export const Line = styled("div")<LineProps>`
+  background-color: ${(p) => p.theme.colors.primary};
+  opacity: 0.3;
+  ${(p) =>
+    p.theme.responsiveStyle("height", {
+      s: "36px",
+      l: "52px",
+    })};
+  margin-bottom: ${(p) => `${p.theme.spacings.l}px`};
+  width: ${(p) => p.width};
+`;
+
+export const LineArea = styled("div")<LineProps>`
+  position: absolute;
+  height: 400px;
+  width: 100%;
+`;
+
 interface BackgroundImageProps {
   readonly backgroundImage: any;
   readonly backgroundImageStyles?: any;
@@ -30,7 +56,6 @@ interface InnerContainerProps {
   readonly hasBackgroundImage: boolean;
 }
 export const InnerContainer = styled("div")<InnerContainerProps>`
-  position: relative;
   z-index: 1;
   ${(p) =>
     p.hasBackgroundImage

@@ -35,7 +35,7 @@ const HeroText = styled("div")`
 `;
 
 export const Hero: React.FC<{}> = () => (
-  <ContainerWithBorder backgroundImage={heroImage}>
+  <ContainerWithBorder backgroundImage={heroImage} lineVariant="hero">
     <HeroContainer>
       <HeroText>HOVA LABS</HeroText>
     </HeroContainer>
