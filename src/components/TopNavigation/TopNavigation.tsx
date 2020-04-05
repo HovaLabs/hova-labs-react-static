@@ -49,7 +49,7 @@ export const TopNavigation: React.FC<{}> = () => {
                 {themeToggle}
                 <Icon
                   IconComponent={GiHamburgerMenu}
-                  size={64}
+                  size={42}
                   onPress={() => {
                     setNavModalIsOpen(true);
                   }}
