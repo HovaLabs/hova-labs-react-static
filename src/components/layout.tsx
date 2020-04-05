@@ -1,19 +1,16 @@
 import React from "react";
-import { DesignSystemProvider } from "@hova-labs/bento-box-web";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
+import { TopNavigation } from "./TopNavigation";
 import { NavigationFooter } from "./Navigation/NavigationFooter";
 import favicon from "../media/Meta/favicon.png";
 import metaPic from "../media/Meta/metaPic.jpg";
-
-import { GlobalStyle, TopNavigation } from ".";
-import { themes } from "../theme";
 
 const Layout: React.FC = ({ children }) => {
   ReactGA.initialize("UA-162830088-1");
   ReactGA.pageview(window.location.pathname + window.location.search);
   return (
-    <DesignSystemProvider themes={themes}>
+    <>
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap"
@@ -41,11 +38,10 @@ const Layout: React.FC = ({ children }) => {
         <meta name="twitter:image:height" content="630" />
         <meta name="twitter:image" content={metaPic} />
       </Helmet>
-      <GlobalStyle />
       <TopNavigation />
       {children}
       <NavigationFooter />
-    </DesignSystemProvider>
+    </>
   );
 };
 
