@@ -7,10 +7,10 @@ export const TopNavPadding = styled("div")`
 `;
 
 export const Logo = styled("div")`
-  padding-left: ${(p) =>
-    p.theme.responsiveValue({
-      s: (p) => `${p.theme.spacings.s - 5}px`,
-      l: (p) => `${p.theme.spacings.xl - 5}px`,
+  ${(p) =>
+    p.theme.responsiveStyle("padding-left", {
+      s: `${p.theme.spacings.s - 5}px`,
+      l: `${p.theme.spacings.xl - 5}px`,
     })};
 `;
 
@@ -24,26 +24,26 @@ export const Container = styled("div")`
   align-items: center;
   background: ${(p) => p.theme.colors.background};
   z-index: 1000;
-  margin-left: ${(p) =>
-    p.theme.responsiveValue({
-      s: 11,
-      l: 0,
-    })}px;
-  margin-right: ${(p) =>
-    p.theme.responsiveValue({
-      s: 11,
-      l: 0,
-    })}px;
+  ${(p) =>
+    p.theme.responsiveStyle("margin-left", {
+      s: "11px",
+      l: "0px",
+    })};
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: "11px",
+      l: "0px",
+    })};
 `;
 
 export const Links = styled("div")`
   display: flex;
   align-items: center;
-  margin-right: ${(p) =>
-    p.theme.responsiveValue({
-      s: 24,
-      l: p.theme.backgroundGutters.l,
-    })}px;
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: "24px",
+      l: `${p.theme.backgroundGutters.l}px`,
+    })};
   > a {
     margin: ${(p) => p.theme.spacings.l}px;
     :last-child {
@@ -53,11 +53,11 @@ export const Links = styled("div")`
 `;
 
 export const Toggle = styled("div")`
-  margin-right: ${(p) =>
-    p.theme.responsiveValue({
-      s: p.theme.spacings.l,
-      l: 0,
-    })}px;
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: `${p.theme.spacings.l}px`,
+      l: "0px",
+    })};
 `;
 
 export const ModalLinkContainer = styled("div")``;
