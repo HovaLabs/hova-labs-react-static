@@ -6,6 +6,14 @@ export const TopNavPadding = styled("div")`
   height: ${(p) => p.theme.spacings.xxl}px;
 `;
 
+export const Logo = styled("div")`
+  padding-left: ${(p) =>
+    p.theme.responsiveValue({
+      s: (p) => `${p.theme.spacings.s - 5}px`,
+      l: (p) => `${p.theme.spacings.xl - 5}px`,
+    })};
+`;
+
 export const Container = styled("div")`
   position: fixed;
   top: 0;

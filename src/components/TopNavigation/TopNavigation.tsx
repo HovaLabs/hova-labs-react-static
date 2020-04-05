@@ -38,7 +38,9 @@ export const TopNavigation: React.FC<{}> = () => {
       <S.TopNavPadding />
       <S.Container>
         <Link to={routes.HOMEPAGE}>
-          <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
+          <S.Logo>
+            <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
+          </S.Logo>
         </Link>
         <div style={{ display: "flex", alignItems: "center" }}>
           <S.Links>
