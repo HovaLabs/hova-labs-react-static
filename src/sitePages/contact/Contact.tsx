@@ -6,7 +6,7 @@ import Layout from "../../components/layout";
 
 export const Contact: React.FC<{}> = () => (
   <Layout>
-    <ContainerWithBorder>
+    <ContainerWithBorder lineVariant="hero">
       <S.OuterContainer>
         <Text typography="headingLarge">
           Contact us to talk about a project or just to say hello!

@@ -32,6 +32,23 @@ export const ContainerWithBorder: React.FC<{
       case "forward":
         lines = <Lines percents={["100%", "80%", "60%"]} />;
         break;
+      case "store":
+        lines = (
+          <Lines
+            percents={[
+              "100%",
+              "80%",
+              "60%",
+              "40%",
+              "20%",
+              "40%",
+              "60%",
+              "80%",
+              "100%",
+            ]}
+          />
+        );
+        break;
       default:
         lines = null;
     }

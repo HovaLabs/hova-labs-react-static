@@ -9,7 +9,7 @@ import Layout from "../../components/layout";
 export const Store: React.FC<{}> = () => {
   return (
     <Layout>
-      <ContainerWithBorder>
+      <ContainerWithBorder lineVariant="store">
         <S.StoreArea>
           <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
           <div>

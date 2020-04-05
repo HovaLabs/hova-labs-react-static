@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Select = styled("select")<{ backgroundImage: string }>`
   display: block;
   padding: 0.6em 1.4em 0.5em 0.8em;
+  background: transparent;
   border: 0;
   border-bottom: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
   border-radius: 0;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-color: ${(p) => p.theme.colors.surface1};
   background-image: url(${(p) => p.backgroundImage});
   background-repeat: no-repeat, repeat;
   background-position: right 0 top 60%, 0 0;
