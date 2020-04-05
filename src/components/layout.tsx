@@ -7,8 +7,10 @@ import favicon from "../media/Meta/favicon.png";
 import metaPic from "../media/Meta/metaPic.jpg";
 
 const Layout: React.FC = ({ children }) => {
-  ReactGA.initialize("UA-162830088-1");
-  ReactGA.pageview(window.location.pathname + window.location.search);
+  if (typeof window !== "undefined") {
+    ReactGA.initialize("UA-162830088-1");
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
   return (
     <>
       <Helmet>
