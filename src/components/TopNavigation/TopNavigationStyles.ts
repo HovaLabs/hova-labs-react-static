@@ -3,7 +3,8 @@ import styled from "styled-components";
 // TopNavPadding and Container are used together to create a fixed TopNav and to push down everything below it
 
 export const TopNavPadding = styled("div")`
-  height: ${p => p.theme.spacings.xxl}px;
+  height: ${(p) => p.theme.spacings.xxl}px;
+  margin-bottom: ${(p) => `-${p.theme.spacings.xxl}px`};
 `;
 
 export const Container = styled("div")`
@@ -11,17 +12,17 @@ export const Container = styled("div")`
   top: 0;
   display: flex;
   width: 100%;
-  height: ${p => p.theme.spacings.xxl}px;
+  height: ${(p) => p.theme.spacings.xxl}px;
   justify-content: space-between;
   align-items: center;
-  background: ${p => p.theme.colors.background};
+  background: ${(p) => p.theme.colors.background};
   z-index: 1000;
-  margin-left: ${p =>
+  margin-left: ${(p) =>
     p.theme.responsiveValue({
       s: 11,
       l: 0,
     })}px;
-  margin-right: ${p =>
+  margin-right: ${(p) =>
     p.theme.responsiveValue({
       s: 11,
       l: 0,
@@ -31,13 +32,13 @@ export const Container = styled("div")`
 export const Links = styled("div")`
   display: flex;
   align-items: center;
-  margin-right: ${p =>
+  margin-right: ${(p) =>
     p.theme.responsiveValue({
       s: 24,
       l: p.theme.backgroundGutters.l,
     })}px;
   > a {
-    margin: ${p => p.theme.spacings.l}px;
+    margin: ${(p) => p.theme.spacings.l}px;
     :last-child {
       margin-right: 0;
     }
@@ -45,7 +46,7 @@ export const Links = styled("div")`
 `;
 
 export const Toggle = styled("div")`
-  margin-right: ${p =>
+  margin-right: ${(p) =>
     p.theme.responsiveValue({
       s: p.theme.spacings.l,
       l: 0,
@@ -56,7 +57,7 @@ export const ModalLinkContainer = styled("div")``;
 
 export const ModalContainer = styled("div")`
   color: red;
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("display", {
       s: "block",
       l: "none",
@@ -70,7 +71,7 @@ export const ModalContent = styled("div")`
   justify-content: center;
   align-items: center;
   > div {
-    margin: ${p => p.theme.spacings.m}px 0;
+    margin: ${(p) => p.theme.spacings.m}px 0;
     > a {
       text-decoration: none;
     }
@@ -81,5 +82,5 @@ export const ClosedButtonContainer = styled("div")`
   position: absolute;
   top: 0;
   right: 0;
-  padding: ${p => p.theme.spacings.xl}px;
+  padding: ${(p) => p.theme.spacings.xl}px;
 `;
