@@ -89,5 +89,5 @@ export const ClosedButtonContainer = styled("div")`
   position: absolute;
   top: 0;
   right: 0;
-  padding: ${(p) => p.theme.spacings.xl}px;
+  padding: ${(p) => p.theme.spacings.l}px;
 `;
