@@ -1,36 +1,6 @@
 import styled from "styled-components";
 
-// COPYRIGHT START
-export const ContainerCopyright = styled("div")`
-  ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.l}px`,
-    })}
-`;
-
 // MAILING LIST
-export const ContainerMailingList = styled("div")`
-  align-items: center;
-  display: flex;
-  ${(p) =>
-    p.theme.responsiveStyle("display", {
-      s: "block",
-      l: "block",
-      xl: "flex",
-    })}
-  ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.l}px`,
-    })}
-  justify-content: space-between;
-`;
-
-export const TitleArea = styled("div")`
-  flex-basis: 40%;
-`;
-
 export const Input = styled("input")`
   background: ${(p) => p.theme.colors.surface1};
   border: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};

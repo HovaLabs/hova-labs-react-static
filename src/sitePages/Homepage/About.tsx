@@ -34,14 +34,14 @@ const TheHovas = styled("img").attrs({
 export const About: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <TitlePrimary subtitle="About" title="The Hovas" />
         <Text>
           We are two Nebraska nerds currently living in the SF Bay Area who use
           diverse backgrounds in art and science to build scalable projects.
         </Text>
       </ContainerContent>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <HovaCentered>
           <TheHovas />
         </HovaCentered>

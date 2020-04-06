@@ -27,7 +27,7 @@ export const LinkList: React.FC<{}> = () => {
   ));
   return (
     <ContainerWithBorder>
-      <ContainerContent flexL="100">
+      <ContainerContent flexXL="100">
         <S.LinksContainer>{links}</S.LinksContainer>
       </ContainerContent>
     </ContainerWithBorder>

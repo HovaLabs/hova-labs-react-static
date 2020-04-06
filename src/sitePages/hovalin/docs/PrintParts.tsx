@@ -15,17 +15,17 @@ export const PrintParts: React.FC<{}> = () => (
   <>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <Text typography="headingLarge">2</Text>
           <Text typography="headingSmall">Print Parts</Text>
           <br />
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <img src={threeDPrinter} alt="3d printer" />
         </ContainerContent>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <Text typography="headingSmall">New to 3D printing?</Text>
           <div>
             In order to make the violin we’re going to need a 3D printer. It
@@ -48,7 +48,7 @@ export const PrintParts: React.FC<{}> = () => (
           </ul>
         </ContainerContent>
       </ContainerFlex>
-      <ContainerContent flexL="100">
+      <ContainerContent flexXL="100">
         {" "}
         <div>* extra credit *</div>
         <div>
@@ -68,7 +68,7 @@ export const PrintParts: React.FC<{}> = () => (
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <Text typography="headingMedium">The Neck</Text>
           <Text typography="bodyText">10 PRINT HOURS | 90g PLASTIC </Text>
           <Text typography="bodyText">Layer Height: 0.2mm </Text>
@@ -81,14 +81,14 @@ export const PrintParts: React.FC<{}> = () => (
             onPress={() => {}}
           />
         </ContainerContent>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <img width="100%" src={hovalinNeck} alt="hovalin neck" />
         </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <Text typography="headingMedium">The Body</Text>
           <Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text>
           <Text typography="bodyText">Layer Height: 0.3mm</Text>
@@ -101,7 +101,7 @@ export const PrintParts: React.FC<{}> = () => (
             onPress={() => {}}
           />
         </ContainerContent>
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <img width="100%" src={hovalinBody} alt="hovalin body" />
         </ContainerContent>
       </ContainerFlex>

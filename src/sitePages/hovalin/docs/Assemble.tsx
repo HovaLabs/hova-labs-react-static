@@ -10,17 +10,17 @@ import {
 export const Assemble: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <Text typography="headingLarge">4</Text>
         <Text typography="headingSmall">Assemble</Text>
         <br />
       </ContainerContent>
     </ContainerFlex>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <img src={assembly} alt="hovalin assembly" width="100%" />
       </ContainerContent>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         Fit together the neck and chamber pieces. Once the pieces are locked
         together, insert the carbon fiber rod through the top of the neck down
         through the chamber so that it is flush with the top of the neck.

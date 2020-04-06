@@ -14,7 +14,7 @@ export const Hero: React.FC<{}> = () => (
     backgroundImage={hero}
     backgroundImageStyles={{ opacity: ".3" }}
   >
-    <ContainerContent flexL="100">
+    <ContainerContent flexXL="100">
       <Text typography="headingLarge">Hovalin Docs</Text>
       <S.ButtonContainer>
         <Button

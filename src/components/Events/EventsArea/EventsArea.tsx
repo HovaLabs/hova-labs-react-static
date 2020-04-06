@@ -3,12 +3,12 @@ import { Text } from "@hova-labs/bento-box-web";
 import { events } from "./EventsAreaUtils";
 import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
 
+import { EventListInnerContainer } from "./EventsAreaStyles";
 import {
-  EventListInnerContainer,
-  EventListOuterContainer,
-  OuterContainer,
-} from "./EventsAreaStyles";
-import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
+  ContainerWithBorder,
+  ContainerFlex,
+  ContainerContent,
+} from "../../Container";
 import EventsListItem from "../EventsListItem/EventsListItem";
 
 export const EventsArea: React.FC<{}> = () => {
@@ -23,10 +23,14 @@ export const EventsArea: React.FC<{}> = () => {
   );
   return (
     <ContainerWithBorder>
-      <OuterContainer>
-        <TitlePrimary subtitle="Events" title="Say Hey" />
-        <EventListOuterContainer>{content}</EventListOuterContainer>
-      </OuterContainer>
+      <ContainerFlex>
+        <ContainerContent flexXL="100">
+          <TitlePrimary subtitle="Events" title="Say Hey" />
+        </ContainerContent>
+      </ContainerFlex>
+      <ContainerFlex>
+        <ContainerContent flexXL="100">{content}</ContainerContent>
+      </ContainerFlex>
     </ContainerWithBorder>
   );
 };

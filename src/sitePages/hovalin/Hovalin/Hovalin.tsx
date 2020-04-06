@@ -46,10 +46,10 @@ export const Hovalin: React.FC<{}> = () => (
       </ContainerWithBorder>
       <ContainerWithBorder>
         <ContainerFlex>
-          <ContainerContent flexL="50">
+          <ContainerContent flexXL="50">
             <img src={hovalinAbout} alt="hovalin" width="50%" />
           </ContainerContent>
-          <ContainerContent flexL="50">
+          <ContainerContent flexXL="50">
             <TitlePrimary subtitle="About" title="A violin for Makers" />
             <Text typography="bodyText">
               The hovalin is a functional acoustic violin that can be produced

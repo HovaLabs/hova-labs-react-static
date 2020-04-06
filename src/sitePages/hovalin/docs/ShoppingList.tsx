@@ -11,7 +11,7 @@ import * as S from "./ShoppingListStyles";
 export const ShoppingList: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <Text typography="headingLarge">1</Text>
         <Text typography="headingSmall">Shopping List</Text>
         <br />
@@ -19,7 +19,7 @@ export const ShoppingList: React.FC<{}> = () => (
     </ContainerFlex>
     <ContainerFlex>
       {shoppingList.map((item) => (
-        <ContainerContent flexL="50">
+        <ContainerContent flexXL="50">
           <Icon size={32} IconComponent={item.icon} />
           <Text typography="headingSmall">{item.title}</Text>
           <Text typography="bodyText">{item.description}</Text>

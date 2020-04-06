@@ -14,9 +14,9 @@ import {
 
 const BlogPost = styled("div")`
   ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.m}px 0`,
-      l: `${p.theme.spacings.l}px 0`,
+    p.theme.responsiveStyle("padding-bottom", {
+      s: `${p.theme.spacings.m}px`,
+      l: `${p.theme.spacings.l}px`,
     })}
 `;
 
@@ -32,14 +32,11 @@ const Image = styled("div")<{ backgroundImage: string }>`
   ${(p) =>
     p.theme.responsiveStyle("height", {
       s: "150px",
-      l: "326px",
+      m: "150px",
+      l: "150px",
+      xl: "326px",
     })}
-  ${(p) =>
-    p.theme.responsiveStyle("flex", {
-      s: "0 0 100%",
-      l: "0 1 60%",
-    })}
-  background-color: ${(p) => p.theme.colors.surface1};
+  width: 100%;
   background-image: url(${(p) => p.backgroundImage});
   background-position: center;
   background-size: cover;
@@ -49,27 +46,25 @@ const Image = styled("div")<{ backgroundImage: string }>`
 export const NewOnTheBlog: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexL="100">
+      <ContainerContent flexXL="100">
         <div>
           <TitlePrimary subtitle="New on the Blog" title="Our Writings" />
         </div>
       </ContainerContent>
     </ContainerFlex>
-    <br />
     {blogManifest.slice(0, 2).map((blog) => (
       <BlogPost>
         <ContainerFlex>
-          <ContainerContent flexL="50">
+          <ContainerContent flexXL="40">
             <Image backgroundImage={blog.hero} />
           </ContainerContent>
-          <ContainerContent flexL="50">
+          <ContainerContent flexXL="60">
             <Text typography="headingMedium">{blog.title}</Text>
             <Date>{dateToString(blog.datePublished)}</Date>
             <div>
               <Button title="Read More" href={blog.url} onPress={() => {}} />
             </div>
           </ContainerContent>
-          <br />
         </ContainerFlex>
       </BlogPost>
     ))}

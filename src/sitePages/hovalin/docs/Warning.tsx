@@ -8,7 +8,7 @@ import {
 
 export const Warning: React.FC<{}> = () => (
   <ContainerWithBorder>
-    <ContainerContent flexL="100">
+    <ContainerContent flexXL="100">
       <Icon size={32} IconComponent={IoMdWarning} />
       <Text typography="bodyText">
         Warning!!! As with any craft, violin making and 3D printing requires

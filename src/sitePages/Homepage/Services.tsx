@@ -4,17 +4,13 @@ import { IconBaseProps } from "react-icons";
 import { Icon, Cube, Robot, XML, Magic, Text } from "@hova-labs/bento-box-web";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 
-import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
+import {
+  ContainerContent,
+  ContainerWithBorder,
+  ContainerFlex,
+} from "../../components/Container";
 
 // SERVICES START
-
-const ServicesContainer = styled("div")`
-  ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
-`;
 
 const ServicesTextContainer = styled("div")``;
 
@@ -80,13 +76,13 @@ const services: Array<Service> = [
 
 export const Services: React.FC<{}> = () => (
   <ContainerWithBorder lineVariant="forward">
-    <ServicesContainer>
-      <ServicesTextContainer>
+    <ContainerFlex>
+      <ContainerContent flexXL="100">
         <TitlePrimary subtitle="Services" title="What We Do" />
-      </ServicesTextContainer>
+      </ContainerContent>
       <ServiceGridContainer>
         {services.map((s) => (
-          <ServiceGridItem key={s.title}>
+          <ContainerContent flexXL="50" key={s.title}>
             <div>
               <Icon IconComponent={s.icon} size={32} />
             </div>
@@ -96,9 +92,9 @@ export const Services: React.FC<{}> = () => (
             <div>
               <Text>{s.description}</Text>
             </div>
-          </ServiceGridItem>
+          </ContainerContent>
         ))}
       </ServiceGridContainer>
-    </ServicesContainer>
+    </ContainerFlex>
   </ContainerWithBorder>
 );

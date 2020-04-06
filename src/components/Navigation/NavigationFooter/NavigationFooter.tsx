@@ -2,7 +2,12 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 import { Button } from "../../Button/Button";
-import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
+import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
+import {
+  ContainerContent,
+  ContainerFlex,
+  ContainerWithBorder,
+} from "../../Container";
 import * as S from "./NavigationFooterStyles";
 
 export const NavigationFooter: React.FC<{}> = () => {
@@ -61,12 +66,16 @@ export const NavigationFooter: React.FC<{}> = () => {
   return (
     <>
       <ContainerWithBorder>
-        <S.ContainerMailingList>
-          <div>
-            <Text typography="headingMedium">Join our mailing list</Text>
-            <Text typography="bodyText">for updates and news</Text>
-          </div>
-          <S.InputsArea>
+        <ContainerFlex>
+          <ContainerContent flexXL="30" flexXL="100">
+            <div>
+              <TitlePrimary
+                subtitle="updates and news"
+                title="Join our mailing list"
+              />
+            </div>
+          </ContainerContent>
+          <ContainerContent flexXL="70" flexXL="100">
             <MailchimpSubscribe
               url={url}
               render={({ subscribe, status, message }) => (
@@ -79,17 +88,19 @@ export const NavigationFooter: React.FC<{}> = () => {
                 </div>
               )}
             />
-          </S.InputsArea>
-        </S.ContainerMailingList>
+          </ContainerContent>
+        </ContainerFlex>
       </ContainerWithBorder>
       <ContainerWithBorder>
-        <S.ContainerCopyright>
-          <Text typography="bodyText">
-            {`Copyright Hova Labs 2019 - ${new Date()
-              .getFullYear()
-              .toString()}`}
-          </Text>
-        </S.ContainerCopyright>
+        <ContainerFlex>
+          <ContainerContent flexXL="100">
+            <Text typography="bodyText">
+              {`Copyright Hova Labs 2019 - ${new Date()
+                .getFullYear()
+                .toString()}`}
+            </Text>
+          </ContainerContent>
+        </ContainerFlex>
       </ContainerWithBorder>
     </>
   );

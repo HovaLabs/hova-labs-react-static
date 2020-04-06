@@ -11,14 +11,14 @@ import {
 export const InstallStrings: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <Text typography="headingLarge">5</Text>
         <Text typography="headingSmall">Install Strings</Text>
         <br />
       </ContainerContent>
     </ContainerFlex>
     <ContainerFlex>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         <img width="100%" src={hovalinStrings} alt="strings on bridge" />
         <br />
         <img
@@ -27,7 +27,7 @@ export const InstallStrings: React.FC<{}> = () => (
           alt="strings on tuning pegs"
         />
       </ContainerContent>
-      <ContainerContent flexL="50">
+      <ContainerContent flexXL="50">
         Feed the strings through the hole at the base of the violin, through the
         hole at the top of the neck, and then through the tuning peg.
       </ContainerContent>
