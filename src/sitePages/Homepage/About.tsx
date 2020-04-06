@@ -10,17 +10,6 @@ import {
   ContainerContent,
 } from "../../components/Container";
 
-const InnerContainer = styled("div")`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
-`;
-
 const HovaCentered = styled("div")`
   flex: 1;
   display: flex;
