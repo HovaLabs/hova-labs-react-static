@@ -1,10 +1,15 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import hovalin from "./hovalinv4.png";
-import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
+import {
+  ContainerWithBorder,
+  ContainerContent,
+  ContainerFlex,
+} from "../../components/Container";
 import { InputsSelect } from "../../components/Inputs/InputsSelect/InputsSelect";
 import * as S from "./StoreStyles";
 import Layout from "../../components/layout";
+import { Container } from "../../components/TopNavigation/TopNavigationStyles";
 
 export const Store: React.FC<{}> = () => {
   return (
@@ -60,21 +65,25 @@ export const Store: React.FC<{}> = () => {
           </div>
         </S.StoreArea>
         <S.NoteArea>
-          <Text typography="bodyText">Note:</Text>
-          <Text typography="bodyText">
-            All violin parts are printed with Hatchbox PLA filament. Gold,
-            Silver, Bronze, and Copper are reference colors, and are not
-            inferring that the violin will actually be made with any precious
-            metal. Checkout Hatchbox PLA color here. Official Hovalins come with
-            a hovalin logo embeded on the tailpiece.
-          </Text>
-          <Text typography="bodyText">
-            All parts are made to order. Shipping estimate is 2 weeks.
-          </Text>
-          <Text typography="bodyText">
-            Shipping outside of continental United States will be subject to an
-            extra charge.
-          </Text>
+          <ContainerFlex>
+            <ContainerContent flexXL="100">
+              <Text typography="bodyText">Note:</Text>
+              <Text typography="bodyText">
+                All violin parts are printed with Hatchbox PLA filament. Gold,
+                Silver, Bronze, and Copper are reference colors, and are not
+                inferring that the violin will actually be made with any
+                precious metal. Checkout Hatchbox PLA color here. Official
+                Hovalins come with a hovalin logo embeded on the tailpiece.
+              </Text>
+              <Text typography="bodyText">
+                All parts are made to order. Shipping estimate is 2 weeks.
+              </Text>
+              <Text typography="bodyText">
+                Shipping outside of continental United States will be subject to
+                an extra charge.
+              </Text>
+            </ContainerContent>
+          </ContainerFlex>
         </S.NoteArea>
       </ContainerWithBorder>
     </Layout>
