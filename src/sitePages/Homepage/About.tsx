@@ -4,7 +4,11 @@ import { Text } from "@hova-labs/bento-box-web";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 import theHovas from "./the-hovas.png";
 
-import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
+import {
+  ContainerWithBorder,
+  ContainerFlex,
+  ContainerContent,
+} from "../../components/Container";
 
 const InnerContainer = styled("div")`
   display: flex;
@@ -15,12 +19,6 @@ const InnerContainer = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
-`;
-
-const AboutTextContainer = styled("div")`
-  flex: 1;
-  min-width: 360px;
-  max-width: 600px;
 `;
 
 const HovaCentered = styled("div")`
@@ -35,8 +33,8 @@ const TheHovas = styled("img").attrs({
   align-self: flex-end;
   ${(p) =>
     p.theme.responsiveStyle("bottom", {
-      s: `-${p.theme.spacings.xl}px`,
-      l: `-${p.theme.spacings.xxl}px`,
+      s: `-${p.theme.spacings.l}px`,
+      l: `-${p.theme.spacings.xl}px`,
     })}
   min-width: 250px;
   max-width: 350px;
@@ -46,17 +44,19 @@ const TheHovas = styled("img").attrs({
 
 export const About: React.FC<{}> = () => (
   <ContainerWithBorder>
-    <InnerContainer>
-      <AboutTextContainer>
+    <ContainerFlex>
+      <ContainerContent flexL="50">
         <TitlePrimary subtitle="About" title="The Hovas" />
         <Text>
           We are two Nebraska nerds currently living in the SF Bay Area who use
           diverse backgrounds in art and science to build scalable projects.
         </Text>
-      </AboutTextContainer>
-      <HovaCentered>
-        <TheHovas />
-      </HovaCentered>
-    </InnerContainer>
+      </ContainerContent>
+      <ContainerContent flexL="50">
+        <HovaCentered>
+          <TheHovas />
+        </HovaCentered>
+      </ContainerContent>
+    </ContainerFlex>
   </ContainerWithBorder>
 );
