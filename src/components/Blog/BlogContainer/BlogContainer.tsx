@@ -83,7 +83,7 @@ const authorBios = {
 
 const authorLinks = {
   Matt: {
-    text: "www.matthova.com",
+    text: "github.com/matthova",
     link: "https://github.com/matthova",
   },
   Kaitlyn: {
