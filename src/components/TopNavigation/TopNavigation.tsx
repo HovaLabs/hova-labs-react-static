@@ -37,7 +37,7 @@ export const TopNavigation: React.FC<{}> = () => {
       />
       <S.TopNavPadding />
       <S.Container>
-        <Link to={routes.HOMEPAGE}>
+        <Link aria-label="home page" to={routes.HOMEPAGE}>
           <S.Logo>
             <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
           </S.Logo>
@@ -57,16 +57,16 @@ export const TopNavigation: React.FC<{}> = () => {
               </>
             ) : (
               <>
-                <Link to={routes.PROJECTS}>
+                <Link aria-label="projects" to={routes.PROJECTS}>
                   <Text typography="bodyText">Projects</Text>
                 </Link>
-                <Link to={routes.BLOG}>
+                <Link aria-label="blog" to={routes.BLOG}>
                   <Text typography="bodyText">Blog</Text>
                 </Link>
-                <Link to={routes.STORE}>
+                <Link aria-label="store" to={routes.STORE}>
                   <Text typography="bodyText">Store</Text>
                 </Link>
-                <Link to={routes.CONTACT}>
+                <Link aria-label="contact" to={routes.CONTACT}>
                   <Text typography="bodyText">Contact</Text>
                 </Link>
                 {themeToggle}
