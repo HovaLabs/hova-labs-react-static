@@ -32,15 +32,16 @@ const HovaCentered = styled("div")`
 const TheHovas = styled("img").attrs({
   src: theHovas,
 })`
-  position: relative;
+  align-self: flex-end;
   ${(p) =>
     p.theme.responsiveStyle("bottom", {
       s: `-${p.theme.spacings.xl}px`,
       l: `-${p.theme.spacings.xxl}px`,
     })}
-  height: 336px;
-  min-width: 336px;
-  align-self: flex-end;
+  min-width: 250px;
+  max-width: 350px;
+  position: relative;
+  width: 100%;
 `;
 
 export const About: React.FC<{}> = () => (
