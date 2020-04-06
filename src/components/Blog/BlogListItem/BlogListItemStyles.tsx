@@ -71,6 +71,7 @@ export const OuterContainer = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
+    width: 100%;
 `;
 
 export const TagsContainer = styled.div`

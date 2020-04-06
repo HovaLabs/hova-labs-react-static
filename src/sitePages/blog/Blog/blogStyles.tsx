@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const BlogTagList = styled("div")`
+  display: flex;
+  flex-wrap: wrap;
+`;
+
 export const OuterContainer = styled("div")`
   display: grid;
   ${(p) =>
