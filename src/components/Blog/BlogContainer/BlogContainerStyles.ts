@@ -7,67 +7,51 @@ export const BlogStyles = styled.div`
   iframe,
   img {
     align-self: center;
-    margin: ${p => p.theme.spacings.l}px;
+    margin: ${(p) => p.theme.spacings.l}px;
   }
   img {
     max-width: 100%;
     max-height: 70vh;
   }
   code {
-    background: ${p => p.theme.colors.surface1};
-    margin: ${p => p.theme.spacings.l}px;
+    background: ${(p) => p.theme.colors.surface1};
+    margin: ${(p) => p.theme.spacings.l}px;
   }
 `;
 
 export const HeroImage = styled("div")<{ backgroundImage: string }>`
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("height", {
-      s: `150px`,
-      l: `120px`,
+      s: "150px",
+      l: "120px",
     })}
-  background-color: ${p => p.theme.colors.surface1};
-  background-image: url(${p => p.backgroundImage});
+  background-color: ${(p) => p.theme.colors.surface1};
+  background-image: url(${(p) => p.backgroundImage});
   background-position: center;
   background-size: cover;
   width: 100%;
 `;
 
 export const AuthorImage = styled.img`
-  height: 240px;
-  ${p =>
-    p.theme.responsiveStyle("margin-bottom", {
-      s: `${p.theme.spacings.m}px`,
-      l: `-${p.theme.spacings.xl}px`,
+  ${(p) =>
+    p.theme.responsiveStyle("align-self", {
+      s: "flex-start",
+      l: "center",
     })}
-`;
-export const AuthorImageContainer = styled.span`
-  ${p =>
-    p.theme.responsiveStyle("flex-basis", {
-      s: "100%",
-      m: "40%",
-      l: "30%",
-    })}
+  max-width: 200px;
 `;
 
-export const AuthorContainer = styled.div`
-  ${p =>
-    p.theme.responsiveStyle("display", {
-      s: "block",
-      l: "flex",
+export const AuthorImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  ${(p) =>
+    p.theme.responsiveStyle("justify-content", {
+      m: "flex-start",
+      l: "center",
     })}
 `;
-
-export const AuthorAboutContainer = styled.div`
-  ${p =>
-    p.theme.responsiveStyle("flex-basis", {
-      s: "100%",
-      m: "60%",
-      l: "70%",
-    })}
-`;
-
 export const Subtitle = styled.div`
-  ${p =>
+  ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.m}px 0`,
       l: `${p.theme.spacings.l}px 0`,

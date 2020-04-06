@@ -5,7 +5,11 @@ import { Link } from "gatsby";
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
 import Cat from "./cat.png";
-import { ContainerWithBorder } from "../../Container/ContainerWithBorder";
+import {
+  ContainerFlex,
+  ContainerContent,
+  ContainerWithBorder,
+} from "../../Container";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogContainerStyles";
 import Layout from "../../layout";
@@ -33,21 +37,30 @@ export const BlogContainer: React.FC<{
         backgroundImage={blogManifest.hero}
         backgroundImageStyles={{ opacity: 0.2 }}
       >
-        <div>
-          <Link to={routes.BLOG}>
-            <Text color="primary" typography="bodyText">
-              ← back to blog
-            </Text>
-          </Link>
-        </div>
-        <Text typography="headingLarge">{blogManifest.title}</Text>
-        <S.Subtitle>
-          <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
-        </S.Subtitle>
-        <S.TagsContainer>{tagsList}</S.TagsContainer>
+        <ContainerFlex>
+          <ContainerContent flexXL="100">
+            <div>
+              <Link to={routes.BLOG}>
+                <Text color="primary" typography="bodyText">
+                  ← back to blog
+                </Text>
+              </Link>
+            </div>
+
+            <Text typography="headingLarge">{blogManifest.title}</Text>
+            <S.Subtitle>
+              <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
+            </S.Subtitle>
+            <S.TagsContainer>{tagsList}</S.TagsContainer>
+          </ContainerContent>
+        </ContainerFlex>
       </ContainerWithBorder>
       <ContainerWithBorder>
-        <S.BlogStyles>{children}</S.BlogStyles>
+        <ContainerFlex>
+          <ContainerContent flexXL="100">
+            <S.BlogStyles>{children}</S.BlogStyles>
+          </ContainerContent>
+        </ContainerFlex>
       </ContainerWithBorder>
       <Author author={blogManifest.author} />
     </Layout>
@@ -71,7 +84,7 @@ const authorBios = {
 const authorLinks = {
   Matt: {
     text: "www.matthova.com",
-    link: "http://www.matthova.com/",
+    link: "https://github.com/matthova",
   },
   Kaitlyn: {
     text: "www.kaitlynhova.com",
@@ -88,11 +101,14 @@ const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
   author,
 }) => (
   <ContainerWithBorder>
-    <S.AuthorContainer>
-      <S.AuthorImageContainer>
-        <S.AuthorImage src={authorPhotos[author]} alt="Author" />
-      </S.AuthorImageContainer>
-      <S.AuthorAboutContainer>
+    <ContainerFlex>
+      <ContainerContent flexM="40" flexL="50" flexXL="40">
+        <S.AuthorImageContainer>
+          <S.AuthorImage src={authorPhotos[author]} alt="Author" />
+        </S.AuthorImageContainer>
+      </ContainerContent>
+
+      <ContainerContent flexM="60" flexL="50" flexXL="60">
         <div>
           <Text typography="headingMedium">About the Author</Text>
         </div>
@@ -106,7 +122,7 @@ const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
             </Text>
           </a>
         </div>
-      </S.AuthorAboutContainer>
-    </S.AuthorContainer>
+      </ContainerContent>
+    </ContainerFlex>
   </ContainerWithBorder>
 );
