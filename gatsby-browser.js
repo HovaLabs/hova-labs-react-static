@@ -10,11 +10,25 @@ import { DesignSystemProvider } from "@hova-labs/bento-box-web";
 import { GlobalStyle } from "./src/components";
 import { themes } from './src/theme';
 
+const StateKicker = ({ children }) => {
+  const [initialized, setInitialized] = React.useState(false);
+
+  React.useEffect(() => {
+    setInitialized(true);
+  }, []);
+
+  if (!initialized) {
+    return null;
+  }
+  return children;
+}
 export const wrapRootElement = ({ element }) => {
   return (
-    <DesignSystemProvider themes={themes}>
-      <GlobalStyle />
-      {element}
-    </DesignSystemProvider>
+    <StateKicker>
+      <DesignSystemProvider themes={themes}>
+        <GlobalStyle />
+        {element}
+      </DesignSystemProvider>
+    </StateKicker>
   );
 };
