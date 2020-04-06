@@ -9,8 +9,8 @@ export const colorsLightTheme: Colors = {
   background: "hsla(0, 0%, 100%, 1)",
   surface1: "hsla(0, 0%, 90%, 1)",
   surface2: "hsla(0, 0%, 80%, 1)",
-  primary: "hsla(230, 25%, 58%, 1)",
-  secondary: "hsla(230, 28%, 45%, 1)",
+  primary: "hsla(206, 31%, 45%,1)",
+  secondary: "hsla(206, 31%, 25%,1)",
 };
 
 export const colorsDarkTheme: Colors = {
@@ -22,6 +22,6 @@ export const colorsDarkTheme: Colors = {
   background: "	hsl(0, 0%, 7%)",
   surface1: "hsl(0, 0%, 12%)",
   surface2: "hsl(0, 0%, 18%)",
-  primary: "hsla(230, 25%, 68%, 1)",
-  secondary: "hsla(230, 25%, 78%, 1)",
+  primary: "hsla(206, 31%, 45%,1)",
+  secondary: "hsla(206, 31%, 25%,1)",
 };
