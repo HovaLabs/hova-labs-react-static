@@ -23,7 +23,7 @@ export const Line = styled("div")<LineProps>`
   opacity: 0.2;
   ${(p) =>
     p.theme.responsiveStyle("height", {
-      s: "36px",
+      s: "46px",
       l: "52px",
     })};
   margin-bottom: ${(p) => `${p.theme.spacings.l}px`};
