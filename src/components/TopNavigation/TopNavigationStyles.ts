@@ -7,6 +7,9 @@ export const TopNavPadding = styled("div")`
 `;
 
 export const Logo = styled("div")`
+  > div {
+    display: flex;
+  }
   ${(p) =>
     p.theme.responsiveStyle("padding-left", {
       s: `${p.theme.spacings.s - 5}px`,
@@ -36,23 +39,12 @@ export const Container = styled("div")`
     })};
 `;
 
-export const Links = styled("div")`
-  display: flex;
-  align-items: center;
-  ${(p) =>
-    p.theme.responsiveStyle("margin-right", {
-      s: "24px",
-      l: `${p.theme.backgroundGutters.l}px`,
-    })};
-  > a {
-    margin: ${(p) => p.theme.spacings.l}px;
-    :last-child {
-      margin-right: 0;
-    }
-  }
-`;
-
-export const Toggle = styled("div")`
+interface ToggleProps {
+  readonly isMounted?: boolean;
+}
+export const Toggle = styled("div")<ToggleProps>`
+  opacity: ${(p) => (p.isMounted ? "1" : "0")};
+  transition: opacity 500ms;
   ${(p) =>
     p.theme.responsiveStyle("margin-right", {
       s: `${p.theme.spacings.l}px`,
@@ -90,4 +82,50 @@ export const ClosedButtonContainer = styled("div")`
   top: 0;
   right: 0;
   padding: ${(p) => p.theme.spacings.l}px;
+`;
+
+export const MobileLinks = styled("div")`
+  display: flex;
+  align-items: center;
+  > div {
+    display: flex;
+    background: pink;
+  }
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: "24px",
+      l: `${p.theme.backgroundGutters.l}px`,
+    })};
+  > a {
+    margin: ${(p) => p.theme.spacings.l}px;
+    :last-child {
+      margin-right: 0;
+    }
+  }
+  ${(p) =>
+    p.theme.responsiveStyle("display", {
+      s: "inherit",
+      l: "none",
+    })}
+`;
+
+export const DesktopLinks = styled("div")`
+  display: flex;
+  align-items: center;
+  ${(p) =>
+    p.theme.responsiveStyle("margin-right", {
+      s: "24px",
+      l: `${p.theme.backgroundGutters.l}px`,
+    })};
+  > a {
+    margin: ${(p) => p.theme.spacings.l}px;
+    :last-child {
+      margin-right: 0;
+    }
+  }
+  ${(p) =>
+    p.theme.responsiveStyle("display", {
+      s: "none",
+      l: "inherit",
+    })}
 `;

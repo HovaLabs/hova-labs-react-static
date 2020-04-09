@@ -5,14 +5,22 @@ import { TopNavigation } from "./TopNavigation";
 import { NavigationFooter } from "./Navigation/NavigationFooter";
 import favicon from "../media/Meta/favicon.png";
 import metaPic from "../media/Meta/metaPic.jpg";
+import { GlobalStyle } from ".";
 
 const Layout: React.FC = ({ children }) => {
+  const [initialized, setInitialized] = React.useState<boolean>(false);
   if (typeof window !== "undefined") {
     ReactGA.initialize("UA-162830088-1");
     ReactGA.pageview(window.location.pathname + window.location.search);
   }
+
+  React.useEffect(() => {
+    setInitialized(true);
+  }, []);
+
   return (
     <>
+      <GlobalStyle initialized={initialized} />
       <Helmet>
         <link
           href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
