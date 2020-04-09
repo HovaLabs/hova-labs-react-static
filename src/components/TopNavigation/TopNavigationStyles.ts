@@ -87,9 +87,8 @@ export const ClosedButtonContainer = styled("div")`
 export const MobileLinks = styled("div")`
   display: flex;
   align-items: center;
-  > div {
+  > div:nth-child(2) {
     display: flex;
-    background: pink;
   }
   ${(p) =>
     p.theme.responsiveStyle("margin-right", {
