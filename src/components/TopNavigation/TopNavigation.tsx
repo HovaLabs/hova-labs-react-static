@@ -23,14 +23,16 @@ export const TopNavigation: React.FC<{}> = () => {
 
   const themeToggle = (
     <S.Toggle isMounted={isMounted}>
-      <ThemeToggle
-        onPress={() => {
-          setThemeByThemeKey(
-            theme.name === "lightTheme" ? "darkTheme" : "lightTheme",
-          );
-        }}
-        currentTheme={theme.name}
-      />
+      {isMounted ? (
+        <ThemeToggle
+          onPress={() => {
+            setThemeByThemeKey(
+              theme.name === "lightTheme" ? "darkTheme" : "lightTheme",
+            );
+          }}
+          currentTheme={theme.name}
+        />
+      ) : null}
     </S.Toggle>
   );
 

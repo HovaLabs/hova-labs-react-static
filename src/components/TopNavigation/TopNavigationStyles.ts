@@ -42,7 +42,9 @@ export const Container = styled("div")`
 interface ToggleProps {
   readonly isMounted?: boolean;
 }
+// we're hard-coding the width to hold position until js loads, then fading in once js loads
 export const Toggle = styled("div")<ToggleProps>`
+  width: 78px;
   opacity: ${(p) => (p.isMounted ? "1" : "0")};
   transition: opacity 500ms;
   ${(p) =>
