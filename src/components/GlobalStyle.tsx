@@ -65,6 +65,7 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
   a {
+    color: ${(p) => p.theme.colors.primary};
     text-decoration: none;
   }
 
