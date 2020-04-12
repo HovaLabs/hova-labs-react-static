@@ -22,12 +22,14 @@ const Layout: React.FC = ({ children }) => {
     <>
       <GlobalStyle initialized={initialized} />
       <Helmet>
+        {/* FONTS */}
         <link
           href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
           rel="stylesheet"
           type="text/css"
         />
-        <link rel="shortcut icon" href={favicon} />
+        {/* FAVICON */}
+        <link rel="icon" href={favicon} type="image/gif" />
         {/* META */}
         <title>HOVA LABS</title>
         <meta name="description" content="Professional Prototypers" />
