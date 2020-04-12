@@ -65,6 +65,7 @@ export const routes = {
   HOVALIN_FAQ: "/hovalin/faq",
   HYDRAPRINT: "/hydraprint",
   PROJECTS: "/projects",
+  PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
   STORE: "/store",
   SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
   THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
