@@ -1,0 +1,35 @@
+:root {
+  --hova-labs-on-background: hsla(220, 7%, 8%, 1);
+  --hova-labs-on-surface-1: hsla(220, 7%, 8%, 1);
+  --hova-labs-on-surface-2: hsla(220, 7%, 8%, 1);
+  --hova-labs-on-primary: hsla(0, 0%, 100%, 1);
+  --hova-labs-on-secondary: hsla(0, 0%, 95%, 1);
+  --hova-labs-background: hsla(0, 0%, 100%, 1);
+  --hova-labs-surface-1: hsla(0, 0%, 90%, 1);
+  --hova-labs-surface-2: hsla(0, 0%, 80%, 1);
+  --hova-labs-primary: hsla(206, 31%, 45%,1);
+  --hova-labs-secondary: hsla(206, 31%, 25%,1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hova-labs-on-background: hsla(0, 0%, 100%, 1);
+  --hova-labs-on-surface-1: hsla(0, 0%, 100%, 1);
+  --hova-labs-on-surface-2: hsla(0, 0%, 100%, 1);
+  --hova-labs-on-primary: hsla(0, 0%, 95%, 1);
+  --hova-labs-on-secondary: hsla(0, 0%, 0%, 1);
+  --hova-labs-background: 	hsl(0, 0%, 7%);
+  --hova-labs-surface-1: hsl(0, 0%, 12%);
+  --hova-labs-surface-2: hsl(0, 0%, 18%);
+  --hova-labs-primary: hsla(206, 31%, 45%,1);
+  --hova-labs-secondary: hsla(206, 31%, 25%,1);
+  }
+}
+
+html {
+  background: var(--hova-labs-background);
+}
+
+body { 
+  margin: 0;
+}

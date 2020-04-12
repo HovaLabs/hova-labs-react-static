@@ -9,23 +9,30 @@ import {
   ThemeContext,
 } from "@hova-labs/bento-box-web";
 import { TopNavigationModal } from "./TopNavigationModal";
-
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
 
 export const TopNavigation: React.FC<{}> = () => {
   const [navModalIsOpen, setNavModalIsOpen] = React.useState<boolean>(false);
   const { theme, setThemeByThemeKey } = React.useContext(ThemeContext);
+  const [isMounted, setIsMounted] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
   const themeToggle = (
-    <S.Toggle>
-      <ThemeToggle
-        onPress={() => {
-          setThemeByThemeKey(
-            theme.name === "lightTheme" ? "darkTheme" : "lightTheme",
-          );
-        }}
-        currentTheme={theme.name}
-      />
+    <S.Toggle isMounted={isMounted}>
+      {isMounted ? (
+        <ThemeToggle
+          onPress={() => {
+            setThemeByThemeKey(
+              theme.name === "lightTheme" ? "darkTheme" : "lightTheme",
+            );
+          }}
+          currentTheme={theme.name}
+        />
+      ) : null}
     </S.Toggle>
   );
 
@@ -43,38 +50,32 @@ export const TopNavigation: React.FC<{}> = () => {
           </S.Logo>
         </Link>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <S.Links>
-            {["s", "m"].includes(theme.breakpoint) ? (
-              <>
-                {themeToggle}
-                <Icon
-                  IconComponent={GiHamburgerMenu}
-                  size={42}
-                  onPress={() => {
-                    setNavModalIsOpen(true);
-                  }}
-                />
-              </>
-            ) : (
-              <>
-                <Link aria-label="projects" to={routes.PROJECTS}>
-                  <Text typography="bodyText">Projects</Text>
-                </Link>
-                <Link aria-label="blog" to={routes.BLOG}>
-                  <Text typography="bodyText">Blog</Text>
-                </Link>
-                <Link aria-label="store" to={routes.STORE}>
-                  <Text typography="bodyText">Store</Text>
-                </Link>
-                <Link aria-label="contact" to={routes.CONTACT}>
-                  <Text typography="bodyText">Contact</Text>
-                </Link>
-                {themeToggle}
-              </>
-            )}
-          </S.Links>
+          <S.MobileLinks>
+            {themeToggle}
+            <Icon
+              IconComponent={GiHamburgerMenu}
+              size={42}
+              onPress={() => {
+                setNavModalIsOpen(true);
+              }}
+            />
+          </S.MobileLinks>
+          <S.DesktopLinks>
+            <Link aria-label="projects" to={routes.PROJECTS}>
+              <Text typography="bodyText">Projects</Text>
+            </Link>
+            <Link aria-label="blog" to={routes.BLOG}>
+              <Text typography="bodyText">Blog</Text>
+            </Link>
+            <Link aria-label="store" to={routes.STORE}>
+              <Text typography="bodyText">Store</Text>
+            </Link>
+            <Link aria-label="contact" to={routes.CONTACT}>
+              <Text typography="bodyText">Contact</Text>
+            </Link>
+            {themeToggle}
+          </S.DesktopLinks>
         </div>
-        {/* <S.MenuButton /> */}
       </S.Container>
     </>
   );

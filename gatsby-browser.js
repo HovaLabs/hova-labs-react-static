@@ -4,11 +4,10 @@
  *
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
-
 import React from "react";
 import { DesignSystemProvider } from "@hova-labs/bento-box-web";
-import { GlobalStyle } from "./src/components";
 import { themes } from './src/theme';
+import "./src/styles/global.css"
 
 const StateKicker = ({ children }) => {
   const [initialized, setInitialized] = React.useState(false);
@@ -24,11 +23,10 @@ const StateKicker = ({ children }) => {
 }
 export const wrapRootElement = ({ element }) => {
   return (
-    <StateKicker>
+    // <StateKicker>
       <DesignSystemProvider themes={themes}>
-        <GlobalStyle />
         {element}
       </DesignSystemProvider>
-    </StateKicker>
+    // </StateKicker>
   );
 };
