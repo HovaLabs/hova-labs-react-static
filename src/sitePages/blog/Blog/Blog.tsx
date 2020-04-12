@@ -5,11 +5,7 @@ import BlogListItem from "../../../components/Blog/BlogListItem/BlogListItem";
 import { BlogTag } from "../../../components/Blog/BlogTag/BlogTag";
 import * as S from "./blogStyles";
 import { blogManifest } from "./blogManifest";
-import {
-  ContainerWithBorder,
-  ContainerFlex,
-  ContainerContent,
-} from "../../../components/Container";
+import { ContainerWithBorder } from "../../../components/Container";
 import Layout from "../../../components/layout";
 
 export const Blog: React.FC<{}> = () => {
@@ -50,13 +46,11 @@ export const Blog: React.FC<{}> = () => {
   return (
     <Layout>
       <ContainerWithBorder>
-        <ContainerFlex>
-          <ContainerContent flexL="100">
-            <Text typography="headingLarge">Blog</Text>
-            <S.BlogTagList>{blogTagList}</S.BlogTagList>
-          </ContainerContent>
-        </ContainerFlex>
-        <ContainerFlex>{BlogList}</ContainerFlex>
+        <Text typography="headingLarge">Blog</Text>
+
+        <S.BlogTagList>{blogTagList}</S.BlogTagList>
+        <br />
+        {BlogList}
       </ContainerWithBorder>
     </Layout>
   );

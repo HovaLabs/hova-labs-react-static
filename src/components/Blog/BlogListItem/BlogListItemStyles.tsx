@@ -67,6 +67,11 @@ export const OuterContainer = styled("div")`
       xl: "flex",
     })}
   ${(p) =>
+    p.theme.responsiveStyle("margin-bottom", {
+      s: `${p.theme.backgroundGutters.s}px`,
+      l: `${p.theme.backgroundGutters.l}px`,
+    })}
+  ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
