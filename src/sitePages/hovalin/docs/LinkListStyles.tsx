@@ -5,7 +5,15 @@ export const Link = styled("div")`
     p.theme.responsiveStyle("flex", {
       s: "1 1 50%",
       m: "1 1 50%",
-      l: "1 1 20%",
+      l: "1 1 50%",
+      xl: "1 1 20%",
+    })}
+  ${(p) =>
+    p.theme.responsiveStyle("max-width", {
+      s: "50%",
+      m: "50%",
+      l: "50%",
+      xl: "20%",
     })}
 `;
 
@@ -15,11 +23,14 @@ export const LinksContainer = styled("div")`
     p.theme.responsiveStyle("flex-wrap", {
       s: "wrap",
       m: "wrap",
-      l: "nowrap",
+      l: "wrap",
+      xl: "nowrap",
     })}
 `;
 
 export const LinkSurface = styled("div")`
+  background-color: ${(p) => p.theme.colors.surface2};
   color: ${(p) => p.theme.colors.onSurface1};
+  margin: ${(p) => `${p.theme.spacings.l}px`};
   padding: ${(p) => `${p.theme.spacings.l}px`};
 `;
