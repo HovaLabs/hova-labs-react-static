@@ -1,6 +1,7 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import hovalin from "./hovalinv4.png";
+import { Button } from "../../components/Button/Button";
 import {
   ContainerWithBorder,
   ContainerContent,
@@ -9,7 +10,6 @@ import {
 import { InputsSelect } from "../../components/Inputs/InputsSelect/InputsSelect";
 import * as S from "./StoreStyles";
 import Layout from "../../components/layout";
-import { Container } from "../../components/TopNavigation/TopNavigationStyles";
 
 export const Store: React.FC<{}> = () => {
   return (
@@ -55,12 +55,7 @@ export const Store: React.FC<{}> = () => {
               />
               <input type="hidden" name="on0" value="Color" />
               <InputsSelect />
-              <S.Button
-                type="submit"
-                name="submit"
-                value="Purchase"
-                title="Purchase"
-              />
+              <Button type="submit" title="Purchase" />
             </form>
           </div>
         </S.StoreArea>
