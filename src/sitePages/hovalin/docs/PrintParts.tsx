@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
+import ReactGA from "react-ga";
 import threeDPrinter from "./Photos/threeDPrinter.svg";
 import hovalinNeck from "./Photos/hovalin-neck.svg";
 import hovalinBody from "./Photos/hovalin-body.svg";
@@ -12,7 +13,7 @@ import {
 } from "../../../components/Container";
 
 export const PrintParts: React.FC<{}> = () => (
-  <>
+  <div id="print-parts">
     <ContainerWithBorder>
       <ContainerFlex>
         <ContainerContent flexXL="50">
@@ -78,7 +79,12 @@ export const PrintParts: React.FC<{}> = () => (
           <Button
             href={routes.HOVALIN_DOCS}
             title="DOWNLOAD"
-            onPress={() => {}}
+            onPress={() => {
+              ReactGA.event({
+                category: "Hovalin_Docs",
+                action: "Download_v4_Neck_File",
+              });
+            }}
           />
         </ContainerContent>
         <ContainerContent flexXL="50">
@@ -98,7 +104,12 @@ export const PrintParts: React.FC<{}> = () => (
           <Button
             href={routes.HOVALIN_DOCS}
             title="DOWNLOAD"
-            onPress={() => {}}
+            onPress={() => {
+              ReactGA.event({
+                category: "Hovalin_Docs",
+                action: "Download_v4_Body_File",
+              });
+            }}
           />
         </ContainerContent>
         <ContainerContent flexXL="50">
@@ -106,5 +117,5 @@ export const PrintParts: React.FC<{}> = () => (
         </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
-  </>
+  </div>
 );
