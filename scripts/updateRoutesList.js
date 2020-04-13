@@ -60,7 +60,8 @@ const routeObject = {
   LIST_FISHMAN_PICKUP: "http://www.amazon.com/gp/product/B0002IHFGW/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B0002IHFGW&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=TBDJ2G5KRNCKK5ZB",
   LIST_SOCKET_WRENCH_SET: "http://www.amazon.com/gp/product/B00004TBL1/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00004TBL1&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=I5FGWGZEFN5MSXEJ",
   LIST_BLUE_TAPE: "http://www.amazon.com/gp/product/B00LAJNM7S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00LAJNM7S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=KASDE2Q4HYHUFPTG",
-  LIST_PRINT_SCRAPER: "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK"
+  LIST_PRINT_SCRAPER: "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
+  PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
 };
 
 routesArray.forEach(r => {

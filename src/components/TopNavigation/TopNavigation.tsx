@@ -49,7 +49,7 @@ export const TopNavigation: React.FC<{}> = () => {
             <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
           </S.Logo>
         </Link>
-        <div style={{ display: "flex", alignItems: "center" }}>
+        <S.LinkContainer>
           <S.MobileLinks>
             {themeToggle}
             <Icon
@@ -75,7 +75,7 @@ export const TopNavigation: React.FC<{}> = () => {
             </Link>
             {themeToggle}
           </S.DesktopLinks>
-        </div>
+        </S.LinkContainer>
       </S.Container>
     </>
   );

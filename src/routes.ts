@@ -45,6 +45,7 @@ export const routes = {
     "http://www.amazon.com/gp/product/B00LAJNM7S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00LAJNM7S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=KASDE2Q4HYHUFPTG",
   LIST_PRINT_SCRAPER:
     "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
+  PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
   BLOG: "/blog",
   BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
     "/blog/autodesk-instagram-and-the-fffiddle",
@@ -65,7 +66,6 @@ export const routes = {
   HOVALIN_FAQ: "/hovalin/faq",
   HYDRAPRINT: "/hydraprint",
   PROJECTS: "/projects",
-  PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
   STORE: "/store",
   SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
   THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
