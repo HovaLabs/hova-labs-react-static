@@ -9,7 +9,7 @@ export const ContainerFlex = styled("div")`
   flex-wrap: wrap;
   ${(p) =>
     p.theme.responsiveStyle("padding", {
-      s: `${p.theme.spacings.l}px`,
+      s: `${p.theme.spacings.s}px`,
       l: `${p.theme.spacings.l}px`,
     })}
 `;
