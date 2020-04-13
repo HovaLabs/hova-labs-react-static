@@ -1,5 +1,6 @@
 import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
+import ReactGA from "react-ga";
 import hovalin from "./hovalinv4.png";
 import { Button } from "../../components/Button/Button";
 import {
@@ -55,7 +56,16 @@ export const Store: React.FC<{}> = () => {
               />
               <input type="hidden" name="on0" value="Color" />
               <InputsSelect />
-              <Button type="submit" title="Purchase" />
+              <Button
+                onPress={() => {
+                  ReactGA.event({
+                    category: "Store",
+                    action: "Purchase",
+                  });
+                }}
+                type="submit"
+                title="Purchase"
+              />
             </form>
           </div>
         </S.StoreArea>
