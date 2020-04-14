@@ -33,3 +33,40 @@ html {
 body { 
   margin: 0;
 }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  transition: color 300ms;
+  transition: background-color 500ms;
+}
+
+body{
+  display: block;
+  font-family: Oxygen, sans-serif;
+  color: --hova-labs-on-surface-1;
+  font-weight: normal;
+  font-size: 16px;
+
+  @media screen and (min-width: 321px) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 769px) {
+    font-size: 24px;
+  }
+  line-height: 150.5%;
+}
+
+a {
+  color: --hova-labs-primary;
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+ul {
+  padding-inline-start: 20px;
+}
