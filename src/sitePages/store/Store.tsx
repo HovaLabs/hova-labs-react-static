@@ -17,7 +17,17 @@ export const Store: React.FC<{}> = () => {
     <Layout>
       <ContainerWithBorder lineVariant="store">
         <S.StoreArea>
-          <img src={hovalin} alt="hovalin" style={{ height: "70vh" }} />
+          <img
+            src={hovalin}
+            alt="hovalin"
+            style={{
+              display: "block",
+              maxWidth: "50vw",
+              maxHeight: "70vh",
+              width: "auto",
+              height: "auto",
+            }}
+          />
           <div>
             <Text typography="headingLarge">The Hovalin</Text>
 
