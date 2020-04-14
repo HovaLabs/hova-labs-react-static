@@ -1,7 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
-import { TopNavigation } from "./TopNavigation";
 import { NavigationFooter } from "./Navigation/NavigationFooter";
 import favicon from "../media/Meta/favicon.png";
 import metaPic from "../media/Meta/metaPic.jpg";
@@ -43,7 +42,6 @@ const Layout: React.FC = ({ children }) => {
         <meta name="twitter:image:height" content="630" />
         <meta name="twitter:image" content={metaPic} />
       </Helmet>
-      <TopNavigation />
       {children}
       <NavigationFooter />
     </>
