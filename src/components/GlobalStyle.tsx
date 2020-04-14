@@ -1,10 +1,11 @@
+import React from "react";
 import { createGlobalStyle } from "styled-components";
 
 interface GlobalStyleProps {
   readonly initialized?: boolean;
 }
 
-export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
+const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
   :root {
     ${(p) =>
       p.initialized
@@ -80,3 +81,13 @@ export const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   }
 
 `;
+
+export const GlobalStyle: React.FC = () => {
+  const [initialized, setInitialized] = React.useState<boolean>(false);
+
+  React.useEffect(() => {
+    setInitialized(true);
+  }, []);
+
+  return <GlobalStyleInstance initialized={initialized} />;
+};

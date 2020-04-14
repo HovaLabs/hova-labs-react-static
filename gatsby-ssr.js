@@ -5,15 +5,12 @@
  * See: https://www.gatsbyjs.org/docs/ssr-apis/
  */
 import React from "react";
-import { DesignSystemProvider } from "@hova-labs/bento-box-web";
-import { GlobalStyle } from "./src/components";
-import { themes } from "./src/theme";
+import { Renderer } from './src/components/Renderer';
 
 export const wrapRootElement = ({ element }) => {
   return (
-    <DesignSystemProvider themes={themes}>
-      <GlobalStyle />
+    <Renderer>
       {element}
-    </DesignSystemProvider>
+    </Renderer>
   );
 };

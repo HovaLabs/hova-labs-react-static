@@ -22,7 +22,7 @@ export const TopNavigation: React.FC<{}> = () => {
   }, []);
 
   const themeToggle = (
-    <S.Toggle isMounted={isMounted}>
+    <S.Toggle isMounted={isMounted} className="top-nav-toggle">
       {isMounted ? (
         <ThemeToggle
           onPress={() => {
@@ -42,15 +42,15 @@ export const TopNavigation: React.FC<{}> = () => {
         navModalIsOpen={navModalIsOpen}
         setNavModalIsOpen={setNavModalIsOpen}
       />
-      <S.TopNavPadding />
-      <S.Container>
+      <S.TopNavPadding className="top-nav-padding" />
+      <S.Container className="top-nav-container">
         <Link aria-label="home page" to={routes.HOMEPAGE}>
-          <S.Logo>
+          <S.Logo className="top-nav-logo">
             <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
           </S.Logo>
         </Link>
-        <div style={{ display: "flex", alignItems: "center" }}>
-          <S.MobileLinks>
+        <S.LinkContainer className="top-nav-link-container">
+          <S.MobileLinks className="top-nav-mobile-links">
             {themeToggle}
             <Icon
               IconComponent={GiHamburgerMenu}
@@ -60,7 +60,7 @@ export const TopNavigation: React.FC<{}> = () => {
               }}
             />
           </S.MobileLinks>
-          <S.DesktopLinks>
+          <S.DesktopLinks className="top-nav-desktop-links">
             <Link aria-label="projects" to={routes.PROJECTS}>
               <Text typography="bodyText">Projects</Text>
             </Link>
@@ -75,7 +75,7 @@ export const TopNavigation: React.FC<{}> = () => {
             </Link>
             {themeToggle}
           </S.DesktopLinks>
-        </div>
+        </S.LinkContainer>
       </S.Container>
     </>
   );
