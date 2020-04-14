@@ -2,8 +2,8 @@ import React from "react";
 import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
 import threeDPrinter from "./Photos/threeDPrinter.svg";
-import hovalinNeck from "./Photos/hovalin-neck.svg";
-import hovalinBody from "./Photos/hovalin-body.svg";
+import { HovalinNeck } from "./Photos/hovalin-neck";
+import { HovalinBody } from "./Photos/hovalin-body";
 import { Button } from "../../../components";
 import { routes } from "../../../routes";
 import {
@@ -50,7 +50,6 @@ export const PrintParts: React.FC<{}> = () => (
         </ContainerContent>
       </ContainerFlex>
       <ContainerContent flexXL="100">
-        {" "}
         <div>* extra credit *</div>
         <div>
           Sand the blue tape with 100 grit sandpaper to help prevent warping
@@ -88,7 +87,7 @@ export const PrintParts: React.FC<{}> = () => (
           />
         </ContainerContent>
         <ContainerContent flexXL="50">
-          <img width="100%" src={hovalinNeck} alt="hovalin neck" />
+          <HovalinNeck />
         </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
@@ -113,7 +112,7 @@ export const PrintParts: React.FC<{}> = () => (
           />
         </ContainerContent>
         <ContainerContent flexXL="50">
-          <img width="100%" src={hovalinBody} alt="hovalin body" />
+          <HovalinBody />
         </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
