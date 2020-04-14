@@ -8,36 +8,38 @@ import { blogManifest } from "./blogManifest";
 import { ContainerWithBorder } from "../../../components/Container";
 import Layout from "../../../components/layout";
 
+const getBlogList = (): {
+  hero: any;
+  datePublished: string;
+  tags: string[];
+  title: string;
+  subtitle: string;
+  url: string;
+}[] => {
+  const filteredManifestArray = blogManifest.filter((post) => {
+    return (
+      typeof window === "undefined" ||
+      window.location.hash === "" ||
+      window.location.hash === "#all" ||
+      post.tags.includes(window.location.hash.replace("#", ""))
+    );
+  });
+  return filteredManifestArray;
+};
 export const Blog: React.FC<{}> = () => {
-  if (typeof window === "undefined") {
-    return null;
-  }
-
-  const blogTags = blogManifest.reduce((acc, b) => {
-    b.tags.forEach((tag) => {
-      if (!acc.includes(tag)) {
-        acc.push(tag);
-      }
-    });
-    return acc;
-  }, []);
-
-  const BlogList = React.useMemo(() => {
-    if (typeof window === "undefined") {
-      return null;
-    }
-    return blogManifest
-      .filter(
-        (post) =>
-          window.location.hash === "" ||
-          post.tags.includes(window.location.hash.replace("#", "")),
-      )
-      .map((post) => {
-        return <BlogListItem key={post.datePublished} {...post} />;
+  const blogTags = blogManifest.reduce(
+    (acc, b) => {
+      b.tags.forEach((tag) => {
+        if (!acc.includes(tag)) {
+          acc.push(tag);
+        }
       });
-    // This is frustrating. linter isn't catching use of window.location.hash
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window]);
+      return acc;
+    },
+    ["all"],
+  );
+
+  const blogList = getBlogList();
 
   const blogTagList = blogTags.map((tag) => (
     <BlogTag key={tag} title={tag} onPress={() => {}} />
@@ -47,10 +49,11 @@ export const Blog: React.FC<{}> = () => {
     <Layout>
       <ContainerWithBorder>
         <Text typography="headingLarge">Blog</Text>
-
         <S.BlogTagList>{blogTagList}</S.BlogTagList>
         <br />
-        {BlogList}
+        {blogList.map((post) => (
+          <BlogListItem key={post.datePublished} {...post} />
+        ))}
       </ContainerWithBorder>
     </Layout>
   );
