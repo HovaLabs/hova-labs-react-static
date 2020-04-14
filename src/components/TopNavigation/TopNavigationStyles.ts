@@ -130,3 +130,8 @@ export const DesktopLinks = styled("div")`
       l: "inherit",
     })}
 `;
+
+export const LinkContainer = styled("div")`
+  display: flex;
+  align-items: center;
+`;

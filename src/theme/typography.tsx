@@ -5,7 +5,7 @@ interface TypographyProps {
   color: keyof Colors;
 }
 
-const fontFamily = "Oxygen, sans-seriff";
+const fontFamily = "Oxygen, sans-serif";
 
 export const typography: Typography = {
   headingLarge: css<TypographyProps>`

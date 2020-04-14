@@ -1,1 +1,1 @@
-export { NavigationFooter } from "./NavigationFooter";
+export * from "./NavigationFooter";
