@@ -16,19 +16,19 @@ export const Store: React.FC<{}> = () => {
   return (
     <Layout>
       <ContainerWithBorder lineVariant="store">
-        <S.StoreArea>
-          <img
-            src={hovalin}
-            alt="hovalin"
-            style={{
-              display: "block",
-              maxWidth: "50vw",
-              maxHeight: "70vh",
-              width: "auto",
-              height: "auto",
-            }}
-          />
-          <div>
+        <ContainerFlex>
+          <ContainerContent flexL="50">
+            <img
+              src={hovalin}
+              alt="hovalin"
+              style={{
+                maxWidth: "400px",
+                width: "100%",
+              }}
+            />
+          </ContainerContent>
+
+          <ContainerContent flexL="50">
             <Text typography="headingLarge">The Hovalin</Text>
 
             <S.TextCost>
@@ -77,8 +77,9 @@ export const Store: React.FC<{}> = () => {
                 title="Purchase"
               />
             </form>
-          </div>
-        </S.StoreArea>
+          </ContainerContent>
+        </ContainerFlex>
+
         <S.NoteArea>
           <ContainerFlex>
             <ContainerContent flexXL="100">
