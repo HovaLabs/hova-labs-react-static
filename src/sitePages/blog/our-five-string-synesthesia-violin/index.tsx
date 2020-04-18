@@ -44,7 +44,7 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
     <div>
       <Text>
         Just checking off the first box was quite an endeavor. We're nowhere
-        near done tweaking our design, but we wereso happy to have our first
+        near done tweaking our design, but we were so happy to have our first
         working prototype of what I call, the"Synesthesia Projector" Hovalin.
       </Text>
     </div>
@@ -73,16 +73,16 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
     <div>
       <Text>
         Below that pickup, (You can sort of see it through the F hole) we have a
-        cheapo piezopickup that will be used to drive the pitch and level
+        cheapo piezo pickup that will be used to drive the pitch and level
         detection.
       </Text>
     </div>
     <img src={violinPhoto2} alt="hovalin-pickup-alternate-angle" />
     <div>
       <Text>
-        In order tocharge the LED system, we added a usb-micro extension cable.
-        To mount it inplace, we covered a chopstick in hot glue and proceeded to
-        apply it liberally to the general area.
+        In order to charge the LED system, we added a usb-micro extension cable.
+        To mount it in place, we covered a chopstick in hot glue and proceeded
+        to apply it liberally to the general area.
       </Text>
     </div>
     <img src={violinPhoto3} alt="hovalin-hot-glue" />
@@ -90,8 +90,8 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
     <div>
       <Text>
         All signal processing is done by the Teensy3.6 and the Teensy Audio
-        board. The goal of the Teensy is to convert theinput microphone's pitch
-        into a specific color, and have the volume drivethe brightness.
+        board. The goal of the Teensy is to convert the input microphone's pitch
+        into a specific color, and have the volume drive the brightness.
       </Text>
     </div>
     <div>
@@ -100,29 +100,29 @@ const OurFiveStringSynesthesiaViolin: React.FC<{}> = () => (
     <ul>
       <li>
         <Text>
-          If I started to drive morethan ~40 neopixels, I would start to
-          experience ring modulation in my audioprocessing sketch.
+          If I started to drive more than ~40 neopixels, I would start to
+          experience ring modulation in my audio processing sketch.
         </Text>
       </li>
       <li>
         <Text>
-          The noise generated from driving neopixels could bepicked up by the
-          audio circuit. If it picked up enough noise from drivingthe LEDs, it
-          would eventually reach a never-ending noise/light/feedback loopwhere
-          the noise generated from the LEDs would create audio which would
-          makethe LEDs brighter, and so on.
+          The noise generated from driving neopixels could be picked up by the
+          audio circuit. If it picked up enough noise from driving the LEDs, it
+          would eventually reach a never-ending noise/light/feedback loop where
+          the noise generated from the LEDs would create audio which would make
+          the LEDs brighter, and so on.
         </Text>
       </li>
       <li>
         <Text>
-          The Teensy 3.2 (or perhaps my poor soldering)was more susceptible to
+          The Teensy 3.2 (or perhaps my poor soldering) was more susceptible to
           noise.
         </Text>
       </li>
     </ul>
     <div>
       <Text>
-        I'd love to improve the sketch, but for now,it's working just fine. My
+        I'd love to improve the sketch, but for now, it's working just fine. My
         guess is that having a dedicated brain for the neopixels will make
         things run a lot smoother.
       </Text>
