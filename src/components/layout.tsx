@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import ReactGA from "react-ga";
 import { NavigationFooter } from "./Navigation/NavigationFooter";
-import favicon from "../media/Meta/favicon.png";
 import metaPic from "../media/Meta/metaPic.jpg";
 
 const Layout: React.FC = ({ children }) => {
@@ -20,8 +19,6 @@ const Layout: React.FC = ({ children }) => {
           rel="stylesheet"
           type="text/css"
         />
-        {/* FAVICON */}
-        <link rel="icon" href={favicon} type="image/gif" />
         {/* META */}
         <title>HOVA LABS</title>
         <meta name="description" content="Professional Prototypers" />
