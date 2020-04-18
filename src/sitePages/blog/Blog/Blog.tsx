@@ -58,22 +58,3 @@ export const Blog: React.FC<{}> = () => {
     </Layout>
   );
 };
-
-export const NewOnTheBlog: React.FC<{}> = () => {
-  // Grabbing only the two latest
-  const BlogList = blogManifest.slice(0, 2).map((post) => {
-    return <BlogListItem key={post.datePublished} {...post} />;
-  });
-
-  return (
-    <ContainerWithBorder>
-      <S.NewOnTheBlogExtraPadding>
-        <div>
-          <Text typography="headingSmall">NEW ON THE BLOG</Text>
-        </div>
-        <br />
-        <S.OuterContainer>{BlogList}</S.OuterContainer>
-      </S.NewOnTheBlogExtraPadding>
-    </ContainerWithBorder>
-  );
-};
