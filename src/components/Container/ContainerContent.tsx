@@ -7,6 +7,7 @@ interface ContainerContentProps {
 }
 
 export const ContainerContent = styled("div")<ContainerContentProps>`
+  min-width: 0;
   ${(p) =>
     p.theme.responsiveStyle("flex-basis", {
       s: "100%",
