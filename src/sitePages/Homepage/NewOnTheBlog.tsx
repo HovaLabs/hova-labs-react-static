@@ -32,8 +32,6 @@ const Image = styled("div")<{ backgroundImage: string }>`
   ${(p) =>
     p.theme.responsiveStyle("height", {
       s: "150px",
-      m: "150px",
-      l: "150px",
       xl: "326px",
     })}
   width: 100%;
@@ -41,6 +39,20 @@ const Image = styled("div")<{ backgroundImage: string }>`
   background-position: center;
   background-size: cover;
   margin-bottom: ${(p) => `${p.theme.spacings.l}px`};
+`;
+
+const OuterContainer = styled("div")`
+  background: ${(p) => p.theme.colors.surface2};
+  ${(p) =>
+    p.theme.responsiveStyle("margin-top", {
+      s: `${p.theme.spacings.l}px`,
+      l: `${p.theme.spacings.xl}px`,
+    })}
+  ${(p) =>
+    p.theme.responsiveStyle("padding", {
+      s: `${p.theme.spacings.l}px ${p.theme.spacings.l}px 0`,
+      l: `${p.theme.spacings.xl}px 0 0 0`,
+    })}
 `;
 
 export const NewOnTheBlog: React.FC<{}> = () => (
@@ -53,20 +65,22 @@ export const NewOnTheBlog: React.FC<{}> = () => (
       </ContainerContent>
     </ContainerFlex>
     {blogManifest.slice(0, 2).map((blog) => (
-      <BlogPost>
-        <ContainerFlex>
-          <ContainerContent flexXL="40">
-            <Image backgroundImage={blog.hero} />
-          </ContainerContent>
-          <ContainerContent flexXL="60">
-            <Text typography="headingMedium">{blog.title}</Text>
-            <Date>{dateToString(blog.datePublished)}</Date>
-            <div>
-              <Button title="Read More" href={blog.url} onPress={() => {}} />
-            </div>
-          </ContainerContent>
-        </ContainerFlex>
-      </BlogPost>
+      <OuterContainer>
+        <BlogPost>
+          <ContainerFlex>
+            <ContainerContent flexXL="40">
+              <Image backgroundImage={blog.hero} />
+            </ContainerContent>
+            <ContainerContent flexXL="60">
+              <Text typography="headingMedium">{blog.title}</Text>
+              <Date>{dateToString(blog.datePublished)}</Date>
+              <div>
+                <Button title="Read More" href={blog.url} onPress={() => {}} />
+              </div>
+            </ContainerContent>
+          </ContainerFlex>
+        </BlogPost>
+      </OuterContainer>
     ))}
   </ContainerWithBorder>
 );

@@ -66,8 +66,20 @@ export const Store: React.FC<{}> = () => {
               />
               <input type="hidden" name="on0" value="Color" />
               <InputsSelect />
+              <input
+                type="submit"
+                value="submit"
+                style={{ visibility: "hidden" }}
+                id="paypal-submit"
+              />
               <Button
                 onPress={() => {
+                  // in order to submit the form we click a hidden submit button
+                  // This allows us to use our design-system's button for input type="submit"
+                  const paypalButton = document.getElementById("paypal-submit");
+                  if (paypalButton) {
+                    paypalButton.click();
+                  }
                   ReactGA.event({
                     category: "Store",
                     action: "Purchase",
