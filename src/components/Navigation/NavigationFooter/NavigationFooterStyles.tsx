@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 // MAILING LIST
 export const Input = styled("input")`
+  ${(p) => p.theme.typography.bodyText};
+  min-width: 0;
   background: ${(p) => p.theme.colors.surface1};
   border: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
   color: ${(p) => p.theme.colors.onSurface1};
@@ -28,7 +30,6 @@ export const Input = styled("input")`
       xl: `${p.theme.spacings.l}px`,
     })}
   padding: ${(p) => `${p.theme.spacings.m}px`};
-  ${(p) => p.theme.typography.bodyText};
   width: 100%;
 `;
 
