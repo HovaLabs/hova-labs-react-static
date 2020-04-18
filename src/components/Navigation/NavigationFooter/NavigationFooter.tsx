@@ -67,7 +67,7 @@ export const NavigationFooter: React.FC<{}> = () => {
     <>
       <ContainerWithBorder>
         <ContainerFlex>
-          <ContainerContent flexXL="30" flexXL="100">
+          <ContainerContent flexXL="100">
             <div>
               <TitlePrimary
                 subtitle="updates and news"
@@ -75,7 +75,7 @@ export const NavigationFooter: React.FC<{}> = () => {
               />
             </div>
           </ContainerContent>
-          <ContainerContent flexXL="70" flexXL="100">
+          <ContainerContent flexXL="100">
             <MailchimpSubscribe
               url={url}
               render={({ subscribe, status, message }) => (
