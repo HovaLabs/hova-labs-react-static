@@ -60,7 +60,7 @@
   "scripts": {
     "build": "yarn run update-scripts && gatsby build",
     "clean": "gatsby clean",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -H 0.0.0.0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "launch": "yarn build && surge ./public hova-labs.surge.sh",
     "lint": "eslint . --ignore-path .gitignore --ext .ts,.tsx,.js",
