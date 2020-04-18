@@ -16,35 +16,27 @@ import { BlogContainer } from "../../../components/Blog/BlogContainer";
 const HovalinAtNasa: React.FC<{}> = () => (
   <BlogContainer blogManifest={{ ...blogManifest, hero }}>
     <div>
-      <Text>We had the opportunity to bring our project to</Text>
+      We had the opportunity to bring our project to
       <a href="https://www.nasa.gov/centers/ames/home/">
-        <Text> NASA's Ames Research Center </Text>
+        {" NASA's Ames Research Center "}
       </a>
-      <Text>this week! I met them at their booth while performing at</Text>
-      <a href="http://steamcarnival.com/">
-        <Text> STEAM Carnival SF </Text>
-      </a>
-      <Text>
-        a few weeks back, and we were beyond excited to be invited to their
-        research center. Big thanks to everyone there, and especially to our
-        awesome new buddy Luke.
-      </Text>
+      {/* eslint-disable */}
+      this week! I met them at their booth while performing at
+      <a href="http://steamcarnival.com/">{" STEAM Carnival SF "}</a>
+      a few weeks back, and we were beyond excited to be invited to their
+      research center. Big thanks to everyone there, and especially to our
+      awesome new buddy Luke.
+      {/* eslint-enable */}
     </div>
     <div>
-      <Text>
-        While there we got to tour the campus, learn about the projects they
-        have going on, and show them everything about the Hovalin. This is
-        totally going to go in our family Holiday card!
-      </Text>
+      While there we got to tour the campus, learn about the projects they have
+      going on, and show them everything about the Hovalin. This is totally
+      going to go in our family Holiday card!
     </div>
+    <div>Looking forward to going back soon! ; )</div>
     <div>
-      <Text>Looking forward to going back soon! ; )</Text>
-    </div>
-    <div>
-      <Text>
-        PS: It's been amazing getting so much support for our project. All the
-        thank-you's and high fives to you over the internet for reading this!
-      </Text>
+      PS: It's been amazing getting so much support for our project. All the
+      thank-you's and high fives to you over the internet for reading this!
     </div>
     <img src={hovalinWithNasaLogo} alt="The Hovalin with Nasa Logo" />
     <img src={kaitWithNasaWorkers} alt="Kaitln with NASA workers" />

@@ -4,6 +4,13 @@ export const BlogStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  > div {
+    ${(p) =>
+      p.theme.responsiveStyle("margin-bottom", {
+        s: `${p.theme.spacings.l}px`,
+        l: `${p.theme.spacings.xl}px`,
+      })}
+  }
   iframe,
   img {
     align-self: center;
