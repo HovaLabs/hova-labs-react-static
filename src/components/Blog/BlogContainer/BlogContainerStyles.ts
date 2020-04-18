@@ -35,18 +35,26 @@ export const HeroImage = styled("div")<{ backgroundImage: string }>`
 export const AuthorImage = styled.img`
   ${(p) =>
     p.theme.responsiveStyle("align-self", {
-      s: "flex-start",
-      l: "center",
+      s: "center",
+      l: "flex-end",
+    })}
+  position: relative;
+  ${(p) =>
+    p.theme.responsiveStyle("bottom", {
+      l: "-48px",
+      s: "0",
     })}
   max-width: 200px;
 `;
 
 export const AuthorImageContainer = styled.div`
   display: flex;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
   ${(p) =>
     p.theme.responsiveStyle("justify-content", {
-      m: "flex-start",
+      s: "flex-start",
       l: "center",
     })}
 `;

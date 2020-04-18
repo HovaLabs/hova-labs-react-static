@@ -11,23 +11,25 @@ import {
 } from "../../components/Container";
 
 const HovaCentered = styled("div")`
-  flex: 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
   display: flex;
-  justify-content: center;
+  align-items: flex-end;
 `;
 
 const TheHovas = styled("img").attrs({
   src: theHovas,
 })`
-  align-self: flex-end;
   ${(p) =>
     p.theme.responsiveStyle("bottom", {
-      s: `-${p.theme.spacings.l}px`,
-      l: `-${p.theme.spacings.xl}px`,
+      s: "-20px",
+      l: "-48px",
     })}
   min-width: 250px;
   max-width: 350px;
   position: relative;
+
   width: 100%;
 `;
 
