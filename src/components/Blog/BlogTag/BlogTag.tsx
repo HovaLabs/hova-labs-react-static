@@ -8,7 +8,8 @@ interface TextProps {
 }
 const Text = styled("div")<TextProps>`
   ${(p) => p.theme.typography.bodyText};
-  color: ${(p) => p.theme.colors[p.color]};
+  ${(p) => p.theme.themedColor("color", p.color)}
+  transition: color 500ms;
 `;
 export interface BlogTag {
   onPress: () => void;
@@ -29,7 +30,13 @@ export const BlogTag: React.FC<BlogTag> = ({ onPress, title }) => {
       : "onBackground";
 
   if (!mounted) {
-    return null;
+    return (
+      <Link to={`${routes.BLOG}#${title}`}>
+        <Text color="primary" onClick={onPress}>
+          {`\u00A0#${title}\u00A0`}
+        </Text>
+      </Link>
+    );
   }
 
   return (

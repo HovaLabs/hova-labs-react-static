@@ -1,38 +1,17 @@
-:root {
-  --hova-labs-on-background: hsla(220, 7%, 8%, 1);
-  --hova-labs-on-surface-1: hsla(220, 7%, 8%, 1);
-  --hova-labs-on-surface-2: hsla(220, 7%, 8%, 1);
-  --hova-labs-on-primary: hsla(0, 0%, 100%, 1);
-  --hova-labs-on-secondary: hsla(0, 0%, 95%, 1);
-  --hova-labs-background: hsla(0, 0%, 100%, 1);
-  --hova-labs-surface-1: hsla(0, 0%, 90%, 1);
-  --hova-labs-surface-2: hsla(0, 0%, 80%, 1);
-  --hova-labs-primary: hsla(206, 31%, 45%,1);
-  --hova-labs-secondary: hsla(206, 31%, 25%,1);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --hova-labs-on-background: hsla(0, 0%, 100%, 1);
-  --hova-labs-on-surface-1: hsla(0, 0%, 100%, 1);
-  --hova-labs-on-surface-2: hsla(0, 0%, 100%, 1);
-  --hova-labs-on-primary: hsla(0, 0%, 95%, 1);
-  --hova-labs-on-secondary: hsla(0, 0%, 0%, 1);
-  --hova-labs-background: 	hsl(0, 0%, 7%);
-  --hova-labs-surface-1: hsl(0, 0%, 12%);
-  --hova-labs-surface-2: hsl(0, 0%, 18%);
-  --hova-labs-primary: hsla(206, 31%, 45%,1);
-  --hova-labs-secondary: hsla(206, 31%, 25%,1);
-  }
-}
-
-html {
-  background: var(--hova-labs-background);
-}
-
 body { 
   margin: 0;
 }
+
+html {
+  background: hsla(0, 0%, 100%, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    background: hsl(0, 0%, 7%);
+  }
+}
+
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -45,12 +24,18 @@ body {
 body{
   display: block;
   font-family: Oxygen, sans-serif;
-  color: --hova-labs-on-surface-1;
+  color: hsl(0, 0%, 7%);
   font-weight: normal;
   font-size: 16px;
 
   line-height: 150.5%;
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    color: hsla(0, 0%, 100%, 1);
+  }
+}
+
 @media screen and (min-width: 321px) {
   body {
     font-size: 18px;
@@ -64,8 +49,13 @@ body{
 
 
 a {
-  color: var(--hova-labs-primary);
+  color: hsl(0, 0%, 7%);
   text-decoration: none;
+}
+@media (prefers-color-scheme: dark) {
+  a {
+    color: hsla(0, 0%, 100%, 1);
+  }
 }
 
 a:visited {
@@ -101,14 +91,25 @@ ul {
   height: 64px;
   justify-content: space-between;
   align-items: center;
-  background: var(--hova-labs-background);
+  background: hsla(0, 0%, 100%, 1);
   z-index: 1000;
   margin-left: 11px;
   margin-right: 11px;
 }
-.top-nav-container > a {
-  color: var(--hova-labs-on-background);
+.top-nav-container > * {
+  color: hsl(0, 0%, 7%);
+  fill: hsl(0, 0%, 7%);
 }
+@media (prefers-color-scheme: dark) {
+  .top-nav-container {
+    background: hsl(0, 0%, 7%);
+  }
+  .top-nav-container > * {
+    color: hsla(0, 0%, 100%, 1);
+    fill: hsla(0, 0%, 100%, 1);
+    }  
+}
+
 @media screen and (min-width: 769px) {
   .top-nav-container {
     margin-left: 0;

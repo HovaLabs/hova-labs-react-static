@@ -6,16 +6,16 @@ interface CircleDivProps {
 }
 export const CircleDiv = styled("div")<CircleDivProps>`
   position: absolute;
-  width: ${p => (p.isOpen ? p.radius * 2 : 0)}px;
-  height: ${p => (p.isOpen ? p.radius * 2 : 0)}px;
-  top: ${p => (p.isOpen ? -p.radius + 50 : 50)}px;
-  right: ${p => (p.isOpen ? -p.radius + 50 : 50)}px;
+  ${(p) => p.theme.themedColor("background", "background")}
+  width: ${(p) => (p.isOpen ? p.radius * 2 : 0)}px;
+  height: ${(p) => (p.isOpen ? p.radius * 2 : 0)}px;
+  top: ${(p) => (p.isOpen ? -p.radius + 50 : 50)}px;
+  right: ${(p) => (p.isOpen ? -p.radius + 50 : 50)}px;
   border-radius: 50%;
   pointer-events: none;
   transition: all 500ms;
-  ${p => (p.isOpen ? "" : "transition-delay: 250ms;")}
-  background: ${p => p.theme.colors.background};
-  opacity: ${p => (p.isOpen ? 1 : 0)};
+  ${(p) => (p.isOpen ? "" : "transition-delay: 250ms;")}
+  opacity: ${(p) => (p.isOpen ? 1 : 0)};
 `;
 
 export const OuterContainer = styled("div")`

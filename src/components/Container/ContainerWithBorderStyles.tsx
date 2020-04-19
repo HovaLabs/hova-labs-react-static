@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 export const OuterContainer = styled("div")`
   position: relative;
-  background-color: ${(p) => p.theme.colors.surface1};
+  ${(p) => p.theme.themedColor("background-color", "surface1")}
   ${(p) =>
     p.theme.responsiveStyle("margin", {
       s: `${p.theme.backgroundGutters.s}px`,
@@ -19,7 +19,7 @@ interface LineProps {
   readonly width: any;
 }
 export const Line = styled("div")<LineProps>`
-  background-color: ${(p) => p.theme.colors.primary};
+  ${(p) => p.theme.themedColor("background", "primary")}
   opacity: 0.2;
   ${(p) =>
     p.theme.responsiveStyle("height", {
@@ -57,12 +57,7 @@ interface InnerContainerProps {
 }
 export const InnerContainer = styled("div")<InnerContainerProps>`
   z-index: 1;
-  ${(p) =>
-    p.hasBackgroundImage
-      ? null
-      : css`
-          background-color: ${p.theme.colors.surface1};
-        `}
+  ${(p) => p.theme.themedColor("background-color", "surface1")}
   ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.backgroundGutters.s}px`,
