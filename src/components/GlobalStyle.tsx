@@ -1,56 +1,13 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, useTheme, ThemeProvider } from "styled-components";
 
 interface GlobalStyleProps {
   readonly initialized?: boolean;
 }
 
 const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
-  :root {
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-on-background: ${p.theme.colors.onBackgroundRaw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-on-surface-1: ${p.theme.colors.onSurface1Raw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-on-surface-2: ${p.theme.colors.onSurface2Raw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-on-primary: ${p.theme.colors.onPrimaryRaw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-on-secondary: ${p.theme.colors.onSecondaryRaw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-background: ${p.theme.colors.backgroundRaw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-surface-1: ${p.theme.colors.surface1Raw};`
-        : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-surface-2: ${p.theme.colors.surface2Raw};`
-        : ""}
-    ${(p) =>
-      p.initialized ? `--hova-labs-primary: ${p.theme.colors.primaryRaw};` : ""}
-    ${(p) =>
-      p.initialized
-        ? `--hova-labs-secondary: ${p.theme.colors.secondaryRaw};`
-        : ""}
-  }
-
   html {
-    background: ${(p) => {
-      return p.theme.colors.background;
-    }};
+    ${(p) => p.theme.themedColor("background", "background")}
   }
 
   * {
@@ -66,9 +23,7 @@ const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
   }
 
   a {
-    color: ${(p) => {
-      return p.theme.colors.primary;
-    }};
+    ${(p) => p.theme.themedColor("color", "primary")}
     text-decoration: none;
   }
 
@@ -79,15 +34,8 @@ const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
   ul {
     padding-inline-start: 20px;
   }
-
 `;
 
 export const GlobalStyle: React.FC = () => {
-  const [initialized, setInitialized] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    setInitialized(true);
-  }, []);
-
-  return <GlobalStyleInstance initialized={initialized} />;
+  return <GlobalStyleInstance />;
 };

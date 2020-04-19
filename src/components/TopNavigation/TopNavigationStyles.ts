@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { Icon } from "@hova-labs/bento-box-web";
 // TopNavPadding and Container are used together to create a fixed TopNav and to push down everything below it
 
 export const TopNavPadding = styled("div")`
@@ -17,6 +17,11 @@ export const Logo = styled("div")`
     })};
 `;
 
+// redundant name... just want to overwrite the fill property
+export const LogoIcon = styled(Icon)`
+  ${(p) => p.theme.responsiveStyle("fill", "onBackground")}
+`;
+
 export const Container = styled("div")`
   position: fixed;
   top: 0;
@@ -25,7 +30,7 @@ export const Container = styled("div")`
   height: ${(p) => p.theme.spacings.xxl}px;
   justify-content: space-between;
   align-items: center;
-  background: ${(p) => p.theme.colors.background};
+  ${(p) => p.theme.themedColor("background", "background")}
   z-index: 1000;
   ${(p) =>
     p.theme.responsiveStyle("margin-left", {

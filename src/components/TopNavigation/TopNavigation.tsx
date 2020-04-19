@@ -46,7 +46,11 @@ export const TopNavigation: React.FC<{}> = () => {
       <S.Container className="top-nav-container">
         <Link aria-label="home page" to={routes.HOMEPAGE}>
           <S.Logo className="top-nav-logo">
-            <Icon IconComponent={HovaLabsLogo} size={64} onPress={() => {}} />
+            <S.LogoIcon
+              IconComponent={HovaLabsLogo}
+              size={64}
+              onPress={() => {}}
+            />
           </S.Logo>
         </Link>
         <S.LinkContainer className="top-nav-link-container">

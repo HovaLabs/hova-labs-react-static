@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Button as BBButton } from "@hova-labs/bento-box-web";
 
 export const Button = styled(BBButton)`
-  color: ${(p) => p.theme.colors.onPrimary};
+  ${(p) => p.theme.themedColor("color", "onPrimary")}
   margin-top: ${(p) => `${p.theme.spacings.l}px`};
   margin-bottom: ${(p) => `${p.theme.spacings.l}px`};
 `;
@@ -53,14 +53,14 @@ export const Image = styled("div")<{ backgroundImage: string }>`
       s: `${p.theme.spacings.l}px`,
       xl: "0",
     })}
-  background-color: ${(p) => p.theme.colors.surface1};
+  ${(p) => p.theme.themedColor("background-color", "surface1")}
   background-image: url(${(p) => p.backgroundImage});
   background-position: center;
   background-size: cover;
 `;
 
 export const OuterContainer = styled("div")`
-  background: ${(p) => p.theme.colors.surface2};
+  ${(p) => p.theme.themedColor("background", "surface2")}
   ${(p) =>
     p.theme.responsiveStyle("display", {
       s: "block",
