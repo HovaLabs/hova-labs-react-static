@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledPath = styled("path")`
-  fill: ${(p) => p.theme.colors.primary};
+  ${(p) => p.theme.themedColor("fill", "primary")}
 `;
 
 export const SvgContainer = styled("svg")`

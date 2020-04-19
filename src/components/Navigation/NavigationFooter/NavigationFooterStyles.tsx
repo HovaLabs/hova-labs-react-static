@@ -4,9 +4,10 @@ import styled from "styled-components";
 export const Input = styled("input")`
   ${(p) => p.theme.typography.bodyText};
   min-width: 0;
-  background: ${(p) => p.theme.colors.surface1};
-  border: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
-  color: ${(p) => p.theme.colors.onSurface1};
+  ${(p) => p.theme.themedColor("background", "surface1")}
+  border: 3px solid transparent;
+  ${(p) => p.theme.themedColor("border-color", "onSurface1")}
+  ${(p) => p.theme.themedColor("color", "onSurface1")}
   display: inline;
   ${(p) =>
     p.theme.responsiveStyle("margin-bottom", {
@@ -53,6 +54,6 @@ export const StatusArea = styled("div")`
   flex-basis: 100%;
   margin-top: ${(p) => `${p.theme.spacings.l}px`};
   & > div > a {
-    color: ${(p) => p.theme.colors.primary};
+    ${(p) => p.theme.themedColor("color", "primary")}
   }
 `;

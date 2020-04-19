@@ -21,7 +21,7 @@ export const BlogStyles = styled.div`
     max-height: 70vh;
   }
   code {
-    background: ${(p) => p.theme.colors.surface1};
+    ${(p) => p.theme.themedColor("background", "surface1")}
     margin: ${(p) => p.theme.spacings.l}px;
   }
 `;
@@ -32,7 +32,8 @@ export const HeroImage = styled("div")<{ backgroundImage: string }>`
       s: "150px",
       l: "120px",
     })}
-  background-color: ${(p) => p.theme.colors.surface1};
+  ${(p) => p.theme.themedColor("background-color", "surface1")}
+
   background-image: url(${(p) => p.backgroundImage});
   background-position: center;
   background-size: cover;

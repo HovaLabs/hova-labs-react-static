@@ -8,7 +8,7 @@ interface TextProps {
 }
 const Text = styled("div")<TextProps>`
   ${(p) => p.theme.typography.bodyText};
-  color: ${(p) => p.theme.colors[p.color]};
+  ${(p) => p.theme.themedColor("color", p.color)}
 `;
 export interface BlogTag {
   onPress: () => void;
