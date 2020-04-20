@@ -7,7 +7,15 @@ import styled from "styled-components";
 */
 
 export const EventListInnerContainer = styled("div")`
-  display: grid;
-  grid-template-columns: min-content 1fr;
-  grid-gap: ${(p) => p.theme.spacings.l}px;
+  width: 100%;
+  display: flex;
+  > div {
+    :first-child {
+      margin-right: ${(p) => p.theme.spacings.l}px;
+      flex: none;
+    }
+    :last-child {
+      flex: 1 0 auto;
+    }
+  }
 `;
