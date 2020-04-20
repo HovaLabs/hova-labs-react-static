@@ -6,12 +6,6 @@ export const BlogTagList = styled("div")`
 `;
 
 export const OuterContainer = styled("div")`
-  display: grid;
-  ${(p) =>
-    p.theme.responsiveStyle("grid-gap", {
-      s: `${p.theme.spacings.l}px`,
-      l: `${p.theme.spacings.xl}px`,
-    })}
   h1 {
     ${(p) => p.theme.typography.headingLarge}
   }
@@ -23,6 +17,16 @@ export const OuterContainer = styled("div")`
   }
   p {
     ${(p) => p.theme.typography.bodyText}
+  }
+  > div {
+    ${(p) =>
+        p.theme.responsiveStyle("margin-bottom", {
+          s: `${p.theme.spacings.l}px`,
+          l: `${p.theme.spacings.xl}px`,
+        })}
+      :last-child {
+      margin-bottom: 0;
+    }
   }
 `;
 
