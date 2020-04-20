@@ -57,6 +57,10 @@ export const Toggle = styled("div")<ToggleProps>`
       s: `${p.theme.spacings.l}px`,
       l: "0px",
     })};
+  > div {
+    border: 4px solid black;
+    ${(p) => p.theme.themedColor("border-color", "onBackground")}
+  }
 `;
 
 export const ModalLinkContainer = styled("div")``;

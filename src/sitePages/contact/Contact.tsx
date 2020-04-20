@@ -14,9 +14,11 @@ export const Contact: React.FC<{}> = () => (
       <ContainerFlex>
         <ContainerContent flexXL="100">
           <S.OuterContainer>
-            <Text typography="headingLarge">
-              Contact us to talk about a project or just to say hello!
-            </Text>
+            <div>
+              <Text typography="headingLarge">
+                Contact us to talk about a project or just to say hello!
+              </Text>
+            </div>
             <S.EmailContainer>
               <a href="mailto:hello@hovalabs.com">
                 <Text typography="headingSmall" color="primary">

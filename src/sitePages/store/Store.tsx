@@ -58,20 +58,7 @@ export const Store: React.FC<{}> = () => {
               method="post"
               target="_top"
             >
-              <input type="hidden" name="cmd" value="_s-xclick" />
-              <input
-                type="hidden"
-                name="hosted_button_id"
-                value="XMM2C9UPENTNU"
-              />
-              <input type="hidden" name="on0" value="Color" />
               <InputsSelect />
-              <input
-                type="submit"
-                value="submit"
-                style={{ visibility: "hidden" }}
-                id="paypal-submit"
-              />
               <Button
                 onPress={() => {
                   // in order to submit the form we click a hidden submit button
@@ -88,6 +75,19 @@ export const Store: React.FC<{}> = () => {
                 type="submit"
                 title="Purchase"
               />
+              <input type="hidden" name="cmd" value="_s-xclick" />
+              <input
+                type="hidden"
+                name="hosted_button_id"
+                value="XMM2C9UPENTNU"
+              />
+              <input type="hidden" name="on0" value="Color" />
+              <input
+                type="submit"
+                value="submit"
+                style={{ visibility: "hidden" }}
+                id="paypal-submit"
+              />
             </form>
           </ContainerContent>
         </ContainerFlex>
@@ -95,21 +95,29 @@ export const Store: React.FC<{}> = () => {
         <S.NoteArea>
           <ContainerFlex>
             <ContainerContent flexXL="100">
-              <Text typography="bodyText">Note:</Text>
-              <Text typography="bodyText">
-                All violin parts are printed with Hatchbox PLA filament. Gold,
-                Silver, Bronze, and Copper are reference colors, and are not
-                inferring that the violin will actually be made with any
-                precious metal. Checkout Hatchbox PLA color here. Official
-                Hovalins come with a hovalin logo embeded on the tailpiece.
-              </Text>
-              <Text typography="bodyText">
-                All parts are made to order. Shipping estimate is 2 weeks.
-              </Text>
-              <Text typography="bodyText">
-                Shipping outside of continental United States will be subject to
-                an extra charge.
-              </Text>
+              <div>
+                <Text typography="bodyText">Note:</Text>
+              </div>
+              <div>
+                <Text typography="bodyText">
+                  All violin parts are printed with Hatchbox PLA filament. Gold,
+                  Silver, Bronze, and Copper are reference colors, and are not
+                  inferring that the violin will actually be made with any
+                  precious metal. Checkout Hatchbox PLA color here. Official
+                  Hovalins come with a hovalin logo embeded on the tailpiece.
+                </Text>
+              </div>
+              <div>
+                <Text typography="bodyText">
+                  All parts are made to order. Shipping estimate is 2 weeks.
+                </Text>
+              </div>
+              <div>
+                <Text typography="bodyText">
+                  Shipping outside of continental United States will be subject
+                  to an extra charge.
+                </Text>
+              </div>
             </ContainerContent>
           </ContainerFlex>
         </S.NoteArea>

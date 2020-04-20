@@ -17,16 +17,13 @@ export const NavigationFooter: React.FC<{}> = () => {
   const CustomForm = ({ status, message, onValidated }) => {
     let email;
     let fname;
-    let lname;
     const submit = () =>
       email &&
       fname &&
-      lname &&
       email.value.indexOf("@") > -1 &&
       onValidated({
         EMAIL: email.value,
         FNAME: fname.value,
-        LNAME: lname.value,
       });
     const statusText = {
       sending: "Sending...",
@@ -41,12 +38,7 @@ export const NavigationFooter: React.FC<{}> = () => {
           <S.Input
             ref={(node) => (fname = node)}
             type="text"
-            placeholder="Hans"
-          />
-          <S.Input
-            ref={(node) => (lname = node)}
-            type="text"
-            placeholder="Hova"
+            placeholder="Name"
           />
           <S.Input
             ref={(node) => (email = node)}
