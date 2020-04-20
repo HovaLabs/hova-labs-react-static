@@ -23,6 +23,10 @@ export const BlogStyles = styled.div`
   img {
     max-width: 100%;
     max-height: 70vh;
+    flex-shrink: 0;
+    height:auto;
+    width:auto;
+    display:block
   }
   code {
     ${(p) => p.theme.themedColor("background", "surface1")}
