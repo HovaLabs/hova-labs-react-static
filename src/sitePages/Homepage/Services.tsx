@@ -15,21 +15,74 @@ import {
 const ServicesTextContainer = styled("div")``;
 
 const ServiceGridContainer = styled("div")`
-  padding-top: ${(p) => p.theme.spacings.xl}px;
+  display: -ms-grid;
   display: grid;
+  ${(p) =>
+    p.theme.responsiveStyle("-ms-grid-columns", {
+      s: "1fr",
+      xl: "1fr 1fr",
+    })}
   ${(p) =>
     p.theme.responsiveStyle("grid-template-columns", {
       s: "1fr",
       xl: "1fr 1fr",
     })}
-  ${(p) =>
-    p.theme.responsiveStyle("grid-gap", {
-      s: `${p.theme.spacings.xl}px`,
-      l: `${p.theme.spacings.xxl}px`,
-    })}
+    > div {
+    ${(p) =>
+      p.theme.responsiveStyle("margin", {
+        s: `${p.theme.spacings.l}px`,
+        l: `${p.theme.spacings.xl}px`,
+      })}
+    :nth-child(1) {
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-column", {
+          s: "1",
+          xl: "1",
+        })}
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-row", {
+          s: "1",
+          xl: "1",
+        })}
+    }
+    :nth-child(2) {
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-column", {
+          s: "1",
+          xl: "2",
+        })}
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-row", {
+          s: "2",
+          xl: "1",
+        })}
+    }
+    :nth-child(3) {
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-column", {
+          s: "1",
+          xl: "1",
+        })}
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-row", {
+          s: "3",
+          xl: "2",
+        })}
+    }
+    :nth-child(4) {
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-column", {
+          s: "1",
+          xl: "2",
+        })}
+      ${(p) =>
+        p.theme.responsiveStyle("-ms-grid-row", {
+          s: "4",
+          xl: "2",
+        })}
+    }
+  }
 `;
-
-const ServiceGridItem = styled("div")``;
 
 type Service = {
   icon: (props: IconBaseProps) => JSX.Element;
