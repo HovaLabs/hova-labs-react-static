@@ -4,10 +4,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import {
   Icon,
   HovaLabsLogo,
-  Text,
   ThemeToggle,
   ThemeContext,
 } from "@hova-labs/bento-box-web";
+import { Text } from "..";
 import { TopNavigationModal } from "./TopNavigationModal";
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";

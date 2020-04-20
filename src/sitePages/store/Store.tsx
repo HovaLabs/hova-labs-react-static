@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
+import { Text } from "../../components";
 import hovalin from "./hovalinv4.png";
 import { Button } from "../../components/Button/Button";
 import {

@@ -1,5 +1,6 @@
 import React from "react";
-import { Icon, Text } from "@hova-labs/bento-box-web";
+import { Icon } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 import { shoppingList } from "./ShoppingListData";
 import {
   ContainerFlex,

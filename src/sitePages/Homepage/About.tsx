@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../components";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 import theHovas from "./the-hovas.png";
 

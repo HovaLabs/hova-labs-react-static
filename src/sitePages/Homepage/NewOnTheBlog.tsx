@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text, Button } from "../../components";
 import { blogManifest } from "../blog/Blog/blogManifest";
-import { Button } from "../../components";
+
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 import { dateToString } from "../../utils/utilsDates";
 

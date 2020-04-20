@@ -1,10 +1,10 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
+import { Text, Button } from "../../../components";
 import threeDPrinter from "./Photos/threeDPrinter.svg";
 import { HovalinNeck } from "./Photos/hovalin-neck";
 import { HovalinBody } from "./Photos/hovalin-body";
-import { Button } from "../../../components";
+
 import { routes } from "../../../routes";
 import {
   ContainerFlex,

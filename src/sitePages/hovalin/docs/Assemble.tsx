@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 import assembly from "./Photos/assembly.gif";
 import {
   ContainerFlex,

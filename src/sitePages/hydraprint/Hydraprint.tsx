@@ -1,8 +1,7 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 
 import { ContainerWithBorder } from "../../components/Container";
-import { Button } from "../../components";
+import { Button, Text } from "../../components";
 import { routes } from "../../routes";
 import hydraprintDashboard from "./hydraprint-dashboard.jpg";
 import hydraprintFilesList from "./hydraprint-files-list.jpg";

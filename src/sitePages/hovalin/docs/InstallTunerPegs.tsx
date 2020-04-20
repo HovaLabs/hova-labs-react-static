@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 import pegEndBreakoff from "./Photos/peg-end-breakoff.gif";
 import pegInsert from "./Photos/peg-insert.gif";
 import pegTighten from "./Photos/peg-tighten.gif";

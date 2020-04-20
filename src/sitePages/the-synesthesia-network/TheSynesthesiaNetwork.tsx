@@ -1,6 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
-import { Button } from "../../components";
+import { Text, Button } from "../../components";
 import tsnHero from "./tsn-hero.jpg";
 import tsn from "./tsn.jpg";
 import { routes } from "../../routes";

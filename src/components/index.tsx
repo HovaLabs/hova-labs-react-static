@@ -7,3 +7,4 @@ export { ModalsMobileNav } from "./Modals";
 export { Portal } from "./Portal";
 export * from "./Navigation/NavigationFooter";
 export { TopNavigation } from "./TopNavigation";
+export * from "./Text";

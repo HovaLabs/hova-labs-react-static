@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import { Link } from "gatsby";
+import { Text } from "../..";
 
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";

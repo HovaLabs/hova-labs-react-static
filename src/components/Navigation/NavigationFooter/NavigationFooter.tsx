@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { Text } from "../..";
 import { Button } from "../../Button/Button";
 import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
 import {

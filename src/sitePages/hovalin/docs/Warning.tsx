@@ -1,6 +1,7 @@
 import React from "react";
 import { IoMdWarning } from "react-icons/io";
-import { Icon, Text } from "@hova-labs/bento-box-web";
+import { Icon } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 import {
   ContainerContent,
   ContainerWithBorder,

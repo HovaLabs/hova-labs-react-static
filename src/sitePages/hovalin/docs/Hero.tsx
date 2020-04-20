@@ -1,7 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
-import { Button } from "../../../components";
+import { Button, Text } from "../../../components";
 import { routes } from "../../../routes";
 import {
   ContainerContent,

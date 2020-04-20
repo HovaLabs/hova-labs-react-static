@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
 export const ContainerFlex = styled("div")`
+  width: 100%;
+  > * {
+    width: 100%;
+  }
   ${(p) =>
     p.theme.responsiveStyle("display", {
       s: "block",

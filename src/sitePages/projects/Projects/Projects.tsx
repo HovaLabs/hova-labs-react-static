@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Button, Text } from "@hova-labs/bento-box-web";
 import * as S from "./ProjectsStyles";
 import { routes } from "../../../routes";
 import { ContainerWithBorder } from "../../../components/Container/ContainerWithBorder";
@@ -10,6 +9,7 @@ import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
 import MCUHero from "./Media/mcu-hero.jpg";
 import WaldoHero from "./Media/waldo-hero.jpg";
 import Layout from "../../../components/layout";
+import { Button, Text } from "../../../components";
 
 type Project = {
   title: string;

@@ -31,10 +31,8 @@ const themedColor = (
 ): FlattenInterpolation<ThemeProps<HovaLabsTheme>> => css`
   ${(p) => {
     if (p.theme.initialized) {
-      console.log("all done");
       return `${key}: ${p.theme.colors[val]};`;
     }
-    console.log("not done yet");
     return `
       ${key}: ${p.theme.themeColors.lightTheme[val]};
       @media (prefers-color-scheme: dark) {

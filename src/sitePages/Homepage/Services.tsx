@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { IconBaseProps } from "react-icons";
-import { Icon, Cube, Robot, XML, Magic, Text } from "@hova-labs/bento-box-web";
+import { Icon, Cube, Robot, XML, Magic } from "@hova-labs/bento-box-web";
+import { Text } from "../../components";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 
 import {
