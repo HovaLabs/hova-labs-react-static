@@ -20,8 +20,12 @@ export const Hydraprint: React.FC<{}> = () => (
       backgroundImage={hydraprintHero}
       backgroundImageStyles={{ opacity: 0.2 }}
     >
-      <Text typography="headingLarge">Hydraprint</Text>
-      <Text typography="headingSmall">A host for talking to hardware.</Text>
+      <div>
+        <Text typography="headingLarge">Hydraprint</Text>
+      </div>
+      <div>
+        <Text typography="headingSmall">A host for talking to hardware.</Text>
+      </div>
       <S.ButtonPadding>
         <Button
           title="Check it out on Github"
