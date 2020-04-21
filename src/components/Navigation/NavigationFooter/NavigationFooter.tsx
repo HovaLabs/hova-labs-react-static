@@ -38,12 +38,12 @@ export const NavigationFooter: React.FC<{}> = () => {
           <S.Input
             ref={(node) => (fname = node)}
             type="text"
-            placeholder="Name"
+            placeholder="name"
           />
           <S.Input
             ref={(node) => (email = node)}
             type="email"
-            placeholder="Your email"
+            placeholder="email"
           />
           <Button onPress={submit} title={buttonText} />
         </S.InputsArea>

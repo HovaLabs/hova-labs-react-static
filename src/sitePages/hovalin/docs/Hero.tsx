@@ -15,7 +15,9 @@ export const Hero: React.FC<{}> = () => (
     backgroundImageStyles={{ opacity: ".3" }}
   >
     <ContainerContent flexXL="100">
-      <Text typography="headingLarge">Hovalin Docs</Text>
+      <div>
+        <Text typography="headingLarge">Hovalin Docs</Text>
+      </div>
       <S.ButtonContainer>
         <Button
           href={routes.HOVALIN_4_4_FILES}

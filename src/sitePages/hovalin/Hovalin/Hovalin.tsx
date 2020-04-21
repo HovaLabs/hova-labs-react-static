@@ -21,34 +21,40 @@ export const Hovalin: React.FC<{}> = () => (
         backgroundImage={hovalinHero}
         backgroundImageStyles={{ opacity: 0.2 }}
       >
-        <Text typography="headingLarge">Hovalin</Text>
-        <Text typography="headingSmall">
-          Open Source, 3D printable acoustic violin v4.0.0
-        </Text>
-        <S.ButtonPadding>
-          <Button
-            href={routes.HOVALIN_DOCS}
-            onPress={() => {}}
-            title="Make One"
-          />
-        </S.ButtonPadding>
-        <S.ButtonPadding>
-          <Button href={routes.STORE} onPress={() => {}} title="Buy One" />
-        </S.ButtonPadding>
-        <S.ButtonPadding>
-          <Button
-            href={routes.HOVALIN_REDDIT}
-            onPress={() => {}}
-            title="Discuss on Reddit"
-          />
-        </S.ButtonPadding>
+        <div>
+          <Text typography="headingLarge">Hovalin</Text>
+        </div>
+        <div>
+          <Text typography="headingSmall">
+            Open Source, 3D printable acoustic violin v4.0.0
+          </Text>
+        </div>
+        <div>
+          <S.ButtonPadding>
+            <Button
+              href={routes.HOVALIN_DOCS}
+              onPress={() => {}}
+              title="Make One"
+            />
+          </S.ButtonPadding>
+          <S.ButtonPadding>
+            <Button href={routes.STORE} onPress={() => {}} title="Buy One" />
+          </S.ButtonPadding>
+          <S.ButtonPadding>
+            <Button
+              href={routes.HOVALIN_REDDIT}
+              onPress={() => {}}
+              title="Discuss on Reddit"
+            />
+          </S.ButtonPadding>
+        </div>
       </ContainerWithBorder>
       <ContainerWithBorder>
         <ContainerFlex>
-          <ContainerContent flexXL="50">
+          <ContainerContent disablePadding flexXL="50">
             <img src={hovalinAbout} alt="hovalin" width="50%" />
           </ContainerContent>
-          <ContainerContent flexXL="50">
+          <ContainerContent disablePadding flexXL="50">
             <TitlePrimary subtitle="About" title="A violin for Makers" />
             <Text typography="bodyText">
               The hovalin is a functional acoustic violin that can be produced
@@ -87,10 +93,14 @@ export const Hovalin: React.FC<{}> = () => (
         backgroundImage={makeHero}
         backgroundImageStyles={{ opacity: 0.2 }}
       >
-        <Text typography="headingLarge">Let's make one</Text>
-        <Text typography="headingSmall">
-          Visit the Hovalin Docs for step by step instructions
-        </Text>
+        <div>
+          <Text typography="headingLarge">Let's make one</Text>
+        </div>
+        <div>
+          <Text typography="headingSmall">
+            Visit the Hovalin Docs for step by step instructions
+          </Text>
+        </div>
         <S.ButtonPadding>
           <Button
             href={routes.HOVALIN_DOCS}

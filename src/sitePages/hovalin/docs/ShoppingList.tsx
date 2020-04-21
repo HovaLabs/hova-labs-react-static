@@ -13,15 +13,19 @@ export const ShoppingList: React.FC<{}> = () => (
   <div id="shopping-list">
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent flexXL="50">
-          <Text typography="headingLarge">1</Text>
-          <Text typography="headingSmall">Shopping List</Text>
+        <ContainerContent disablePadding flexXL="50">
+          <div>
+            <Text typography="headingLarge">1</Text>
+          </div>
+          <div>
+            <Text typography="headingSmall">Shopping List</Text>
+          </div>
           <br />
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
         {shoppingList.map((item) => (
-          <ContainerContent flexXL="50">
+          <ContainerContent disablePadding flexXL="50">
             <S.Title>
               <Icon size={32} IconComponent={item.icon} />
               <Text typography="headingSmall">{item.title}</Text>

@@ -17,7 +17,7 @@ export const Store: React.FC<{}> = () => {
     <Layout>
       <ContainerWithBorder lineVariant="store">
         <ContainerFlex>
-          <ContainerContent flexL="50">
+          <ContainerContent disablePadding flexL="50">
             <img
               src={hovalin}
               alt="hovalin"
@@ -28,7 +28,7 @@ export const Store: React.FC<{}> = () => {
             />
           </ContainerContent>
 
-          <ContainerContent flexL="50">
+          <ContainerContent disablePadding flexL="50">
             <Text typography="headingLarge">The Hovalin</Text>
 
             <S.TextCost>
@@ -94,7 +94,7 @@ export const Store: React.FC<{}> = () => {
 
         <S.NoteArea>
           <ContainerFlex>
-            <ContainerContent flexXL="100">
+            <ContainerContent disablePadding flexXL="100">
               <div>
                 <Text typography="bodyText">Note:</Text>
               </div>

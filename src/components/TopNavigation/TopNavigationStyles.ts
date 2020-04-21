@@ -58,7 +58,7 @@ export const Toggle = styled("div")<ToggleProps>`
       l: "0px",
     })};
   > div {
-    border: 4px solid black;
+    border: 3px solid black;
     ${(p) => p.theme.themedColor("border-color", "onBackground")}
   }
 `;

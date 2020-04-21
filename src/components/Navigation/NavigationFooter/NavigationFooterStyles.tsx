@@ -32,6 +32,7 @@ export const Input = styled("input")`
     })}
   padding: ${(p) => `${p.theme.spacings.m}px`};
   width: 100%;
+  max-width: 400px;
 `;
 
 export const InputsArea = styled("div")`
@@ -46,7 +47,7 @@ export const InputsArea = styled("div")`
       s: `${p.theme.spacings.m}px 0`,
       l: "0",
     })}
-  justify-content: space-between;
+  justify-content: flex-start;
 `;
 
 export const StatusArea = styled("div")`

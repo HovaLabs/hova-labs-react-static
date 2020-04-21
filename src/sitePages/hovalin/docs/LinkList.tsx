@@ -26,8 +26,12 @@ export const LinkList: React.FC<{}> = () => {
         }}
       >
         <S.LinkSurface>
-          <Text typography="headingMedium">{(index + 1).toString()}</Text>
-          <Text typography="bodyText">{step.title}</Text>
+          <div>
+            <Text typography="headingMedium">{(index + 1).toString()}</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">{step.title}</Text>
+          </div>
         </S.LinkSurface>
       </a>
     </S.Link>
