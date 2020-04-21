@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../..";
 import { events } from "./EventsAreaUtils";
 import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
 

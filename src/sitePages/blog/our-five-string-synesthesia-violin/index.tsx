@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 
 import violinPhoto1 from "./violin-photo-1.jpg";
 import violinPhoto2 from "./violin-photo-2.jpg";

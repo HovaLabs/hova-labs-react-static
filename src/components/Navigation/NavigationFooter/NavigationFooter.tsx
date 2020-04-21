@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import { Text } from "../..";
 import { Button } from "../../Button/Button";
 import { TitlePrimary } from "../../Title/TitlePrimary/TitlePrimary";
 import {
@@ -17,16 +17,13 @@ export const NavigationFooter: React.FC<{}> = () => {
   const CustomForm = ({ status, message, onValidated }) => {
     let email;
     let fname;
-    let lname;
     const submit = () =>
       email &&
       fname &&
-      lname &&
       email.value.indexOf("@") > -1 &&
       onValidated({
         EMAIL: email.value,
         FNAME: fname.value,
-        LNAME: lname.value,
       });
     const statusText = {
       sending: "Sending...",
@@ -41,17 +38,12 @@ export const NavigationFooter: React.FC<{}> = () => {
           <S.Input
             ref={(node) => (fname = node)}
             type="text"
-            placeholder="Hans"
-          />
-          <S.Input
-            ref={(node) => (lname = node)}
-            type="text"
-            placeholder="Hova"
+            placeholder="name"
           />
           <S.Input
             ref={(node) => (email = node)}
             type="email"
-            placeholder="Your email"
+            placeholder="email"
           />
           <Button onPress={submit} title={buttonText} />
         </S.InputsArea>

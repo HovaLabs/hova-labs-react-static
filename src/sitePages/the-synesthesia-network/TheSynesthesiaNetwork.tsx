@@ -1,6 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
-import { Button } from "../../components";
+import { Text, Button } from "../../components";
 import tsnHero from "./tsn-hero.jpg";
 import tsn from "./tsn.jpg";
 import { routes } from "../../routes";
@@ -15,10 +14,14 @@ export const TheSynesthesiaNetwork: React.FC<{}> = () => (
       backgroundImage={tsnHero}
       backgroundImageStyles={{ opacity: 0.2 }}
     >
+      <div>
       <Text typography="headingLarge">The Synesthesia Network</Text>
+      </div>
+      <div>
       <Text typography="headingSmall">
         A Nexus for Synesthetes and Researchers
       </Text>
+      </div>
       <S.ButtonPadding>
         <Button
           title="Check it out Live"
@@ -28,11 +31,15 @@ export const TheSynesthesiaNetwork: React.FC<{}> = () => (
       </S.ButtonPadding>
     </ContainerWithBorder>
     <ContainerWithBorder>
+      <div>
       <Text typography="bodyText">
         The Synesthesia Network is an educational social network designed to
         explore the phenomenon of Synesthesia by connecting researchers,
         synesthetes, and inquiring minds.
       </Text>
+      </div>
+      <div>
+      </div>
       <Text typography="bodyText">
         Functions include checking out people with the condition, taking tests
         to see if you have any form of synesthesia, and brushing up on the

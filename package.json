@@ -78,11 +78,5 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "./scripts/gitflow-check.sh",
-      "post-checkout": "./scripts/npm-post-checkout.sh"
-    }
   }
 }

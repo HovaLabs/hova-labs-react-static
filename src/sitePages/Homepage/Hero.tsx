@@ -14,7 +14,7 @@ const HeroContainer = styled("div")`
 `;
 
 const HeroText = styled("div")`
-  position: absolute;
+  position: relative;
   color: ${(p) => p.theme.colors.onSurface1};
   ${(p) =>
     p.theme.responsiveStyle("font-size", {

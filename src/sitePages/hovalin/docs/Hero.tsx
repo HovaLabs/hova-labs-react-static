@@ -1,7 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
-import { Button } from "../../../components";
+import { Button, Text } from "../../../components";
 import { routes } from "../../../routes";
 import {
   ContainerContent,
@@ -16,7 +15,9 @@ export const Hero: React.FC<{}> = () => (
     backgroundImageStyles={{ opacity: ".3" }}
   >
     <ContainerContent flexXL="100">
-      <Text typography="headingLarge">Hovalin Docs</Text>
+      <div>
+        <Text typography="headingLarge">Hovalin Docs</Text>
+      </div>
       <S.ButtonContainer>
         <Button
           href={routes.HOVALIN_4_4_FILES}

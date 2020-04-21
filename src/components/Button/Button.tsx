@@ -1,6 +1,36 @@
 import React from "react";
-import { Button as ButtonBB, ButtonProps } from "@hova-labs/bento-box-web";
 import { Link } from "gatsby";
+import { ButtonProps } from "./ButtonProps";
+
+import * as S from "./ButtonStyles";
+
+const ButtonComponent = ({
+  disabled,
+  className,
+  // href,
+  variant,
+  // size,
+  onPress,
+  style,
+  title,
+}: ButtonProps): React.ReactElement => {
+  return (
+    <S.Button
+      className={className}
+      variant={variant}
+      disabled={disabled}
+      onPress={onPress}
+      style={style}
+    >
+      <S.Text variant={variant} disabled={disabled}>
+        {title}
+      </S.Text>
+    </S.Button>
+  );
+};
+ButtonComponent.defaultProps = {
+  variant: "primary",
+};
 
 const isExternalHref = (href: string): boolean => /^https?:\/\//i.test(href);
 
@@ -25,6 +55,6 @@ const ButtonLinkWrapper: React.FC<{
 
 export const Button: React.FC<ButtonProps> = ({ href, ...rest }) => (
   <ButtonLinkWrapper href={href}>
-    <ButtonBB {...rest} />
+    <ButtonComponent {...rest} />
   </ButtonLinkWrapper>
 );

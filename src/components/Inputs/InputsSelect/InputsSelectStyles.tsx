@@ -19,4 +19,8 @@ export const Select = styled("select")<{ backgroundImage: string }>`
   background-size: 0.65em auto, 100%;
   margin-bottom: ${(p) => `${p.theme.spacings.xl}px`};
   padding-left: 0;
+  > option {
+    ${p => p.theme.themedColor('background-color', 'surface1')}
+    ${p => p.theme.themedColor('color', 'onSurface1')}
+  }
 `;

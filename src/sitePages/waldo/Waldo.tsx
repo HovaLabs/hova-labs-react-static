@@ -1,7 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import * as S from "./WaldoStyles";
-import { Button } from "../../components";
+import { Button, Text } from "../../components";
 import { ContainerWithBorder } from "../../components/Container";
 import { routes } from "../../routes";
 

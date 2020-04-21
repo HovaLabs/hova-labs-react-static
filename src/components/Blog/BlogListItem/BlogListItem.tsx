@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../..";
 import { BlogTag } from "../BlogTag/BlogTag";
 import * as S from "./BlogListItemStyles";
 import { dateToString } from "../../../utils/utilsDates";

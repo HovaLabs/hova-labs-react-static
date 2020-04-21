@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../components";
 import { TitlePrimary } from "../../components/Title/TitlePrimary/TitlePrimary";
 import theHovas from "./the-hovas.png";
 
@@ -36,14 +36,14 @@ const TheHovas = styled("img").attrs({
 export const About: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexXL="50">
+      <ContainerContent disablePadding flexXL="50">
         <TitlePrimary subtitle="About" title="The Hovas" />
         <Text>
           We are two Nebraska nerds currently living in the SF Bay Area who use
           diverse backgrounds in art and science to build scalable projects.
         </Text>
       </ContainerContent>
-      <ContainerContent flexXL="50">
+      <ContainerContent disablePadding flexXL="50">
         <HovaCentered>
           <TheHovas />
         </HovaCentered>

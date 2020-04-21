@@ -4,6 +4,7 @@ interface ContainerContentProps {
   readonly flexXL?: string;
   readonly flexL?: string;
   readonly flexM?: string;
+  readonly disablePadding?: boolean;
 }
 
 export const ContainerContent = styled("div")<ContainerContentProps>`
@@ -16,8 +17,10 @@ export const ContainerContent = styled("div")<ContainerContentProps>`
       xl: `${p.flexXL}%`,
     })};
   ${(p) =>
-    p.theme.responsiveStyle("padding", {
-      s: "0",
-      l: `0 ${p.theme.spacings.xl}px`,
-    })};
+    p.disablePadding
+      ? null
+      : p.theme.responsiveStyle("padding", {
+          s: "0",
+          l: `0 ${p.theme.spacings.xl}px`,
+        })};
 `;

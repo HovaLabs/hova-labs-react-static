@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import { Link } from "gatsby";
+import { Text } from "../..";
 
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
@@ -102,13 +102,13 @@ const Author: React.FC<{ author: "Matt" | "Kaitlyn" | "Cat" }> = ({
 }) => (
   <ContainerWithBorder>
     <ContainerFlex>
-      <ContainerContent flexM="40" flexL="50" flexXL="40">
+      <ContainerContent disablePadding flexM="40" flexL="50" flexXL="40">
         <S.AuthorImageContainer>
           <S.AuthorImage src={authorPhotos[author]} alt="Author" />
         </S.AuthorImageContainer>
       </ContainerContent>
 
-      <ContainerContent flexM="60" flexL="50" flexXL="60">
+      <ContainerContent disablePadding flexM="60" flexL="50" flexXL="60">
         <div>
           <Text typography="headingMedium">About the Author</Text>
         </div>

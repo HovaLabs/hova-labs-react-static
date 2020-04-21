@@ -4,6 +4,10 @@ export const BlogStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  > * {
+    width: 100%;
+  }
   > div {
     ${(p) =>
       p.theme.responsiveStyle("margin-bottom", {
@@ -19,6 +23,10 @@ export const BlogStyles = styled.div`
   img {
     max-width: 100%;
     max-height: 70vh;
+    flex-shrink: 0;
+    height:auto;
+    width:auto;
+    display:block
   }
   code {
     ${(p) => p.theme.themedColor("background", "surface1")}

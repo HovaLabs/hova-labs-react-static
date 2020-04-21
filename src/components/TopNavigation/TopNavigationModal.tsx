@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import { MdClose } from "react-icons/md";
-import { Icon, Text } from "@hova-labs/bento-box-web";
-
+import { Icon } from "@hova-labs/bento-box-web";
+import { Text, ModalsMobileNav } from "..";
 import { routes } from "../../routes";
 import * as S from "./TopNavigationStyles";
 import * as S2 from "./TopNavigationModalStyles";
-import { ModalsMobileNav } from "..";
 
 export const TopNavigationModal: React.FC<{
   navModalIsOpen: boolean;

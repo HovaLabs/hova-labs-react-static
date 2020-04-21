@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "../../../components";
 import hovalinStrings from "./Photos/hovalin-strings.jpg";
 import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 import {

@@ -1,6 +1,6 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 import ReactGA from "react-ga";
+import { Text } from "../../../components";
 import { ContainerWithBorder } from "../../../components/Container";
 import * as S from "./LinkListStyles";
 
@@ -26,8 +26,12 @@ export const LinkList: React.FC<{}> = () => {
         }}
       >
         <S.LinkSurface>
-          <Text typography="headingMedium">{(index + 1).toString()}</Text>
-          <Text typography="bodyText">{step.title}</Text>
+          <div>
+            <Text typography="headingMedium">{(index + 1).toString()}</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">{step.title}</Text>
+          </div>
         </S.LinkSurface>
       </a>
     </S.Link>

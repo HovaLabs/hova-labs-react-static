@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button as BBButton } from "@hova-labs/bento-box-web";
+import { Button as BBButton } from "../..";
 
 export const Button = styled(BBButton)`
   ${(p) => p.theme.themedColor("color", "onPrimary")}

@@ -1,8 +1,7 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
 
 import { ContainerWithBorder } from "../../components/Container";
-import { Button } from "../../components";
+import { Button, Text } from "../../components";
 import { routes } from "../../routes";
 import hydraprintDashboard from "./hydraprint-dashboard.jpg";
 import hydraprintFilesList from "./hydraprint-files-list.jpg";
@@ -21,8 +20,12 @@ export const Hydraprint: React.FC<{}> = () => (
       backgroundImage={hydraprintHero}
       backgroundImageStyles={{ opacity: 0.2 }}
     >
-      <Text typography="headingLarge">Hydraprint</Text>
-      <Text typography="headingSmall">A host for talking to hardware.</Text>
+      <div>
+        <Text typography="headingLarge">Hydraprint</Text>
+      </div>
+      <div>
+        <Text typography="headingSmall">A host for talking to hardware.</Text>
+      </div>
       <S.ButtonPadding>
         <Button
           title="Check it out on Github"

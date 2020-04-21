@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "@hova-labs/bento-box-web";
+import { Text } from "..";
 import { ContainerWithBorder } from "../Container/ContainerWithBorder";
 import * as S from "./FourOhFourStyles";
 import Layout from "../layout";
