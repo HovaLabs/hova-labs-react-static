@@ -13,7 +13,9 @@ import {
 
 // SERVICES START
 
-const ServicesTextContainer = styled("div")``;
+const OurIcon = styled(Icon).attrs((p) => ({
+  color: p.theme.colors.onBackground,
+}))``;
 
 const ServiceGridContainer = styled("div")`
   display: -ms-grid;
@@ -138,7 +140,7 @@ export const Services: React.FC<{}> = () => (
         {services.map((s) => (
           <ContainerContent flexXL="50" key={s.title}>
             <div>
-              <Icon IconComponent={s.icon} size={32} />
+              <OurIcon IconComponent={s.icon} size={32} />
             </div>
             <div>
               <Text typography="headingSmall">{s.title}</Text>
