@@ -7,7 +7,7 @@ import { EventsArea } from "../../components/Events/EventsArea/EventsArea";
 import { Hero } from "./Hero";
 import { Services } from "./Services";
 import { NewOnTheBlog } from "./NewOnTheBlog";
-import SEO from "../../components/seo";
+import { SEO } from "../../components/seo";
 
 const Container = styled("div")``;
 
