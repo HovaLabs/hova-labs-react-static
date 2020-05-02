@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import { Text } from "../..";
+import { Text, SEO } from "../..";
 
 import Matt from "./matt.png";
 import Kaitlyn from "./kaitlyn.png";
@@ -33,6 +33,11 @@ export const BlogContainer: React.FC<{
   const formattedDate = dateToString(blogManifest.datePublished);
   return (
     <Layout>
+      <SEO
+        title={blogManifest.title}
+        description={blogManifest.subtitle}
+        image={blogManifest.hero}
+      />
       <ContainerWithBorder
         backgroundImage={blogManifest.hero}
         backgroundImageStyles={{ opacity: 0.2 }}

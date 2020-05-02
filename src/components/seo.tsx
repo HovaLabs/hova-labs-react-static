@@ -8,14 +8,22 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import defaultImage from "../images/meta-image.jpg";
 
 type SEOArgs = {
   description?: string;
   lang?: string;
   meta?: any;
-  title: string;
+  title?: string;
+  image?: string;
 };
-const SEO: React.FC<SEOArgs> = ({ description, lang, meta, title }) => {
+export const SEO: React.FC<SEOArgs> = ({
+  description,
+  lang,
+  meta,
+  title,
+  image,
+}) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -23,7 +31,8 @@ const SEO: React.FC<SEOArgs> = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
-            author
+            keywords
+            url
           }
         }
       }
@@ -31,22 +40,27 @@ const SEO: React.FC<SEOArgs> = ({ description, lang, meta, title }) => {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const metaTitle = title || site.siteMetadata.title;
+  const metaImage = image || defaultImage;
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
       meta={[
         {
           name: "description",
           content: metaDescription,
         },
         {
+          name: "keywords",
+          content: site.siteMetadata.keywords,
+        },
+        {
           property: "og:title",
-          content: title,
+          content: metaTitle,
         },
         {
           property: "og:description",
@@ -57,19 +71,41 @@ const SEO: React.FC<SEOArgs> = ({ description, lang, meta, title }) => {
           content: "website",
         },
         {
+          property: "og:image",
+          content: metaImage,
+        },
+        {
           name: "twitter:card",
           content: "summary",
         },
         {
-          name: "twitter:creator",
-          content: site.siteMetadata.author,
-        },
-        {
           name: "twitter:title",
-          content: title,
+          content: metaTitle,
         },
         {
           name: "twitter:description",
+          content: metaDescription,
+        },
+        {
+          name: "twitter:image:width",
+          content: "1200",
+        },
+        {
+          name: "twitter:image:height",
+          content: "630",
+        },
+        {
+          name: "twitter:image",
+          content: metaImage,
+        },
+        {
+          name: "title",
+          property: "og:title",
+          content: metaTitle,
+        },
+        {
+          name: "description",
+          property: "og:description",
           content: metaDescription,
         },
       ].concat(meta)}
@@ -81,5 +117,3 @@ SEO.defaultProps = {
   meta: [],
   description: "",
 };
-
-export default SEO;

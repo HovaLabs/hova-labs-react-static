@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Link = styled("a")`
-  color: ${(p) => p.theme.colors.primary};
+  ${(p) => p.theme.themedColor("color", "primary")}
 `;
 
 export const Title = styled("div")`

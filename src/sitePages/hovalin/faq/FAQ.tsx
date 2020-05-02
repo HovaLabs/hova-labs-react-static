@@ -6,6 +6,7 @@ import {
   ContainerContent,
 } from "../../../components/Container";
 import * as S from "./FAQStyles";
+import { routes } from "../../../routes";
 
 export const FAQ: React.FC<{}> = () => {
   return (
@@ -143,8 +144,8 @@ export const FAQ: React.FC<{}> = () => {
             <div>
               <S.Q>Q: What if I have more questions?</S.Q>
               <div>
-                More questions? No problem! Let's keep the conversation going
-                here.
+                More questions? No problem! Let's keep the conversation going on
+                <a href={routes.HOVALIN_REDDIT}>{" reddit."}</a>
               </div>
             </div>
           </ContainerContent>

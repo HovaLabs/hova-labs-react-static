@@ -42,7 +42,7 @@ const Image = styled("div")<{ backgroundImage: string }>`
 `;
 
 const OuterContainer = styled("div")`
-  background: ${(p) => p.theme.colors.surface2};
+  ${(p) => p.theme.themedColor("background", "surface2")}
   ${(p) =>
     p.theme.responsiveStyle("margin-top", {
       s: `${p.theme.spacings.l}px`,

@@ -53,7 +53,7 @@ export const shoppingList = [
     icon: GoCheck,
     title: "ROSIN",
     description:
-      "Rosin helps to keep your violin from squeaking and keeps the bow on the strings.Here are a few brands of rosin that we suggest:",
+      "Rosin helps to keep your violin from squeaking and keeps the bow on the strings. Here are a few brands of rosin that we suggest:",
     list: [
       {
         name: " Bellafina Rosin",
@@ -73,7 +73,7 @@ export const shoppingList = [
     icon: GoCheck,
     title: "STRINGS",
     description:
-      "Strings can be expensive. We are fans of high value, low cost.Here are a few brands of strings that we endorse:",
+      "Strings can be expensive. We are fans of high value, low cost. Here are a few brands of strings that we endorse:",
     list: [
       {
         name: "D'Addario Prelude",
@@ -105,7 +105,7 @@ export const shoppingList = [
     icon: GoCheck,
     title: "BOW",
     description:
-      "Bows can also be expensive, we are fans of high value, low cost.Here are a few brands of bows that we support.",
+      "Bows can also be expensive, we are fans of high value, low cost. Here are a few brands of bows that we support.",
     list: [
       {
         name: "ViolinSmart Violin Bow",

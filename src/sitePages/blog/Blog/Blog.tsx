@@ -50,7 +50,6 @@ export const Blog: React.FC<{}> = () => {
       <ContainerWithBorder>
         <Text typography="headingLarge">Blog</Text>
         <S.BlogTagList>{blogTagList}</S.BlogTagList>
-        <br />
         {blogList.map((post) => (
           <BlogListItem key={post.datePublished} {...post} />
         ))}

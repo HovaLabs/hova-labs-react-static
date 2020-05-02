@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled("input")`
   ${(p) => p.theme.typography.buttonText}
-  background-color: ${(p) => p.theme.colors.primary};
+  ${(p) => p.theme.themedColor("background-color", "primary")}
   border: 0;
   padding: 16px;
   display: inline-block;
@@ -14,7 +14,9 @@ export const Button = styled("input")`
 `;
 
 export const Divider = styled("hr")`
-  border: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
+  border-width: 3px;
+  border-style: solid;
+  ${(p) => p.theme.themedColor("border-color", "onSurface1")}
   ${(p) =>
     p.theme.responsiveStyle("margin-bottom", {
       s: `${p.theme.spacings.xl}px`,

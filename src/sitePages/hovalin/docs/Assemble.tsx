@@ -12,9 +12,12 @@ export const Assemble: React.FC<{}> = () => (
     <ContainerWithBorder>
       <ContainerFlex>
         <ContainerContent flexXL="50">
-          <Text typography="headingLarge">4</Text>
-          <Text typography="headingSmall">Assemble</Text>
-          <br />
+          <div>
+            <Text typography="headingLarge">5</Text>
+          </div>
+          <div>
+            <Text typography="headingSmall">Assemble</Text>
+          </div>
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>

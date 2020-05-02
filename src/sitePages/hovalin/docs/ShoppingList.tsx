@@ -20,12 +20,11 @@ export const ShoppingList: React.FC<{}> = () => (
           <div>
             <Text typography="headingSmall">Shopping List</Text>
           </div>
-          <br />
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
         {shoppingList.map((item) => (
-          <ContainerContent disablePadding flexXL="50">
+          <ContainerContent flexXL="50">
             <S.Title>
               <Icon size={32} IconComponent={item.icon} />
               <Text typography="headingSmall">{item.title}</Text>

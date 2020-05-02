@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: "Hova Labs",
-    description: "Welcome to the Hova Labs website!",
-    author: "Kaitlyn & Matt Hova",
+    description:
+      "Professional Prototyping with design-systems, software, firmware, and 3d printing",
+    keywords:
+      "design systems, design-systems, design, sketch, figma, web design, technology, code, software, hardware, cat hova",
+    author: "The Hovas",
+    url: "https://www.hovalabs.com", // No trailing slash allowed!
   },
   plugins: [
     "gatsby-plugin-typescript",

@@ -23,8 +23,12 @@ export const Waldo: React.FC<{}> = () => (
       backgroundImage={waldoHero}
       backgroundImageStyles={{ opacity: 0.2 }}
     >
-      <Text typography="headingLarge">Waldo</Text>
-      <Text typography="headingSmall">Organize your startup</Text>
+      <div>
+        <Text typography="headingLarge">Waldo</Text>
+      </div>
+      <div>
+        <Text typography="headingSmall">Organize your startup</Text>
+      </div>
       <S.ButtonPadding>
         <Button
           href={routes.PROJECT_WALDO}
@@ -34,17 +38,23 @@ export const Waldo: React.FC<{}> = () => (
       </S.ButtonPadding>
     </ContainerWithBorder>
     <ContainerWithBorder>
-      <Text typography="bodyText">
-        Our friend Lukas came to Kaitlyn with an idea for making a tool to
-        organize 3D Robotics‘s software department during our Hack Week. They
-        were growing fast, and it’d would have been super helpful to have
-        something that displayed everything that was going on while also having
-        a cute UI.
-      </Text>
-      <Text typography="bodyText">ENTER: WALDO</Text>
-      <Text typography="bodyText">
-        Our team was called “Cat Paws”, which included:
-      </Text>
+      <div>
+        <Text typography="bodyText">
+          Our friend Lukas came to Kaitlyn with an idea for making a tool to
+          organize 3D Robotics‘s software department during our Hack Week. They
+          were growing fast, and it’d would have been super helpful to have
+          something that displayed everything that was going on while also
+          having a cute UI.
+        </Text>
+      </div>
+      <div>
+        <Text typography="bodyText">ENTER: WALDO</Text>
+      </div>
+      <div>
+        <Text typography="bodyText">
+          Our team was called “Cat Paws”, which included:
+        </Text>
+      </div>
       <ul>
         <li>
           <Text typography="bodyText">Ed: Icon design.</Text>
@@ -101,7 +111,9 @@ export const Waldo: React.FC<{}> = () => (
           </Text>
         </li>
       </ul>
-      <Text typography="headingMedium">Workflow</Text>
+      <div>
+        <Text typography="headingMedium">Workflow</Text>
+      </div>
       <Text typography="bodyText">
         Because we didn’t want to have our Project Managers learn a new tool’s
         UI for inputing data, Lukas used google APIs to take a google
@@ -109,7 +121,9 @@ export const Waldo: React.FC<{}> = () => (
         app via Https request. This way, there is literally no difference in
         their workflow, and we just pretty up the data they already have.
       </Text>
-      <Text typography="bodyText">The data flow is as follows:</Text>
+      <div>
+        <Text typography="bodyText">The data flow is as follows:</Text>
+      </div>
       <ul>
         <li>
           <Text typography="bodyText">Google Spreadsheets –></Text>
@@ -124,16 +138,19 @@ export const Waldo: React.FC<{}> = () => (
           <Text typography="bodyText">Rails App</Text>
         </li>
       </ul>
-      <Text typography="bodyText">
-        Names and projects have been changed on the portfolio site for security
-        reasons.
-      </Text>
-      <Text typography="headingMedium">Results</Text>
-
+      <div>
+        <Text typography="headingMedium">Results</Text>
+      </div>
       <Text typography="bodyText">
         We were the first (and only, to our knowledge) hack week project to make
         it to production!
       </Text>
+      <div>
+        <Text typography="bodyText">
+          Names and projects have been changed on the portfolio site for
+          security reasons.
+        </Text>
+      </div>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <img src={waldoCard} alt="Waldo Card" width="100%" />

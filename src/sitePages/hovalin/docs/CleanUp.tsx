@@ -11,11 +11,14 @@ export const CleanUp: React.FC<{}> = () => (
   <ContainerWithBorder>
     <ContainerFlex>
       <ContainerContent flexXL="50">
-        <Text typography="headingLarge">3</Text>
-        <Text typography="headingSmall">Clean Up</Text>
+        <div>
+          <Text typography="headingLarge">3</Text>
+        </div>
+        <div>
+          <Text typography="headingSmall">Clean Up</Text>
+        </div>
       </ContainerContent>
     </ContainerFlex>
-    <br />
     <ContainerFlex>
       <ContainerContent flexXL="50">
         <img src={sanding} alt="sanding" width="100%" />

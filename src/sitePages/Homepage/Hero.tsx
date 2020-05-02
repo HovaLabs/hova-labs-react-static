@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import heroImage from "./hero_homepage.jpg";
 import { ContainerWithBorder } from "../../components/Container/ContainerWithBorder";
+import { HovaLabs } from "../../components";
+
 // HERO START
 const HeroContainer = styled("div")`
   position: relative;
@@ -13,31 +15,14 @@ const HeroContainer = styled("div")`
   justify-content: center;
 `;
 
-const HeroText = styled("div")`
-  position: relative;
-  color: ${(p) => p.theme.colors.onSurface1};
-  ${(p) =>
-    p.theme.responsiveStyle("font-size", {
-      s: "50px",
-      l: "114px",
-    })}
-  ${(p) =>
-    p.theme.responsiveStyle("letter-spacing", {
-      s: "10px",
-      l: "20px",
-    })}
-  text-align: center;
-  ${(p) =>
-    p.theme.responsiveStyle("line-height", {
-      s: "50px",
-      l: "114px",
-    })}
+const HeroText = styled(HovaLabs)`
+  position: absolute;
 `;
 
 export const Hero: React.FC<{}> = () => (
   <ContainerWithBorder backgroundImage={heroImage} lineVariant="hero">
     <HeroContainer>
-      <HeroText>HOVA LABS</HeroText>
+      <HeroText />
     </HeroContainer>
   </ContainerWithBorder>
 );
