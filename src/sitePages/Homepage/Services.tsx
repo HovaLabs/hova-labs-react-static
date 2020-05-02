@@ -13,9 +13,11 @@ import {
 
 // SERVICES START
 
-const OurIcon = styled(Icon).attrs((p) => ({
-  color: p.theme.colors.onBackground,
-}))``;
+const OurIcon = styled(Icon)`
+  * {
+    ${(p) => p.theme.themedColor("fill", "onBackground")}
+  }
+`;
 
 const ServiceGridContainer = styled("div")`
   display: -ms-grid;
