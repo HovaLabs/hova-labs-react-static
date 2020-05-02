@@ -8,3 +8,4 @@ export { Portal } from "./Portal";
 export * from "./Navigation/NavigationFooter";
 export { TopNavigation } from "./TopNavigation";
 export * from "./Text";
+export { SEO } from "./seo";
