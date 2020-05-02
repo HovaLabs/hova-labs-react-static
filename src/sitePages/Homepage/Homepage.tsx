@@ -16,7 +16,7 @@ const Container = styled("div")``;
 
 export const Homepage: React.FC<{}> = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO />
     <Container>
       <Hero />
       <About />
