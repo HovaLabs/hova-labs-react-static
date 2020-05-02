@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Title = styled("svg")`
   * {
-    fill: ${(p) => p.theme.colors.onBackground};
+    ${(p) => p.theme.themedColor("fill", "onBackground")}
   }
 `;
 
