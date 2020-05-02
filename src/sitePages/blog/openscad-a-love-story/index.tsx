@@ -21,7 +21,6 @@ const OpenscadALoveStory: React.FC<{}> = () => (
       that it can easily turn into spaghetti code when creating complex 3d
       models.
     </div>
-    <br />
     <div>
       The hovalin design began as 100 lines of OpenSCAD code. Despite all of its
       shortcomings, hovalin v0.1 created the basic concepts for a 3d printable

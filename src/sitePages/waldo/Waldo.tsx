@@ -101,7 +101,9 @@ export const Waldo: React.FC<{}> = () => (
           </Text>
         </li>
       </ul>
-      <Text typography="headingMedium">Workflow</Text>
+      <div>
+        <Text typography="headingMedium">Workflow</Text>
+      </div>
       <Text typography="bodyText">
         Because we didn’t want to have our Project Managers learn a new tool’s
         UI for inputing data, Lukas used google APIs to take a google
@@ -109,7 +111,9 @@ export const Waldo: React.FC<{}> = () => (
         app via Https request. This way, there is literally no difference in
         their workflow, and we just pretty up the data they already have.
       </Text>
-      <Text typography="bodyText">The data flow is as follows:</Text>
+      <div>
+        <Text typography="bodyText">The data flow is as follows:</Text>
+      </div>
       <ul>
         <li>
           <Text typography="bodyText">Google Spreadsheets –></Text>
@@ -124,16 +128,19 @@ export const Waldo: React.FC<{}> = () => (
           <Text typography="bodyText">Rails App</Text>
         </li>
       </ul>
-      <Text typography="bodyText">
-        Names and projects have been changed on the portfolio site for security
-        reasons.
-      </Text>
-      <Text typography="headingMedium">Results</Text>
-
+      <div>
+        <Text typography="headingMedium">Results</Text>
+      </div>
       <Text typography="bodyText">
         We were the first (and only, to our knowledge) hack week project to make
         it to production!
       </Text>
+      <div>
+        <Text typography="bodyText">
+          Names and projects have been changed on the portfolio site for
+          security reasons.
+        </Text>
+      </div>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <img src={waldoCard} alt="Waldo Card" width="100%" />

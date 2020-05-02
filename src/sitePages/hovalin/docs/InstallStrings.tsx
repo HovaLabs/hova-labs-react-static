@@ -13,15 +13,17 @@ export const InstallStrings: React.FC<{}> = () => (
     <ContainerWithBorder>
       <ContainerFlex>
         <ContainerContent flexXL="50">
-          <Text typography="headingLarge">5</Text>
-          <Text typography="headingSmall">Install Strings</Text>
-          <br />
+          <div>
+            <Text typography="headingLarge">5</Text>
+          </div>
+          <div>
+            <Text typography="headingSmall">Install Strings</Text>
+          </div>
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
         <ContainerContent flexXL="50">
           <img width="100%" src={hovalinStrings} alt="strings on bridge" />
-          <br />
           <img
             width="100%"
             src={hovalinStringsTuners}

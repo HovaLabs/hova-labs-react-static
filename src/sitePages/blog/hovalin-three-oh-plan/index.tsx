@@ -10,7 +10,6 @@ const HovalinThreeOhPlan: React.FC<{}> = () => (
       This post is half update and half an apology for the United States not
       using the metric system. Enjoy!
     </div>
-    <br />
     <div>
       Thus far in our work with Hovalin, we've spent a lot of time developing a
       design before talking about or releasing it. This post is a departure from

@@ -16,24 +16,26 @@ export const PrintParts: React.FC<{}> = () => (
   <div id="print-parts">
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent disablePadding  flexXL="50">
-          <Text typography="headingLarge">2</Text>
-          <Text typography="headingSmall">Print Parts</Text>
-          <br />
+        <ContainerContent disablePadding flexXL="50">
+          <div>
+            <Text typography="headingLarge">2</Text>
+          </div>
+          <div>
+            <Text typography="headingSmall">Print Parts</Text>
+          </div>
         </ContainerContent>
       </ContainerFlex>
       <ContainerFlex>
-        <ContainerContent disablePadding  flexXL="50">
+        <ContainerContent disablePadding flexXL="50">
           <img src={threeDPrinter} alt="3d printer" />
         </ContainerContent>
-        <ContainerContent disablePadding  flexXL="50">
+        <ContainerContent disablePadding flexXL="50">
           <Text typography="headingSmall">New to 3D printing?</Text>
           <div>
             In order to make the violin we’re going to need a 3D printer. It
             needs to be wide enough to print the neck (~300mm) and tall enough
             to print the violin body (~360mm).
           </div>
-          <br />
           <Text typography="headingSmall">First Layer Problems</Text>
           <div>
             A majority of the problems from 3d printing can stem from the first
@@ -49,7 +51,7 @@ export const PrintParts: React.FC<{}> = () => (
           </ul>
         </ContainerContent>
       </ContainerFlex>
-      <ContainerContent disablePadding  flexXL="100">
+      <ContainerContent disablePadding flexXL="100">
         <div>* extra credit *</div>
         <div>
           Sand the blue tape with 100 grit sandpaper to help prevent warping
@@ -68,13 +70,22 @@ export const PrintParts: React.FC<{}> = () => (
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent disablePadding  flexXL="50">
-          <div><Text typography="headingMedium">The Neck</Text></div>
-          <div><Text typography="bodyText">10 PRINT HOURS | 90g PLASTIC </Text></div>
-          <div><Text typography="bodyText">Layer Height: 0.2mm </Text></div>
-          <div><Text typography="bodyText">Infill: 30% </Text></div>
-          <div><Text typography="bodyText">Perimeters: 3 </Text></div>
-          <br />
+        <ContainerContent disablePadding flexXL="50">
+          <div>
+            <Text typography="headingMedium">The Neck</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">10 PRINT HOURS | 90g PLASTIC </Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Layer Height: 0.2mm </Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Infill: 30% </Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Perimeters: 3 </Text>
+          </div>
           <Button
             href={routes.HOVALIN_DOCS}
             title="DOWNLOAD"
@@ -86,20 +97,29 @@ export const PrintParts: React.FC<{}> = () => (
             }}
           />
         </ContainerContent>
-        <ContainerContent disablePadding  flexXL="50">
+        <ContainerContent disablePadding flexXL="50">
           <HovalinNeck />
         </ContainerContent>
       </ContainerFlex>
     </ContainerWithBorder>
     <ContainerWithBorder>
       <ContainerFlex>
-        <ContainerContent disablePadding  flexXL="50">
-          <div><Text typography="headingMedium">The Body</Text></div>
-          <div><Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text></div>
-          <div><Text typography="bodyText">Layer Height: 0.3mm</Text></div>
-          <div><Text typography="bodyText">Infill: 30%</Text></div>
-          <div><Text typography="bodyText">Perimeters: 2</Text></div>
-          <br />
+        <ContainerContent disablePadding flexXL="50">
+          <div>
+            <Text typography="headingMedium">The Body</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Layer Height: 0.3mm</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Infill: 30%</Text>
+          </div>
+          <div>
+            <Text typography="bodyText">Perimeters: 2</Text>
+          </div>
           <Button
             href={routes.HOVALIN_DOCS}
             title="DOWNLOAD"
@@ -111,7 +131,7 @@ export const PrintParts: React.FC<{}> = () => (
             }}
           />
         </ContainerContent>
-        <ContainerContent disablePadding  flexXL="50">
+        <ContainerContent disablePadding flexXL="50">
           <HovalinBody />
         </ContainerContent>
       </ContainerFlex>

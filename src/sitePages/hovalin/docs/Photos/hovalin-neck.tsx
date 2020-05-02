@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const SVG = styled("svg")`
-  stroke: ${(p) => p.theme.colors.primary};
+  ${(p) => p.theme.themedColor("stroke", "primary")}
   stroke-width: 0.5;
   width: 100%;
 `;

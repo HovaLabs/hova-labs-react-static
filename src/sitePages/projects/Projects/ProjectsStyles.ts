@@ -19,7 +19,7 @@ export const HeroImage = styled("div")<{ backgroundImage: string }>`
 `;
 
 export const InfoContainer = styled.div`
-  background: ${(p) => p.theme.colors.surface2};
+  ${(p) => p.theme.themedColor("background", "surface2")}
   ${(p) =>
     p.theme.responsiveStyle("padding", {
       s: `${p.theme.spacings.l}px`,

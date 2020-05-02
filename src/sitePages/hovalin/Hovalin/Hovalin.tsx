@@ -65,12 +65,13 @@ export const Hovalin: React.FC<{}> = () => (
               hovalin project is inspired in part by David Perry's FFFiddle.
               Check it out here. Read our FAQ
             </Text>
-            <br />
-            <Button
-              href={routes.HOVALIN_FAQ}
-              title="Read our FAQ"
-              onPress={() => {}}
-            />
+            <S.ButtonPadding>
+              <Button
+                href={routes.HOVALIN_FAQ}
+                title="Read our FAQ"
+                onPress={() => {}}
+              />
+            </S.ButtonPadding>
           </ContainerContent>
         </ContainerFlex>
       </ContainerWithBorder>
