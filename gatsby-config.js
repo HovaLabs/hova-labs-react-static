@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "Hova Labs",
     description:
-      "Professional Prototyping with design-system, 3d printing, software, and firmware",
+      "Professional Prototyping with design-systems, software, firmware, and 3d printing",
     keywords:
       "design systems, design-systems, design, sketch, figma, web design, technology, code, software, hardware, cat hova",
     author: "The Hovas",
