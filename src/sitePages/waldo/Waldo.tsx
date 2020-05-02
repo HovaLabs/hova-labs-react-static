@@ -23,8 +23,12 @@ export const Waldo: React.FC<{}> = () => (
       backgroundImage={waldoHero}
       backgroundImageStyles={{ opacity: 0.2 }}
     >
-      <Text typography="headingLarge">Waldo</Text>
-      <Text typography="headingSmall">Organize your startup</Text>
+      <div>
+        <Text typography="headingLarge">Waldo</Text>
+      </div>
+      <div>
+        <Text typography="headingSmall">Organize your startup</Text>
+      </div>
       <S.ButtonPadding>
         <Button
           href={routes.PROJECT_WALDO}
@@ -34,17 +38,23 @@ export const Waldo: React.FC<{}> = () => (
       </S.ButtonPadding>
     </ContainerWithBorder>
     <ContainerWithBorder>
-      <Text typography="bodyText">
-        Our friend Lukas came to Kaitlyn with an idea for making a tool to
-        organize 3D Robotics‘s software department during our Hack Week. They
-        were growing fast, and it’d would have been super helpful to have
-        something that displayed everything that was going on while also having
-        a cute UI.
-      </Text>
-      <Text typography="bodyText">ENTER: WALDO</Text>
-      <Text typography="bodyText">
-        Our team was called “Cat Paws”, which included:
-      </Text>
+      <div>
+        <Text typography="bodyText">
+          Our friend Lukas came to Kaitlyn with an idea for making a tool to
+          organize 3D Robotics‘s software department during our Hack Week. They
+          were growing fast, and it’d would have been super helpful to have
+          something that displayed everything that was going on while also
+          having a cute UI.
+        </Text>
+      </div>
+      <div>
+        <Text typography="bodyText">ENTER: WALDO</Text>
+      </div>
+      <div>
+        <Text typography="bodyText">
+          Our team was called “Cat Paws”, which included:
+        </Text>
+      </div>
       <ul>
         <li>
           <Text typography="bodyText">Ed: Icon design.</Text>
