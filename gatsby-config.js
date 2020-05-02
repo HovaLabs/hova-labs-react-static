@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: "Hova Labs",
-    description: "Welcome to the Hova Labs website!",
-    keywords: "web design, technology, code, software, hardware, cat hova",
+    description:
+      "Professional Prototyping with design-system, 3d printing, software, and firmware",
+    keywords:
+      "design systems, design-systems, design, sketch, figma, web design, technology, code, software, hardware, cat hova",
     author: "The Hovas",
     url: "https://www.hovalabs.com", // No trailing slash allowed!
   },
