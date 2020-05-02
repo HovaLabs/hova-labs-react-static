@@ -2,6 +2,7 @@ export * from "./Button";
 export * from "./ClientOnly";
 export * from "./Container";
 export { GlobalStyle } from "./GlobalStyle";
+export * from "./HovaLabs";
 export * from "./Icons";
 export { ModalsMobileNav } from "./Modals";
 export { Portal } from "./Portal";
