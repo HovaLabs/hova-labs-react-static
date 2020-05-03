@@ -8,7 +8,7 @@ const outputFilePath = path.join(__dirname, "..", "src", "routes.ts");
 const pagesFolder = path.join(__dirname, "..", "src", "sitePages");
 const pagesOutputFolder = path.join(__dirname, "..", "src", "pages");
 
-const routesArray = [];
+const routesArray = ['/404'];
 
 function findAllRoutes(route) {
   fs.readdirSync(route).forEach((file) => {
