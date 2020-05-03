@@ -1,4 +1,5 @@
 export const routes = {
+  "404": "/404",
   HOMEPAGE: "/",
   HOVALIN_REDDIT: "https://reddit.com/r/hovalin_community",
   HOVALIN_4_4_FILES:
