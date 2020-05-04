@@ -56,15 +56,18 @@ export const Hovalin: React.FC<{}> = () => (
           </ContainerContent>
           <ContainerContent disablePadding flexXL="50">
             <TitlePrimary subtitle="About" title="A violin for Makers" />
-            <Text typography="bodyText">
-              The hovalin is a functional acoustic violin that can be produced
-              using most standard consumer 3d printers. The total cost of raw
-              materials for the violin (4/4) is currently about $70. The hovalin
-              was designed with Autodesk Fusion 360, and its shape and
-              dimensions are inspired by the Stradivarius violin model. The
-              hovalin project is inspired in part by David Perry's FFFiddle.
-              Check it out here. Read our FAQ
-            </Text>
+            <div>
+              <Text typography="bodyText">
+                The hovalin is a functional acoustic violin that can be produced
+                using most standard consumer 3d printers. The total cost of raw
+                materials for the violin (4/4) is currently about $70. The
+                hovalin was designed with Autodesk Fusion 360, and its shape and
+                dimensions are inspired by the Stradivarius violin model. The
+                hovalin project is inspired in part by David Perry's FFFiddle.
+                Check it out
+                <a href="https://openfabpdx.com/fffiddle/">{" here."}</a>
+              </Text>
+            </div>
             <S.ButtonPadding>
               <Button
                 href={routes.HOVALIN_FAQ}
