@@ -63,7 +63,7 @@ export const Hovalin: React.FC<{}> = () => (
               was designed with Autodesk Fusion 360, and its shape and
               dimensions are inspired by the Stradivarius violin model. The
               hovalin project is inspired in part by David Perry's FFFiddle.
-              Check it out here. Read our FAQ
+              Check it out here.
             </Text>
             <S.ButtonPadding>
               <Button
