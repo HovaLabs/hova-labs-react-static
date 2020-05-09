@@ -53,6 +53,7 @@ export const routes = {
   BLOG: "/blog",
   BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
     "/blog/autodesk-instagram-and-the-fffiddle",
+  BLOG_DEDUCTIVE_COMPONENT_LANGUAGE: "/blog/deductive-component-language",
   BLOG_DO_SPACE: "/blog/do-space",
   BLOG_HOVALIN_AT_NASA: "/blog/hovalin-at-nasa",
   BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",

@@ -5,9 +5,6 @@ export const BlogStyles = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  > * {
-    width: 100%;
-  }
   > div {
     ${(p) =>
       p.theme.responsiveStyle("margin-bottom", {
