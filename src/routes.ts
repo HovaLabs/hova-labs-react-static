@@ -58,6 +58,7 @@ export const routes = {
   BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",
   BLOG_HOVALIN_THREE_OH_PLAN: "/blog/hovalin-three-oh-plan",
   BLOG_HOVALIN_TWO: "/blog/hovalin-two",
+  BLOG_OATMEAL_PANCAKES: "/blog/oatmeal-pancakes",
   BLOG_OPENSCAD_A_LOVE_STORY: "/blog/openscad-a-love-story",
   BLOG_OUR_FIVE_STRING_SYNESTHESIA_VIOLIN:
     "/blog/our-five-string-synesthesia-violin",

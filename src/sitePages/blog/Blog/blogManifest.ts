@@ -5,6 +5,7 @@ import hovalinAtNasaHeroImage from "../hovalin-at-nasa/hero.jpg";
 import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
 import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
+import oatmealPancakesHeroImage from "../oatmeal-pancakes/hero.jpg";
 import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
 import steamCarnivalSfHeroImage from "../steam-carnival-sf/hero.jpg";
@@ -12,6 +13,14 @@ import theSiteIsNowLiveHeroImage from "../the-site-is-now-live/hero.jpg";
 import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogManifest = [
+  {
+    hero: oatmealPancakesHeroImage,
+    datePublished: "2020-05-10T00:00:00.000Z",
+    tags: ["recipe", "breakfast"],
+    title: "Oatmeal Pancakes",
+    subtitle: "Kick your breakfast off with some tasty pancakes",
+    url: "/blog/oatmeal-pancakes",
+  },
   {
     hero: ourFiveStringSynesthesiaViolinHeroImage,
     datePublished: "2020-02-12T16:26:08.712Z",
