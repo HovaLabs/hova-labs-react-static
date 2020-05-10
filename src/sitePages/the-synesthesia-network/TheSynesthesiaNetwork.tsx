@@ -15,12 +15,12 @@ export const TheSynesthesiaNetwork: React.FC<{}> = () => (
       backgroundImageStyles={{ opacity: 0.2 }}
     >
       <div>
-      <Text typography="headingLarge">The Synesthesia Network</Text>
+        <Text typography="headingLarge">The Synesthesia Network</Text>
       </div>
       <div>
-      <Text typography="headingSmall">
-        A Nexus for Synesthetes and Researchers
-      </Text>
+        <Text typography="headingSmall">
+          A Nexus for Synesthetes and Researchers
+        </Text>
       </div>
       <S.ButtonPadding>
         <Button
@@ -32,14 +32,13 @@ export const TheSynesthesiaNetwork: React.FC<{}> = () => (
     </ContainerWithBorder>
     <ContainerWithBorder>
       <div>
-      <Text typography="bodyText">
-        The Synesthesia Network is an educational social network designed to
-        explore the phenomenon of Synesthesia by connecting researchers,
-        synesthetes, and inquiring minds.
-      </Text>
+        <Text typography="bodyText">
+          The Synesthesia Network is an educational social network designed to
+          explore the phenomenon of Synesthesia by connecting researchers,
+          synesthetes, and inquiring minds.
+        </Text>
       </div>
-      <div>
-      </div>
+      <div />
       <Text typography="bodyText">
         Functions include checking out people with the condition, taking tests
         to see if you have any form of synesthesia, and brushing up on the
@@ -47,6 +46,11 @@ export const TheSynesthesiaNetwork: React.FC<{}> = () => (
       </Text>
     </ContainerWithBorder>
     <ContainerWithBorder>
+      <div>Check out some snapshots from the site or...</div>
+      <div style={{ height: 20 }} />
+      <Button href={routes.THE_SYNESTHESIA_NETWORK} title="Check it out Live" />
+      <div style={{ height: 20 }} />
+
       <img src={tsn} width="100%" alt="The Synesthesia Netork snapshot" />
       <img src={tsn2} width="100%" alt="The Synesthesia Netork snapshot 2" />
     </ContainerWithBorder>
