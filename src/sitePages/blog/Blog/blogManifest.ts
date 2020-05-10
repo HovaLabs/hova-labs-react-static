@@ -15,7 +15,7 @@ import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 export const blogManifest = [
   {
     hero: oatmealPancakesHeroImage,
-    datePublished: "2052-01-01T00:00:00.000Z",
+    datePublished: "2020-05-10T00:00:00.000Z",
     tags: ["recipe", "breakfast"],
     title: "Oatmeal Pancakes",
     subtitle: "Kick your breakfast off with some tasty pancakes",
