@@ -3,7 +3,10 @@ import React from "react";
 import { Button } from "../../../components/Button/Button";
 import blogManifest from "./manifest.json";
 import hero from "./hero.jpg";
+import { Code, Highlight, Quote } from "../Blog/blogStyles";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
+import meme from "./Media/meme.png";
+import whyCare from "./Media/whatDoYouWant.gif";
 
 const DeductiveComponentLanguage: React.FC<{}> = () => {
   return (
@@ -31,6 +34,8 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
           <a href="#conclusion">Conclusion.</a>
         </li>
       </ol>
+      <img alt="what happens when you try to name a button" src={meme} />
+
       <div id="what-is-component-language" />
       <br />
       <h2>What is Component Language?</h2>
@@ -43,62 +48,73 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         language (spoken/programming/domain specific) and by mindfully unifying
         design & engineering behind a naming/organization system (“language”)
         you can make it easier to convey product ideas and make the process of
-        implementing those ideas easier and faster to realize. At it’s best,
-        “Component Language” is the process that organizes & definitively names
-        a component in your codebase and design files. This process most likely
-        won’t happen organically, especially on larger teams. It requires
-        mindful structure and 100% “buy-in” from product, design, and
-        engineering teams.
+        implementing those ideas easier and faster to realize.
+{" "}
+        <Highlight>
+          At it’s best, “Component Language” is the process that organizes &
+          definitively names a component in your codebase and design files.
+        </Highlight>
+{" "}
+        This process most likely won’t happen organically, especially on larger
+        teams. It requires mindful structure and 100% “buy-in” from product,
+        design, and engineering teams.
       </p>
       <div id="why-care" />
       <br />
       <h2>Why Care about Component Language?</h2>
+      <img alt="why care about component language" src={whyCare} />
       <p>
         A quick google of “how to name components” will give you a few very
         opinionated articles (yes, including this one). Why are so many people
         passionate about this?
-{" "}
-        <strong>
+        <Highlight>
           It’s because component naming and organization reflect the state of
           product organization of an entire company.
-        </strong>
+        </Highlight>
         Not having a set system to name & organize your components is an
         indicator that your company may also have:
       </p>
       <ol>
         <li>
-          Fragmented communication between product, design, and engineering
-          teams. When product teams talk about a “Announcement” concept, design
-          teams call it “Banner”, and engineering teams call it whatever the
-          person writing the ticket thinks works in the moment (probably
-          something like “Alert”), it’s hard to keep deliverables and
-          expectations straight. Much refactoring ensues. Much duplicate code.
-          Much sadness.
+          <strong>
+            Fragmented communication between product, design, and engineering
+            teams.
+          </strong>
+          When product teams talk about a “Announcement” concept, design teams
+          call it “Banner”, and engineering teams call it whatever the person
+          writing the ticket thinks works in the moment (probably something like
+          “Alert”), it’s hard to keep deliverables and expectations straight.
+          Much refactoring ensues. Much duplicate code. Much sadness.
         </li>
         <li>
-          Difficulty navigating through the codebase & design files quickly &
-          coherently. This doesn’t just concern “new hires.” If you don’t have a
-          set component organization & language, even the most familiar
-          engineers & designers on a team will spend some time second guessing
-          where something lives instead of being able to locate it quickly. Even
+          <strong>
+            Difficulty navigating through the codebase & design files quickly &
+            coherently.
+          </strong>
+          This doesn’t just concern “new hires.” If you don’t have a set
+          component organization & language, even the most familiar engineers &
+          designers on a team will spend some time second guessing where
+          something lives instead of being able to locate it quickly. Even
           worse, they might create files in places no one else would think to
           look.
         </li>
         <li>
-          Lack of clarity about what a component is supposed to do. Without a
-          set system in place to name components, you’ll run into the
+          <strong>
+            Lack of clarity about what a component is supposed to do.
+          </strong>
+          Without a set system in place to name components, you’ll run into the
           possibility of creating several components that do similar things in
           design and engineering. In some cases this leads to duplicate silos of
           work that can slow down development of new features. (why build a
           component again?)
         </li>
         <li>
-          A rough “Design handoff process” to engineering. How does an engineer
-          know what to implement if design calls it something different than
-          what’s in the codebase? How do they quickly know what reusable
-          components already make up that design so that they don’t make
-          duplicate code? How does a designer know what components engineering
-          has already made?
+          <strong>A rough “Design handoff process” to engineering. </strong>
+          How does an engineer know what to implement if design calls it
+          something different than what’s in the codebase? How do they quickly
+          know what reusable components already make up that design so that they
+          don’t make duplicate code? How does a designer know what components
+          engineering has already made?
         </li>
       </ol>
       <p>
@@ -107,6 +123,17 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       <div id="deductive-component-language" />
       <br />
       <h2>Deductive Component Language</h2>
+      <Quote>
+        <p>TLDR</p>
+        <p>File Structure:</p>
+        <p>
+          {
+            "<genericGroup>/<genericGroup><functionality>/<genericGroup><functionality>.<fileExtension>"
+          }
+        </p>
+        <p>For Example:</p>
+        <p>Blog/BlogHeroArea/BlogHeroArea.tsx</p>
+      </Quote>
       <p>
         The general idea of Deductive Component Language is that you work your
         way down from the most general to the most specific attributes to name
@@ -155,6 +182,27 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         easily start grouping “like” components together alphabetically in your
         code editor. For example:
       </p>
+
+      <Code>
+        <p>
+          // All your dialogs are grouped in a folder and those with "create"
+          (in this case, create="AddNew") functionality are also grouped
+          alphabetically in a folder by your code editor:
+        </p>
+        <p>
+          {
+            "Dialog/DialogAddNewCat\nDialog/DialogAddNewComment\nDialog/DialogAddNewTitle"
+          }
+        </p>
+        <p>
+          // If that is too many high level folders, you can now nest them like:
+        </p>
+        <p>
+          Dialog/DialogAddNew/DialogAddNewCat
+          Dialog/DialogAddNew/DialogAddNewComment
+          Dialog/DialogAddNew/DialogAddNewTitle
+        </p>
+      </Code>
       <div id="transform-process" />
       <br />
       <h2>

@@ -5,6 +5,17 @@ export const BlogTagList = styled("div")`
   flex-wrap: wrap;
 `;
 
+export const Code = styled("div")`
+  background-color: ${(p) => p.theme.colors.surface2};
+  font-family: monospace;
+  padding: ${(p) => `0 ${p.theme.spacings.xl}px`};
+  white-space: break-spaces;
+`;
+
+export const Highlight = styled("span")`
+  background-color: ${(p) => p.theme.colors.primary};
+`;
+
 export const OuterContainer = styled("div")`
   h1 {
     ${(p) => p.theme.typography.headingLarge}
@@ -36,6 +47,11 @@ export const NewOnTheBlogExtraPadding = styled("div")`
       s: `${p.theme.spacings.l}px`,
       l: `${p.theme.spacings.xl}px`,
     })}
+`;
+
+export const Quote = styled("span")`
+  border-left: ${(p) => `3px solid ${p.theme.colors.onSurface1}`};
+  padding-left: ${(p) => `${p.theme.spacings.xl}px`};
 `;
 
 export const TagsContainer = styled.div`
