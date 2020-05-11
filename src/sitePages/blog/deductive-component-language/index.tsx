@@ -198,9 +198,8 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
           // If that is too many high level folders, you can now nest them like:
         </p>
         <p>
-          Dialog/DialogAddNew/DialogAddNewCat
-          Dialog/DialogAddNew/DialogAddNewComment
-          Dialog/DialogAddNew/DialogAddNewTitle
+          DialogAddNew/DialogAddNewCat DialogAddNew/DialogAddNewComment
+          DialogAddNew/DialogAddNewTitle
         </p>
       </Code>
       <div id="transform-process" />

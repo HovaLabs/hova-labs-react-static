@@ -8,12 +8,16 @@ export const BlogTagList = styled("div")`
 export const Code = styled("div")`
   background-color: ${(p) => p.theme.colors.surface2};
   font-family: monospace;
-  padding: ${(p) => `0 ${p.theme.spacings.xl}px`};
   white-space: break-spaces;
+  width: 100%;
+  > p {
+    padding: ${(p) => `0 ${p.theme.spacings.xl}px`};
+  }
 `;
 
 export const Highlight = styled("span")`
-  background-color: ${(p) => p.theme.colors.primary};
+  background-color: ${(p) => p.theme.colors.highlight};
+  color: ${(p) => p.theme.colors.onSurface1};
 `;
 
 export const OuterContainer = styled("div")`
