@@ -18,6 +18,8 @@ export const Code = styled("div")`
 export const Highlight = styled("span")`
   background-color: ${(p) => p.theme.colors.highlight};
   color: ${(p) => p.theme.colors.onSurface1};
+  margin: ${(p) => `0px ${p.theme.spacings.s}px`};
+  padding: ${(p) => `0px ${p.theme.spacings.s}px`};
 `;
 
 export const OuterContainer = styled("div")`

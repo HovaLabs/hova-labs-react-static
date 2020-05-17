@@ -1,44 +1,59 @@
 import React from "react";
-
+import { Text } from "@hova-labs/bento-box-web";
 import { Button } from "../../../components/Button/Button";
 import blogManifest from "./manifest.json";
 import hero from "./hero.jpg";
 import { Code, Highlight, Quote } from "../Blog/blogStyles";
 import { BlogContainer } from "../../../components/Blog/BlogContainer";
-import meme from "./Media/meme.png";
-import whyCare from "./Media/whatDoYouWant.gif";
+import imgMeme from "./Media/meme.png";
+import imgFigma from "./Media/figma.png";
+import imgStorybook from "./Media/storybook.png";
+import imgWhyCare from "./Media/whatDoYouWant.gif";
 
 const DeductiveComponentLanguage: React.FC<{}> = () => {
   return (
     <BlogContainer blogManifest={{ ...blogManifest, hero }}>
-      <h3>TLDR;</h3>
+      <Text typography="headingSmall">TLDR;</Text>
       <ol>
         <li>
-          <a href="#what-is-component-language">What is Component Language?</a>
+          <strong>
+            <a href="#what-is-component-language">
+              What is Component Language?
+            </a>
+          </strong>
         </li>
         <li>
-          <a href="#why-care">Why care about Component Naming?</a>
+          <strong>
+            <a href="#why-care">Why care about Component Naming?</a>
+          </strong>
         </li>
         <li>
-          <a href="#deductive-component-language">
-            Deductive Component Language.
-          </a>
+          <strong>
+            <a href="#deductive-component-language">
+              Deductive Component Language.
+            </a>
+          </strong>
         </li>
         <li>
-          <a href="#transform-process">
-            How Deductive Component Language Can Transform your Design Process,
-            Engineering Implementation, and Documentation.
-          </a>
+          <strong>
+            <a href="#transform-process">
+              How Deductive Component Language Can Transform your Design
+              Process, Engineering Implementation, and Documentation.
+            </a>
+          </strong>
         </li>
         <li>
-          <a href="#conclusion">Conclusion.</a>
+          <strong>
+            <a href="#conclusion">Conclusion.</a>
+          </strong>
         </li>
       </ol>
-      <img alt="what happens when you try to name a button" src={meme} />
+
+      <img alt="what happens when you try to name a button" src={imgMeme} />
 
       <div id="what-is-component-language" />
       <br />
-      <h2>What is Component Language?</h2>
+      <Text typography="headingMedium">What is Component Language?</Text>
       <p>
         Languages are generally made up of a structured set of syntactic rules.
         There are spoken languages (English, etc), programming languages
@@ -61,8 +76,8 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       </p>
       <div id="why-care" />
       <br />
-      <h2>Why Care about Component Language?</h2>
-      <img alt="why care about component language" src={whyCare} />
+      <Text typography="headingMedium">Why Care about Component Language?</Text>
+      <img alt="why care about component language" src={imgWhyCare} />
       <p>
         A quick google of “how to name components” will give you a few very
         opinionated articles (yes, including this one). Why are so many people
@@ -80,41 +95,50 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
             Fragmented communication between product, design, and engineering
             teams.
           </strong>
-          When product teams talk about a “Announcement” concept, design teams
-          call it “Banner”, and engineering teams call it whatever the person
-          writing the ticket thinks works in the moment (probably something like
-          “Alert”), it’s hard to keep deliverables and expectations straight.
-          Much refactoring ensues. Much duplicate code. Much sadness.
+          <p>
+            When product teams talk about a “Announcement” concept, design teams
+            call it “Banner”, and engineering teams call it whatever the person
+            writing the ticket thinks works in the moment (probably something
+            like “Alert”), it’s hard to keep deliverables and expectations
+            straight. Much refactoring ensues. Much duplicate code. Much
+            sadness.
+          </p>
         </li>
         <li>
           <strong>
             Difficulty navigating through the codebase & design files quickly &
             coherently.
           </strong>
-          This doesn’t just concern “new hires.” If you don’t have a set
-          component organization & language, even the most familiar engineers &
-          designers on a team will spend some time second guessing where
-          something lives instead of being able to locate it quickly. Even
-          worse, they might create files in places no one else would think to
-          look.
+          <p>
+            This doesn’t just concern “new hires.” If you don’t have a set
+            component organization & language, even the most familiar engineers
+            & designers on a team will spend some time second guessing where
+            something lives instead of being able to locate it quickly. Even
+            worse, they might create files in places no one else would think to
+            look.
+          </p>
         </li>
         <li>
           <strong>
             Lack of clarity about what a component is supposed to do.
           </strong>
-          Without a set system in place to name components, you’ll run into the
-          possibility of creating several components that do similar things in
-          design and engineering. In some cases this leads to duplicate silos of
-          work that can slow down development of new features. (why build a
-          component again?)
+          <p>
+            Without a set system in place to name components, you’ll run into
+            the possibility of creating several components that do similar
+            things in design and engineering. In some cases this leads to
+            duplicate silos of work that can slow down development of new
+            features. (why build a component again?)
+          </p>
         </li>
         <li>
           <strong>A rough “Design handoff process” to engineering. </strong>
-          How does an engineer know what to implement if design calls it
-          something different than what’s in the codebase? How do they quickly
-          know what reusable components already make up that design so that they
-          don’t make duplicate code? How does a designer know what components
-          engineering has already made?
+          <p>
+            How does an engineer know what to implement if design calls it
+            something different than what’s in the codebase? How do they quickly
+            know what reusable components already make up that design so that
+            they don’t make duplicate code? How does a designer know what
+            components engineering has already made?
+          </p>
         </li>
       </ol>
       <p>
@@ -122,17 +146,19 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       </p>
       <div id="deductive-component-language" />
       <br />
-      <h2>Deductive Component Language</h2>
+      <Text typography="headingMedium">Deductive Component Language</Text>
       <Quote>
-        <p>TLDR</p>
-        <p>File Structure:</p>
-        <p>
+        <p>TLDR;</p>
+        <p>// File Structure:</p>
+        <strong>
           {
             "<genericGroup>/<genericGroup><functionality>/<genericGroup><functionality>.<fileExtension>"
           }
+        </strong>
+        <p>// For Example:</p>
+        <p>
+          <Code>Blog/BlogHeroArea/BlogHeroArea.tsx</Code>
         </p>
-        <p>For Example:</p>
-        <p>Blog/BlogHeroArea/BlogHeroArea.tsx</p>
       </Quote>
       <p>
         The general idea of Deductive Component Language is that you work your
@@ -145,25 +171,31 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       </p>
       <ol>
         <li>
-          What does the component generally concern? This could be a model (like
-          in an MVC framework) or general functionality (like “Container,”
-          “Dialog,” or “Input”). For example, if it is a component that is
-          generally used for your “Blog” on your website, then the answer to
-          this question is “Blog”. This answer becomes the parent folder name
-          where this component lives & the first part of the component’s final
-          name. This parent-level term can be plural or singular but you should
-          pick one or the other so that all folders have the same structure
-          (e.g.: “Blog” or “Blogs” ). So far our component has this structure:
-          Blog/Blog____/Blog____.tsx
+          <strong>What does the component generally concern?</strong>
+          <p>
+            This could be a model (like in an MVC framework) or general
+            functionality (like “Container,” “Dialog,” or “Input”). For example,
+            if it is a component that is generally used for your “Blog” on your
+            website, then the answer to this question is “Blog”. This answer
+            becomes the parent folder name where this component lives & the
+            first part of the component’s final name. This parent-level term can
+            be plural or singular but you should pick one or the other so that
+            all folders have the same structure (e.g.: “Blog” or “Blogs” ). So
+            far our component has this structure:
+          </p>
+          <Code>Blog/Blog____/Blog____.tsx</Code>
         </li>
         <li>
-          What does this component do? This is the hyper-specific functionality
-          of the component. For example, if it is a component that displays all
-          of the logic for your blog’s hero areas (on blog display pages) then
-          the answer to this question is something like “well, it’s the Hero
-          Area”. This answer becomes the second part of the component’s name. In
-          the end, this component’s name & structure looks something
-          like:Blog/BlogHeroArea/BlogHeroArea.tsx
+          <strong>What does this component do?</strong>
+          <p>
+            This is the hyper-specific functionality of the component. For
+            example, if it is a component that displays all of the logic for
+            your blog’s hero areas (on blog display pages) then the answer to
+            this question is something like “well, it’s the Hero Area”. This
+            answer becomes the second part of the component’s name. In the end,
+            this component’s name & structure looks something like:
+          </p>
+          <Code>Blog/BlogHeroArea/BlogHeroArea.tsx</Code>
         </li>
       </ol>
       <p>
@@ -175,7 +207,7 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         <li>What the component specifically does.</li>
       </ul>
 
-      <h3>Advanced usage:</h3>
+      <Text typography="headingSmall">Advanced usage:</Text>
       <p>
         If you keep the generic pattern of going from the most broad to the most
         specific attributes and adopt specific patterns of naming, you will
@@ -204,16 +236,19 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       </Code>
       <div id="transform-process" />
       <br />
-      <h2>
+      <Text typography="headingMedium">
         How Deductive Component Language Can Transform your Design Process,
         Engineering Implementation, and Documentation.
-      </h2>
+      </Text>
       <p>
         Cool, so how does this concept transform your entire company? Deductive
         Component Language can completely transform the typically hellish design
         handoff process.
       </p>
-      <h3>1. Design Process:</h3>
+      <Text typography="headingSmall">
+        <strong>1. Design Process:</strong>
+      </Text>
+      <img src={imgFigma} />
       <p>In Figma (for example, but this also applies to Sketch ):</p>
       <p>
         Figma File = Most general attribute (Deductive Component Language
@@ -231,7 +266,9 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         instances of a master component.
       </p>
 
-      <h3>2. Engineering Implementation</h3>
+      <Text typography="headingSmall">
+        <strong>2. Engineering Implementation</strong>
+      </Text>
       <p>
         If the Figma file has everything needed for implementation (styles,
         component groupings) then implementing the component is a no brainer.
@@ -247,7 +284,13 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         names
       </p>
       <p>For Example: Events/EventsListItem/EventsListItem.tsx</p>
-      <h3>3. Component Documentation</h3>
+      <Text typography="headingSmall">
+        <strong>3. Component Documentation</strong>
+      </Text>
+      <img
+        alt="what happens when you try to name a button"
+        src={imgStorybook}
+      />
       <p>
         Since the names & organization are the same between Figma & the app,
         Figma is great to look towards as a source of documentation. However,
@@ -264,7 +307,7 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
       <p>Figma Frame & Master Component = Storybook top level Folder</p>
       <div id="conclusion" />
       <br />
-      <h2>Conclusion</h2>
+      <Text typography="headingMedium">Conclusion</Text>
       <p>
         Having a unified system for naming and organizing your components in
         your app, design, and documentation is key to keeping design and

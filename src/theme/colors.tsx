@@ -11,7 +11,7 @@ export const colorsLightTheme: Colors = {
   surface2: "hsla(0, 0%, 80%, 1)",
   primary: "hsla(206, 31%, 45%,1)",
   secondary: "hsla(206, 31%, 25%,1)",
-  highlight: "hsla(43, 74%, 49%,1)",
+  highlight: "hsla(43, 74%, 49%,.4)",
 };
 
 export const colorsDarkTheme: Colors = {
@@ -25,5 +25,5 @@ export const colorsDarkTheme: Colors = {
   surface2: "hsl(0, 0%, 18%)",
   primary: "hsla(206, 31%, 45%,1)",
   secondary: "hsla(206, 31%, 25%,1)",
-  highlight: "hsla(282, 44%, 39%,1)",
+  highlight: "hsla(282, 44%, 39%,.4)",
 };
