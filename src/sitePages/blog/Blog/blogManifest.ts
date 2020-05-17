@@ -9,10 +9,19 @@ import oatmealPancakesHeroImage from "../oatmeal-pancakes/hero.jpg";
 import openscadALoveStoryHeroImage from "../openscad-a-love-story/hero.jpg";
 import ourFiveStringSynesthesiaViolinHeroImage from "../our-five-string-synesthesia-violin/hero.jpg";
 import steamCarnivalSfHeroImage from "../steam-carnival-sf/hero.jpg";
+import theBestChickenMarinadeRecipeHeroImage from "../the-best-chicken-marinade-recipe/hero.jpg";
 import theSiteIsNowLiveHeroImage from "../the-site-is-now-live/hero.jpg";
 import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogManifest = [
+  {
+    hero: theBestChickenMarinadeRecipeHeroImage,
+    datePublished: "2020-05-16T00:00:00.000Z",
+    tags: ["recipe", "dinner", "grilling"],
+    title: "The Best Chicken Marinade Recipe",
+    subtitle: "we love it, and think you will too",
+    url: "/blog/the-best-chicken-marinade-recipe",
+  },
   {
     hero: oatmealPancakesHeroImage,
     datePublished: "2020-05-10T00:00:00.000Z",
