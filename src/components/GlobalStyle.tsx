@@ -10,6 +10,13 @@ const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
     ${(p) => p.theme.themedColor("background", "background")}
   }
 
+  ::selection {
+    background: ${(p) => p.theme.colors.highlight}; /* WebKit/Blink Browsers */
+  }
+  ::-moz-selection {
+    background: ${(p) => p.theme.colors.highlight}; /* Gecko Browsers */
+  }
+
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
