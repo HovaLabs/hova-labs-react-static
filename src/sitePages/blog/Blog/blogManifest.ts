@@ -16,14 +16,6 @@ import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogManifest = [
   {
-    hero: deductiveComponentLanguageHeroImage,
-    datePublished: "2020-03-01T00:00:00.000Z",
-    tags: ["Design Systems"],
-    title: "Deductive Component Language",
-    subtitle: "Streamline Product, Design, and Engineering!",
-    url: "/blog/deductive-component-language",
-  },
-  {
     hero: theBestChickenMarinadeRecipeHeroImage,
     datePublished: "2020-05-16T00:00:00.000Z",
     tags: ["recipe", "dinner", "grilling"],
@@ -38,6 +30,14 @@ export const blogManifest = [
     title: "Oatmeal Pancakes",
     subtitle: "Kick your breakfast off with some tasty pancakes",
     url: "/blog/oatmeal-pancakes",
+  },
+  {
+    hero: deductiveComponentLanguageHeroImage,
+    datePublished: "2020-03-01T00:00:00.000Z",
+    tags: ["Design-Systems"],
+    title: "Deductive Component Language",
+    subtitle: "Streamline Product, Design, and Engineering!",
+    url: "/blog/deductive-component-language",
   },
   {
     hero: ourFiveStringSynesthesiaViolinHeroImage,
