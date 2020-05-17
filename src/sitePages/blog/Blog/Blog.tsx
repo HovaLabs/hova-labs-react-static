@@ -20,7 +20,7 @@ const getBlogList = (): {
     return (
       typeof window === "undefined" ||
       window.location.hash === "" ||
-      window.location.hash === "#all" ||
+      window.location.hash === "#All" ||
       post.tags.includes(window.location.hash.replace("#", ""))
     );
   });
@@ -36,7 +36,7 @@ export const Blog: React.FC<{}> = () => {
       });
       return acc;
     },
-    ["all"],
+    ["All"],
   );
 
   const blogList = getBlogList();
@@ -56,4 +56,5 @@ export const Blog: React.FC<{}> = () => {
       </ContainerWithBorder>
     </Layout>
   );
+  z;
 };

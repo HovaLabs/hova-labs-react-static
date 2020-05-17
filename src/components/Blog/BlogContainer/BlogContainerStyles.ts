@@ -5,14 +5,18 @@ export const BlogStyles = styled.div`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  > * {
-    width: 100%;
-  }
   > div {
     ${(p) =>
+      p.theme.responsiveStyle("margin", {
+        s: `${p.theme.spacings.l}px 0px`,
+        l: `${p.theme.spacings.xl}px 0px`,
+      })}
+  }
+  li {
+    ${(p) =>
       p.theme.responsiveStyle("margin-bottom", {
-        s: `${p.theme.spacings.l}px`,
-        l: `${p.theme.spacings.xl}px`,
+        s: `${p.theme.spacings.m}px`,
+        l: `${p.theme.spacings.l}px`,
       })}
   }
   iframe,
