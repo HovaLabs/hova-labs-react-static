@@ -63,6 +63,8 @@ export const routes = {
   BLOG_OUR_FIVE_STRING_SYNESTHESIA_VIOLIN:
     "/blog/our-five-string-synesthesia-violin",
   BLOG_STEAM_CARNIVAL_SF: "/blog/steam-carnival-sf",
+  BLOG_THE_BEST_CHICKEN_MARINADE_RECIPE:
+    "/blog/the-best-chicken-marinade-recipe",
   BLOG_THE_SITE_IS_NOW_LIVE: "/blog/the-site-is-now-live",
   BLOG_WOMEN_WHO_CODE: "/blog/women-who-code",
   CONTACT: "/contact",
