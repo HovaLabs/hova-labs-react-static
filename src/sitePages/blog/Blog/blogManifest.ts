@@ -122,7 +122,7 @@ export const blogManifest = [
   {
     hero: autodeskInstagramAndTheFffiddleHeroImage,
     datePublished: "2015-09-02T00:00:00.000Z",
-    tags: ["hovalin"],
+    tags: ["Hovalin"],
     title: "AUTODESK, INSTAGRAM, AND THE FFFIDDLE",
     subtitle: "Origins of the Hovalin",
     url: "/blog/autodesk-instagram-and-the-fffiddle",
