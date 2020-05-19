@@ -10,7 +10,7 @@ import {
 } from "../../../components/Container";
 import { ContainerFlexOnly } from "../Blog/blogStyles";
 
-const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
+const RecipeOatMealPancakes: React.FC<{}> = () => {
   const ingredientsDry = [
     { unit: "1 Tablespoon", name: "Granulated Sugar" },
     { unit: "2/3 Cup", name: "All-purpose Flour" },
@@ -64,16 +64,27 @@ const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
               <ol>
                 <li>Mix together all of the Dry ingredients in a bowl.</li>
                 <li>
-                  In another bowl, prepare the Oatmeal by microwaving the
-                  {displayIngredientInfoInline(ingredientsOatmeal, "butter")}
-                  for 30-60 seconds (until it has completely melted). Then mix
-                  in the
-                  {displayIngredientInfoInline(ingredientsOatmeal, "milk")}
-                  and
-                  {displayIngredientInfoInline(ingredientsOatmeal, "oats")}
-                  and let it sit for at least 5 minutes.
+                  In another bowl, prepare the Oatmeal by:
+                  <ul>
+                    <li>
+                      Microwaving the
+                      {displayIngredientInfoInline(
+                        ingredientsOatmeal,
+                        "butter",
+                      )}
+                      for 30-60 seconds (until it has completely melted).
+                    </li>
+                    <li>
+                      Mixing in the
+                      {displayIngredientInfoInline(ingredientsOatmeal, "milk")}
+                      and
+                      {displayIngredientInfoInline(ingredientsOatmeal, "oats")}
+.
+</li>
+                    <li>Let it sit for at least 5 minutes.</li>
+                  </ul>
                 </li>
-                <li>Mix your oatmeal into your dry ingredients</li>
+                <li>Mix your oatmeal into your dry ingredients.</li>
               </ol>
               <br />
               <Text typography="headingSmall">Frying</Text>
@@ -99,4 +110,4 @@ const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
     </>
   );
 };
-export default TheBestChickenMarinadeRecipe;
+export default RecipeOatMealPancakes;
