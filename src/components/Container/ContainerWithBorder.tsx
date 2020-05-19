@@ -17,7 +17,14 @@ export const ContainerWithBorder: React.FC<{
   backgroundImageStyles?: any;
   children: React.ReactNode;
   lineVariant?: any;
-}> = ({ backgroundImage, backgroundImageStyles, children, lineVariant }) => {
+  hasTopMargin?: boolean;
+}> = ({
+  backgroundImage,
+  backgroundImageStyles,
+  children,
+  hasTopMargin,
+  lineVariant,
+}) => {
   let lines;
   if (lineVariant) {
     switch (lineVariant) {
@@ -54,7 +61,7 @@ export const ContainerWithBorder: React.FC<{
     }
   }
   return (
-    <S.OuterContainer>
+    <S.OuterContainer hasTopMargin={hasTopMargin}>
       {backgroundImage ? (
         <S.BackgroundImage
           backgroundImage={backgroundImage}

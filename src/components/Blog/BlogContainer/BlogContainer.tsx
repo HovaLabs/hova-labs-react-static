@@ -26,10 +26,23 @@ export const BlogContainer: React.FC<{
     tags: Array<string>;
   };
   children: React.ReactNode;
-}> = ({ blogManifest, children }) => {
+  variant: "recipe" | "general";
+}> = ({ blogManifest, children, variant = "general" }) => {
   const tagsList = blogManifest.tags.map((tag) => (
     <BlogTag title={tag} onPress={() => {}} />
   ));
+  const content =
+    variant === "recipe" ? (
+      <S.BlogRecipeStyles>{children}</S.BlogRecipeStyles>
+    ) : (
+      <ContainerWithBorder>
+        <ContainerFlex>
+          <ContainerContent flexXL="100">
+            <S.BlogStyles>{children}</S.BlogStyles>
+          </ContainerContent>
+        </ContainerFlex>
+      </ContainerWithBorder>
+    );
   const formattedDate = dateToString(blogManifest.datePublished);
   return (
     <Layout>
@@ -60,13 +73,7 @@ export const BlogContainer: React.FC<{
           </ContainerContent>
         </ContainerFlex>
       </ContainerWithBorder>
-      <ContainerWithBorder>
-        <ContainerFlex>
-          <ContainerContent flexXL="100">
-            <S.BlogStyles>{children}</S.BlogStyles>
-          </ContainerContent>
-        </ContainerFlex>
-      </ContainerWithBorder>
+      {content}
       <Author author={blogManifest.author} />
     </Layout>
   );

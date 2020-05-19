@@ -38,6 +38,45 @@ export const BlogStyles = styled.div`
   }
 `;
 
+export const BlogRecipeStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  li {
+    ${(p) =>
+      p.theme.responsiveStyle("margin-bottom", {
+        s: `${p.theme.spacings.m}px`,
+        l: `${p.theme.spacings.l}px`,
+      })}
+  }
+  iframe,
+  img {
+    align-self: center;
+    margin: 0 auto;
+    ${(p) =>
+      p.theme.responsiveStyle("margin-bottom", {
+        s: `${p.theme.spacings.l}px`,
+        l: `${p.theme.spacings.xl}px`,
+      })}
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+  img {
+    max-width: 100%;
+    max-height: 70vh;
+    flex-shrink: 0;
+    height:auto;
+    width:auto;
+    display:block
+  }
+  code {
+    ${(p) => p.theme.themedColor("background", "surface1")}
+    margin: ${(p) => p.theme.spacings.l}px;
+  }
+`;
+
 export const HeroImage = styled("div")<{ backgroundImage: string }>`
   ${(p) =>
     p.theme.responsiveStyle("height", {
