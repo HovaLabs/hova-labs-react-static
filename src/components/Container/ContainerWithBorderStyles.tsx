@@ -1,6 +1,11 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const OuterContainer = styled("div")`
+interface OuterContainerProps {
+  readonly hasTopMargin: boolean;
+}
+
+export const OuterContainer = styled("div")<OuterContainerProps>`
+  align-self: stretch;
   position: relative;
   ${(p) => p.theme.themedColor("background-color", "surface1")}
   ${(p) =>
@@ -8,6 +13,25 @@ export const OuterContainer = styled("div")`
       s: `${p.theme.backgroundGutters.s}px`,
       l: `${p.theme.backgroundGutters.l}px`,
     })};
+
+${(p) =>
+  p.hasTopMargin
+    ? p.theme.responsiveStyle("margin-top", {
+        s: `${p.theme.backgroundGutters.s}px`,
+        l: `${p.theme.backgroundGutters.l}px`,
+      })
+    : p.theme.responsiveStyle("margin-top", {
+        s: "0",
+        l: "0",
+      })};
+
+hasTopMargin
+`;
+
+export const OuterContainerSplit = styled("div")`
+  position: relative;
+  ${(p) => p.theme.themedColor("background-color", "surface1")}
+  height: 100%;
 `;
 
 export const ContentContainer = styled("div")`

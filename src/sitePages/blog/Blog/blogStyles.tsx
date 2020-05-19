@@ -47,6 +47,14 @@ export const OuterContainer = styled("div")`
   }
 `;
 
+export const ContainerFlexOnly = styled("div")`
+  ${(p) =>
+    p.theme.responsiveStyle("display", {
+      s: "block",
+      l: "flex",
+    })}
+`;
+
 export const NewOnTheBlogExtraPadding = styled("div")`
   ${(p) =>
     p.theme.responsiveStyle("padding", {
