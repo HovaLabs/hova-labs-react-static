@@ -9,7 +9,6 @@ import { BlogContainer } from "../../../components/Blog/BlogContainer";
 import {
   ContainerWithBorderSplit,
   ContainerWithBorder,
-  ContainerFlex,
   ContainerContent,
 } from "../../../components/Container";
 import { ContainerFlexOnly } from "../Blog/blogStyles";
