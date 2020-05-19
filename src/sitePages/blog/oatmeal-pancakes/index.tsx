@@ -10,7 +10,7 @@ import {
 } from "../../../components/Container";
 import { ContainerFlexOnly } from "../Blog/blogStyles";
 
-const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
+const RecipeOatMealPancakes: React.FC<{}> = () => {
   const ingredientsDry = [
     { unit: "1 Tablespoon", name: "Granulated Sugar" },
     { unit: "2/3 Cup", name: "All-purpose Flour" },
@@ -78,8 +78,9 @@ const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
                       Mixing in the
                       {displayIngredientInfoInline(ingredientsOatmeal, "milk")}
                       and
-                      {displayIngredientInfoInline(ingredientsOatmeal, "oats")}.
-                    </li>
+                      {displayIngredientInfoInline(ingredientsOatmeal, "oats")}
+.
+</li>
                     <li>Let it sit for at least 5 minutes.</li>
                   </ul>
                 </li>
@@ -109,4 +110,4 @@ const TheBestChickenMarinadeRecipe: React.FC<{}> = () => {
     </>
   );
 };
-export default TheBestChickenMarinadeRecipe;
+export default RecipeOatMealPancakes;
