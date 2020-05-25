@@ -152,12 +152,12 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         <p>// File Structure:</p>
         <strong>
           {
-            "<genericGroup>/<genericGroup><functionality>/<genericGroup><functionality>.<fileExtension>"
+            "<genericGroup> / <genericGroup><functionality> / <genericGroup><functionality>.<fileExtension>"
           }
         </strong>
         <p>// For Example:</p>
         <p>
-          <Code>Blog/BlogHeroArea/BlogHeroArea.tsx</Code>
+          <Code>Blog / BlogHeroArea / BlogHeroArea.tsx</Code>
         </p>
       </Quote>
       <p>
@@ -183,7 +183,7 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
             all folders have the same structure (e.g.: “Blog” or “Blogs” ). So
             far our component has this structure:
           </p>
-          <Code>Blog/Blog____/Blog____.tsx</Code>
+          <Code>Blog / Blog____ / Blog____.tsx</Code>
         </li>
         <li>
           <strong>What does this component do?</strong>
@@ -195,7 +195,7 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
             answer becomes the second part of the component’s name. In the end,
             this component’s name & structure looks something like:
           </p>
-          <Code>Blog/BlogHeroArea/BlogHeroArea.tsx</Code>
+          <Code>Blog / BlogHeroArea / BlogHeroArea.tsx</Code>
         </li>
       </ol>
       <p>
@@ -221,18 +221,18 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
           (in this case, create="AddNew") functionality are also grouped
           alphabetically in a folder by your code editor:
         </p>
+
+        <p>Dialog / DialogAddNew / DialogAddNewCat</p>
+        <p>Dialog / DialogAddNew / DialogAddNewComment</p>
+        <p>Dialog / DialogAddNew /DialogAddNewTitle</p>
+
         <p>
-          {
-            "Dialog/DialogAddNewCat\nDialog/DialogAddNewComment\nDialog/DialogAddNewTitle"
-          }
+          // If that is too many high level folders for you, you can still nest
+          them like:
         </p>
-        <p>
-          // If that is too many high level folders, you can now nest them like:
-        </p>
-        <p>
-          DialogAddNew/DialogAddNewCat DialogAddNew/DialogAddNewComment
-          DialogAddNew/DialogAddNewTitle
-        </p>
+        <p>Dialog / DialogAddNewCat</p>
+        <p>Dialog / DialogAddNewComment</p>
+        <p>Dialog / DialogAddNewTitle</p>
       </Code>
       <div id="transform-process" />
       <br />
@@ -283,7 +283,8 @@ const DeductiveComponentLanguage: React.FC<{}> = () => {
         Figma Frame & Master Component = Specific component folder & component
         names
       </p>
-      <p>For Example: Events/EventsListItem/EventsListItem.tsx</p>
+      <p>For Example:</p>
+      <p> Events / EventsListItem / EventsListItem.tsx</p>
       <Text typography="headingSmall">
         <strong>3. Component Documentation</strong>
       </Text>

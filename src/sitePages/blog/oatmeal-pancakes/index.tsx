@@ -11,35 +11,31 @@ import {
 import { ContainerFlexOnly } from "../Blog/blogStyles";
 
 const RecipeOatMealPancakes: React.FC<{}> = () => {
-  const ingredientsDry = [
-    { unit: "1 Tablespoon", name: "Granulated Sugar" },
-    { unit: "2/3 Cup", name: "All-purpose Flour" },
-    { unit: "2 Teaspoons", name: "Baking Powder" },
-    { unit: "1/4 Teaspoons", name: "Kosher Salt" },
-    { unit: "1/4 Teaspoons", name: "Ground Cinnamon" },
-  ];
-  const ingredientsOatmeal = {
-    oats: { unit: "1 Cup", name: "Rolled Oats" },
-    milk: { unit: "1 Cup", name: "Milk (regular or non-dairy)" },
+  const ingredients = {
     butter: { unit: "1 Tablespoon", name: "Unsalted Butter" },
+    milk: { unit: "1 Cup", name: "Milk (regular or non-dairy)" },
+    oats: { unit: "1 Cup", name: "Rolled Oats" },
+    eggs: { unit: "2", name: "Eggs" },
+    sugar: { unit: "1 Tablespoon", name: "Granulated Sugar" },
+    flour: { unit: "2/3 Cup", name: "All-purpose Flour" },
+    bakingPowder: { unit: "2 Teaspoons", name: "Baking Powder" },
+    salt: { unit: "1/4 Teaspoons", name: "Kosher Salt" },
+    cinnamon: { unit: "1/4 Teaspoons", name: "Ground Cinnamon" },
   };
-  const ingredientsDryMap = ingredientsDry.map((ingredient) => (
+  const ingredientsMap = Object.keys(ingredients).map((ingredient: string) => (
     <li>
-      <strong>{ingredient.unit}</strong>
-      {` ${ingredient.name}`}
+      <strong>{ingredients[ingredient].unit}</strong>
+      {` ${ingredients[ingredient].name}`}
     </li>
   ));
-  const ingredientsOatmealMap = Object.keys(ingredientsOatmeal).map(
-    (ingredient) => (
-      <li>
-        <strong>{ingredientsOatmeal[ingredient].unit}</strong>
-        {` ${ingredientsOatmeal[ingredient].name}`}
-      </li>
-    ),
-  );
 
   function displayIngredientInfoInline(ingredients: any, key: string) {
-    return ` ${ingredients[key].unit} ${ingredients[key].name} `;
+    return (
+      <strong>
+        {` ${ingredients[key].unit} ${ingredients[key].name}
+`}
+      </strong>
+    );
   }
 
   return (
@@ -50,54 +46,37 @@ const RecipeOatMealPancakes: React.FC<{}> = () => {
             <ContainerWithBorderSplit>
               <Text typography="headingMedium">Ingredients:</Text>
               <br />
-              <Text typography="headingSmall">Dry</Text>
-              <ul>{ingredientsDryMap}</ul>
-              <Text typography="headingSmall">Oatmeal</Text>
-              <ul>{ingredientsOatmealMap}</ul>
+              <ul>{ingredientsMap}</ul>
             </ContainerWithBorderSplit>
           </ContainerContent>
           <ContainerContent disablePadding flexL="50" variant="right">
             <ContainerWithBorderSplit>
               <Text typography="headingMedium">Instructions:</Text>
               <br />
-              <Text typography="headingSmall">Blending</Text>
               <ol>
-                <li>Mix together all of the Dry ingredients in a bowl.</li>
                 <li>
-                  In another bowl, prepare the Oatmeal by:
-                  <ul>
-                    <li>
-                      Microwaving the
-                      {displayIngredientInfoInline(
-                        ingredientsOatmeal,
-                        "butter",
-                      )}
-                      for 30-60 seconds (until it has completely melted).
-                    </li>
-                    <li>
-                      Mixing in the
-                      {displayIngredientInfoInline(ingredientsOatmeal, "milk")}
-                      and
-                      {displayIngredientInfoInline(ingredientsOatmeal, "oats")}
-.
+                  In a bowl, Microwave the{" "}
+                  {displayIngredientInfoInline(ingredients, "butter")} for 30-60
+                  seconds (until it has completely melted).
+{" "}
+                </li>
+{" "}
+                <li>
+                  Mix in the
+                  {displayIngredientInfoInline(ingredients, "milk")}+
+                  {displayIngredientInfoInline(ingredients, "oats")}
+{' '}
+into the
+                  bowl and let it sit for at least 5 minutes.
 </li>
-                    <li>Let it sit for at least 5 minutes.</li>
-                  </ul>
-                </li>
-                <li>Mix your oatmeal into your dry ingredients.</li>
-              </ol>
-              <br />
-              <Text typography="headingSmall">Frying</Text>
-              <ol>
-                <li>
-                  Start heating a pan at medium heat. Give it like, 5 minutes to
-                  heat up.
-                </li>
+                <li>Heat a pan at medium heat.</li>
+                <li>Mix in everything else into the bowl. </li>
+{" "}
                 <li>
                   Scoop a pancake-amount of batter onto your
                   skillet/frying-pan/whatever-have-you.
                 </li>
-                <li>You can take it from here.</li>
+                <li>You can take it from here</li>
               </ol>
               <br />
             </ContainerWithBorderSplit>
