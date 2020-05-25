@@ -100,7 +100,8 @@ const authorBios = {
     "Matt is an Electrical Engineer, Full Stack Software Developer, and likes fun things. Cat is the best.",
   Kaitlyn:
     "Kaitlyn is a Neuroscientist, Violinist, Designer, and Software Engineer. Cat is the best.",
-  Cat: "meow",
+  Cat:
+    "Cat is the Hova Labs unofficial mascot, a beloved part of the family, and a stern (but fair) project manager.",
 };
 
 const authorLinks = {
@@ -113,7 +114,7 @@ const authorLinks = {
     link: "http://www.kaitlynhova.com/",
   },
   Cat: {
-    text: "www.cathova.com",
+    text: "",
     link:
       "http://adventures.kaitlynhova.com/posts/the-time-my-cat-went-viral-on-the-internet",
   },
