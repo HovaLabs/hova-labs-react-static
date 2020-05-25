@@ -55,18 +55,20 @@ const RecipeOatMealPancakes: React.FC<{}> = () => {
               <br />
               <ol>
                 <li>
-                  In a bowl, Microwave the butter for 30-60 seconds (until it
-                  has completely melted).
+                  In a bowl, Microwave the{" "}
+                  {displayIngredientInfoInline(ingredients, "butter")} for 30-60
+                  seconds (until it has completely melted).
 {" "}
                 </li>
 {" "}
                 <li>
                   Mix in the
-                  {displayIngredientInfoInline(ingredients, "milk")}
-+
-{displayIngredientInfoInline(ingredients, "oats")} into the
+                  {displayIngredientInfoInline(ingredients, "milk")}+
+                  {displayIngredientInfoInline(ingredients, "oats")}
+{' '}
+into the
                   bowl and let it sit for at least 5 minutes.
-                </li>
+</li>
                 <li>Heat a pan at medium heat.</li>
                 <li>Mix in everything else into the bowl. </li>
 {" "}
