@@ -44,6 +44,15 @@ export const BlogContainer: React.FC<{
       </ContainerWithBorder>
     );
   const formattedDate = dateToString(blogManifest.datePublished);
+  const servingsArea =
+    variant === "recipe" ? (
+      <div>
+        <br />
+        <Text typography="bodyText">Serves: 4</Text>
+      </div>
+    ) : (
+      <></>
+    );
   return (
     <Layout>
       <SEO
@@ -68,6 +77,7 @@ export const BlogContainer: React.FC<{
             <Text typography="headingLarge">{blogManifest.title}</Text>
             <S.Subtitle>
               <Text typography="headingSmall">{`${formattedDate} | ${blogManifest.subtitle}`}</Text>
+              {servingsArea}
             </S.Subtitle>
             <S.TagsContainer>{tagsList}</S.TagsContainer>
           </ContainerContent>
