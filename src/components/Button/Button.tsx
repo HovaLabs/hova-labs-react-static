@@ -19,7 +19,7 @@ const ButtonComponent = ({
       className={className}
       variant={variant}
       disabled={disabled}
-      onPress={onPress}
+      onClick={onPress}
       style={style}
     >
       <S.Text variant={variant} disabled={disabled}>
