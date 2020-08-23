@@ -7,11 +7,9 @@ const buttonVariantStyles = (p: any): any => {
   switch (p.variant) {
     case "secondary": {
       return css`
-        box-sizing: border-box;
-        background-color: transparent;
-        border-width: ${borderWidth}px;
+        ${p.theme.themedColor("background-color", "onPrimary")}
         ${p.theme.themedColor("border-color", "primary")}
-        padding: ${p.theme.spacings.l - borderWidth}px;
+        padding: ${p.theme.spacings.l}px;
       `;
     }
     case "tertiary": {
@@ -30,7 +28,9 @@ const buttonVariantStyles = (p: any): any => {
   }
 };
 
-export const Button = styled("div")<ButtonProps>`
+export const Button = styled("div")<
+  Omit<ButtonProps, "onPress"> & { onClick: (e: React.SyntheticEvent) => void }
+>`
   ${buttonVariantStyles}
   display: inline-block;
   box-sizing: border-box;
@@ -52,7 +52,7 @@ const buttonTextVariantColor = (
 ): "primary" | "onBackground" | "onPrimary" => {
   switch (p.variant) {
     case "secondary": {
-      return "primary";
+      return "onBackground";
     }
     case "tertiary": {
       return "onBackground";
