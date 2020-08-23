@@ -8,52 +8,63 @@ import {
 } from "../../../components/Container";
 import hero from "./hero.jpg";
 import * as S from "./HeroStyles";
+import { HovalinFilesModal } from "../../../components/hovalin-files-modal";
 
-export const Hero: React.FC<{}> = () => (
-  <ContainerWithBorder
-    backgroundImage={hero}
-    backgroundImageStyles={{ opacity: ".3" }}
-  >
-    <ContainerContent flexXL="100">
-      <div>
-        <Text typography="headingLarge">Hovalin Docs</Text>
-      </div>
-      <S.ButtonContainer>
-        <Button
-          href={routes.HOVALIN_4_4_FILES}
-          onPress={() => {
-            ReactGA.event({
-              category: "Hovalin_Docs",
-              action: "Download_v4_STL_files",
-            });
-          }}
-          title="Download v4.0.0 .stl files"
-        />
-      </S.ButtonContainer>
-      <S.ButtonContainer>
-        <Button
-          href={routes.HOVALIN_4_4_CAD}
-          onPress={() => {
-            ReactGA.event({
-              category: "Hovalin_Docs",
-              action: "View_CAD_v4",
-            });
-          }}
-          title="Check out the CAD"
-        />
-      </S.ButtonContainer>
-      <S.ButtonContainer>
-        <Button
-          href={routes.HOVALIN_REDDIT}
-          onPress={() => {
-            ReactGA.event({
-              category: "Hovalin_Docs",
-              action: "Discuss_on_Reddit",
-            });
-          }}
-          title="Discuss on Reddit"
-        />
-      </S.ButtonContainer>
-    </ContainerContent>
-  </ContainerWithBorder>
-);
+export const Hero: React.FC<{}> = () => {
+  const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
+
+  return (
+    <>
+      <HovalinFilesModal
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
+      <ContainerWithBorder
+        backgroundImage={hero}
+        backgroundImageStyles={{ opacity: ".3" }}
+      >
+        <ContainerContent flexXL="100">
+          <div>
+            <Text typography="headingLarge">Hovalin Docs</Text>
+          </div>
+          <S.ButtonContainer>
+            <Button
+              onPress={() => {
+                setIsModalOpen(true);
+                ReactGA.event({
+                  category: "Hovalin_Docs",
+                  action: "Download_v4_STL_files",
+                });
+              }}
+              title="Download v5.0.0 .stl files"
+            />
+          </S.ButtonContainer>
+          <S.ButtonContainer>
+            <Button
+              href={routes.HOVALIN_4_4_CAD}
+              onPress={() => {
+                ReactGA.event({
+                  category: "Hovalin_Docs",
+                  action: "View_CAD_v4",
+                });
+              }}
+              title="Check out the CAD"
+            />
+          </S.ButtonContainer>
+          <S.ButtonContainer>
+            <Button
+              href={routes.HOVALIN_REDDIT}
+              onPress={() => {
+                ReactGA.event({
+                  category: "Hovalin_Docs",
+                  action: "Discuss_on_Reddit",
+                });
+              }}
+              title="Discuss on Reddit"
+            />
+          </S.ButtonContainer>
+        </ContainerContent>
+      </ContainerWithBorder>
+    </>
+  );
+};
