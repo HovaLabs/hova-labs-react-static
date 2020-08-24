@@ -7,7 +7,7 @@ const buttonVariantStyles = (p: any): any => {
   switch (p.variant) {
     case "secondary": {
       return css`
-        ${p.theme.themedColor("background-color", "onPrimary")}
+        ${p.theme.themedColor("background-color", "onBackground")}
         ${p.theme.themedColor("border-color", "primary")}
         padding: ${p.theme.spacings.l}px;
       `;
@@ -49,10 +49,10 @@ export const Button = styled("div")<
 // Determine the "color" prop based on which variant of the button it is
 const buttonTextVariantColor = (
   p: any,
-): "primary" | "onBackground" | "onPrimary" => {
+): "onPrimary" | "onBackground" | "background" => {
   switch (p.variant) {
     case "secondary": {
-      return "onBackground";
+      return "background";
     }
     case "tertiary": {
       return "onBackground";

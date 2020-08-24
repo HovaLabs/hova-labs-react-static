@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Button";
 
 export const Modal = styled("div")(
   (p) => `
@@ -21,6 +22,18 @@ export const ModalContent = styled("div")(
   padding: 32px;
   margin: 32px;
   background: ${p.theme.colors.surface1};
+  position: relative;
+
+`,
+);
+
+export const CloseButton = styled("div")(
+  (p) => `
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 8px 16px;
+  cursor: pointer;
 `,
 );
 
@@ -34,3 +47,9 @@ export const ButtonContainer = styled("div")`
 export const Spacer = styled("div")`
   height: 32px;
 `;
+
+export const SelectButton = styled(Button)(
+  (p) => `
+  border: 1px solid ${p.theme.colors.onBackground};
+`,
+);

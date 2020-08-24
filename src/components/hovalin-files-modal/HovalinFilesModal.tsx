@@ -36,6 +36,7 @@ export const HovalinFilesModal: React.FC<{
     <S.Modal>
       <ClickOutside onClickOutside={() => setIsModalOpen(false)}>
         <S.ModalContent>
+          <S.CloseButton onClick={() => setIsModalOpen(false)}>x</S.CloseButton>
           {isMobile ? (
             <div>
               <div>
@@ -53,7 +54,8 @@ export const HovalinFilesModal: React.FC<{
               <div>Choose a violin size:</div>
               <S.ButtonContainer>
                 {hovalinSizes.map((hovalinSize) => (
-                  <Button
+                  <S.SelectButton
+                    key={hovalinSize}
                     variant={size === hovalinSize ? "secondary" : "tertiary"}
                     title={hovalinSize.replace("_", "/")}
                     onPress={() => setSize(hovalinSize)}
@@ -63,12 +65,12 @@ export const HovalinFilesModal: React.FC<{
               <S.Spacer />
               <div>Include built-in supports?</div>
               <S.ButtonContainer>
-                <Button
+                <S.SelectButton
                   variant={withSupports ? "secondary" : "tertiary"}
                   title="With Supports"
                   onPress={() => setWithSupports(true)}
                 />
-                <Button
+                <S.SelectButton
                   variant={!withSupports ? "secondary" : "tertiary"}
                   title="Without Supports"
                   onPress={() => setWithSupports(false)}
@@ -77,12 +79,12 @@ export const HovalinFilesModal: React.FC<{
               <S.Spacer />
               <div>Single Piece or Multi-piece Chamber?</div>
               <S.ButtonContainer>
-                <Button
+                <S.SelectButton
                   variant={singlePieceChamber ? "secondary" : "tertiary"}
                   title="Single Piece Chamber"
                   onPress={() => setSinglePieceChamber(true)}
                 />
-                <Button
+                <S.SelectButton
                   variant={!singlePieceChamber ? "secondary" : "tertiary"}
                   title="Multi-piece Chamber"
                   onPress={() => setSinglePieceChamber(false)}
