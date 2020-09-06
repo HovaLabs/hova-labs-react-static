@@ -9,16 +9,14 @@ import {
 import hero from "./hero.jpg";
 import * as S from "./HeroStyles";
 import { HovalinFilesModal } from "../../../components/hovalin-files-modal";
+import { HovalinSelectionContext } from "./HovalinSelectionContext";
 
 export const Hero: React.FC<{}> = () => {
-  const [isModalOpen, setIsModalOpen] = React.useState<boolean>(false);
+  const { setIsDownloadModalOpen } = React.useContext(HovalinSelectionContext);
 
   return (
     <>
-      <HovalinFilesModal
-        isModalOpen={isModalOpen}
-        setIsModalOpen={setIsModalOpen}
-      />
+      <HovalinFilesModal />
       <ContainerWithBorder
         backgroundImage={hero}
         backgroundImageStyles={{ opacity: ".3" }}
@@ -30,7 +28,7 @@ export const Hero: React.FC<{}> = () => {
           <S.ButtonContainer>
             <Button
               onPress={() => {
-                setIsModalOpen(true);
+                setIsDownloadModalOpen(true);
                 ReactGA.event({
                   category: "Hovalin_Docs",
                   action: "Download_v4_STL_files",

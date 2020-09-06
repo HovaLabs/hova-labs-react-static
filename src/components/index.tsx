@@ -10,3 +10,5 @@ export * from "./Navigation/NavigationFooter";
 export { TopNavigation } from "./TopNavigation";
 export * from "./Text";
 export { SEO } from "./seo";
+export * from "./Spacer";
+export * from "./Stack";

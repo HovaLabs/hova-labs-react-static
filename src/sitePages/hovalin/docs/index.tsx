@@ -8,22 +8,29 @@ import { CleanUp } from "./CleanUp";
 import { InstallTunerPegs } from "./InstallTunerPegs";
 import { Assemble } from "./Assemble";
 import { InstallStrings } from "./InstallStrings";
+import { ViolinTypeSelector } from "./ViolinTypeSelector";
+import { HovalinSelectionContextProvider } from "./HovalinSelectionContext";
 import Layout from "../../../components/layout";
 
-const Hovalin: React.FC<{}> = () => (
-  <Layout>
-    <div>
-      <Hero />
-      <LinkList />
-      <Warning />
-      <ShoppingList />
-      <PrintParts />
-      <CleanUp />
-      <InstallTunerPegs />
-      <Assemble />
-      <InstallStrings />
-    </div>
-  </Layout>
-);
+const Hovalin: React.FC<{}> = () => {
+  return (
+    <HovalinSelectionContextProvider>
+      <Layout>
+        <div>
+          <Hero />
+          <ViolinTypeSelector />
+          <LinkList />
+          <Warning />
+          <ShoppingList />
+          <PrintParts />
+          <CleanUp />
+          <InstallTunerPegs />
+          <Assemble />
+          <InstallStrings />
+        </div>
+      </Layout>
+    </HovalinSelectionContextProvider>
+  );
+};
 
 export default Hovalin;
