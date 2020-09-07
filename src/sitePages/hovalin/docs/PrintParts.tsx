@@ -85,7 +85,7 @@ export const PrintParts: React.FC<{}> = () => {
               <Text typography="headingMedium">The Neck</Text>
             </div>
             <div>
-              <Text typography="bodyText">10 PRINT HOURS | 90g PLASTIC </Text>
+              <Text typography="bodyText">11 PRINT HOURS | 90g PLASTIC </Text>
             </div>
             <div>
               <Text typography="bodyText">Layer Height: 0.2mm </Text>
@@ -122,7 +122,7 @@ export const PrintParts: React.FC<{}> = () => {
                 </div>
                 <div>
                   <Text typography="bodyText">
-                    33 PRINT HOURS | 390g PLASTIC
+                    12 PRINT HOURS | 150g PLASTIC
                   </Text>
                 </div>
                 <div>
@@ -157,9 +157,7 @@ export const PrintParts: React.FC<{}> = () => {
                   <Text typography="headingMedium">The Body (Middle)</Text>
                 </div>
                 <div>
-                  <Text typography="bodyText">
-                    33 PRINT HOURS | 390g PLASTIC
-                  </Text>
+                  <Text typography="bodyText">7 PRINT HOURS | 80g PLASTIC</Text>
                 </div>
                 <div>
                   <Text typography="bodyText">Layer Height: 0.3mm</Text>
@@ -194,7 +192,7 @@ export const PrintParts: React.FC<{}> = () => {
                 </div>
                 <div>
                   <Text typography="bodyText">
-                    33 PRINT HOURS | 390g PLASTIC
+                    17 PRINT HOURS | 200g PLASTIC
                   </Text>
                 </div>
                 <div>
@@ -229,9 +227,7 @@ export const PrintParts: React.FC<{}> = () => {
                   <Text typography="headingMedium">The Body (Notches)</Text>
                 </div>
                 <div>
-                  <Text typography="bodyText">
-                    33 PRINT HOURS | 390g PLASTIC
-                  </Text>
+                  <Text typography="bodyText">3 PRINT HOURS | 40g PLASTIC</Text>
                 </div>
                 <div>
                   <Text typography="bodyText">Layer Height: 0.3mm</Text>
@@ -267,7 +263,7 @@ export const PrintParts: React.FC<{}> = () => {
                 <Text typography="headingMedium">The Body</Text>
               </div>
               <div>
-                <Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text>
+                <Text typography="bodyText">36 PRINT HOURS | 400g PLASTIC</Text>
               </div>
               <div>
                 <Text typography="bodyText">Layer Height: 0.3mm</Text>
@@ -302,7 +298,7 @@ export const PrintParts: React.FC<{}> = () => {
               <Text typography="headingMedium">The Bridge</Text>
             </div>
             <div>
-              <Text typography="bodyText">33 PRINT HOURS | 390g PLASTIC</Text>
+              <Text typography="bodyText">1 PRINT HOUR | 10g PLASTIC</Text>
             </div>
             <div>
               <Text typography="bodyText">Layer Height: 0.3mm</Text>
