@@ -4,17 +4,12 @@ import { isMobile } from "react-device-detect";
 import * as S from "./HovalinFilesModalStyles";
 import { ClickOutside } from "../ClickOutside";
 import { Button } from "../Button";
+import { Spacer } from "../Spacer";
 import { HovalinSelectionContext } from "../../sitePages/hovalin/docs/HovalinSelectionContext";
+import { ViolinTypeSelector } from "../../sitePages/hovalin/docs/ViolinTypeSelector";
 
 export const HovalinFilesModal: React.FC = () => {
   const {
-    hovalinSizes,
-    hovalinSize,
-    setHovalinSize,
-    hasSupports,
-    setHasSupports,
-    setIsMultiPieceChamber,
-    isMultiPieceChamber,
     downloadUrl,
     isDownloadModalOpen,
     setIsDownloadModalOpen,
@@ -45,47 +40,8 @@ export const HovalinFilesModal: React.FC = () => {
             </div>
           ) : (
             <>
-              <div>Choose a violin size:</div>
-              <S.ButtonContainer>
-                {hovalinSizes.map((size) => (
-                  <S.SelectButton
-                    key={size}
-                    variant={hovalinSize === size ? "secondary" : "tertiary"}
-                    title={size.replace("_", "/")}
-                    onPress={() => setHovalinSize(size)}
-                  />
-                ))}
-              </S.ButtonContainer>
-              <S.Spacer />
-              <div>Include built-in supports?</div>
-              <S.ButtonContainer>
-                <S.SelectButton
-                  variant={hasSupports ? "secondary" : "tertiary"}
-                  title="With Supports"
-                  onPress={() => setHasSupports(true)}
-                />
-                <S.SelectButton
-                  variant={!hasSupports ? "secondary" : "tertiary"}
-                  title="Without Supports"
-                  onPress={() => setHasSupports(false)}
-                />
-              </S.ButtonContainer>
-              <S.Spacer />
-              <div>Single Piece or Multi-piece Chamber?</div>
-              <S.ButtonContainer>
-                <S.SelectButton
-                  variant={isMultiPieceChamber ? "tertiary" : "secondary"}
-                  title="Single Piece Chamber"
-                  onPress={() => setIsMultiPieceChamber(false)}
-                />
-                <S.SelectButton
-                  variant={!isMultiPieceChamber ? "tertiary" : "secondary"}
-                  title="Multi-piece Chamber"
-                  onPress={() => setIsMultiPieceChamber(true)}
-                />
-              </S.ButtonContainer>
-              <S.Spacer />
-              <S.Spacer />
+              <ViolinTypeSelector />
+              <Spacer height="32px" />
               <Button variant="primary" href={downloadUrl} title="DOWNLOAD" />
             </>
           )}

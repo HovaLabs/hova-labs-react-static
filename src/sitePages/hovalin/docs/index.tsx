@@ -8,7 +8,7 @@ import { CleanUp } from "./CleanUp";
 import { InstallTunerPegs } from "./InstallTunerPegs";
 import { Assemble } from "./Assemble";
 import { InstallStrings } from "./InstallStrings";
-import { ViolinTypeSelector } from "./ViolinTypeSelector";
+import { ViolinTypeSelectorSection } from "./ViolinTypeSelector";
 import { HovalinSelectionContextProvider } from "./HovalinSelectionContext";
 import Layout from "../../../components/layout";
 
@@ -18,7 +18,7 @@ const Hovalin: React.FC<{}> = () => {
       <Layout>
         <div>
           <Hero />
-          <ViolinTypeSelector />
+          <ViolinTypeSelectorSection />
           <LinkList />
           <Warning />
           <ShoppingList />
