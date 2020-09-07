@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "../../../components";
-import hovalinStrings from "./Photos/hovalin-strings.jpg";
+import hovalinStrings from "./Photos/hovalin-strings-2.jpg";
 import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 import {
   ContainerContent,
