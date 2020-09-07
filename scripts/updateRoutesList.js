@@ -8,7 +8,7 @@ const outputFilePath = path.join(__dirname, "..", "src", "routes.ts");
 const pagesFolder = path.join(__dirname, "..", "src", "sitePages");
 const pagesOutputFolder = path.join(__dirname, "..", "src", "pages");
 
-const routesArray = ['/404'];
+const routesArray = ["/404"];
 
 function findAllRoutes(route) {
   fs.readdirSync(route).forEach((file) => {
@@ -53,7 +53,7 @@ const routeObject = {
   HOVALIN_REDDIT: "https://reddit.com/r/hovalin_community",
   HOVALIN_4_4_FILES:
     "https://s3-us-west-2.amazonaws.com/hovalin/v4.0.0/4_4/Hovalin+v4.0.0+4_4.zip",
-  HOVALIN_4_4_CAD: "https://a360.co/2Oj1DKr",
+  HOVALIN_4_4_CAD: "https://a360.co/2R5CSBk",
   HOVALIN_V3: "https://www.hovalabs.com/hova-instruments/hovalin/docs/v3.1.0",
   LIST_CR10S:
     "https://www.gearbest.com/3d-printers-3d-printer-kits/pp_778981.html?wid=1859758&lkid=16008056",
@@ -96,8 +96,9 @@ const routeObject = {
   LIST_PRINT_SCRAPER:
     "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
   PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
-  PROJECT_TSN: 'http://www.thesynesthesianetwork.com/',
-  PROJECT_HYDRAPRINT: 'https://www.github.com/autodesk/machine-collaboration-utility'
+  PROJECT_TSN: "http://www.thesynesthesianetwork.com/",
+  PROJECT_HYDRAPRINT:
+    "https://www.github.com/autodesk/machine-collaboration-utility",
 };
 
 routesArray.forEach((r) => {
