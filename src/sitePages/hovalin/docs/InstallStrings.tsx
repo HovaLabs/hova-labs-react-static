@@ -14,7 +14,7 @@ export const InstallStrings: React.FC<{}> = () => (
       <ContainerFlex>
         <ContainerContent flexXL="50">
           <div>
-            <Text typography="headingLarge">5</Text>
+            <Text typography="headingLarge">6</Text>
           </div>
           <div>
             <Text typography="headingSmall">Install Strings</Text>
