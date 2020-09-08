@@ -57,6 +57,7 @@ export const routes = {
   BLOG_DO_SPACE: "/blog/do-space",
   BLOG_HOVALIN_AT_NASA: "/blog/hovalin-at-nasa",
   BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",
+  BLOG_HOVALIN_FIVE: "/blog/hovalin-five",
   BLOG_HOVALIN_THREE_OH_PLAN: "/blog/hovalin-three-oh-plan",
   BLOG_HOVALIN_TWO: "/blog/hovalin-two",
   BLOG_OATMEAL_PANCAKES: "/blog/oatmeal-pancakes",
