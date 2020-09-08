@@ -1,6 +1,6 @@
 import React from "react";
 import { Text } from "../../../components";
-import hovalinStrings from "./Photos/hovalin-strings.jpg";
+import hovalinStrings from "./Photos/hovalin-strings-2.jpg";
 import hovalinStringsTuners from "./Photos/hovalin-strings-tuners.jpg";
 import {
   ContainerContent,
@@ -14,7 +14,7 @@ export const InstallStrings: React.FC<{}> = () => (
       <ContainerFlex>
         <ContainerContent flexXL="50">
           <div>
-            <Text typography="headingLarge">5</Text>
+            <Text typography="headingLarge">6</Text>
           </div>
           <div>
             <Text typography="headingSmall">Install Strings</Text>
