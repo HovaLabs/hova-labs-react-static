@@ -10,6 +10,9 @@ const GlobalStyleInstance = createGlobalStyle<GlobalStyleProps>`
     ${(p) => p.theme.themedColor("background", "background")}
   }
 
+  li {
+    text-align:inherit;
+  }
   ::selection {
     background: ${(p) => p.theme.colors.highlight}; /* WebKit/Blink Browsers */
   }

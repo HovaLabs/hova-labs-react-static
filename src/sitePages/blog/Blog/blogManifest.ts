@@ -4,6 +4,7 @@ import deductiveComponentLanguageHeroImage from "../deductive-component-language
 import doSpaceHeroImage from "../do-space/hero.jpg";
 import hovalinAtNasaHeroImage from "../hovalin-at-nasa/hero.jpg";
 import hovalinAuctionHeroImage from "../hovalin-auction/hero.jpg";
+import hovalinFiveHeroImage from "../hovalin-five/hero.jpg";
 import hovalinThreeOhPlanHeroImage from "../hovalin-three-oh-plan/hero.jpg";
 import hovalinTwoHeroImage from "../hovalin-two/hero.jpg";
 import oatmealPancakesHeroImage from "../oatmeal-pancakes/hero.jpg";
@@ -15,6 +16,14 @@ import theSiteIsNowLiveHeroImage from "../the-site-is-now-live/hero.jpg";
 import womenWhoCodeHeroImage from "../women-who-code/hero.jpg";
 
 export const blogManifest = [
+  {
+    hero: hovalinFiveHeroImage,
+    datePublished: "2020-09-07T00:00:00.000Z",
+    tags: ["Hovalin", "CAD"],
+    title: "Hovalin V5",
+    subtitle: "Now compatible with even more printers!",
+    url: "/blog/hovalin-five",
+  },
   {
     hero: theBestChickenMarinadeRecipeHeroImage,
     datePublished: "2020-05-16T00:00:00.000Z",

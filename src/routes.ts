@@ -4,7 +4,7 @@ export const routes = {
   HOVALIN_REDDIT: "https://reddit.com/r/hovalin_community",
   HOVALIN_4_4_FILES:
     "https://s3-us-west-2.amazonaws.com/hovalin/v4.0.0/4_4/Hovalin+v4.0.0+4_4.zip",
-  HOVALIN_4_4_CAD: "https://a360.co/2Oj1DKr",
+  HOVALIN_4_4_CAD: "https://a360.co/2R5CSBk",
   HOVALIN_V3: "https://www.hovalabs.com/hova-instruments/hovalin/docs/v3.1.0",
   LIST_CR10S:
     "https://www.gearbest.com/3d-printers-3d-printer-kits/pp_778981.html?wid=1859758&lkid=16008056",
@@ -57,6 +57,7 @@ export const routes = {
   BLOG_DO_SPACE: "/blog/do-space",
   BLOG_HOVALIN_AT_NASA: "/blog/hovalin-at-nasa",
   BLOG_HOVALIN_AUCTION: "/blog/hovalin-auction",
+  BLOG_HOVALIN_FIVE: "/blog/hovalin-five",
   BLOG_HOVALIN_THREE_OH_PLAN: "/blog/hovalin-three-oh-plan",
   BLOG_HOVALIN_TWO: "/blog/hovalin-two",
   BLOG_OATMEAL_PANCAKES: "/blog/oatmeal-pancakes",
