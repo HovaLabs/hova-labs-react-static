@@ -43,7 +43,7 @@ export const HovalinSelectionContextProvider: React.FC = ({ children }) => {
   );
 
   const downloadUrlArray = [
-    "https://hovalin.s3-us-west-2.amazonaws.com/v5.0.0/hovalin_v5_0_0",
+    "https://hovalin.s3-us-west-2.amazonaws.com/v5.1.0/hovalin_v5_1_0",
   ];
   downloadUrlArray.push(hovalinSize);
   downloadUrlArray.push(hasSupports ? "with_supports" : "without_supports");

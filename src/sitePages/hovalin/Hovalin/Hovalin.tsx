@@ -26,7 +26,7 @@ export const Hovalin: React.FC<{}> = () => (
         </div>
         <div>
           <Text typography="headingSmall">
-            Open Source, 3D printable acoustic violin v5.0.0
+            Open Source, 3D printable acoustic violin v5.1.0
           </Text>
         </div>
         <div>
