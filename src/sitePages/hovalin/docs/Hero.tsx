@@ -34,7 +34,7 @@ export const Hero: React.FC<{}> = () => {
                   action: "Download_v4_STL_files",
                 });
               }}
-              title="Download v5.0.0 .stl files"
+              title="Download v5.1.0 .stl files"
             />
           </S.ButtonContainer>
           <S.ButtonContainer>

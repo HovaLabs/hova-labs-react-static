@@ -12,8 +12,8 @@ export const shoppingList = [
         link: routes.LIST_CR10S,
       },
       {
-        name: "Raise3D N2 Plus",
-        link: routes.LIST_RAISE3D,
+        name: "Ender-3 Pro",
+        link: routes.LIST_ENDER3,
       },
     ],
   },

@@ -6,18 +6,13 @@ export const routes = {
     "https://s3-us-west-2.amazonaws.com/hovalin/v4.0.0/4_4/Hovalin+v4.0.0+4_4.zip",
   HOVALIN_4_4_CAD: "https://a360.co/2R5CSBk",
   HOVALIN_V3: "https://www.hovalabs.com/hova-instruments/hovalin/docs/v3.1.0",
-  LIST_CR10S:
-    "https://www.gearbest.com/3d-printers-3d-printer-kits/pp_778981.html?wid=1859758&lkid=16008056",
-  LIST_RAISE3D:
-    "https://www.amazon.com/gp/product/B01NAYIQZ3/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B01NAYIQZ3&linkCode=as2&tag=hovalin-20&linkId=8d696c33dbdadd8521a87545bdaf804e",
+  LIST_CR10S: "https://amzn.to/31Gsaa1",
+  LIST_ENDER3: "https://amzn.to/3mzCfxF",
   LIST_HATCHBOX_PLA:
     "https://www.amazon.com/gp/product/B00J0ECR5I/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00J0ECR5I&linkCode=as2&tag=hovalin-20&linkId=d68dfe6b34366d8ac8358034ed944540",
-  LIST_TUNERS_BLACK:
-    "http://www.amazon.com/gp/product/B009AQIZYS/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B009AQIZYS&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=RR43FGQCYG63T4VS",
-  LIST_TUNERS_CHROME:
-    "http://www.amazon.com/gp/product/B00BJTGILG/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B00BJTGILG&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=X4L4INPTZ2DNTHGO",
-  LIST_TUNERS_GOLD:
-    "http://www.amazon.com/gp/product/B0092M2EZQ/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B0092M2EZQ&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=QK5MVIX45BJKMD5F",
+  LIST_TUNERS_BLACK: "https://amzn.to/2HyANwu",
+  LIST_TUNERS_CHROME: "https://amzn.to/3oqv3oZ",
+  LIST_TUNERS_GOLD: "https://amzn.to/2J5wFVc",
   LIST_BELLAFINA_ROSIN:
     "http://www.amazon.com/gp/product/B0064RM2IG/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B0064RM2IG&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=6IC23B5RPEXCYDLX",
   LIST_LETO_ROSIN:
