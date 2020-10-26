@@ -59,7 +59,7 @@ const routeObject = {
   LIST_ENDER3: "https://amzn.to/3mzCfxF",
   LIST_HATCHBOX_PLA:
     "https://www.amazon.com/gp/product/B00J0ECR5I/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B00J0ECR5I&linkCode=as2&tag=hovalin-20&linkId=d68dfe6b34366d8ac8358034ed944540",
-  LIST_TUNERS_BLACK: "https://amzn.to/2HyANwu",
+  LIST_TUNERS_BLACK: "https://amzn.to/34vsNFk",
   LIST_TUNERS_CHROME: "https://amzn.to/3oqv3oZ",
   LIST_TUNERS_GOLD: "https://amzn.to/2J5wFVc",
   LIST_BELLAFINA_ROSIN:

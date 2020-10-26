@@ -13,7 +13,7 @@ export const shoppingList = [
       },
       {
         name: "Ender-3 Pro",
-        link: routes.LIST_RAISE3D,
+        link: routes.LIST_ENDER3,
       },
     ],
   },
