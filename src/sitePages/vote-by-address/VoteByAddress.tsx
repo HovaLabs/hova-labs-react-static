@@ -2,8 +2,8 @@ import React from "react";
 import { Text, Button } from "../../components";
 import { routes } from "../../routes";
 import { ContainerWithBorder } from "../../components/Container";
-import VoteByAddressPic from "./media/vote-by-address.png";
-import VoteByAddressExample from "./media/vote-by-address-example.png";
+import VoteByAddressPic from "./vote-by-address.png";
+import VoteByAddressExample from "./vote-by-address-example.png";
 import Layout from "../../components/layout";
 
 export const VoteByAddress: React.FC<{}> = () => (

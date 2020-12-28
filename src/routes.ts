@@ -45,6 +45,7 @@ export const routes = {
   PROJECT_TSN: "http://www.thesynesthesianetwork.com/",
   PROJECT_HYDRAPRINT:
     "https://www.github.com/autodesk/machine-collaboration-utility",
+  PROJECT_VOTE_BY_ADDRESS: "https://www.votebyaddress.com/",
   BLOG: "/blog",
   BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
     "/blog/autodesk-instagram-and-the-fffiddle",
@@ -74,6 +75,5 @@ export const routes = {
   SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
   THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
   VOTE_BY_ADDRESS: "/vote-by-address",
-  VOTE_BY_ADDRESS_MEDIA: "/vote-by-address/media",
   WALDO: "/waldo",
 };
