@@ -26,8 +26,8 @@ const TheHovas = styled("img").attrs({
       s: "-20px",
       l: "-48px",
     })}
-  min-width: 250px;
-  max-width: 350px;
+  min-width: 400px;
+  max-width: 500px;
   position: relative;
 
   width: 100%;
