@@ -8,6 +8,7 @@ import TSNHero from "./Media/tsn-hero.jpg";
 import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
 import MCUHero from "./Media/mcu-hero.jpg";
 import WaldoHero from "./Media/waldo-hero.jpg";
+import VoteByAddressHero from "./Media/vote-by-address.png";
 import Layout from "../../../components/layout";
 import { Button, Text } from "../../../components";
 
@@ -25,6 +26,14 @@ const projectArray: Array<Project> = [
     imgSrc: HovaInstrumentsHero,
     linkTitle: "view",
     linkUrl: routes.HOVALIN,
+  },
+  {
+    title: "Vote By Address",
+    description:
+      "A voting information resource for the 2020 (and all future) elections.",
+    imgSrc: VoteByAddressHero,
+    linkTitle: "view",
+    linkUrl: routes.VOTE_BY_ADDRESS,
   },
   {
     title: "Synesthesia Network",
@@ -74,7 +83,7 @@ export const Projects: React.FC<{}> = () => (
           </S.DescriptionContainer>
           <S.ButtonContainer>
             <Link to={project.linkUrl} key={project.linkUrl}>
-              <Button onPress={() => {}} title={project.linkTitle} />
+              <Button onPress={() => { }} title={project.linkTitle} />
             </Link>
           </S.ButtonContainer>
         </S.InfoContainer>
