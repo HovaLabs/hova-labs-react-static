@@ -9,7 +9,7 @@ const fontFamily = "Oxygen, sans-serif";
 
 export const typography: Typography = {
   headingLarge: css<TypographyProps>`
-    display: block;
+    display: block !important;
     font-family: ${fontFamily};
     ${(p) => p.theme.themedColor("color", "onSurface1")}
     ${(p) =>
