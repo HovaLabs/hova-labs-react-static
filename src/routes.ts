@@ -45,7 +45,6 @@ export const routes = {
   PROJECT_TSN: "http://www.thesynesthesianetwork.com/",
   PROJECT_HYDRAPRINT:
     "https://www.github.com/autodesk/machine-collaboration-utility",
-  PROJECT_VOTE_BY_ADDRESS: "https://www.votebyaddress.com/",
   BLOG: "/blog",
   BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
     "/blog/autodesk-instagram-and-the-fffiddle",
