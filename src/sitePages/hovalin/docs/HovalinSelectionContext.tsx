@@ -1,6 +1,6 @@
 import React from "react";
 
-export const hovalinSizes = ["4_4", "3_4"];
+export const hovalinSizes = ["4_4", "3_4", "1_2"];
 type ElementType<T extends ReadonlyArray<unknown>> = T extends ReadonlyArray<
   infer ElementType
 >
