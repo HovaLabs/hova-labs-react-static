@@ -1,5 +1,6 @@
+import ReactGA from "react-ga";
 import React from "react";
-import { Stack, Text } from "../../../components";
+import { Button, Stack, Text } from "../../../components";
 import {
   ContainerContent,
   ContainerWithBorder,
@@ -69,10 +70,25 @@ export const ViolinTypeSelector: React.FC<{}> = () => {
   );
 };
 
-export const ViolinTypeSelectorSection: React.FC = () => (
-  <ContainerWithBorder>
-    <ContainerContent flexXL="100">
-      <ViolinTypeSelector />
-    </ContainerContent>
-  </ContainerWithBorder>
-);
+export const ViolinTypeSelectorSection: React.FC = () => {
+  const { setIsDownloadModalOpen } = React.useContext(HovalinSelectionContext);
+
+  return (
+    <ContainerWithBorder>
+      <ContainerContent flexXL="100">
+        <ViolinTypeSelector />
+        <Button
+          style={{ marginTop: 24, width: "min-content" }}
+          title="DOWNLOAD"
+          onPress={() => {
+            setIsDownloadModalOpen(true);
+            ReactGA.event({
+              category: "Hovalin_Docs",
+              action: "Download_v4_Body_File",
+            });
+          }}
+        />
+      </ContainerContent>
+    </ContainerWithBorder>
+  );
+};
