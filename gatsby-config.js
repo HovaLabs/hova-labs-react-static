@@ -8,6 +8,9 @@ module.exports = {
     author: "The Hovas",
     url: "https://www.hovalabs.com", // No trailing slash allowed!
   },
+  flags: {
+    FAST_REFRESH: true,
+  },
   plugins: [
     {
       resolve: "gatsby-plugin-google-analytics",
