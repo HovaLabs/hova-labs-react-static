@@ -85,13 +85,11 @@ export const NavigationFooter: React.FC<{}> = () => {
       </ContainerWithBorder>
       <ContainerWithBorder>
         <ContainerFlex>
-          <ContainerContent flexXL="100">
-            <Text typography="bodyText">
-              {`Copyright Hova Labs 2019 - ${new Date()
-                .getFullYear()
-                .toString()}`}
-            </Text>
-          </ContainerContent>
+          <Text typography="bodyText">
+            {`Copyright Hova Labs 2019 - ${new Date()
+              .getFullYear()
+              .toString()}`}
+          </Text>
         </ContainerFlex>
       </ContainerWithBorder>
     </>
