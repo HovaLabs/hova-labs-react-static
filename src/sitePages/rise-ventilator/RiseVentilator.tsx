@@ -107,6 +107,12 @@ export const RiseVentilator: React.FC<{}> = () => (
           but only the most important data is top level.
         </li>
       </ol>
+      <Text typography="bodyText">
+        There ended up being some really cool features to this dashboard but all
+        we can officially share is what is displayed on the landing page:
+      </Text>
+      <br />
+      <br />
       <img alt="ventilator dashboard" src={dashboard} width="100%" />
     </ContainerWithBorder>
   </Layout>

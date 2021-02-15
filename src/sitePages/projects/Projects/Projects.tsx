@@ -9,6 +9,7 @@ import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
 import MCUHero from "./Media/mcu-hero.jpg";
 import WaldoHero from "./Media/waldo-hero.jpg";
 import VoteByAddressHero from "./Media/vote-by-address.png";
+import RiseHero from "./Media/riseHero.png";
 import Layout from "../../../components/layout";
 import { Button, Text } from "../../../components";
 
@@ -39,7 +40,7 @@ const projectArray: Array<Project> = [
     title: "Rise Ventilator",
     description:
       "A Ventilator Designed for manufacturing anywhere to meet needs during covid-19",
-    imgSrc: VoteByAddressHero,
+    imgSrc: RiseHero,
     linkTitle: "view",
     linkUrl: routes.RISE_VENTILATOR,
   },
