@@ -2,9 +2,9 @@ import React from "react";
 import { Button, Text } from "../../components";
 import { routes } from "../../routes";
 import { ContainerWithBorder } from "../../components/Container";
-import explosion from "./media/explosion.png";
-import ventilator from "./media/ventilator.png";
-import dashboard from "./media/dashboard.png";
+import Explosion from "./media/explosion.png";
+import Ventilator from "./media/ventilator.png";
+import Dashboard from "./media/dashboard.png";
 import Layout from "../../components/layout";
 
 export const RiseVentilator: React.FC<{}> = () => (
@@ -68,8 +68,8 @@ export const RiseVentilator: React.FC<{}> = () => (
         <br />
         <br />
       </Text>
-      <img alt="ventilator parts explosion" src={explosion} width="100%" />
-      <img alt="ventilator side profile" src={ventilator} width="100%" />
+      <img alt="ventilator parts explosion" src={Explosion} width="100%" />
+      <img alt="ventilator side profile" src={Ventilator} width="100%" />
     </ContainerWithBorder>
 
     <ContainerWithBorder>
@@ -114,7 +114,7 @@ export const RiseVentilator: React.FC<{}> = () => (
       </Text>
       <br />
       <br />
-      <img alt="ventilator dashboard" src={dashboard} width="100%" />
+      <img alt="ventilator dashboard" src={Dashboard} width="100%" />
     </ContainerWithBorder>
   </Layout>
 );
