@@ -82,11 +82,11 @@ export const RiseVentilator: React.FC<{}> = () => (
       </Text>
       <ol>
         <li>
-          <strong>Fix latent human error:</strong> Health providers that are
-          lacking sleep and need to be able to view alert info as easily as
-          possible. Get most important data above the fold and in front of
-          health care provider’s eyes asap. Any ventilator experiencing an alert
-          should.
+          <strong>Fix latent human error:</strong>
+          Health providers that are lacking sleep and need to be able to view
+          alert info as easily as possible. Get most important data above the
+          fold and in front of health care provider’s eyes asap. Any ventilator
+          experiencing an alert should:
           <ol>
             <li>
               Be automatically be kicked to the top of the ventilator list so
@@ -96,15 +96,16 @@ export const RiseVentilator: React.FC<{}> = () => (
           </ol>
         </li>
         <li>
-          <strong>Accessibility over fanciness:</strong> Make sure fonts etc
-          meet accessibility standards. For example Make fonts 12px+ so that
-          health providers that are lacking sleep or older in age can read data
-          easily.
+          <strong>Accessibility over fanciness:</strong>
+          Make sure fonts etc meet accessibility standards. For example Make
+          fonts 12px+ so that health providers that are lacking sleep or older
+          in age can read data easily.
         </li>
         <li>
-          <strong>Efficiency over bloat:</strong> Save space and view only the
-          most important data without nesting. All data can be made available
-          but only the most important data is top level.
+          <strong>Efficiency over bloat:</strong>
+          Save space and view only the most important data without nesting. All
+          data can be made available but only the most important data is top
+          level.
         </li>
       </ol>
       <Text typography="bodyText">
