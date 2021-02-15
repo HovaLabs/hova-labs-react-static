@@ -36,6 +36,14 @@ const projectArray: Array<Project> = [
     linkUrl: routes.VOTE_BY_ADDRESS,
   },
   {
+    title: "Rise Ventilator",
+    description:
+      "A Ventilator Designed for manufacturing anywhere to meet needs during covid-19",
+    imgSrc: VoteByAddressHero,
+    linkTitle: "view",
+    linkUrl: routes.RISE_VENTILATOR,
+  },
+  {
     title: "Synesthesia Network",
     description: "A Social Network for synesthetes and researchers.",
     imgSrc: TSNHero,
@@ -83,7 +91,7 @@ export const Projects: React.FC<{}> = () => (
           </S.DescriptionContainer>
           <S.ButtonContainer>
             <Link to={project.linkUrl} key={project.linkUrl}>
-              <Button onPress={() => { }} title={project.linkTitle} />
+              <Button onPress={() => {}} title={project.linkTitle} />
             </Link>
           </S.ButtonContainer>
         </S.InfoContainer>
