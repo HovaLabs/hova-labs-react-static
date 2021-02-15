@@ -2,9 +2,9 @@ import React from "react";
 import { Button, Text } from "../../components";
 import { routes } from "../../routes";
 import { ContainerWithBorder } from "../../components/Container";
-import Explosion from "./media/explosion.png";
-import Ventilator from "./media/ventilator.png";
-import Dashboard from "./media/dashboard.png";
+import Explosion from "./explosion.png";
+import Ventilator from "./ventilator.png";
+import Dashboard from "./dashboard.png";
 import Layout from "../../components/layout";
 
 export const RiseVentilator: React.FC<{}> = () => (
