@@ -96,6 +96,13 @@ const routeObject = {
   PROJECT_RISE_VENTILATOR: "https://www.riseventilator.com/",
   PROJECT_HYDRAPRINT:
     "https://www.github.com/autodesk/machine-collaboration-utility",
+  PROJECT_UNWORDLER: "https://www.unwordler.com",
+  PROJECT_UNWORDLER_WORDLE: "https://www.powerlanguage.co.uk/wordle/",
+  PROJECT_UNWORDLER_WORDLIST_ENGLISH:
+    "https://www.npmjs.com/package/wordlist-english",
+  PROJECT_UNWORDLER_SIMPLECSS: "https://simplecss.org/",
+  PROJECT_UNWORDLER_REMIX: "https://remix.run/",
+  PROJECT_UNWORDLER_NETLIFY: "https://www.netlify.com/",
 };
 
 routesArray.forEach((r) => {
