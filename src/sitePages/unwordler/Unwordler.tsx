@@ -97,7 +97,7 @@ export const Unwordler: React.FC<{}> = () => (
             <li>
               Use Remix as more than just a SPA renderer and get updates via
               form submissions (maybe the whole UI could be SSR and we could
-              deliver a zero-js app.
+              deliver a zero-js app).
             </li>
           </ul>
         </div>
