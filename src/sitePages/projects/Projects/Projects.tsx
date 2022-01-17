@@ -8,6 +8,7 @@ import TSNHero from "./Media/tsn-hero.jpg";
 import HovalinLightsHero from "./Media/hovalin-lights-hero.jpg";
 import MCUHero from "./Media/mcu-hero.jpg";
 import WaldoHero from "./Media/waldo-hero.jpg";
+import UnwordlerHero from "./Media/unwordler-hero.jpg";
 import VoteByAddressHero from "./Media/vote-by-address.png";
 import RiseHero from "./Media/riseHero.png";
 import Layout from "../../../components/layout";
@@ -73,6 +74,13 @@ const projectArray: Array<Project> = [
     imgSrc: WaldoHero,
     linkTitle: "view",
     linkUrl: routes.WALDO,
+  },
+  {
+    title: "Unwordler",
+    description: "A tool for solving wordle.",
+    imgSrc: UnwordlerHero,
+    linkTitle: "view",
+    linkUrl: routes.UNWORDLER,
   },
 ];
 

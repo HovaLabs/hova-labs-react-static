@@ -43,9 +43,17 @@ export const routes = {
     "http://www.amazon.com/gp/product/B01DVYLJ3S/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=B01DVYLJ3S&amp;linkCode=as2&amp;tag=hovalin-20&amp;linkId=4BOVD54GNA7UMJKK",
   PROJECT_WALDO: "https://waldo-rails.herokuapp.com/",
   PROJECT_TSN: "http://www.thesynesthesianetwork.com/",
+  PROJECT_VOTE_BY_ADDRESS: "https://www.votebyaddress.com/",
   PROJECT_RISE_VENTILATOR: "https://www.riseventilator.com/",
   PROJECT_HYDRAPRINT:
     "https://www.github.com/autodesk/machine-collaboration-utility",
+  PROJECT_UNWORDLER: "https://www.unwordler.com",
+  PROJECT_UNWORDLER_WORDLE: "https://www.powerlanguage.co.uk/wordle/",
+  PROJECT_UNWORDLER_WORDLIST_ENGLISH:
+    "https://www.npmjs.com/package/wordlist-english",
+  PROJECT_UNWORDLER_SIMPLECSS: "https://simplecss.org/",
+  PROJECT_UNWORDLER_REMIX: "https://remix.run/",
+  PROJECT_UNWORDLER_NETLIFY: "https://www.netlify.com/",
   BLOG: "/blog",
   BLOG_AUTODESK_INSTAGRAM_AND_THE_FFFIDDLE:
     "/blog/autodesk-instagram-and-the-fffiddle",
@@ -75,6 +83,7 @@ export const routes = {
   STORE: "/store",
   SYNESTHESIA_LIGHT_SHOW: "/synesthesia-light-show",
   THE_SYNESTHESIA_NETWORK: "/the-synesthesia-network",
+  UNWORDLER: "/unwordler",
   VOTE_BY_ADDRESS: "/vote-by-address",
   WALDO: "/waldo",
 };
