@@ -116,9 +116,9 @@ export const Unwordler: React.FC<{}> = () => (
         <div>
           Kait is always on and on about themes, and since the UI for this is
           relatively simple we used{" "}
-          <a href={routes.PROJECT_UNWORDLER_SIMPLECSS}>simple.css</a> to make a
-          light theme / dark theme set up. The theme will match whatever is set
-          for your OS.
+          <a href={routes.PROJECT_UNWORDLER_SIMPLECSS}>simple.css</a> to set up
+          a light theme / dark theme. The theme will match whatever is set for
+          your OS.
         </div>
         <br />
         <img alt="unwordler in light theme" src={lightThemeImg} width="100%" />
@@ -149,9 +149,8 @@ export const Unwordler: React.FC<{}> = () => (
           Part of the euphoria of wordle is being stumped, thinking that a
           solution is impossible, and then rising from the ashes like the wordle
           phoenix that you are, on guess #6. This solver isn't for everyone, but
-          even if you're against solvers (like Matt), replaying the game and
-          seeing all of the guesses you had at each stage can give new life to
-          each game.
+          even if you're against solvers (like Matt), replaying and seeing all
+          of the guesses you had at every stage can give new life to each game.
         </div>
         <h3 id="netlify">
           Super easy continuous integration via Remix/Github/Netlify
